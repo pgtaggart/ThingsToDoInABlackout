@@ -1,6 +1,4 @@
 import React, { PureComponent } from 'react';
-import frame from '../images/Frame.svg';
-import { motion } from 'framer-motion';
 
 export default class Room extends PureComponent {
 
@@ -65,63 +63,11 @@ export default class Room extends PureComponent {
         this.repositionBackface();
     };
 
-    onImageClick(text) {
-      console.log(text);
-    }
-
-    roomOne() {
+    chooseRoom(className) {
       return (
               <>
-                <div className="wall" />
-                <div className="wall" />
-                <div className="wall" />
-                <div className="wall" />
-                <div className="wall" id="backwall">
-                  <motion.div className="picture-frame" animate={{ scale: [0, 1] }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}> 
-                    <img src={frame} alt="pictureFrame" onClick={() => this.onImageClick(this.props.greeting)}/>
-                  </motion.div>
-                </div>
+                <div className={className} />
               </>
-      );
-    }
-
-    roomTwo() {
-      return (
-              <>
-                <div className="wall" />
-                <div className="wall" />
-                <div className="wall" />
-                <div className="wall" />
-                <div className="wall" id="backwall">
-                  <motion.div className="picture-frame" animate={{ scale: [0, 1] }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}> 
-                    <img src={frame} alt="pictureFrame" onClick={() => this.onImageClick(this.props.greeting)}/>
-                  </motion.div>
-                </div>
-              </>
-      );
-    }
-
-    roomThree() {
-      return (
-              <>
-                <div className="testRoom" />
-              </>
-      );
-    }
-
-    roomDefault() {
-      return (
-              <>
-                <div className="wall" />
-                <div className="wall" />
-                <div className="wall" />
-                <div className="wall" />
-                <div className="wall" id="backwall">
-                  <motion.div className="picture-frame" animate={{ scale: [0, 1] }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}> 
-                    <img src={frame} alt="pictureFrame" onClick={() => this.onImageClick(this.props.greeting)}/>
-                  </motion.div>
-                </div>
-            </>
       );
     }
 
@@ -130,12 +76,12 @@ export default class Room extends PureComponent {
           <>
             <div id="viewport">
               <div className="room">
-                {this.props.roomIndex.roomIndex === 0 && this.roomOne()}
-                {this.props.roomIndex.roomIndex === 1 && this.roomTwo()}
-                {this.props.roomIndex.roomIndex === 2 && this.roomThree()}
-                {this.props.roomIndex.roomIndex === 3 && this.roomDefault()}
-                {this.props.roomIndex.roomIndex === 4 && this.roomDefault()}
-                {this.props.roomIndex.roomIndex === 5 && this.roomDefault()}
+                {this.props.roomIndex === 0 && this.chooseRoom('roomOne')}
+                {this.props.roomIndex === 1 && this.chooseRoom('roomTwo')}
+                {this.props.roomIndex === 2 && this.chooseRoom('roomThree')}
+                {this.props.roomIndex === 3 && this.chooseRoom('roomFour')}
+                {this.props.roomIndex === 4 && this.chooseRoom('roomFive')}
+                {this.props.roomIndex === 5 && this.chooseRoom('roomSix')}
               </div>
             </div>
           </>

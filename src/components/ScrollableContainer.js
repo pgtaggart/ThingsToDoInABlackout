@@ -1,26 +1,26 @@
-import React, { PureComponent } from 'react'
-import debounce from 'lodash.debounce'
-import { motion } from 'framer-motion'
+import React, { PureComponent } from 'react';
+import debounce from 'lodash.debounce';
+import ImageMapArea from './ImageMapArea';
+import ImageMap from './ImageMap';
+import ResponsiveImageMap from './ResponsiveImageMap';
 
-import house1 from '../images/house1.svg';
-import house2 from '../images/house2.svg';
-import house3 from '../images/house3.svg';
-import house4 from '../images/house4.svg';
-import house5 from '../images/house5.svg';
-import house6 from '../images/house6.svg';
-
+import StreetScene from '../images/StreetScene.png';
 
 export default class ScrollableContainer extends PureComponent {
 
   constructor(props) {
+    
     super(props);
 
-    this.state = {
-      items: [house1, house2, house3, house4, house5, house6],
-      hasOverflow: false,
-      canScrollLeft: false,
-      canScrollRight: false
-    }
+    this.callbackFunction = props.callbackFunction;
+
+    const HouseOneArea = new ImageMapArea('House1', 'house1', "945,490,1745,1476", 'rect', '');
+    const HouseTwoArea = new ImageMapArea('House2', 'house2', "1759,1483,2579,497", 'rect', '');
+    const HouseThreeArea = new ImageMapArea('House3', 'house3', "2621,497,3366,1483", 'rect', '');
+    const HouseFourArea = new ImageMapArea('House4', 'house4', "3379,504,4117,1483", 'rect', '');
+    const HouseFiveArea = new ImageMapArea('House5', 'house5', "4131,517,4917,1476", 'rect', '');
+    const HouseSixArea = new ImageMapArea('House6', 'house6', "4966,511,5662,1483", 'rect', '');
+    this.StreetSceneImageMap = new ImageMap('StreetScene-imageMap', [HouseOneArea, HouseTwoArea, HouseThreeArea, HouseFourArea, HouseFiveArea, HouseSixArea]);
 
     this.checkForOverflow = this.checkForOverflow.bind(this);
     this.checkForScrollPosition = this.checkForScrollPosition.bind(this);
@@ -29,21 +29,20 @@ export default class ScrollableContainer extends PureComponent {
     this.debounceCheckForScrollPosition = debounce(this.checkForScrollPosition, 200);
 
     this.container = null;
+    this.childImageMap = null;
+
   }
 
   componentDidMount() {
-    this.checkForOverflow();
-    this.checkForScrollPosition();
-
     this.container.addEventListener('scroll', this.debounceCheckForScrollPosition);
 
     // This is to scroll the container to the middle but needs some final tweaks
     setTimeout(() => {
       const {clientWidth } = this.container
-      this.scrollContainerBy(clientWidth / 5.0)
-    }, 500)
-
+      this.scrollContainerBy(clientWidth / 2.0)
+    }, 500);
   }
+
 
   componentWillUnmount() {
     this.container.removeEventListener('scroll', this.debounceCheckForScrollPosition);
@@ -51,15 +50,11 @@ export default class ScrollableContainer extends PureComponent {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if (prevState.items.length !== this.state.items.length) {
-      this.checkForOverflow();
       this.checkForScrollPosition();
-    }
   }
 
   checkForScrollPosition() {
     const { scrollLeft, scrollWidth, clientWidth } = this.container;
-
     this.setState({
       canScrollLeft: scrollLeft > 0,
       canScrollRight: scrollLeft !== scrollWidth - clientWidth
@@ -69,7 +64,6 @@ export default class ScrollableContainer extends PureComponent {
   checkForOverflow() {
     const { scrollWidth, clientWidth } = this.container;
     const hasOverflow = scrollWidth > clientWidth;
-
     this.setState({ hasOverflow });
   }
 
@@ -77,25 +71,17 @@ export default class ScrollableContainer extends PureComponent {
     this.container.scrollBy({ left: distance, behavior: 'smooth' });
   }
 
-
-  buildItems() {
-    return this.state.items.map((item, index) => {
-      return (
-        <li className="house-item" key={item}>
-          <motion.div animate={{ scale: [0, 1] }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-            <img src={item} className="house-image" alt="logo" 
-              onClick={() => { this.props.setRoomIndexFunction({roomIndex: index}); this.props.toggleModalFunction(); } } />
-          </motion.div>
-        </li>
-      );
-    });
-  }
-
   render() {
+
     return (
       <>
         <ul className="house-container" ref={node => { this.container = node}}>
-          {this.buildItems()}
+          <li className="house-item" key={StreetScene} id="UncleBob">
+            <ResponsiveImageMap image={StreetScene} originalWidth='7807' originalHeight='1918'
+              map={this.StreetSceneImageMap} className='StreetScene' parentElementId='UncleBob' 
+              ref={node => {this.childImageMap = node}} 
+              setRoomIndexFunction ={this.props.setRoomIndexFunction} toggleModalFunction={() => this.props.toggleModalFunction()}/>
+          </li>
         </ul>
       </>
     )

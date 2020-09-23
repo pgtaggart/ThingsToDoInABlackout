@@ -1,14 +1,14 @@
 import React, {useState} from 'react';
 import Typist from 'react-typist';
 import { motion, useCycle, AnimatePresence } from 'framer-motion';
-import ScrollableContainer from './components/ScrollableContainer';
-import Room from './components/room';
+import { SocialMediaIconsReact } from 'social-media-icons-react';
 import { MenuToggle } from "./components/MenuToggle";
 import { Navigation } from "./components/Navigation";
 import { ModalClose } from './components/ModalClose';
-import { SocialMediaIconsReact } from 'social-media-icons-react';
+import Room from './components/room';
 import './App.css';
 import './viewportRoom.css';
+import ScrollableContainer from './components/ScrollableContainer';
 
 
 const sidebar = {
@@ -38,13 +38,22 @@ function App(){
 
   const [isNavOpen, toggleNavOpen] = useCycle(false, true); 
   const [isModalOpen, toggleModalOpen] = useCycle(false, true);
-  const [roomIndex, setRoomIndex] = useState(1);
-  
+  const [roomIndex, setRoomIndex] = useState(0);
+
   return (
     <>
       <div className="logo">
-        <Typist cursor={{ hideWhenDone: true }}>Things to do in a Blackout</Typist>
+        <Typist cursor={{ hideWhenDone: true }} startDelay={1000}>Things to do in a Blackout</Typist>
       </div>
+      
+      <motion.nav initial={false} animate={isNavOpen ? "open" : "closed"}>
+        <motion.div className="nav-background" variants={sidebar}>
+          <Navigation />
+          <MenuToggle toggle={() => toggleNavOpen()} />
+        </motion.div>
+      </motion.nav>
+
+      <ScrollableContainer toggleModalFunction={() => toggleModalOpen()} setRoomIndexFunction={(index) => setRoomIndex(index)}/>
 
       <AnimatePresence>     
         {isModalOpen &&(
@@ -55,19 +64,10 @@ function App(){
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}>
             <ModalClose toggle={() => toggleModalOpen()} />
-            <Room greeting="Replace With Imge click" roomIndex={roomIndex}/>
+            <Room roomIndex={roomIndex}/>
           </motion.div>  
         )}      
       </AnimatePresence>
-      
-      <motion.nav initial={false} animate={isNavOpen ? "open" : "closed"}>
-        <motion.div className="nav-background" variants={sidebar}>
-          <Navigation />
-          <MenuToggle toggle={() => toggleNavOpen()} />
-        </motion.div>
-      </motion.nav>
-
-      <ScrollableContainer toggleModalFunction={() => toggleModalOpen()} setRoomIndexFunction={(index) => setRoomIndex(index)}/>
 
       <div className="footer">
         <Typist cursor={{ hideWhenDone: true }} startDelay={3000}>

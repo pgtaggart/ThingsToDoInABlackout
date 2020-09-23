@@ -19,9 +19,9 @@ const variants = {
   }
 };
 
-const images = [bounceLogo];
-const descriptions = ['Bounce Theatre'];
-const links = ['https://www.bouncetheatre.com'];
+//const images = [bounceLogo];
+//const descriptions = ['Bounce Theatre'];
+//const links = ['https://www.bouncetheatre.com'];
 
 export const MenuItem = ({ i }) => {
   return (
