@@ -6,6 +6,9 @@ import ResponsiveImageMap from './ResponsiveImageMap';
 
 import StreetScene from '../images/StreetScene.png';
 
+/**
+ * This class is specific to the house layout and the actions it needs to take
+*/
 export default class ScrollableContainer extends PureComponent {
 
   constructor(props) {
@@ -21,6 +24,8 @@ export default class ScrollableContainer extends PureComponent {
     const HouseFiveArea = new ImageMapArea('House5', 'house5', "4131,517,4917,1476", 'rect', '');
     const HouseSixArea = new ImageMapArea('House6', 'house6', "4966,511,5662,1483", 'rect', '');
     this.StreetSceneImageMap = new ImageMap('StreetScene-imageMap', [HouseOneArea, HouseTwoArea, HouseThreeArea, HouseFourArea, HouseFiveArea, HouseSixArea]);
+
+    this.parentElementId = props.parentElementId;
 
     this.checkForOverflow = this.checkForOverflow.bind(this);
     this.checkForScrollPosition = this.checkForScrollPosition.bind(this);
@@ -76,9 +81,9 @@ export default class ScrollableContainer extends PureComponent {
     return (
       <>
         <ul className="house-container" ref={node => { this.container = node}}>
-          <li className="house-item" key={StreetScene} id="UncleBob">
+          <li className="house-item" key={StreetScene} id={this.parentElementId}>
             <ResponsiveImageMap image={StreetScene} originalWidth='7807' originalHeight='1918'
-              map={this.StreetSceneImageMap} className='StreetScene' parentElementId='UncleBob' 
+              map={this.StreetSceneImageMap} className='StreetScene' parentElementId={this.parentElementId}
               ref={node => {this.childImageMap = node}} 
               setRoomIndexFunction ={this.props.setRoomIndexFunction} toggleModalFunction={() => this.props.toggleModalFunction()}/>
           </li>

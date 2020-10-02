@@ -10,28 +10,48 @@ export default class ResponsiveImageMap extends PureComponent {
         this.originalWidth = props.originalWidth;
         this.originalHeight = props.originalHeight;
         this.map = props.map;
-
         this.state = {
-            resize: false
+            imageWidth: props.originalWidth,
+            imageHeight: props.originalHeight
         }
 
     }
 
     resize() {
 
+        console.log('resize called');
+
         const parentElement = document.getElementById(this.parentElementId);
-        const ratioWidth = parentElement.offsetWidth / this.originalWidth;
+        const newWidth = parentElement.offsetWidth;
+        var newHeight = parentElement.offsetHeight;
+
+        var ratioWidth = newWidth / this.originalWidth;
+        var ratioHeight = newHeight / this.originalHeight;
+        
+        var body = document.body;
+        var html = document.documentElement;
+    
+        var viewHeight = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+
+        if(viewHeight !== newHeight) {
+            const streetImage = document.getElementById('StreetImage');
+            streetImage.height = viewHeight;
+            newHeight = viewHeight;
+            ratioHeight = viewHeight / this.originalHeight;
+        }
 
         for (const area of this.map.areas) {
             const newCoords = [];
-            for (const originalCoord of area.originalCoords) {
-                newCoords.push(Math.round(originalCoord * ratioWidth));
-            }
+            // Warning: This assumes a rectange for the image map area
+            newCoords.push(Math.round(area.originalCoords[0] * ratioWidth));
+            newCoords.push(Math.round(area.originalCoords[1] * ratioHeight));
+            newCoords.push(Math.round(area.originalCoords[2] * ratioWidth));
+            newCoords.push(Math.round(area.originalCoords[3] * ratioHeight));
             area.newCoords = newCoords.join(',');
         }
 
-        this.setState({ resize : true});
-
+        this.setState({ imageWidth: newWidth, imageHeight: newHeight});
+        
         return true;
     };
 
@@ -47,22 +67,22 @@ export default class ResponsiveImageMap extends PureComponent {
         this.resize();
     }
 
-    //{ this.props.setRoomIndexFunction({roomIndex: index}); this.props.toggleModalFunction(); }}
-
     buildAreaItems() {
         return this.map.areas.map((item, index) => {
             return (
                 <area key={index} target={item.target} alt="" title="" href="#" 
                 coords={item.newCoords} shape={item.shape} 
-                onClick={(e) => {e.preventDefault(); this.props.setRoomIndexFunction(index); this.props.toggleModalFunction() }}/>
+                onClick={(e) => {e.preventDefault(); console.log('Room ' + index + ' clicked'); this.props.setRoomIndexFunction(index); this.props.toggleModalFunction() }}/>
             );
         });
     }
 
     render() {
+
+        console.log('render called on image');
         return (
             <>
-                <img src={this.image} useMap={'#' + this.map.name} className={this.className} alt='' hidefocus="true"/>
+                <img src={this.image} useMap={'#' + this.map.name} className={this.className} alt='' hidefocus="true" id='StreetImage'/>
                 <map name={this.map.name}>
                     {this.buildAreaItems()}
                 </map>

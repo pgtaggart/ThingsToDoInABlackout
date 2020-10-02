@@ -5,11 +5,9 @@ import { SocialMediaIconsReact } from 'social-media-icons-react';
 import { MenuToggle } from "./components/MenuToggle";
 import { Navigation } from "./components/Navigation";
 import { ModalClose } from './components/ModalClose';
+import ScrollableContainer from './components/ScrollableContainer';
 import Room from './components/room';
 import './App.css';
-import './viewportRoom.css';
-import ScrollableContainer from './components/ScrollableContainer';
-
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -53,7 +51,9 @@ function App(){
         </motion.div>
       </motion.nav>
 
-      <ScrollableContainer toggleModalFunction={() => toggleModalOpen()} setRoomIndexFunction={(index) => setRoomIndex(index)}/>
+      <ScrollableContainer toggleModalFunction={() => toggleModalOpen()} 
+                           setRoomIndexFunction={(index) => setRoomIndex(index)}
+                           parentElementId = 'StreetImageContainer'/>
 
       <AnimatePresence>     
         {isModalOpen &&(
