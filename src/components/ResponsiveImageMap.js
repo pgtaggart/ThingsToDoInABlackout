@@ -5,11 +5,13 @@ export default class ResponsiveImageMap extends PureComponent {
     constructor(props) {
         super(props);
         this.image = props.image;
+        this.imageId = props.imageId;
         this.className = props.className;
         this.parentElementId = props.parentElementId;
         this.originalWidth = props.originalWidth;
         this.originalHeight = props.originalHeight;
         this.map = props.map;
+        
         this.state = {
             imageWidth: props.originalWidth,
             imageHeight: props.originalHeight
@@ -18,8 +20,6 @@ export default class ResponsiveImageMap extends PureComponent {
     }
 
     resize() {
-
-        console.log('resize called');
 
         const parentElement = document.getElementById(this.parentElementId);
         const newWidth = parentElement.offsetWidth;
@@ -34,7 +34,7 @@ export default class ResponsiveImageMap extends PureComponent {
         var viewHeight = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
 
         if(viewHeight !== newHeight) {
-            const streetImage = document.getElementById('StreetImage');
+            const streetImage = document.getElementById(this.imageId);
             streetImage.height = viewHeight;
             newHeight = viewHeight;
             ratioHeight = viewHeight / this.originalHeight;
@@ -78,11 +78,9 @@ export default class ResponsiveImageMap extends PureComponent {
     }
 
     render() {
-
-        console.log('render called on image');
         return (
             <>
-                <img src={this.image} useMap={'#' + this.map.name} className={this.className} alt='' hidefocus="true" id='StreetImage'/>
+                <img src={this.image} useMap={'#' + this.map.name} className={this.className} alt='' hidefocus="true" id={this.imageId}/>
                 <map name={this.map.name}>
                     {this.buildAreaItems()}
                 </map>

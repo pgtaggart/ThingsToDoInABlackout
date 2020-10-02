@@ -85,6 +85,7 @@ export default class ScrollableContainer extends PureComponent {
             <ResponsiveImageMap image={StreetScene} originalWidth='7807' originalHeight='1918'
               map={this.StreetSceneImageMap} className='StreetScene' parentElementId={this.parentElementId}
               ref={node => {this.childImageMap = node}} 
+              imageId='StreetSceneImage'
               setRoomIndexFunction ={this.props.setRoomIndexFunction} toggleModalFunction={() => this.props.toggleModalFunction()}/>
           </li>
         </ul>
