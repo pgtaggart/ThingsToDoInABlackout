@@ -72,7 +72,7 @@ export default class ResponsiveImageMap extends PureComponent {
             return (
                 <area key={index} target={item.target} alt="" title="" href="#" 
                 coords={item.newCoords} shape={item.shape} 
-                onClick={(e) => {e.preventDefault(); console.log('Room ' + index + ' clicked'); this.props.setRoomIndexFunction(index); this.props.toggleModalFunction() }}/>
+                onClick={(e) => {e.preventDefault(); this.props.setRoomIndexFunction(index); this.props.toggleModalFunction() }}/>
             );
         });
     }

@@ -44,6 +44,10 @@ function App(){
         <Typist cursor={{ hideWhenDone: true }} startDelay={1000}>Things to do in a Blackout</Typist>
       </div>
       
+      <ScrollableContainer toggleModalFunction={() => toggleModalOpen()} 
+                           setRoomIndexFunction={(index) => setRoomIndex(index)}
+                           parentElementId = 'StreetImageContainer'/>
+
       <motion.nav initial={false} animate={isNavOpen ? "open" : "closed"}>
         <motion.div className="nav-background" variants={sidebar}>
           <Navigation />
@@ -51,10 +55,7 @@ function App(){
         </motion.div>
       </motion.nav>
 
-      <ScrollableContainer toggleModalFunction={() => toggleModalOpen()} 
-                           setRoomIndexFunction={(index) => setRoomIndex(index)}
-                           parentElementId = 'StreetImageContainer'/>
-
+    
       <AnimatePresence>     
         {isModalOpen &&(
           <motion.div

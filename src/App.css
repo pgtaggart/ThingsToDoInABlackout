@@ -13,6 +13,7 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  z-index: 1000;
 }
 
 nav {
@@ -51,7 +52,6 @@ nav {
   left: 80px;
   margin: 0 auto;
   width: 400px;
-  height: 100px;
   font-family: American Typewriter, serif;
   font-size: 30px;
 }
@@ -150,30 +150,6 @@ nav {
   flex: 1;
 }
 
-#viewport{
-  height:100%;
-  width:100%;
-  background-color:black;
-  margin:0;
-  padding:0;
-  overflow:hidden;
-  -webkit-perspective-origin:50% 50%;
-  -moz-perspective-origin:50% 50%;
-  -o-perspective-origin:50% 50%;
-  -ms-perspective-origin:50% 50%;
-  perspective-origin:50% 50%;
-  -webkit-transform-style:preserve-3d;
-  -moz-transform-style:preserve-3d;
-  -o-transform-style:preserve-3d;
-  -ms-transform-style:preserve-3d;
-  transform-style:preserve-3d;
-  -webkit-perspective:700px;
-  -moz-perspective:700px;
-  -o-perspective:700px;
-  -ms-perspective:700px;
-  perspective:700px;
-}
-
 .roomOne{
   height:100%;
   width:100%;
@@ -238,16 +214,4 @@ nav {
   background-color:white;
   background-image:url('images/RoomSix.jpg');
   background-size:100% 100%;
-}
-
-.room{
-  height:100%;
-  width:100%;
-  margin:0;
-  padding:0;
-  -webkit-transform-style:preserve-3d;
-  -moz-transform-style:preserve-3d;
-  -o-transform-style:preserve-3d;
-  -ms-transform-style:preserve-3d;
-  transform-style:preserve-3d;
 }
