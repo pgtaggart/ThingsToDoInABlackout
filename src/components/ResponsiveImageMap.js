@@ -22,6 +22,11 @@ export default class ResponsiveImageMap extends PureComponent {
     resize() {
 
         const parentElement = document.getElementById(this.parentElementId);
+
+        if(!parentElement) {
+            return;
+        }
+
         const newWidth = parentElement.offsetWidth;
         var newHeight = parentElement.offsetHeight;
 

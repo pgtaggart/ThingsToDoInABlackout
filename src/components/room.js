@@ -22,6 +22,8 @@ export default class Room extends PureComponent {
     
     componentDidUpdate(prevProps, prevState) {
         
+      console.log('Component did update, room image');
+
     }
 
     render() {
@@ -32,10 +34,12 @@ export default class Room extends PureComponent {
       var imageWidth = '';
       var imageHeight= '';
       var className = '';
+      var roomImageId = '';
 
       if (this.props.roomIndex === 0 ) {
         
         roomImage = roomOne;
+        roomImageId = 'RoomImage1';
         parentElementId = 'RoomOne';
         imageWidth = '1080';
         imageHeight= '714';    
@@ -46,6 +50,7 @@ export default class Room extends PureComponent {
       } else if (this.props.roomIndex === 1 ) {
         
         roomImage = roomTwo;
+        roomImageId = 'RoomImage2';
         parentElementId = 'RoomTwo';
         imageWidth = '1920';
         imageHeight= '1080';
@@ -56,6 +61,7 @@ export default class Room extends PureComponent {
        } else if (this.props.roomIndex === 2 ) {
         
         roomImage = roomThree;
+        roomImageId = 'RoomImage3';
         parentElementId = 'RoomThree';
         imageWidth = '3194';
         imageHeight= '2269';
@@ -66,6 +72,7 @@ export default class Room extends PureComponent {
       } else if (this.props.roomIndex === 3 ) {
         
         roomImage = roomFour;
+        roomImageId = 'RoomImage4';
         parentElementId = 'RoomFour';
         imageWidth = '4832';
         imageHeight= '2718';
@@ -76,6 +83,7 @@ export default class Room extends PureComponent {
       } else if (this.props.roomIndex === 4 ) {
         
         roomImage = roomFive;
+        roomImageId = 'RoomImage5';
         parentElementId = 'RoomFive';
         imageWidth = '1024';
         imageHeight= '700';
@@ -86,18 +94,23 @@ export default class Room extends PureComponent {
       } else if (this.props.roomIndex === 5 ) {
         
         roomImage = roomSix;
+        roomImageId = 'RoomImage6';
         parentElementId = 'RoomSix';
         imageWidth = '1920';
         imageHeight= '1080';
         var roomSixArea = new ImageMapArea('RoomSix', 'RoomSix', "100,100,200,200", 'rect', '');
         imageMap = new ImageMap('RoomSix-imageMap', [roomSixArea]);
         className = 'roomSix';
-
       }
 
       return (
         <>
-          <div className={className} />
+          <div id={parentElementId} className='RoomContainer'>
+          <ResponsiveImageMap image={roomImage} originalWidth={imageWidth} originalHeight={imageHeight}
+              map={imageMap} className='StreetScene' parentElementId={parentElementId} 
+              imageId={roomImageId}
+              setRoomIndexFunction ={this.props.setRoomIndexFunction} toggleModalFunction={() => this.props.toggleModalFunction()}/>
+          </div>
         </>
       )
 

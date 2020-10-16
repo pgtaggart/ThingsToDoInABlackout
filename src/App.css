@@ -150,68 +150,12 @@ nav {
   flex: 1;
 }
 
-.roomOne{
+.roomContainer {
   height:100%;
   width:100%;
   margin:0;
   padding:0;
   bottom:0;
   background-color:white;
-  background-image:url('images/RoomOne.jpg');
-  background-size:100% 100%;
-}
-
-.roomTwo{
-  height:100%;
-  width:100%;
-  margin:0;
-  padding:0;
-  bottom:0;
-  background-color:white;
-  background-image:url('images/RoomTwo.jpg');
-  background-size:100% 100%;
-}
-
-.roomThree{
-  height:100%;
-  width:100%;
-  margin:0;
-  padding:0;
-  bottom:0;
-  background-color:white;
-  background-image:url('images/RoomThree.jpg');
-  background-size:100% 100%;
-}
-
-.roomFour{
-  height:100%;
-  width:100%;
-  margin:0;
-  padding:0;
-  bottom:0;
-  background-color:white;
-  background-image:url('images/RoomFour.jpg');
-  background-size:100% 100%;
-}
-
-.roomFive{
-  height:100%;
-  width:100%;
-  margin:0;
-  padding:0;
-  bottom:0;
-  background-color:white;
-  background-image:url('images/RoomFive.jpg');
-  background-size:100% 100%;
-}
-
-.roomSix{
-  height:100%;
-  width:100%;
-  margin:0;
-  padding:0;
-  bottom:0;
-  background-color:white;
-  background-image:url('images/RoomSix.jpg');
   background-size:100% 100%;
 }

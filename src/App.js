@@ -9,6 +9,7 @@ import ScrollableContainer from './components/ScrollableContainer';
 import Room from './components/room';
 import './App.css';
 
+
 const sidebar = {
   open: (height = 1000) => ({
     clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
@@ -55,7 +56,6 @@ function App(){
         </motion.div>
       </motion.nav>
 
-    
       <AnimatePresence>     
         {isModalOpen &&(
           <motion.div
