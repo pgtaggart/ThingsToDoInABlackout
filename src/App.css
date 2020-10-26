@@ -6,6 +6,16 @@
   max-block-size: -webkit-fill-available;
 }
 
+.RoomContainer {
+  
+}
+
+.RoomImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 .house-container {
   display: flex;
   overflow-x: scroll;
@@ -37,13 +47,25 @@ nav {
 }
 
 .modal-background {
+  background: whitesmoke;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) !important;
   height: 100vh;
   width: 100vw;
-  z-index: 10000;
+  z-index: 10001;
+}
+
+
+.modal-foreground {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+  max-height: 99vh;
+  width: 100vw;
+  z-index: 10001;
 }
 
 .logo {

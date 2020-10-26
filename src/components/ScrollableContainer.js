@@ -3,7 +3,6 @@ import debounce from 'lodash.debounce';
 import ImageMapArea from './ImageMapArea';
 import ImageMap from './ImageMap';
 import ResponsiveImageMap from './ResponsiveImageMap';
-
 import StreetScene from '../images/StreetScene.jpg';
 
 /**
@@ -17,12 +16,12 @@ export default class ScrollableContainer extends PureComponent {
 
     this.callbackFunction = props.callbackFunction;
 
-    const HouseOneArea = new ImageMapArea('House1', 'house1', "945,490,1745,1476", 'rect', '');
-    const HouseTwoArea = new ImageMapArea('House2', 'house2', "1759,1483,2579,497", 'rect', '');
-    const HouseThreeArea = new ImageMapArea('House3', 'house3', "2621,497,3366,1483", 'rect', '');
-    const HouseFourArea = new ImageMapArea('House4', 'house4', "3379,504,4117,1483", 'rect', '');
-    const HouseFiveArea = new ImageMapArea('House5', 'house5', "4131,517,4917,1476", 'rect', '');
-    const HouseSixArea = new ImageMapArea('House6', 'house6', "4966,511,5662,1483", 'rect', '');
+    const HouseOneArea = new ImageMapArea('House1', 'house1', "555,252,1026,840", 'rect', '');
+    const HouseTwoArea = new ImageMapArea('House2', 'house2', "1034,268,1496,840", 'rect', '');
+    const HouseThreeArea = new ImageMapArea('House3', 'house3', "1520,272,1974,840", 'rect', '');
+    const HouseFourArea = new ImageMapArea('House4', 'house4', "1986,268,2420,840", 'rect', '');
+    const HouseFiveArea = new ImageMapArea('House5', 'house5', "2436,260,2890,840", 'rect', '');
+    const HouseSixArea = new ImageMapArea('House6', 'house6', "2903,264,3421,840", 'rect', '');
     this.StreetSceneImageMap = new ImageMap('StreetScene-imageMap', [HouseOneArea, HouseTwoArea, HouseThreeArea, HouseFourArea, HouseFiveArea, HouseSixArea]);
 
     this.parentElementId = props.parentElementId;
@@ -82,7 +81,7 @@ export default class ScrollableContainer extends PureComponent {
       <>
         <ul className="house-container" ref={node => { this.container = node}}>
           <li className="house-item" key={StreetScene} id={this.parentElementId}>
-            <ResponsiveImageMap image={StreetScene} originalWidth='7807' originalHeight='1918'
+            <ResponsiveImageMap image={StreetScene} originalWidth='4589' originalHeight='1080'
               map={this.StreetSceneImageMap} className='StreetScene' parentElementId={this.parentElementId}
               ref={node => {this.childImageMap = node}} 
               imageId='StreetSceneImage'

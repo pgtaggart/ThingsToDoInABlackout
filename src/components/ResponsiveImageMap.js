@@ -11,11 +11,14 @@ export default class ResponsiveImageMap extends PureComponent {
         this.originalWidth = props.originalWidth;
         this.originalHeight = props.originalHeight;
         this.map = props.map;
+        this.backgroundColor = props.backgroundColor;
         
         this.state = {
             imageWidth: props.originalWidth,
             imageHeight: props.originalHeight
         }
+
+        this.resize = this.resize.bind(this); //bind function once
 
     }
 
@@ -24,6 +27,7 @@ export default class ResponsiveImageMap extends PureComponent {
         const parentElement = document.getElementById(this.parentElementId);
 
         if(!parentElement) {
+            console.log('WARNING: resize called for unmounted image: ' + this.image);
             return;
         }
 
@@ -36,11 +40,11 @@ export default class ResponsiveImageMap extends PureComponent {
         var body = document.body;
         var html = document.documentElement;
     
-        var viewHeight = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+        var viewHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
 
         if(viewHeight !== newHeight) {
-            const streetImage = document.getElementById(this.imageId);
-            streetImage.height = viewHeight;
+            const imageElement = document.getElementById(this.imageId);
+            imageElement.height = viewHeight;
             newHeight = viewHeight;
             ratioHeight = viewHeight / this.originalHeight;
         }
@@ -55,17 +59,26 @@ export default class ResponsiveImageMap extends PureComponent {
             area.newCoords = newCoords.join(',');
         }
 
+        // try to set the background for the overflow on the room image
+        var modalBackground = document.getElementsByClassName('modal-background');
+
+        // There should only be one of these
+        for (var i = 0; i < modalBackground.length; i++) {
+            modalBackground[i].style.backgroundColor = this.backgroundColor;
+        }
+
         this.setState({ imageWidth: newWidth, imageHeight: newHeight});
         
         return true;
     };
 
     componentDidMount() {
-        window.addEventListener('resize', e => this.resize(e));
+        window.addEventListener('resize', this.resize, false);
+        this.resize();
     }
     
     componentWillUnmount() {
-        window.removeEventListener('resize', e => this.resize(e));
+        window.removeEventListener('resize', this.resize, false);
     }
 
     componentDidUpdate(prevProps, prevState) {
