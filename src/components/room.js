@@ -41,7 +41,7 @@ export default class Room extends PureComponent {
         imageHeight= '1080';    
         var roomOneArea = new ImageMapArea('RoomOne', 'RoomOne', "801,210,1004,437", 'rect', '');
         imageMap = new ImageMap('RoomOne-imageMap', [roomOneArea]);
-        backgroundColor = 'red';
+        backgroundColor = 'rgb(210, 201, 140)';
     
       } else if (this.props.roomIndex === 1 ) {
         
@@ -52,7 +52,7 @@ export default class Room extends PureComponent {
         imageHeight= '1080';
         var roomTwoArea = new ImageMapArea('RoomTwo', 'RoomTwo', "100,100,200,200", 'rect', '');
         imageMap = new ImageMap('RoomTwo-imageMap', [roomTwoArea]);
-        backgroundColor = 'black';
+        backgroundColor = 'rgb(33, 32, 27)';
 
        } else if (this.props.roomIndex === 2 ) {
         
@@ -63,7 +63,7 @@ export default class Room extends PureComponent {
         imageHeight= '1080'; 
         var roomThreeArea = new ImageMapArea('RoomThree', 'RoomThree', "100,100,200,200", 'rect', '');
         imageMap = new ImageMap('RoomThree-imageMap', [roomThreeArea]);
-        backgroundColor = 'grey';
+        backgroundColor = 'rgb(209, 211, 196)';
 
       } else if (this.props.roomIndex === 3 ) {
         
@@ -74,7 +74,7 @@ export default class Room extends PureComponent {
         imageHeight= '1080'; 
         var roomFourArea = new ImageMapArea('RoomFour', 'RoomFour', "100,100,200,200", 'rect', '');
         imageMap = new ImageMap('RoomFour-imageMap', [roomFourArea]);
-        backgroundColor = 'blue';
+        backgroundColor = 'rgb(205, 205, 203)';
 
       } else if (this.props.roomIndex === 4 ) {
         
@@ -85,7 +85,7 @@ export default class Room extends PureComponent {
         imageHeight= '1080'; 
         var roomFiveArea = new ImageMapArea('RoomFive', 'RoomFive', "100,100,200,200", 'rect', '');
         imageMap = new ImageMap('RoomFive-imageMap', [roomFiveArea]);
-        backgroundColor = 'white';
+        backgroundColor = 'rgb(190, 180, 169)';
 
       } else if (this.props.roomIndex === 5 ) {
         
@@ -96,7 +96,7 @@ export default class Room extends PureComponent {
         imageHeight= '1080';
         var roomSixArea = new ImageMapArea('RoomSix', 'RoomSix', "100,100,200,200", 'rect', '');
         imageMap = new ImageMap('RoomSix-imageMap', [roomSixArea]);
-        backgroundColor = 'yellow';
+        backgroundColor = 'rgb(215, 205, 185)';
       }
 
       return (
@@ -104,7 +104,7 @@ export default class Room extends PureComponent {
           <div className='modal-foreground' id={parentElementId}>
             <ResponsiveImageMap image={roomImage} originalWidth={imageWidth} originalHeight={imageHeight}
                 map={imageMap} className='RoomImage' parentElementId={parentElementId} 
-                imageId={roomImageId} backgroundColor = {backgroundColor}
+                imageId={roomImageId} backgroundColor={backgroundColor} useViewHeight='false'
                 setRoomIndexFunction ={this.props.setRoomIndexFunction} toggleModalFunction={() => this.props.toggleModalFunction()}/>
            </div>
         </>

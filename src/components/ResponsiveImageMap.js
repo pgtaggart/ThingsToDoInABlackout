@@ -12,13 +12,14 @@ export default class ResponsiveImageMap extends PureComponent {
         this.originalHeight = props.originalHeight;
         this.map = props.map;
         this.backgroundColor = props.backgroundColor;
+        this.useViewHeight = props.useViewHeight;
         
         this.state = {
             imageWidth: props.originalWidth,
             imageHeight: props.originalHeight
         }
 
-        this.resize = this.resize.bind(this); //bind function once
+        this.resize = this.resize.bind(this);
 
     }
 
@@ -39,14 +40,22 @@ export default class ResponsiveImageMap extends PureComponent {
         
         var body = document.body;
         var html = document.documentElement;
-    
-        var viewHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
 
-        if(viewHeight !== newHeight) {
-            const imageElement = document.getElementById(this.imageId);
-            imageElement.height = viewHeight;
-            newHeight = viewHeight;
-            ratioHeight = viewHeight / this.originalHeight;
+        if(this.useViewHeight === 'true') {
+            
+            var viewHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+
+            if(viewHeight !== newHeight) {
+
+                console.log('Correcting image view height for ' + this.image);
+
+                const imageElement = document.getElementById(this.imageId);
+                imageElement.height = viewHeight;
+                newHeight = viewHeight;
+                ratioHeight = viewHeight / this.originalHeight;
+            }
+        } else {
+             ratioHeight = ratioWidth;
         }
 
         for (const area of this.map.areas) {
@@ -71,6 +80,7 @@ export default class ResponsiveImageMap extends PureComponent {
         
         return true;
     };
+
 
     componentDidMount() {
         window.addEventListener('resize', this.resize, false);
