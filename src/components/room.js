@@ -34,8 +34,10 @@ export default class Room extends PureComponent {
         parentElementId = 'RoomOne';
         imageWidth = '1920';
         imageHeight= '1080';    
-        var roomOneArea = new ImageMapArea('RoomOne', 'RoomOne', "801,210,1004,437", 'rect', '');
-        imageMap = new ImageMap('RoomOne-imageMap', [roomOneArea]);
+        var roomOneAreaOne = new ImageMapArea('RoomOne', 'RoomOne', '801,210,1004,437', 'rect', '', 'Audio');
+        var roomOneAreaTwo = new ImageMapArea('RoomOne', 'RoomOne', '1681,297,1835,566', 'rect', '', 'Image');
+        var roomOneAreaThree = new ImageMapArea('RoomOne', 'RoomOne', '20,877,271,1063', 'rect', '', 'Text');
+        imageMap = new ImageMap('RoomOne-imageMap', [roomOneAreaOne, roomOneAreaTwo, roomOneAreaThree]);
         backgroundColor = 'rgb(210, 201, 140)';
     
       } else if (this.props.roomIndex === 1 ) {
@@ -45,7 +47,7 @@ export default class Room extends PureComponent {
         parentElementId = 'RoomTwo';
         imageWidth = '1920';
         imageHeight= '1080';
-        var roomTwoArea = new ImageMapArea('RoomTwo', 'RoomTwo', "100,100,200,200", 'rect', '');
+        var roomTwoArea = new ImageMapArea('RoomTwo', 'RoomTwo', '100,100,200,200', 'rect', '');
         imageMap = new ImageMap('RoomTwo-imageMap', [roomTwoArea]);
         backgroundColor = 'rgb(33, 32, 27)';
 
@@ -56,7 +58,7 @@ export default class Room extends PureComponent {
         parentElementId = 'RoomThree';
         imageWidth = '1920';
         imageHeight= '1080'; 
-        var roomThreeArea = new ImageMapArea('RoomThree', 'RoomThree', "100,100,200,200", 'rect', '');
+        var roomThreeArea = new ImageMapArea('RoomThree', 'RoomThree', '100,100,200,200', 'rect', '');
         imageMap = new ImageMap('RoomThree-imageMap', [roomThreeArea]);
         backgroundColor = 'rgb(209, 211, 196)';
 
@@ -67,7 +69,7 @@ export default class Room extends PureComponent {
         parentElementId = 'RoomFour';
         imageWidth = '1920';
         imageHeight= '1080'; 
-        var roomFourArea = new ImageMapArea('RoomFour', 'RoomFour', "100,100,200,200", 'rect', '');
+        var roomFourArea = new ImageMapArea('RoomFour', 'RoomFour', '100,100,200,200', 'rect', '');
         imageMap = new ImageMap('RoomFour-imageMap', [roomFourArea]);
         backgroundColor = 'rgb(205, 205, 203)';
 
@@ -78,7 +80,7 @@ export default class Room extends PureComponent {
         parentElementId = 'RoomFive';
         imageWidth = '1920';
         imageHeight= '1080'; 
-        var roomFiveArea = new ImageMapArea('RoomFive', 'RoomFive', "100,100,200,200", 'rect', '');
+        var roomFiveArea = new ImageMapArea('RoomFive', 'RoomFive', '100,100,200,200', 'rect', '');
         imageMap = new ImageMap('RoomFive-imageMap', [roomFiveArea]);
         backgroundColor = 'rgb(190, 180, 169)';
 
@@ -89,7 +91,7 @@ export default class Room extends PureComponent {
         parentElementId = 'RoomSix';
         imageWidth = '1920';
         imageHeight= '1080';
-        var roomSixArea = new ImageMapArea('RoomSix', 'RoomSix', "100,100,200,200", 'rect', '');
+        var roomSixArea = new ImageMapArea('RoomSix', 'RoomSix', '100,100,200,200', 'rect', '');
         imageMap = new ImageMap('RoomSix-imageMap', [roomSixArea]);
         backgroundColor = 'rgb(215, 205, 185)';
       }
@@ -99,8 +101,7 @@ export default class Room extends PureComponent {
           <div className='modal-foreground' id={parentElementId}>
             <ResponsiveImageMap image={roomImage} originalWidth={imageWidth} originalHeight={imageHeight}
                 map={imageMap} className='RoomImage' parentElementId={parentElementId} 
-                imageId={roomImageId} backgroundColor={backgroundColor} useViewHeight='false'
-                setRoomIndexFunction ={this.props.setRoomIndexFunction} toggleModalFunction={() => this.props.toggleModalFunction()}/>
+                imageId={roomImageId} backgroundColor={backgroundColor} useViewHeight='false'/>
            </div>
         </>
       )

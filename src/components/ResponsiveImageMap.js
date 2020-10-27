@@ -13,6 +13,7 @@ export default class ResponsiveImageMap extends PureComponent {
         this.map = props.map;
         this.backgroundColor = props.backgroundColor;
         this.useViewHeight = props.useViewHeight;
+        this.type = props.type;
         
         this.state = {
             imageWidth: props.originalWidth,
@@ -20,6 +21,9 @@ export default class ResponsiveImageMap extends PureComponent {
         }
 
         this.resize = this.resize.bind(this);
+
+        // Set the icon colour based on which room this is
+        this.iconColour = 'white';
 
     }
 
@@ -93,23 +97,58 @@ export default class ResponsiveImageMap extends PureComponent {
         this.resize();
     }
 
-    mouseOverArea(areaId, coords) {
+    mouseOverArea(coords, mapType) {
+
         const coordsArr = coords.split(',');
         const parentElement = document.getElementById(this.parentElementId);
         
+        // Create the div and set it's location
         const newElement = document.createElement("div");
         newElement.setAttribute("id", "infoDiv");
         newElement.classList.add('infoDiv');
-        newElement.style.top = coordsArr[1] + "px";
-        newElement.style.left = coordsArr[0] + "px";
         
-        const infoImg = document.createElement("img");
-        infoImg.setAttribute("src", "./images/info_icon.svg");
-        infoImg.setAttribute("height", "10");
-        infoImg.setAttribute("width", "10");
-        infoImg.setAttribute("alt", "Info");
+        // Create the icon that will be used
+        const infoIcon = document.createElement("i");
 
-        newElement.appendChild(infoImg);        
+
+        // Set the icon, size and colour based on what type of area we have
+        switch(mapType) {
+
+            case 'Audio' : 
+                infoIcon.setAttribute("class", "glyphicon glyphicon-headphones");
+                infoIcon.style.fontSize = "2.5em";  // icon at 2.5em is 35x39 px
+                infoIcon.style.color = this.iconColour;
+                break;
+            
+            case 'Image' :
+                infoIcon.setAttribute("class", "glyphicon glyphicon-picture");
+                infoIcon.style.fontSize = "2.5em";  // icon at 2.5em is 35x39 px
+                infoIcon.style.color = this.iconColour;
+                break;
+
+            case 'Text' :
+                infoIcon.setAttribute("class", "glyphicon glyphicon-pencil");
+                infoIcon.style.fontSize = "2.5em";  // icon at 2.5em is 35x39 px
+                infoIcon.style.color = this.iconColour;
+                break;
+
+            default :
+                infoIcon.setAttribute("class", "glyphicon glyphicon-question-sign");
+                infoIcon.style.fontSize = "2.5em";  // icon at 2.5em is 35x39 px
+                infoIcon.style.color = this.iconColour;
+                break;
+        }
+        
+        // Calculate the offsets so the icon is in the middle of the map
+        const xOffset = parseInt(coordsArr[0]) + parseInt((coordsArr[2] - coordsArr[0]) / 2.0 ) - 17.5;
+        const yOffset = parseInt(coordsArr[1]) + parseInt((coordsArr[3] - coordsArr[1]) / 2.0 ) - 19.5;
+        
+        // Set the location of the Div that will contain the icon
+        newElement.style.top  =   yOffset + "px";
+        newElement.style.left =  xOffset + "px";      
+        
+        // Add the icon to the div and the div to the parent
+        newElement.appendChild(infoIcon);
         parentElement.appendChild(newElement);
     }
 
@@ -132,9 +171,9 @@ export default class ResponsiveImageMap extends PureComponent {
     buildAreaItems() {
         return this.map.areas.map((item, index) => {
             return (
-                <area key={index} target={item.target} alt="" title="" href="#" id={this.imageId + '_map' + index}
+                <area key={index} target={item.target} alt="" title="" href="#"
                       coords={item.newCoords} shape={item.shape} 
-                      onMouseOver={()=>this.mouseOverArea(this.imageId + '_map' + index, item.newCoords)}
+                      onMouseOver={()=>this.mouseOverArea(item.newCoords, item.type)}
                       onMouseOut={()=>this.mouseOutArea()}/>
             );
         });
