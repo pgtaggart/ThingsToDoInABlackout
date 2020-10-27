@@ -1,9 +1,7 @@
 import React, { PureComponent } from 'react';
-
 import ResponsiveImageMap from './ResponsiveImageMap';
 import ImageMapArea from './ImageMapArea';
 import ImageMap from './ImageMap';
-
 import roomOne from '../images/RoomOne.jpg';
 import roomTwo from '../images/RoomTwo.jpg';
 import roomThree from '../images/RoomThree.jpg';
@@ -13,14 +11,11 @@ import roomSix from '../images/RoomSix.jpg';
 
 export default class Room extends PureComponent {
 
-    componentDidMount() {
-    }
+    componentDidMount() { }
     
-    componentWillUnmount() {
-    }
+    componentWillUnmount() { }
     
-    componentDidUpdate(prevProps, prevState) {
-    }
+    componentDidUpdate(prevProps, prevState) { }
 
     render() {
 

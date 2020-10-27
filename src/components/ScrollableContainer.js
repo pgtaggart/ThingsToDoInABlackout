@@ -5,7 +5,7 @@ import ImageMap from './ImageMap';
 import ResponsiveImageMap from './ResponsiveImageMap';
 import StreetScene from '../images/StreetScene.jpg';
 
-/**
+/*
 * This class is specific to the house layout and the actions it needs to take
 */
 export default class ScrollableContainer extends PureComponent {

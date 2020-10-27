@@ -46,16 +46,15 @@ export default class ResponsiveImageMap extends PureComponent {
             var viewHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
 
             if(viewHeight !== newHeight) {
-
-                console.log('Correcting image view height for ' + this.image);
-
                 const imageElement = document.getElementById(this.imageId);
                 imageElement.height = viewHeight;
                 newHeight = viewHeight;
                 ratioHeight = viewHeight / this.originalHeight;
             }
+
         } else {
-             ratioHeight = ratioWidth;
+             
+            ratioHeight = ratioWidth;
         }
 
         for (const area of this.map.areas) {
@@ -79,8 +78,7 @@ export default class ResponsiveImageMap extends PureComponent {
         this.setState({ imageWidth: newWidth, imageHeight: newHeight});
         
         return true;
-    };
-
+    }
 
     componentDidMount() {
         window.addEventListener('resize', this.resize, false);
@@ -95,12 +93,49 @@ export default class ResponsiveImageMap extends PureComponent {
         this.resize();
     }
 
+    mouseOverArea(areaId, coords) {
+        const coordsArr = coords.split(',');
+        const parentElement = document.getElementById(this.parentElementId);
+        
+        const newElement = document.createElement("div");
+        newElement.setAttribute("id", "infoDiv");
+        newElement.classList.add('infoDiv');
+        newElement.style.top = coordsArr[1] + "px";
+        newElement.style.left = coordsArr[0] + "px";
+        
+        const infoImg = document.createElement("img");
+        infoImg.setAttribute("src", "./images/info_icon.svg");
+        infoImg.setAttribute("height", "10");
+        infoImg.setAttribute("width", "10");
+        infoImg.setAttribute("alt", "Info");
+
+        newElement.appendChild(infoImg);        
+        parentElement.appendChild(newElement);
+    }
+
+    mouseOutArea() {
+        const parentElement = document.getElementById(this.parentElementId);
+        const infoDiv = document.getElementById('infoDiv');
+        parentElement.removeChild(infoDiv);
+    }
+
+    buildAreaItemsForStreet() {
+        return this.map.areas.map((item, index) => {
+            return (
+                <area key={index} target={item.target} alt="" title="" href="#" id={this.imageId + '_map' + index}
+                      coords={item.newCoords} shape={item.shape} 
+                      onClick={(e) => {e.preventDefault(); this.props.setRoomIndexFunction(index); this.props.toggleModalFunction() }}/>
+            );
+        });
+    }
+
     buildAreaItems() {
         return this.map.areas.map((item, index) => {
             return (
-                <area key={index} target={item.target} alt="" title="" href="#" 
-                coords={item.newCoords} shape={item.shape} 
-                onClick={(e) => {e.preventDefault(); this.props.setRoomIndexFunction(index); this.props.toggleModalFunction() }}/>
+                <area key={index} target={item.target} alt="" title="" href="#" id={this.imageId + '_map' + index}
+                      coords={item.newCoords} shape={item.shape} 
+                      onMouseOver={()=>this.mouseOverArea(this.imageId + '_map' + index, item.newCoords)}
+                      onMouseOut={()=>this.mouseOutArea()}/>
             );
         });
     }
@@ -110,7 +145,7 @@ export default class ResponsiveImageMap extends PureComponent {
             <>
                 <img src={this.image} useMap={'#' + this.map.name} className={this.className} alt='' hidefocus="true" id={this.imageId}/>
                 <map name={this.map.name}>
-                    {this.buildAreaItems()}
+                    { this.useViewHeight === 'true' ? this.buildAreaItemsForStreet() : this.buildAreaItems() }
                 </map>
             </>
         );
