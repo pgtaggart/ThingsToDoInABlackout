@@ -49,6 +49,45 @@ nav {
   opacity: 0.8;
 }
 
+.audio-content-modal {
+  background: whitesmoke;
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 15px 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+  height: 50vh;
+  width: 50vw;
+  z-index: 10001;
+}
+
+.image-content-modal {
+  background: whitesmoke;
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 2px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+  height: 70vh;
+  width: 90vw;
+  z-index: 10001;
+}
+
+.text-content-modal {
+  background: whitesmoke;
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+  height: 80vh;
+  width: 60vw;
+  z-index: 10001;
+}
+
 .modal-background {
   background: whitesmoke;
   position: absolute;
@@ -72,7 +111,7 @@ nav {
 
 .logo {
   position: absolute;
-  top: 20px;
+  top: 19px;
   left: 80px;
   margin: 0 auto;
   width: 400px;
@@ -83,7 +122,7 @@ nav {
 .footer {
   position: fixed;
   bottom: 0;
-  height: 40px;
+  height: 30px;
   border-top-width: 1px;
   border-top-style: solid;
   border-top-color: rgb(8, 8, 8);

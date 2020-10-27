@@ -110,7 +110,6 @@ export default class ResponsiveImageMap extends PureComponent {
         // Create the icon that will be used
         const infoIcon = document.createElement("i");
 
-
         // Set the icon, size and colour based on what type of area we have
         switch(mapType) {
 
@@ -158,6 +157,28 @@ export default class ResponsiveImageMap extends PureComponent {
         parentElement.removeChild(infoDiv);
     }
 
+    selectContentModalToOpen(type) {
+
+        switch(type){
+            case 'Audio' : 
+                this.props.toggleAudioContentModalFunction();
+                break;
+            
+            case 'Image' :
+                this.props.toggleImageContentModalFunction();
+                break;
+
+            case 'Text' :
+                this.props.toggleTextContentModalFunction();
+                break;
+
+            default :
+                // don't do anything if we don't know what type this is
+                break;
+        }
+    }
+
+
     buildAreaItemsForStreet() {
         return this.map.areas.map((item, index) => {
             return (
@@ -174,7 +195,8 @@ export default class ResponsiveImageMap extends PureComponent {
                 <area key={index} target={item.target} alt="" title="" href="#"
                       coords={item.newCoords} shape={item.shape} 
                       onMouseOver={()=>this.mouseOverArea(item.newCoords, item.type)}
-                      onMouseOut={()=>this.mouseOutArea()}/>
+                      onMouseOut={()=>this.mouseOutArea()}
+                      onClick={(e) => {e.preventDefault();  this.selectContentModalToOpen(item.type)}}/>
             );
         });
     }

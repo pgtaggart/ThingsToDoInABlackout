@@ -1,4 +1,7 @@
 import React, { PureComponent } from 'react';
+import { motion, useCycle, AnimatePresence } from 'framer-motion';
+import { ModalClose } from './ModalClose';
+
 import ResponsiveImageMap from './ResponsiveImageMap';
 import ImageMapArea from './ImageMapArea';
 import ImageMap from './ImageMap';
@@ -10,12 +13,6 @@ import roomFive from '../images/RoomFive.jpg';
 import roomSix from '../images/RoomSix.jpg';
 
 export default class Room extends PureComponent {
-
-    componentDidMount() { }
-    
-    componentWillUnmount() { }
-    
-    componentDidUpdate(prevProps, prevState) { }
 
     render() {
 
@@ -99,9 +96,56 @@ export default class Room extends PureComponent {
       return (
         <>
           <div className='modal-foreground' id={parentElementId}>
+            
             <ResponsiveImageMap image={roomImage} originalWidth={imageWidth} originalHeight={imageHeight}
                 map={imageMap} className='RoomImage' parentElementId={parentElementId} 
-                imageId={roomImageId} backgroundColor={backgroundColor} useViewHeight='false'/>
+                imageId={roomImageId} backgroundColor={backgroundColor} useViewHeight='false'
+                toggleAudioContentModalFunction={() => this.props.toggleAudioContentModalOpen()}
+                toggleImageContentModalFunction={() => this.props.toggleImageContentModalOpen()}
+                toggleTextContentModalFunction={() => this.props.toggleTextContentModalOpen()} />
+
+            <AnimatePresence>     
+              {this.props.isAudioContentModalOpen &&(
+                <motion.div
+                  key="audio-content-modal"
+                  className="audio-content-modal"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{delay: 0.1, duration: 0.5}}>
+                  <ModalClose toggle={() => this.props.toggleAudioContentModalOpen()} />
+                </motion.div>  
+              )}      
+            </AnimatePresence>
+
+            <AnimatePresence>     
+              {this.props.isImageContentModalOpen &&(
+                <motion.div
+                  key="image-content-modal"
+                  className="image-content-modal"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{delay: 0.1, duration: 0.5}}>
+                  <ModalClose toggle={() => this.props.toggleImageContentModalOpen()} />
+                </motion.div>  
+              )}      
+            </AnimatePresence>
+
+            <AnimatePresence>     
+              {this.props.isTextContentModalOpen &&(
+                <motion.div
+                  key="text-content-modal"
+                  className="text-content-modal"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{delay: 0.1, duration: 0.5}}>
+                  <ModalClose toggle={() => this.props.toggleTextContentModalOpen()} />
+                </motion.div>  
+              )}      
+            </AnimatePresence>
+
            </div>
         </>
       )

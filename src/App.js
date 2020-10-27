@@ -33,10 +33,13 @@ const sidebar = {
 };
 
 
-function App(){
+function App() {
 
   const [isNavOpen, toggleNavOpen] = useCycle(false, true); 
   const [isModalOpen, toggleModalOpen] = useCycle(false, true);
+  const [isAudioContentModalOpen, toggleAudioContentModalOpen] = useCycle(false, true);
+  const [isImageContentModalOpen, toggleImageContentModalOpen] = useCycle(false, true);
+  const [isTextContentModalOpen, toggleTextContentModalOpen] = useCycle(false, true);
   const [roomIndex, setRoomIndex] = useState(0);
 
   return (
@@ -65,7 +68,11 @@ function App(){
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{delay: 0.1, duration: 0.5}}>
-            <Room roomIndex={roomIndex}/>
+            <Room roomIndex={roomIndex} 
+                isAudioContentModalOpen={isAudioContentModalOpen} toggleAudioContentModalOpen={toggleAudioContentModalOpen}
+                isImageContentModalOpen={isImageContentModalOpen} toggleImageContentModalOpen={toggleImageContentModalOpen}
+                isTextContentModalOpen={isTextContentModalOpen} toggleTextContentModalOpen={toggleTextContentModalOpen}
+            />
             <ModalClose toggle={() => toggleModalOpen()} />
           </motion.div>  
         )}      
