@@ -71,9 +71,13 @@ function App() {
             <Room roomIndex={roomIndex} 
                 isAudioContentModalOpen={isAudioContentModalOpen} toggleAudioContentModalOpen={toggleAudioContentModalOpen}
                 isImageContentModalOpen={isImageContentModalOpen} toggleImageContentModalOpen={toggleImageContentModalOpen}
-                isTextContentModalOpen={isTextContentModalOpen} toggleTextContentModalOpen={toggleTextContentModalOpen}
+                isTextContentModalOpen={isTextContentModalOpen}   toggleTextContentModalOpen={toggleTextContentModalOpen}
             />
-            <RoomModalClose toggle={() => toggleModalOpen()} roomIndex={roomIndex}/>
+            <RoomModalClose toggle={() => toggleModalOpen()} roomIndex={roomIndex}
+              isAudioContentModalOpen={isAudioContentModalOpen} toggleAudioContentModalOpen={toggleAudioContentModalOpen}
+              isImageContentModalOpen={isImageContentModalOpen} toggleImageContentModalOpen={toggleImageContentModalOpen}
+              isTextContentModalOpen={isTextContentModalOpen}   toggleTextContentModalOpen={toggleTextContentModalOpen}
+            />
           </motion.div>  
         )}      
       </AnimatePresence>

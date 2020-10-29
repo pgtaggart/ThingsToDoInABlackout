@@ -2,14 +2,33 @@ import * as React from "react";
 
 const RoomModalClose = (properties) => {
 
-  var colour = 'black';
+  const onMouseClick = (event) => {
+    
+    // We are closing the room, so we need to close any open modals
+    if(properties.isAudioContentModalOpen) {
+      properties.toggleAudioContentModalOpen();
+    }
 
+    if(properties.isImageContentModalOpen) {
+      properties.toggleImageContentModalOpen();
+    }
+
+    if(properties.isTextContentModalOpen) {
+      properties.toggleTextContentModalOpen();
+    }
+
+    // Close the room modal
+    properties.toggle();
+  }
+
+  // Set the colour of the close button
+  var colour = 'black';
   if(properties.roomIndex === 1) {
     colour = 'white';
   }
 
   return (
-    <button className="room-close-modal-button" onClick={properties.toggle}>
+    <button className="room-close-modal-button" onClick={() => onMouseClick() }>
       <svg id="RoomExitSVG" width="512" height="512" viewBox="0 0 800 800"  xmlns="http://www.w3.org/2000/svg">
         <g>
             <path stroke={colour} strokeWidth="2" 
