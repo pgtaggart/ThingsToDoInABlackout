@@ -10,6 +10,11 @@
   width: 100%;
   height: auto;
   object-fit: cover;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -ms-user-select: none;
 }
 
 .infoDiv {
@@ -50,42 +55,63 @@ nav {
 }
 
 .audio-content-modal {
-  background: whitesmoke;
+  background-color: blanchedalmond;
   position: absolute;
   border: 1px solid black;
-  border-radius: 15px 50px;
+  border-radius: 10px;
+  box-shadow: 5px 10px 8px;
+}
+
+.audio-content-modal-body {
+  display: block;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) !important;
-  height: 50vh;
-  width: 50vw;
-  z-index: 10001;
+  width: 64px;
+  height: 64px;
+  background: url('./images/audioLoading.gif');
+  background-size: 64px 64px;
 }
 
 .image-content-modal {
-  background: whitesmoke;
+  background-color: blanchedalmond;
   position: absolute;
   border: 1px solid black;
-  border-radius: 2px;
+  border-radius: 10px;
+  box-shadow: 5px 10px 8px;
+}
+
+.image-content-modal-body {
+  display: block;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) !important;
-  height: 70vh;
-  width: 90vw;
-  z-index: 10001;
+  width: 64px;
+  height: 64px;
+  background: url('./images/imageLoading.gif');
+  background-size: 64px 64px;
 }
 
 .text-content-modal {
-  background: whitesmoke;
+  background-color: blanchedalmond;
   position: absolute;
   border: 1px solid black;
-  border-radius: 15px;
+  border-radius: 10px;
+  box-shadow: 5px 10px 8px;
+}
+
+.text-content-modal-body {
+  display: block;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) !important;
-  height: 80vh;
-  width: 60vw;
-  z-index: 10001;
+  width: 64px;
+  height: 64px;
+  background: url('./images/loading.svg');
+  background-size: 64px 64px;
 }
 
 .modal-background {

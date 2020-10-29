@@ -10,6 +10,8 @@
     "lodash.debounce": "^4.0.8",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-movable": "^2.5.3",
+    "react-moveable": "^0.23.0",
     "react-scripts": "3.4.1",
     "react-typist": "^2.0.5",
     "social-media-icons-react": "^1.0.10"

@@ -143,7 +143,7 @@ export default class ResponsiveImageMap extends PureComponent {
         const yOffset = parseInt(coordsArr[1]) + parseInt((coordsArr[3] - coordsArr[1]) / 2.0 ) - 19.5;
         
         // Set the location of the Div that will contain the icon
-        newElement.style.top  =   yOffset + "px";
+        newElement.style.top  =  yOffset + "px";
         newElement.style.left =  xOffset + "px";      
         
         // Add the icon to the div and the div to the parent
