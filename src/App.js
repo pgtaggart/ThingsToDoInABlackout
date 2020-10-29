@@ -4,7 +4,7 @@ import { motion, useCycle, AnimatePresence } from 'framer-motion';
 import { SocialMediaIconsReact } from 'social-media-icons-react';
 import { MenuToggle } from "./components/MenuToggle";
 import { Navigation } from "./components/Navigation";
-import { ModalClose } from './components/ModalClose';
+import RoomModalClose from './components/RoomModalClose';
 import ScrollableContainer from './components/ScrollableContainer';
 import Room from './components/room';
 import './App.css';
@@ -73,7 +73,7 @@ function App() {
                 isImageContentModalOpen={isImageContentModalOpen} toggleImageContentModalOpen={toggleImageContentModalOpen}
                 isTextContentModalOpen={isTextContentModalOpen} toggleTextContentModalOpen={toggleTextContentModalOpen}
             />
-            <ModalClose toggle={() => toggleModalOpen()} />
+            <RoomModalClose toggle={() => toggleModalOpen()} roomIndex={roomIndex}/>
           </motion.div>  
         )}      
       </AnimatePresence>

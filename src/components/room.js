@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import ContentModal from './ContentModal';
 
-
 import ResponsiveImageMap from './ResponsiveImageMap';
 import ImageMapArea from './ImageMapArea';
 import ImageMap from './ImageMap';
@@ -24,7 +23,7 @@ export default class Room extends PureComponent {
       var imageHeight= '';
       var roomImageId = '';
       var backgroundColor = '';
-
+     
       if (this.props.roomIndex === 0 ) {
         
         roomImage = roomOne;
@@ -48,7 +47,7 @@ export default class Room extends PureComponent {
         var roomTwoArea = new ImageMapArea('RoomTwo', 'RoomTwo', '100,100,200,200', 'rect', '');
         imageMap = new ImageMap('RoomTwo-imageMap', [roomTwoArea]);
         backgroundColor = 'rgb(33, 32, 27)';
-
+        
        } else if (this.props.roomIndex === 2 ) {
         
         roomImage = roomThree;
@@ -113,7 +112,7 @@ export default class Room extends PureComponent {
                   childClassName='audio-content-modal-body'
                   otherModals = {['image-content-modal-id','text-content-modal-id']}
                   top='1%' left='1%' width='20vw' height='20vh'
-                  toggleModalFunction={() => this.props.toggleAudioContentModalOpen()}/>
+                  toggleModalFunction={() => this.props.toggleAudioContentModalOpen()} />
               )}      
             </AnimatePresence>
 
@@ -125,7 +124,7 @@ export default class Room extends PureComponent {
                   childClassName='image-content-modal-body'
                   otherModals = {['audio-content-modal-id','text-content-modal-id']}
                   top='15%' left='15%' width='70vw' height='70vh'
-                  toggleModalFunction={() => this.props.toggleImageContentModalOpen()}/>
+                  toggleModalFunction={() => this.props.toggleImageContentModalOpen()} />
               )}      
             </AnimatePresence>
 
@@ -136,8 +135,8 @@ export default class Room extends PureComponent {
                   className='text-content-modal' 
                   childClassName='text-content-modal-body'
                   otherModals = {['audio-content-modal-id','image-content-modal-id']}
-                  top='1%' left='25%' width='50vw' height='90vh'
-                  toggleModalFunction={() => this.props.toggleTextContentModalOpen()}/>
+                  top='1%' left='25%' width='50vw' height='80vh'
+                  toggleModalFunction={() => this.props.toggleTextContentModalOpen()} />
               )}      
             </AnimatePresence>
 
