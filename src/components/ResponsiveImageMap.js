@@ -103,12 +103,13 @@ export default class ResponsiveImageMap extends PureComponent {
         const parentElement = document.getElementById(this.parentElementId);
         
         // Create the div and set it's location
-        const newElement = document.createElement("div");
-        newElement.setAttribute("id", "infoDiv");
+        const newElement = document.createElement('div');
+        newElement.setAttribute('id', 'infoDiv');
+        newElement.setAttribute('class', 'infoDiv');
         newElement.classList.add('infoDiv');
         
         // Create the icon that will be used
-        const infoIcon = document.createElement("i");
+        const infoIcon = document.createElement('i');
 
         // Set the icon, size and colour based on what type of area we have
         switch(mapType) {

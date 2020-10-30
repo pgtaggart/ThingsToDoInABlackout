@@ -1,4 +1,5 @@
 import * as React from "react";
+import { motion } from 'framer-motion';
 
 const RoomModalClose = (properties) => {
 
@@ -28,7 +29,7 @@ const RoomModalClose = (properties) => {
   }
 
   return (
-    <button className="room-close-modal-button" onClick={() => onMouseClick() }>
+    <motion.button className="room-close-modal-button" onClick={() => onMouseClick()} whileHover={{ scale: 1.5 }}>
       <svg id="RoomExitSVG" width="512" height="512" viewBox="0 0 800 800"  xmlns="http://www.w3.org/2000/svg">
         <g>
             <path stroke={colour} strokeWidth="2" 
@@ -37,7 +38,7 @@ const RoomModalClose = (properties) => {
               d="m26 36c1.682 0 3-1.757 3-4s-1.318-4-3-4-3 1.757-3 4 1.318 4 3 4zm0-6c.408 0 1 .779 1 2s-.592 2-1 2-1-.779-1-2 .592-2 1-2z"/>
         </g>
       </svg>
-    </button>
+    </motion.button>
   )
 
 }

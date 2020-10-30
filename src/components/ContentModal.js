@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { ModalClose } from './ModalClose';
 import ImageGallery from 'react-image-gallery';
 import PlayAudio from 'react-simple-audio-player';
+import chroma from 'chroma-js';
 
 const images = [
     {
@@ -18,6 +19,8 @@ const images = [
       thumbnail: 'https://picsum.photos/id/1019/250/150/',
     },
   ];
+
+const colourScale = chroma.scale(['#0199CB','#ffffff',]).mode('lch').colors(5);
 
 const ContentModal = (properties) => {
     
@@ -51,40 +54,25 @@ const ContentModal = (properties) => {
       }
     }
 
-    // Try to set the stack order of the modals and bring this one on top
-    /*
-    const checkFocusModal = (event) => {
-         
-        var thisModal = document.getElementById(properties.modalId);
-        thisModal.style.zIndex = '10001';
-       
-        for(var i = 0; i < properties.otherModals.length; i++) {
-            var otherModal = document.getElementById(properties.otherModals[i]);
-            if(otherModal) {
-                otherModal.style.zIndex = '1000';
-            }
-            
-        }
-    }
-    */
-
     // Choose the innder div type based on the type of modal we are creating
     const renderModalType = () => {
+
+        console.log('Setting modal type ' + properties.className + ' for room index ' + properties.roomIndex);
+
         switch(properties.className) {
             case 'image-content-modal' :
                 return (
                         <ImageGallery items={images} 
                                       showFullscreenButton={false} 
                                       showPlayButton={false}
-                                      disableSwipe={true} 
-                                      customAdditionalControls={[]} />);
+                                      disableSwipe={true}
+                                      />);
             case 'audio-content-modal' :
-                return(<PlayAudio url={'http://www.noiseaddicts.com/samples_1w72b820/4186.mp3'} />);
+                return(<PlayAudio url={'http://www.noiseaddicts.com/samples_1w72b820/4186.mp3'} colorScale={colourScale}/>);
             default :
                 return (<div className={properties.childClassName}></div>);
         }
     }
-
 
     // choose the icon for the close modal
     const closeModalIcon = () => {
@@ -98,20 +86,16 @@ const ContentModal = (properties) => {
         }
     }
 
-
     return (
         <motion.div
             ref={ref}
             id={properties.modalId}
             className={properties.className}
-            onMouseMove={ properties.canMove ? onMouseMove : null }
-            onMouseDown={ () => setPressed(true)  }
-            onMouseUp={   () => setPressed(false) }
-            onMouseOut={  () => setPressed(false) }
+            whileHover={properties.className === 'audio-content-modal' ? { scale: 1.2 } : {}}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{delay: 0.1, duration: 0.7}}>
+            transition={{delay: 0.0, duration: 0.7}}>
         {closeModalIcon()}
         {renderModalType()}
         </motion.div> 
