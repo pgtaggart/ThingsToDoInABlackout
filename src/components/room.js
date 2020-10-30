@@ -111,7 +111,7 @@ export default class Room extends PureComponent {
                   className='audio-content-modal' 
                   childClassName='audio-content-modal-body'
                   otherModals = {['image-content-modal-id','text-content-modal-id']}
-                  top='1%' left='1%' width='20vw' height='20vh'
+                  top='1%' left='1%'
                   toggleModalFunction={() => this.props.toggleAudioContentModalOpen()}
                   canMove={true}/>
               )}      

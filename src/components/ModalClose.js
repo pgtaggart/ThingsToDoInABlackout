@@ -1,7 +1,7 @@
 import * as React from "react";
 
-export const ModalClose = ({ toggle }) => (
-  <button className="close-modal-button" onClick={toggle}>
-    <i className='glyphicon glyphicon-remove'/>
+export const ModalClose = ({ toggle, icon, className }) => (
+  <button className={className} onClick={toggle}>
+    <i className={icon}/>
   </button>
 );

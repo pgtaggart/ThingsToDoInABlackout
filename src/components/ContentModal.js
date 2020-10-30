@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ModalClose } from './ModalClose';
 import ImageGallery from 'react-image-gallery';
+import PlayAudio from 'react-simple-audio-player';
 
 const images = [
     {
@@ -51,6 +52,7 @@ const ContentModal = (properties) => {
     }
 
     // Try to set the stack order of the modals and bring this one on top
+    /*
     const checkFocusModal = (event) => {
          
         var thisModal = document.getElementById(properties.modalId);
@@ -64,23 +66,38 @@ const ContentModal = (properties) => {
             
         }
     }
-  
+    */
+
+    // Choose the innder div type based on the type of modal we are creating
     const renderModalType = () => {
-
         switch(properties.className) {
-
             case 'image-content-modal' :
                 return (
                         <ImageGallery items={images} 
-                                    showFullscreenButton={false} 
-                                    showPlayButton={false}
-                                    disableSwipe={true} />
-                );
-
+                                      showFullscreenButton={false} 
+                                      showPlayButton={false}
+                                      disableSwipe={true} 
+                                      customAdditionalControls={[]} />);
+            case 'audio-content-modal' :
+                return(<PlayAudio url={'http://www.noiseaddicts.com/samples_1w72b820/4186.mp3'} />);
             default :
                 return (<div className={properties.childClassName}></div>);
         }
     }
+
+
+    // choose the icon for the close modal
+    const closeModalIcon = () => {
+        switch(properties.className) {
+            case 'image-content-modal' :
+                return (<ModalClose toggle={() => properties.toggleModalFunction()} icon='glyphicon glyphicon-remove-sign' className='close-modal-button'/>);
+            case 'audio-content-modal' :
+                return (<ModalClose toggle={() => properties.toggleModalFunction()} icon='glyphicon glyphicon-remove-sign' className='close-audio-modal-button'/>);
+            default :
+                return (<ModalClose toggle={() => properties.toggleModalFunction()} icon='glyphicon glyphicon-remove' className='close-modal-button'/> );
+        }
+    }
+
 
     return (
         <motion.div
@@ -94,8 +111,8 @@ const ContentModal = (properties) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{delay: 0.1, duration: 0.5}}>
-        <ModalClose toggle={() => properties.toggleModalFunction()}/>
+            transition={{delay: 0.1, duration: 0.7}}>
+        {closeModalIcon()}
         {renderModalType()}
         </motion.div> 
     )
