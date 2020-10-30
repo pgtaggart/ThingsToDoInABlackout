@@ -8,7 +8,7 @@ import RoomModalClose from './components/RoomModalClose';
 import ScrollableContainer from './components/ScrollableContainer';
 import Room from './components/room';
 import './App.css';
-
+import './imageGallery.scss';
 
 const sidebar = {
   open: (height = 1000) => ({

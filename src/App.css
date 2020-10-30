@@ -75,11 +75,7 @@ nav {
 }
 
 .image-content-modal {
-  background-color: blanchedalmond;
   position: absolute;
-  border: 1px solid black;
-  border-radius: 10px;
-  box-shadow: 5px 10px 8px;
 }
 
 .image-content-modal-body {
@@ -115,6 +111,7 @@ nav {
 }
 
 .modal-background {
+  overflow-x: hidden;
   background: whitesmoke;
   position: absolute;
   top: 50%;

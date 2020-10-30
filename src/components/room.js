@@ -112,7 +112,8 @@ export default class Room extends PureComponent {
                   childClassName='audio-content-modal-body'
                   otherModals = {['image-content-modal-id','text-content-modal-id']}
                   top='1%' left='1%' width='20vw' height='20vh'
-                  toggleModalFunction={() => this.props.toggleAudioContentModalOpen()} />
+                  toggleModalFunction={() => this.props.toggleAudioContentModalOpen()}
+                  canMove={true}/>
               )}      
             </AnimatePresence>
 
@@ -124,7 +125,8 @@ export default class Room extends PureComponent {
                   childClassName='image-content-modal-body'
                   otherModals = {['audio-content-modal-id','text-content-modal-id']}
                   top='15%' left='15%' width='70vw' height='70vh'
-                  toggleModalFunction={() => this.props.toggleImageContentModalOpen()} />
+                  toggleModalFunction={() => this.props.toggleImageContentModalOpen()} 
+                  canMove={false}/>
               )}      
             </AnimatePresence>
 
@@ -136,7 +138,8 @@ export default class Room extends PureComponent {
                   childClassName='text-content-modal-body'
                   otherModals = {['audio-content-modal-id','image-content-modal-id']}
                   top='1%' left='25%' width='50vw' height='80vh'
-                  toggleModalFunction={() => this.props.toggleTextContentModalOpen()} />
+                  toggleModalFunction={() => this.props.toggleTextContentModalOpen()}
+                  canMove={true} />
               )}      
             </AnimatePresence>
 

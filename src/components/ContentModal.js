@@ -1,6 +1,22 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ModalClose } from './ModalClose';
+import ImageGallery from 'react-image-gallery';
+
+const images = [
+    {
+      original: 'https://picsum.photos/id/1018/1000/600/',
+      thumbnail: 'https://picsum.photos/id/1018/250/150/',
+    },
+    {
+      original: 'https://picsum.photos/id/1015/1000/600/',
+      thumbnail: 'https://picsum.photos/id/1015/250/150/',
+    },
+    {
+      original: 'https://picsum.photos/id/1019/1000/600/',
+      thumbnail: 'https://picsum.photos/id/1019/250/150/',
+    },
+  ];
 
 const ContentModal = (properties) => {
     
@@ -49,12 +65,29 @@ const ContentModal = (properties) => {
         }
     }
   
+    const renderModalType = () => {
+
+        switch(properties.className) {
+
+            case 'image-content-modal' :
+                return (
+                        <ImageGallery items={images} 
+                                    showFullscreenButton={false} 
+                                    showPlayButton={false}
+                                    disableSwipe={true} />
+                );
+
+            default :
+                return (<div className={properties.childClassName}></div>);
+        }
+    }
+
     return (
         <motion.div
             ref={ref}
             id={properties.modalId}
             className={properties.className}
-            onMouseMove={ onMouseMove }
+            onMouseMove={ properties.canMove ? onMouseMove : null }
             onMouseDown={ () => setPressed(true)  }
             onMouseUp={   () => setPressed(false) }
             onMouseOut={  () => setPressed(false) }
@@ -63,7 +96,7 @@ const ContentModal = (properties) => {
             exit={{ opacity: 0 }}
             transition={{delay: 0.1, duration: 0.5}}>
         <ModalClose toggle={() => properties.toggleModalFunction()}/>
-        <div className={properties.childClassName}></div>
+        {renderModalType()}
         </motion.div> 
     )
   }
