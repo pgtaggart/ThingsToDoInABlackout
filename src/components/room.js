@@ -31,10 +31,18 @@ export default class Room extends PureComponent {
         parentElementId = 'RoomOne';
         imageWidth = '1920';
         imageHeight= '1080';    
-        var roomOneAreaOne = new ImageMapArea('RoomOne', 'RoomOne', '801,210,1004,437', 'rect', '', 'Audio');
-        var roomOneAreaTwo = new ImageMapArea('RoomOne', 'RoomOne', '1681,297,1835,566', 'rect', '', 'Image');
-        var roomOneAreaThree = new ImageMapArea('RoomOne', 'RoomOne', '20,877,271,1063', 'rect', '', 'Text');
-        imageMap = new ImageMap('RoomOne-imageMap', [roomOneAreaOne, roomOneAreaTwo, roomOneAreaThree]);
+    
+        var roomOneAreaPoster = new ImageMapArea('RoomOne-Poster', 'RoomOne', '803,217,998,432', 'rect', '', 'Image');
+        var roomOneAreaDiary = new ImageMapArea('RoomOne-Diary', 'RoomOne', '20,890,269,1058', 'rect', '', 'Image');
+        var roomOneAreaGasMask = new ImageMapArea('RoomOne-GasMask', 'RoomOne', '1694,302,1829,554', 'rect', '', 'Image');
+        var roomOneAreaMilkPail = new ImageMapArea('RoomOne-MilkPail', 'RoomOne', '1110,397,1197,517', 'rect', '', 'Text');
+        var roomOneAreaWallPicture = new ImageMapArea('RoomOne-WallPicture', 'RoomOne', '201,236,299,324', 'rect', '', 'Text');
+        var roomOneAreaRationBook = new ImageMapArea('RoomOne-RationBook', 'RoomOne', '1166,939,1398,1075', 'rect', '', 'AudioImage');
+        var roomOneAreaSuitcase = new ImageMapArea('RoomOne-Suitcase', 'RoomOne', '194,575,403,741', 'rect', '', 'Text');
+        var roomOneAreaWindow = new ImageMapArea('RoomOne-Window', 'RoomOne', '423,134,751,439', 'rect', '', 'Text');
+        var roomOneAreaSweets = new ImageMapArea('RoomOne-Sweets', 'RoomOne', '1582,604,1751,685', 'rect', '', 'Text');
+
+        imageMap = new ImageMap('RoomOne-imageMap', [roomOneAreaPoster, roomOneAreaDiary, roomOneAreaGasMask, roomOneAreaMilkPail, roomOneAreaWallPicture, roomOneAreaRationBook, roomOneAreaSuitcase, roomOneAreaWindow, roomOneAreaSweets]);
         backgroundColor = 'rgb(210, 201, 140)';
     
       } else if (this.props.roomIndex === 1 ) {
@@ -102,7 +110,11 @@ export default class Room extends PureComponent {
                 imageId={roomImageId} backgroundColor={backgroundColor} useViewHeight='false'
                 toggleAudioContentModalFunction={() => this.props.toggleAudioContentModalOpen()}
                 toggleImageContentModalFunction={() => this.props.toggleImageContentModalOpen()}
-                toggleTextContentModalFunction={() => this.props.toggleTextContentModalOpen()} />
+                toggleTextContentModalFunction={() => this.props.toggleTextContentModalOpen()}
+                isAudioContentModalOpen={this.props.isAudioContentModalOpen}
+                isImageContentModalOpen={this.props.isImageContentModalOpen}
+                isTextContentModalOpen={this.props.isTextContentModalOpen}
+                setMapAreaTitleFunction={this.props.setMapAreaTitleFunction}/>
 
             <AnimatePresence>     
               {this.props.isAudioContentModalOpen &&(
@@ -112,9 +124,14 @@ export default class Room extends PureComponent {
                   childClassName='audio-content-modal-body'
                   otherModals = {['image-content-modal-id','text-content-modal-id']}
                   top='1%' left='1%'
-                  toggleModalFunction={() => this.props.toggleAudioContentModalOpen()}
-                  canMove={true}
-                  roomIndex={this.props.roomIndex}/>
+                  toggleAudioContentModalFunction={() => this.props.toggleAudioContentModalOpen()}
+                  toggleImageContentModalFunction={() => this.props.toggleImageContentModalOpen()}
+                  toggleTextContentModalFunction={() => this.props.toggleTextContentModalOpen()}
+                  isAudioContentModalOpen={this.props.isAudioContentModalOpen}
+                  isImageContentModalOpen={this.props.isImageContentModalOpen}
+                  isTextContentModalOpen={this.props.isTextContentModalOpen}
+                  roomIndex={this.props.roomIndex}
+                  mapAreaTitle={this.props.mapAreaTitle}/>
               )}      
             </AnimatePresence>
 
@@ -126,9 +143,14 @@ export default class Room extends PureComponent {
                   childClassName='image-content-modal-body'
                   otherModals = {['audio-content-modal-id','text-content-modal-id']}
                   top='15%' left='15%' width='70vw' height='70vh'
-                  toggleModalFunction={() => this.props.toggleImageContentModalOpen()} 
-                  canMove={false}
-                  roomIndex={this.props.roomIndex}/>
+                  toggleAudioContentModalFunction={() => this.props.toggleAudioContentModalOpen()}
+                  toggleImageContentModalFunction={() => this.props.toggleImageContentModalOpen()}
+                  toggleTextContentModalFunction={() => this.props.toggleTextContentModalOpen()}
+                  isAudioContentModalOpen={this.props.isAudioContentModalOpen}
+                  isImageContentModalOpen={this.props.isImageContentModalOpen}
+                  isTextContentModalOpen={this.props.isTextContentModalOpen} 
+                  roomIndex={this.props.roomIndex}
+                  mapAreaTitle={this.props.mapAreaTitle}/>
               )}      
             </AnimatePresence>
 
@@ -140,9 +162,14 @@ export default class Room extends PureComponent {
                   childClassName='text-content-modal-body'
                   otherModals = {['audio-content-modal-id','image-content-modal-id']}
                   top='1%' left='25%' width='50vw' height='80vh'
-                  toggleModalFunction={() => this.props.toggleTextContentModalOpen()}
-                  canMove={true}
-                  roomIndex={this.props.roomIndex}/>
+                  toggleAudioContentModalFunction={() => this.props.toggleAudioContentModalOpen()}
+                  toggleImageContentModalFunction={() => this.props.toggleImageContentModalOpen()}
+                  toggleTextContentModalFunction={() => this.props.toggleTextContentModalOpen()}
+                  isAudioContentModalOpen={this.props.isAudioContentModalOpen}
+                  isImageContentModalOpen={this.props.isImageContentModalOpen}
+                  isTextContentModalOpen={this.props.isTextContentModalOpen}
+                  roomIndex={this.props.roomIndex}
+                  mapAreaTitle={this.props.mapAreaTitle}/>
               )}      
             </AnimatePresence>
 

@@ -1,39 +1,18 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ModalClose } from './ModalClose';
 import ImageGallery from 'react-image-gallery';
 import PlayAudio from 'react-simple-audio-player';
 import chroma from 'chroma-js';
+import imageLoader from './ImageLoader.js'
 
-const images = [
-    {
-      original: 'https://picsum.photos/id/1018/1000/600/',
-      thumbnail: 'https://picsum.photos/id/1018/250/150/',
-    },
-    {
-      original: 'https://picsum.photos/id/1015/1000/600/',
-      thumbnail: 'https://picsum.photos/id/1015/250/150/',
-    },
-    {
-      original: 'https://picsum.photos/id/1019/1000/600/',
-      thumbnail: 'https://picsum.photos/id/1019/250/150/',
-    },
-  ];
+import RationBookAudio from '../media/room-one/RationBook/Rationing.mp3';
 
 const colourScale = chroma.scale(['#0199CB','#ffffff',]).mode('lch').colors(5);
 
 const ContentModal = (properties) => {
     
-    const [pressed, setPressed] = useState(false);
-    const [position, setPosition] = useState({x: 0, y: 0});
     const ref = useRef();
-
-    // Monitor changes to position state and update DOM
-    useEffect(() => {
-        if (ref.current) {
-            ref.current.style.transform = `translate(${position.x}px, ${position.y}px)`
-        }
-    }, [position]);
   
     // Monitor changes to the ref, this will effecively fire when this mounts
     useEffect(() => {
@@ -44,45 +23,69 @@ const ContentModal = (properties) => {
 
     });
 
-    // Update the current position if mouse is down
-    const onMouseMove = (event) => {
-      if (pressed) {
-        setPosition({
-          x: position.x + event.movementX,
-          y: position.y + event.movementY
-        });
-      }
-    }
-
     // Choose the innder div type based on the type of modal we are creating
     const renderModalType = () => {
 
-        console.log('Setting modal type ' + properties.className + ' for room index ' + properties.roomIndex);
+        console.log('Modal Title: ' + properties.mapAreaTitle);
+        console.log('Modal Type: ' + properties.className);
 
-        switch(properties.className) {
-            case 'image-content-modal' :
-                return (
-                        <ImageGallery items={images} 
-                                      showFullscreenButton={false} 
-                                      showPlayButton={false}
-                                      disableSwipe={true}
-                                      />);
-            case 'audio-content-modal' :
-                return(<PlayAudio url={'http://www.noiseaddicts.com/samples_1w72b820/4186.mp3'} colorScale={colourScale}/>);
+        switch(properties.roomIndex) {
+
+            case 0 :
+            {
+                switch(properties.mapAreaTitle) {
+                    
+                    case 'RoomOne-GasMask' :
+                    case 'RoomOne-Poster' :
+                        return ( <ImageGallery items={imageLoader.galleryLoader(properties.mapAreaTitle)} 
+                                        showFullscreenButton={false} 
+                                        showPlayButton={false}
+                                        disableSwipe={true}/>);
+                    
+                    case 'RoomOne-RationBook' :
+                        switch(properties.className) {
+                            case 'audio-content-modal' :
+                                return(<PlayAudio url={RationBookAudio} colorScale={colourScale}/>);
+                            case 'image-content-modal' :
+                                return ( <ImageGallery items={imageLoader.galleryLoader(properties.mapAreaTitle)} 
+                                        showFullscreenButton={false} 
+                                        showPlayButton={false}
+                                        disableSwipe={true}/>);
+                        }
+                        
+                    case 'text-content-modal' :
+                    {
+                        return (<div className={properties.childClassName}></div>);
+                    }
+
+                    default :
+                        return (<div className={properties.childClassName}></div>);
+                }
+            }
             default :
-                return (<div className={properties.childClassName}></div>);
+                return (<div className={properties.childClassName}><p>Romm not Implemented</p></div>);
         }
+
+        
+    }
+
+    const closeModalContent = () => {
+
+        // If any of the modals are open then close them
+        if(properties.isAudioContentModalOpen) properties.toggleAudioContentModalFunction();
+        if(properties.isImageContentModalOpen) properties.toggleImageContentModalFunction();
+        if(properties.isTextContentModalOpen) properties.toggleTextContentModalFunction();
     }
 
     // choose the icon for the close modal
     const closeModalIcon = () => {
         switch(properties.className) {
             case 'image-content-modal' :
-                return (<ModalClose toggle={() => properties.toggleModalFunction()} icon='glyphicon glyphicon-remove-sign' className='close-modal-button'/>);
+                return (<ModalClose toggle={closeModalContent} icon='glyphicon glyphicon-remove-sign' className='close-modal-button'/>);
             case 'audio-content-modal' :
-                return (<ModalClose toggle={() => properties.toggleModalFunction()} icon='glyphicon glyphicon-remove-sign' className='close-audio-modal-button'/>);
+                return (<ModalClose toggle={closeModalContent} icon='glyphicon glyphicon-remove-sign' className='close-audio-modal-button'/>);
             default :
-                return (<ModalClose toggle={() => properties.toggleModalFunction()} icon='glyphicon glyphicon-remove' className='close-modal-button'/> );
+                return (<ModalClose toggle={closeModalContent} icon='glyphicon glyphicon-remove' className='close-modal-button'/> );
         }
     }
 

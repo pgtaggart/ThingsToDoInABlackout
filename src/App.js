@@ -41,6 +41,7 @@ function App() {
   const [isImageContentModalOpen, toggleImageContentModalOpen] = useCycle(false, true);
   const [isTextContentModalOpen, toggleTextContentModalOpen] = useCycle(false, true);
   const [roomIndex, setRoomIndex] = useState(0);
+  const [mapAreaTitle, setMapAreaTitle] = useState('unknown');
 
   return (
     <>
@@ -68,10 +69,11 @@ function App() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{delay: 0.1, duration: 0.5}}>
-            <Room roomIndex={roomIndex} 
+            <Room roomIndex={roomIndex} mapAreaTitle={mapAreaTitle}
                 isAudioContentModalOpen={isAudioContentModalOpen} toggleAudioContentModalOpen={toggleAudioContentModalOpen}
                 isImageContentModalOpen={isImageContentModalOpen} toggleImageContentModalOpen={toggleImageContentModalOpen}
                 isTextContentModalOpen={isTextContentModalOpen}   toggleTextContentModalOpen={toggleTextContentModalOpen}
+                setMapAreaTitleFunction={(modalTitle) => setMapAreaTitle(modalTitle)}
             />
             <RoomModalClose toggle={() => toggleModalOpen()} roomIndex={roomIndex}
               isAudioContentModalOpen={isAudioContentModalOpen} toggleAudioContentModalOpen={toggleAudioContentModalOpen}

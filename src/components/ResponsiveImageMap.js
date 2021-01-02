@@ -121,6 +121,7 @@ export default class ResponsiveImageMap extends PureComponent {
                 break;
             
             case 'Image' :
+            case 'AudioImage' :
                 infoIcon.setAttribute("class", "glyphicon glyphicon-picture");
                 infoIcon.style.fontSize = "2.5em";  // icon at 2.5em is 35x39 px
                 infoIcon.style.color = this.iconColour;
@@ -158,9 +159,18 @@ export default class ResponsiveImageMap extends PureComponent {
         parentElement.removeChild(infoDiv);
     }
 
-    selectContentModalToOpen(type) {
+    selectContentModalToOpen(type, title) {
 
-        switch(type){
+        // Set the title of the map area that was clicked
+        this.props.setMapAreaTitleFunction(title);
+
+        // If any of the modals are open then close them first
+        if(this.props.isAudioContentModalOpen) this.props.toggleAudioContentModalFunction();
+        if(this.props.isImageContentModalOpen) this.props.toggleImageContentModalFunction();
+        if(this.props.isTextContentModalOpen) this.props.toggleTextContentModalFunction();
+
+        // Now trigger the new open of the modal
+        switch(type) {
             case 'Audio' : 
                 this.props.toggleAudioContentModalFunction();
                 break;
@@ -171,6 +181,10 @@ export default class ResponsiveImageMap extends PureComponent {
 
             case 'Text' :
                 this.props.toggleTextContentModalFunction();
+                break;
+            case 'AudioImage' :
+                this.props.toggleAudioContentModalFunction();
+                this.props.toggleImageContentModalFunction();
                 break;
 
             default :
@@ -197,7 +211,7 @@ export default class ResponsiveImageMap extends PureComponent {
                       coords={item.newCoords} shape={item.shape} 
                       onMouseOver={()=>this.mouseOverArea(item.newCoords, item.type)}
                       onMouseOut={()=>this.mouseOutArea()}
-                      onClick={(e) => {e.preventDefault();  this.selectContentModalToOpen(item.type)}}/>
+                      onClick={(e) => {e.preventDefault();  this.selectContentModalToOpen(item.type, item.title)}}/>
             );
         });
     }
