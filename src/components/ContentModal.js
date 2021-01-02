@@ -51,6 +51,8 @@ const ContentModal = (properties) => {
                                         showFullscreenButton={false} 
                                         showPlayButton={false}
                                         disableSwipe={true}/>);
+                            default :
+                                return;
                         }
                         
                     case 'text-content-modal' :
