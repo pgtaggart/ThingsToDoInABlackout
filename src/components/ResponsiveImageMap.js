@@ -169,6 +169,12 @@ export default class ResponsiveImageMap extends PureComponent {
         if(this.props.isImageContentModalOpen) this.props.toggleImageContentModalFunction();
         if(this.props.isTextContentModalOpen) this.props.toggleTextContentModalFunction();
 
+        // Show the lightbox
+        document.getElementById('lightBoxDiv').style.display = "block";
+
+        // Hide the room image
+        document.getElementById(this.props.imageId).style.opacity = '0.1';
+
         // Now trigger the new open of the modal
         switch(type) {
             case 'Audio' : 

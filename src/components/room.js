@@ -38,9 +38,9 @@ export default class Room extends PureComponent {
         var roomOneAreaMilkPail = new ImageMapArea('RoomOne-MilkPail', 'RoomOne', '1110,397,1197,517', 'rect', '', 'Text');
         var roomOneAreaWallPicture = new ImageMapArea('RoomOne-WallPicture', 'RoomOne', '201,236,299,324', 'rect', '', 'Text');
         var roomOneAreaRationBook = new ImageMapArea('RoomOne-RationBook', 'RoomOne', '1166,939,1398,1075', 'rect', '', 'AudioImage');
-        var roomOneAreaSuitcase = new ImageMapArea('RoomOne-Suitcase', 'RoomOne', '194,575,403,741', 'rect', '', 'Text');
-        var roomOneAreaWindow = new ImageMapArea('RoomOne-Window', 'RoomOne', '423,134,751,439', 'rect', '', 'Text');
-        var roomOneAreaSweets = new ImageMapArea('RoomOne-Sweets', 'RoomOne', '1582,604,1751,685', 'rect', '', 'Text');
+        var roomOneAreaSuitcase = new ImageMapArea('RoomOne-Suitcase', 'RoomOne', '194,575,403,741', 'rect', '', 'AudioImage');
+        var roomOneAreaWindow = new ImageMapArea('RoomOne-Window', 'RoomOne', '423,134,751,439', 'rect', '', 'AudioImage');
+        var roomOneAreaSweets = new ImageMapArea('RoomOne-Sweets', 'RoomOne', '1582,604,1751,685', 'rect', '', 'AudioImage');
 
         imageMap = new ImageMap('RoomOne-imageMap', [roomOneAreaPoster, roomOneAreaDiary, roomOneAreaGasMask, roomOneAreaMilkPail, roomOneAreaWallPicture, roomOneAreaRationBook, roomOneAreaSuitcase, roomOneAreaWindow, roomOneAreaSweets]);
         backgroundColor = 'rgb(210, 201, 140)';
@@ -142,7 +142,7 @@ export default class Room extends PureComponent {
                   className='image-content-modal' 
                   childClassName='image-content-modal-body'
                   otherModals = {['audio-content-modal-id','text-content-modal-id']}
-                  top='15%' left='15%' width='70vw' height='70vh'
+                  top='3%' left='15%' width='70vw' height='70vh'
                   toggleAudioContentModalFunction={() => this.props.toggleAudioContentModalOpen()}
                   toggleImageContentModalFunction={() => this.props.toggleImageContentModalOpen()}
                   toggleTextContentModalFunction={() => this.props.toggleTextContentModalOpen()}

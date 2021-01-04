@@ -69,6 +69,7 @@ function App() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{delay: 0.1, duration: 0.5}}>
+            <div class="lightBoxLayer" id="lightBoxDiv"></div>
             <Room roomIndex={roomIndex} mapAreaTitle={mapAreaTitle}
                 isAudioContentModalOpen={isAudioContentModalOpen} toggleAudioContentModalOpen={toggleAudioContentModalOpen}
                 isImageContentModalOpen={isImageContentModalOpen} toggleImageContentModalOpen={toggleImageContentModalOpen}
@@ -83,6 +84,8 @@ function App() {
           </motion.div>  
         )}      
       </AnimatePresence>
+
+      
 
       <div className="footer">
         <Typist cursor={{ hideWhenDone: true }} startDelay={3000}>

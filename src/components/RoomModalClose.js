@@ -18,6 +18,9 @@ const RoomModalClose = (properties) => {
       properties.toggleTextContentModalOpen();
     }
 
+    // hide the lightbox
+    document.getElementById('lightBoxDiv').style.display = "none";
+
     // Close the room modal
     properties.toggle();
   }
