@@ -103,7 +103,6 @@ export default class ResponsiveImageMap extends PureComponent {
         var imageModal = document.getElementById('image-content-modal-id');
         var textModal = document.getElementById('text-content-modal-id');
         if(imageModal || textModal) {
-            console.log('Modal is displayed');
             return;
         }
 
@@ -177,7 +176,7 @@ export default class ResponsiveImageMap extends PureComponent {
 
         // Set the type of the map area that was clicked
         this.props.setMapAreaTypeFunction(type);
-        
+
         // If any of the modals are open then close them first
         if(this.props.isAudioContentModalOpen) this.props.toggleAudioContentModalFunction();
         if(this.props.isImageContentModalOpen) this.props.toggleImageContentModalFunction();

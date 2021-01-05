@@ -28,8 +28,8 @@ const ContentModal = (properties) => {
 
         switch(properties.mapAreaType) {
             
-            // These are the image gallery types
-            case 'Image' :
+            case 'Image' : // These are the image gallery only types
+        
                 return (<ImageGallery items={imageLoader.galleryLoader(properties.mapAreaTitle)} 
                                 showFullscreenButton={false} 
                                 showPlayButton={false}
@@ -38,7 +38,8 @@ const ContentModal = (properties) => {
                                 autoPlay={false}
                                 disableSwipe={true}/>);
             
-            case 'AudioImage' :
+            case 'AudioImage' : // These types are image and audio
+    
                 switch(properties.className) {
                     case 'audio-content-modal' :
                         return audioLoader.loadAudio(properties.mapAreaTitle);
@@ -53,8 +54,10 @@ const ContentModal = (properties) => {
                     default :
                         return;
                 }
+            
             case 'Text' : // These are the text types so use the selector
                 return (<div className="TypeWriterTextBlock">{textLoader.loadText(properties.mapAreaTitle)}</div>);
+            
             default :
                 return (<div className={properties.childClassName}></div>);
         }
@@ -78,11 +81,8 @@ const ContentModal = (properties) => {
     // choose the icon for the close modal
     const closeModalIcon = () => {
         switch(properties.className) {
-            case 'image-content-modal' :
-                return (<ModalClose toggle={closeModalContent} icon='glyphicon glyphicon-remove-sign' className='close-modal-button'/>);
             case 'audio-content-modal' :
                 // disable button for audio as we will always show an image gallery with this control, looks cleaner
-                //return (<ModalClose toggle={closeModalContent} icon='glyphicon glyphicon-remove-sign' className='close-audio-modal-button'/>);
                 return;
             default :
                 return (<ModalClose toggle={closeModalContent} icon='glyphicon glyphicon-remove' className='close-modal-button'/> );
