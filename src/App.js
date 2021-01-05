@@ -9,6 +9,7 @@ import ScrollableContainer from './components/ScrollableContainer';
 import Room from './components/room';
 import './App.css';
 import './imageGallery.scss';
+import bounceLogo from './images/bounce-logo-purple.svg'
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -32,11 +33,11 @@ const sidebar = {
   }
 };
 
-
 function App() {
 
   const [isNavOpen, toggleNavOpen] = useCycle(false, true); 
   const [isModalOpen, toggleModalOpen] = useCycle(false, true);
+  const [isAboutModalOpen, toggleAboutModalOpen] = useCycle(false, true);
   const [isAudioContentModalOpen, toggleAudioContentModalOpen] = useCycle(false, true);
   const [isImageContentModalOpen, toggleImageContentModalOpen] = useCycle(false, true);
   const [isTextContentModalOpen, toggleTextContentModalOpen] = useCycle(false, true);
@@ -56,8 +57,8 @@ function App() {
 
       <motion.nav initial={false} animate={isNavOpen ? "open" : "closed"}>
         <motion.div className="nav-background" variants={sidebar}>
-          <Navigation />
-          <MenuToggle toggle={() => toggleNavOpen()} />
+          <Navigation toggleAboutModalOpen={toggleAboutModalOpen} toggleNavOpen={toggleNavOpen}/>
+          <MenuToggle toggle={() => toggleNavOpen()} isAboutModalOpen={isAboutModalOpen} toggleAboutModalOpen={toggleAboutModalOpen}/>
         </motion.div>
       </motion.nav>
 
@@ -66,9 +67,9 @@ function App() {
           <motion.div
             key="modal"
             className="modal-background"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={{ scale:0, y: -1000 }}
+            animate={{ scale: 1, y: 0 }}
+            exit={{ x: 0, scale: 0 }}
             transition={{delay: 0.1, duration: 0.5}}>
             <div className="lightBoxLayer" id="lightBoxDiv"></div>
             <Room roomIndex={roomIndex} mapAreaTitle={mapAreaTitle} mapAreaType={mapAreaType}
@@ -87,7 +88,43 @@ function App() {
         )}      
       </AnimatePresence>
 
-      
+      <AnimatePresence>     
+        {isAboutModalOpen &&(
+          <div>
+            <motion.div className="aboutModalBackgroundLeft"
+                initial={{ x: -1000 }}
+                animate={{ x: 0 }}
+                exit={{ x: -1000 }}
+                transition={{delay: 0.1, duration: 1}}>
+            </motion.div>
+            <motion.div className="aboutModalBackgroundRight"
+                initial={{ x: 1000 }}
+                animate={{ x: 0 }}
+                exit={{ x: 1000 }}
+                transition={{delay: 0.1, duration: 1}}>
+            </motion.div>
+            <motion.div
+                key="aboutModal"
+                className="aboutModal"
+                initial={{ y: 1000, x: -350 }}
+                animate={{ y: -250, x: -350}}
+                exit={{ y: 1000, x:  -350}}
+                transition={{delay: 0.1, duration: 1}}>
+            <p>About the project</p>
+            <motion.button className="close-about-modal-button" onClick={() => toggleAboutModalOpen()} whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.95 }}>
+              <i className='glyphicon glyphicon-remove'/>
+            </motion.button>
+          </motion.div>
+          <motion.div className="aboutModalLogo"
+                initial={{ y: 1000 }}
+                animate={{ y: -10 }}
+                exit={{ y: 1000 }}
+                transition={{delay: 0.1, duration: 2}}>
+                  <img src={bounceLogo} alt="Bounce Theatre dot com" width="100px" height="100px"/>
+            </motion.div>
+        </div>      
+      )}      
+      </AnimatePresence>
 
       <div className="footer">
         <Typist cursor={{ hideWhenDone: true }} startDelay={3000}>

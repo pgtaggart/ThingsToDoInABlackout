@@ -7,7 +7,7 @@ class TextLoader {
 
         switch (name) {
             case 'RoomOne-WallPicture' :
-                return (<Typist className="TypeWriterTextHeader" cursor={{ hideWhenDone: true }} startDelay={300}>Here is some example text</Typist>);
+                return (<Typist className="TypeWriterTextHeader" cursor={{ hideWhenDone: true }} startDelay={1000}>Here is some example text</Typist>);
                     
             default :
                 return (<Typist className="TypeWriterTextHeader" cursor={{ hideWhenDone: true }} startDelay={300}>No Text defined for this modal</Typist>);

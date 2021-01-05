@@ -26,7 +26,7 @@ const RoomModalClose = (properties) => {
   }
 
   return (
-    <motion.button className="room-close-modal-button" onClick={() => onMouseClick()} whileHover={{ scale: 1.3 }}>
+    <motion.button className="room-close-modal-button" onClick={() => onMouseClick()} whileHover={{ scale: 1.3 }} whileTap={{ scale: 0.95 }}>
       <i className='glyphicon glyphicon-home'/>
     </motion.button>
   )

@@ -47,8 +47,8 @@ nav {
   top: 0;
   left: 0;
   bottom: 0;
-  width: 220px;
-  height: 50vh;
+  width: 230px;
+  height: 30vh;
   background: #fff;
   border-bottom-right-radius: 25px;
   opacity: 0.8;
@@ -60,6 +60,7 @@ nav {
 
 .image-content-modal {
   position: absolute;
+  box-shadow: rgb(255 255 255) 0px 0px 100px 0px;
 }
 
 .text-content-modal {
@@ -77,16 +78,14 @@ nav {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) !important;
 }
 
 .modal-background {
   overflow-x: hidden;
   background: whitesmoke;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) !important;
+  top: 0;
+  left: 0;
   height: 100vh;
   width: 100vw;
   z-index: 10001;
@@ -94,10 +93,9 @@ nav {
 
 .modal-foreground {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) !important;
-  max-height: 99vh;
+  top: 0;
+  left: 0;
+  max-height: 100vh;
   width: 100vw;
   z-index: 10003;
 }
@@ -161,12 +159,13 @@ nav {
   -ms-user-select: none;
   cursor: pointer;
   position: absolute;
-  top: 5px;
+  top: 10px;
   right: 30px;
   width: 20px;
   height: 35px;
   width: 35px;
   background: whitesmoke;
+  box-shadow: rgb(0, 0, 0) 1px 1px 10px 4px;
   border-radius: 35px;
   z-index: 10003;
 }
@@ -202,6 +201,25 @@ nav {
   background: whitesmoke;
   border-radius: 32px;
   z-index: 10002;
+  box-shadow: rgb(0, 0, 0) 1px 1px 10px 4px;
+}
+
+.close-about-modal-button {
+  outline: none;
+  border: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  background: whitesmoke;
+  border-radius: 32px;
+  z-index: 10002;
+  box-shadow: rgb(0, 0, 0) 1px 1px 10px 4px;
 }
 
 .ul-menu,
@@ -214,7 +232,7 @@ nav {
   padding-left: 10px;
   position: absolute;
   top: 70px;
-  width: 200px;
+  width: 220px;
 }
 
 .li-menu {
@@ -232,6 +250,7 @@ nav {
   margin-right: 10px;
   margin-top: 20px;
   margin-left: 10px;
+  text-align: center;
 }
 
 .text-placeholder {
@@ -300,3 +319,62 @@ nav {
   font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
 }
+
+.aboutButton {
+  background-color: transparent;
+  border: none;
+  color: black;
+  padding: 0px;
+}
+
+.aboutModal {
+  overflow-x: hidden;
+  background: whitesmoke;
+  position: absolute;
+  border: none;
+  box-shadow: rgba(187, 55, 116, 0.5) 0px 22px 70px 4px;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  height: 50vh;
+  width: 50vw;
+  z-index: 10002;
+}
+
+.bigbob {
+  box-shadow: rgba(187, 55, 116, 0.5) 0px 22px 70px 4px;
+}
+
+.aboutModalBackgroundLeft {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  height: 100vh;
+  width: 50vw;
+  z-index: 10001;
+  opacity: 0.9;
+}
+
+.aboutModalBackgroundRight {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: black;
+  height: 100vh;
+  width: 50vw;
+  z-index: 10001;
+  opacity: 0.9;
+}
+
+.aboutModalLogo {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  z-index: 10001;
+}
+
+.navLink {
+  color: black;
+}
+

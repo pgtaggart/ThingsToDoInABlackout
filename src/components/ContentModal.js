@@ -89,18 +89,65 @@ const ContentModal = (properties) => {
         }
     }
 
+
+    const chooseInitial = () => {
+        
+        switch(properties.className) {
+            case 'audio-content-modal' :
+                return {scale: 0};
+            case 'image-content-modal' :
+                return {opacity: 0};
+            case 'text-content-modal' :
+                return {y: -1000};
+            default :
+                return {};
+        }
+
+    }
+
+    const chooseAnimate = () => {
+
+        switch(properties.className) {
+            case 'audio-content-modal' :
+                return {scale: 1};
+            case 'image-content-modal' :
+                return {opacity: 1};
+            case 'text-content-modal' :
+                return {y: 0};
+            default :
+                return {};
+        }
+
+    }
+
+    const chooseExit = () => {
+
+        switch(properties.className) {
+            case 'audio-content-modal' :
+                return {scale: 0};
+            case 'image-content-modal' :
+                return {opacity: 0};
+            case 'text-content-modal' :
+                return {y: -1000};
+            default :
+                return {};
+        }
+
+    }
+
     return (
         <motion.div
             ref={ref}
             id={properties.modalId}
             className={properties.className}
             whileHover={properties.className === 'audio-content-modal' ? { scale: 1.2 } : {}}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{delay: 0.0, duration: 0.7}}>
-        {closeModalIcon()}
-        {renderModalType()}
+            whileTap={properties.className === 'audio-content-modal' ? { scale: 0.9 } : {}}
+            initial={chooseInitial()}
+            animate={chooseAnimate()}
+            exit={chooseExit()}
+            transition={{delay: 0.0, duration: 1}}>
+            {closeModalIcon()}
+            {renderModalType()}
         </motion.div> 
     )
   }

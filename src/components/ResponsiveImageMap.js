@@ -129,7 +129,7 @@ export default class ResponsiveImageMap extends PureComponent {
             
             case 'Image' :
             case 'AudioImage' :
-                infoIcon.setAttribute("class", "glyphicon glyphicon-picture");
+                infoIcon.setAttribute("class", "bigbob glyphicon glyphicon-picture");
                 infoIcon.style.fontSize = "2.5em";  // icon at 2.5em is 35x39 px
                 infoIcon.style.color = this.iconColour;
                 break;
