@@ -99,6 +99,14 @@ export default class ResponsiveImageMap extends PureComponent {
 
     mouseOverArea(coords, mapType) {
 
+        // Don't show these if the modal is active
+        var imageModal = document.getElementById('image-content-modal-id');
+        var textModal = document.getElementById('text-content-modal-id');
+        if(imageModal || textModal) {
+            console.log('Modal is displayed');
+            return;
+        }
+
         const coordsArr = coords.split(',');
         const parentElement = document.getElementById(this.parentElementId);
         
@@ -156,7 +164,10 @@ export default class ResponsiveImageMap extends PureComponent {
     mouseOutArea() {
         const parentElement = document.getElementById(this.parentElementId);
         const infoDiv = document.getElementById('infoDiv');
-        parentElement.removeChild(infoDiv);
+        if(infoDiv) {
+            parentElement.removeChild(infoDiv);
+        }
+        
     }
 
     selectContentModalToOpen(type, title) {
@@ -164,6 +175,9 @@ export default class ResponsiveImageMap extends PureComponent {
         // Set the title of the map area that was clicked
         this.props.setMapAreaTitleFunction(title);
 
+        // Set the type of the map area that was clicked
+        this.props.setMapAreaTypeFunction(type);
+        
         // If any of the modals are open then close them first
         if(this.props.isAudioContentModalOpen) this.props.toggleAudioContentModalFunction();
         if(this.props.isImageContentModalOpen) this.props.toggleImageContentModalFunction();
@@ -180,11 +194,9 @@ export default class ResponsiveImageMap extends PureComponent {
             case 'Audio' : 
                 this.props.toggleAudioContentModalFunction();
                 break;
-            
             case 'Image' :
                 this.props.toggleImageContentModalFunction();
                 break;
-
             case 'Text' :
                 this.props.toggleTextContentModalFunction();
                 break;

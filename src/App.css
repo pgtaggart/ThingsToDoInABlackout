@@ -63,9 +63,11 @@ nav {
 }
 
 .text-content-modal {
-  background-color: blanchedalmond;
+  background: url('./images/grunge-paper-background-texture.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   position: absolute;
-  border: 1px solid black;
+  border: none;
   border-radius: 10px;
   box-shadow: 5px 10px 8px;
 }
@@ -76,10 +78,6 @@ nav {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) !important;
-  width: 64px;
-  height: 64px;
-  background: url('./images/loading.svg');
-  background-size: 64px 64px;
 }
 
 .modal-background {
@@ -166,9 +164,11 @@ nav {
   top: 5px;
   right: 30px;
   width: 20px;
-  height: 20px;
-  background: transparent;
-  z-index: 10001;
+  height: 35px;
+  width: 35px;
+  background: whitesmoke;
+  border-radius: 35px;
+  z-index: 10003;
 }
 
 .close-audio-modal-button {
@@ -181,10 +181,10 @@ nav {
   position: absolute;
   top: -10px;
   right: -20px;
-  width: 30px;
   height: 30px;
-  background: transparent;
-  z-index: 10001;
+  background: white;
+  border-radius: 30px;
+  z-index: 10002;
 }
 
 .close-modal-button {
@@ -195,12 +195,13 @@ nav {
   -ms-user-select: none;
   cursor: pointer;
   position: absolute;
-  top: 2px;
-  right: 2px;
-  width: 30px;
-  height: 30px;
-  background: transparent;
-  z-index: 10001;
+  top: 0px;
+  right: 0px;
+  width: 32px;
+  height: 32px;
+  background: whitesmoke;
+  border-radius: 32px;
+  z-index: 10002;
 }
 
 .ul-menu,
@@ -258,8 +259,44 @@ nav {
   width: 100%;
   height: 100%;
   background-color: black;
-  z-index:10002;
+  z-index:10001;
   -moz-opacity: 0.8;
   opacity:.80;
   filter: alpha(opacity=80);
+}
+
+.glyphicon {
+  font-size: 20px;
+}
+
+.glyphicon.glyphicon-remove-sign {
+  top:3px;
+  right:0px;
+}
+
+.glyphicon.glyphicon-home {
+  font-size: 25px;
+  top:2px;
+  right:2px;
+}
+
+.TypeWriterTextBlock {
+  display: block;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  width: 80%;
+  transform: translate(-50%, -50%) !important;
+}
+
+.TypeWriterTextHeader {
+  font-size: x-large;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+.TypeWriterTextParagraph {
+  font-size: x-large;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
 }

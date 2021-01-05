@@ -2,16 +2,9 @@ import React, { useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ModalClose } from './ModalClose';
 import ImageGallery from 'react-image-gallery';
-import PlayAudio from 'react-simple-audio-player';
-import chroma from 'chroma-js';
-import imageLoader from './ImageLoader.js'
-
-import RationBookAudio from '../media/room-one/RationBook/Rationing.mp3';
-import EvacuatedAudio from '../media/room-one/Suitcase/EvacuatedAudio.mp3';
-import BlackoutCurtainsAudio from '../media/room-one/Window/BlackoutCurtainsAudio.mp3';
-import SweetRationingAudio from '../media/room-one/Sweets/SweetRationing.mp3';
-
-const roomOneAudioColourScale = chroma.scale(['#C1AF26','#ffffff',]).mode('lch').colors(5);
+import imageLoader from './ImageLoader.js';
+import textLoader from './TextLoader.js';
+import audioLoader from './AudioLoader.js';
 
 const ContentModal = (properties) => {
     
@@ -31,104 +24,42 @@ const ContentModal = (properties) => {
 
         console.log('Modal Title: ' + properties.mapAreaTitle);
         console.log('Modal Type: ' + properties.className);
+        console.log('Map Area type: ' + properties.mapAreaType);
 
-        switch(properties.roomIndex) {
-
-            case 0 :
-            {
-                switch(properties.mapAreaTitle) {
-                    
-                    case 'RoomOne-GasMask' :
-                    case 'RoomOne-Poster' :
-                        return ( <ImageGallery items={imageLoader.galleryLoader(properties.mapAreaTitle)} 
-                                        showFullscreenButton={false} 
-                                        showPlayButton={false}
-                                        showThumbnails={false}
-                                        showNav={true}
-                                        autoPlay={false}
-                                        disableSwipe={true}/>);
-                    
-                    case 'RoomOne-RationBook' :
-                        switch(properties.className) {
-                            case 'audio-content-modal' :
-                                return(<PlayAudio url={RationBookAudio} colorScale={roomOneAudioColourScale}/>);
-                            case 'image-content-modal' :
-                                return ( <ImageGallery items={imageLoader.galleryLoader(properties.mapAreaTitle)} 
-                                        showFullscreenButton={false} 
-                                        showPlayButton={false}
-                                        showThumbnails={false}
-                                        showNav={true}
-                                        autoPlay={false}
-                                        disableSwipe={true}/>);
-                            default :
-                                return;
-                        }
-                        
-                    case 'RoomOne-Suitcase' :
-                        switch(properties.className) {
-                            case 'audio-content-modal' :
-                                return(<PlayAudio url={EvacuatedAudio} colorScale={roomOneAudioColourScale}/>);
-                            case 'image-content-modal' :
-                                return ( <ImageGallery items={imageLoader.galleryLoader(properties.mapAreaTitle)} 
-                                        showFullscreenButton={false} 
-                                        showPlayButton={false}
-                                        showThumbnails={false}
-                                        showNav={true}
-                                        autoPlay={false}
-                                        disableSwipe={true}/>);
-                            default :
-                                return;
-                        }
-                     
-                        
-                    case 'RoomOne-Sweets' :
-                        switch(properties.className) {
-                            case 'audio-content-modal' :
-                                return(<PlayAudio url={SweetRationingAudio} colorScale={roomOneAudioColourScale}/>);
-                            case 'image-content-modal' :
-                                return ( <ImageGallery items={imageLoader.galleryLoader(properties.mapAreaTitle)} 
-                                        showFullscreenButton={false} 
-                                        showPlayButton={false}
-                                        showThumbnails={false}
-                                        showNav={true}
-                                        autoPlay={false}
-                                        disableSwipe={true}/>);
-                            default :
-                                return;
-                        }
-                                
-
-                    case 'RoomOne-Window' :
-                        switch(properties.className) {
-                            case 'audio-content-modal' :
-                                return(<PlayAudio url={BlackoutCurtainsAudio} colorScale={roomOneAudioColourScale}/>);
-                            case 'image-content-modal' :
-                                return ( <ImageGallery items={imageLoader.galleryLoader(properties.mapAreaTitle)} 
-                                        showFullscreenButton={false} 
-                                        showPlayButton={false}
-                                        showThumbnails={false}
-                                        showNav={true}
-                                        autoPlay={false}
-                                        disableSwipe={true}/>);
-                            default :
-                                return;
-                        }
-                                
-                    case 'text-content-modal' :
-                    {
-                        return (<div className={properties.childClassName}></div>);
-                    }
-
+        switch(properties.mapAreaType) {
+            
+            // These are the image gallery types
+            case 'Image' :
+                return (<ImageGallery items={imageLoader.galleryLoader(properties.mapAreaTitle)} 
+                                showFullscreenButton={false} 
+                                showPlayButton={false}
+                                showThumbnails={false}
+                                showNav={true}
+                                autoPlay={false}
+                                disableSwipe={true}/>);
+            
+            case 'AudioImage' :
+                switch(properties.className) {
+                    case 'audio-content-modal' :
+                        return audioLoader.loadAudio(properties.mapAreaTitle);
+                    case 'image-content-modal' :
+                        return (<ImageGallery items={imageLoader.galleryLoader(properties.mapAreaTitle)} 
+                                showFullscreenButton={false} 
+                                showPlayButton={false}
+                                showThumbnails={false}
+                                showNav={true}
+                                autoPlay={false}
+                                disableSwipe={true}/>);
                     default :
-                        return (<div className={properties.childClassName}></div>);
+                        return;
                 }
-            }
+            case 'Text' : // These are the text types so use the selector
+                return (<div className="TypeWriterTextBlock">{textLoader.loadText(properties.mapAreaTitle)}</div>);
             default :
-                return (<div className={properties.childClassName}><p>Romm not Implemented</p></div>);
+                return (<div className={properties.childClassName}></div>);
         }
-
-        
     }
+           
 
     const closeModalContent = () => {
 
@@ -150,7 +81,9 @@ const ContentModal = (properties) => {
             case 'image-content-modal' :
                 return (<ModalClose toggle={closeModalContent} icon='glyphicon glyphicon-remove-sign' className='close-modal-button'/>);
             case 'audio-content-modal' :
-                return (<ModalClose toggle={closeModalContent} icon='glyphicon glyphicon-remove-sign' className='close-audio-modal-button'/>);
+                // disable button for audio as we will always show an image gallery with this control, looks cleaner
+                //return (<ModalClose toggle={closeModalContent} icon='glyphicon glyphicon-remove-sign' className='close-audio-modal-button'/>);
+                return;
             default :
                 return (<ModalClose toggle={closeModalContent} icon='glyphicon glyphicon-remove' className='close-modal-button'/> );
         }

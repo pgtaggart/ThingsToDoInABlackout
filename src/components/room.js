@@ -114,7 +114,8 @@ export default class Room extends PureComponent {
                 isAudioContentModalOpen={this.props.isAudioContentModalOpen}
                 isImageContentModalOpen={this.props.isImageContentModalOpen}
                 isTextContentModalOpen={this.props.isTextContentModalOpen}
-                setMapAreaTitleFunction={this.props.setMapAreaTitleFunction}/>
+                setMapAreaTitleFunction={this.props.setMapAreaTitleFunction}
+                setMapAreaTypeFunction={this.props.setMapAreaTypeFunction}/>
 
             <AnimatePresence>     
               {this.props.isAudioContentModalOpen &&(
@@ -131,7 +132,8 @@ export default class Room extends PureComponent {
                   isImageContentModalOpen={this.props.isImageContentModalOpen}
                   isTextContentModalOpen={this.props.isTextContentModalOpen}
                   roomIndex={this.props.roomIndex}
-                  mapAreaTitle={this.props.mapAreaTitle}/>
+                  mapAreaTitle={this.props.mapAreaTitle}
+                  mapAreaType={this.props.mapAreaType}/>
               )}      
             </AnimatePresence>
 
@@ -150,7 +152,8 @@ export default class Room extends PureComponent {
                   isImageContentModalOpen={this.props.isImageContentModalOpen}
                   isTextContentModalOpen={this.props.isTextContentModalOpen} 
                   roomIndex={this.props.roomIndex}
-                  mapAreaTitle={this.props.mapAreaTitle}/>
+                  mapAreaTitle={this.props.mapAreaTitle}
+                  mapAreaType={this.props.mapAreaType}/>
               )}      
             </AnimatePresence>
 
@@ -169,7 +172,8 @@ export default class Room extends PureComponent {
                   isImageContentModalOpen={this.props.isImageContentModalOpen}
                   isTextContentModalOpen={this.props.isTextContentModalOpen}
                   roomIndex={this.props.roomIndex}
-                  mapAreaTitle={this.props.mapAreaTitle}/>
+                  mapAreaTitle={this.props.mapAreaTitle}
+                  mapAreaType={this.props.mapAreaType}/>
               )}      
             </AnimatePresence>
 
