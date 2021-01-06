@@ -110,8 +110,7 @@ export default class ResponsiveImageMap extends PureComponent {
         const newElement = document.createElement('div');
         newElement.setAttribute('id', 'infoDiv');
         newElement.setAttribute('class', 'infoDiv');
-        newElement.classList.add('infoDiv');
-        
+
         // Create the icon that will be used
         const infoIcon = document.createElement('button');
 
@@ -119,20 +118,20 @@ export default class ResponsiveImageMap extends PureComponent {
         switch(mapType) {
 
             case 'Audio' : 
-                infoIcon.setAttribute("class", "modalButton glyphicon glyphicon-headphones");
+                infoIcon.setAttribute("class", "modalButton fade-in fadeinglyphicon glyphicon-headphones");
                 break;
             
             case 'Image' :
             case 'AudioImage' :
-                infoIcon.setAttribute("class", "modalButton glyphicon glyphicon-picture");
+                infoIcon.setAttribute("class", "modalButton fade-in glyphicon glyphicon-picture");
                 break;
 
             case 'Text' :
-                infoIcon.setAttribute("class", "modalButton glyphicon glyphicon-pencil");
+                infoIcon.setAttribute("class", "modalButton fade-in glyphicon glyphicon-pencil");
                 break;
 
             default :
-                infoIcon.setAttribute("class", "modalButton glyphicon glyphicon-question-sign");
+                infoIcon.setAttribute("class", "modalButton fade-in glyphicon glyphicon-question-sign");
                 break;
         }
         
@@ -171,11 +170,10 @@ export default class ResponsiveImageMap extends PureComponent {
         if(this.props.isImageContentModalOpen) this.props.toggleImageContentModalFunction();
         if(this.props.isTextContentModalOpen) this.props.toggleTextContentModalFunction();
 
-        // Show the lightbox
-        document.getElementById('lightBoxDiv').style.display = "block";
-
         // Hide the room image
         document.getElementById(this.props.imageId).style.opacity = '0.1';
+        document.getElementById(this.props.imageId).classList.remove("fade-in");
+        document.getElementById(this.props.imageId).classList.add("fade-out");
 
         // Now trigger the new open of the modal
         switch(type) {

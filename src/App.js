@@ -71,7 +71,6 @@ function App() {
             animate={{ x: 0, scale: 1, opacity: 1 }}
             exit={{ x: 0, scale: 0, opacity: 0 }}
             transition={{delay: 0.1, duration: 0.5}}>
-            <div className="lightBoxLayer" id="lightBoxDiv"></div>
             <Room roomIndex={roomIndex} mapAreaTitle={mapAreaTitle} mapAreaType={mapAreaType}
                 isAudioContentModalOpen={isAudioContentModalOpen} toggleAudioContentModalOpen={toggleAudioContentModalOpen}
                 isImageContentModalOpen={isImageContentModalOpen} toggleImageContentModalOpen={toggleImageContentModalOpen}

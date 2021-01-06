@@ -66,12 +66,11 @@ const ContentModal = (properties) => {
 
     const closeModalContent = () => {
 
-        // hide the lightbox
-        document.getElementById('lightBoxDiv').style.display = "none";
-
         // return the roomImage to full opacity
         document.getElementById('RoomImage' + (properties.roomIndex + 1)).style.opacity = '1';
-
+        document.getElementById('RoomImage' + (properties.roomIndex + 1)).classList.remove("fade-out");
+        document.getElementById('RoomImage' + (properties.roomIndex + 1)).classList.add("fade-in");
+            
         // If any of the modals are open then close them
         if(properties.isAudioContentModalOpen) properties.toggleAudioContentModalFunction();
         if(properties.isImageContentModalOpen) properties.toggleImageContentModalFunction();
