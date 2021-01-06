@@ -111,7 +111,7 @@ function App() {
                 exit={{ y: 1000, x:  -350}}
                 transition={{delay: 0.1, duration: 1}}>
               <div className="aboutModalInfo">
-                <Typist className="aboutModalTextParagraph" cursor={{ hideWhenDone: true }} startDelay={1000}>Designed by Bounce Theatre&#8482; &#169; 2021</Typist>
+                <Typist className="aboutModalTextParagraph" cursor={{ hideWhenDone: true }} startDelay={1000}>Designed by Bounce Theatre&#8482;, Copyright &#169; 2021</Typist>
               </div>
               <motion.button className="close-about-modal-button" onClick={() => toggleAboutModalOpen()} whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.95 }}>
                 <i className='glyphicon glyphicon-remove'/>
@@ -130,9 +130,9 @@ function App() {
 
       <div className="footer">
         <Typist cursor={{ hideWhenDone: true }} startDelay={3000}>
-           &#169; Copyright Bounce Theatre 2021
+          Copyright &#169; 2021 Bounce Theatre&#8482; 
           <Typist.Delay ms={1250} />
-          <Typist.Backspace count={33} delay={1000} />
+          <Typist.Backspace count={34} delay={1000} />
           <Typist.Delay ms={1250} />
           Follow us on social media
           <Typist.Backspace count={12} delay={1000} />
