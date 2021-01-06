@@ -67,9 +67,9 @@ function App() {
           <motion.div
             key="modal"
             className="modal-background"
-            initial={{ scale:0, y: -1000 }}
-            animate={{ scale: 1, y: 0 }}
-            exit={{ x: 0, scale: 0 }}
+            initial={{ x: 0, scale:0, opacity: 0 }}
+            animate={{ x: 0, scale: 1, opacity: 1 }}
+            exit={{ x: 0, scale: 0, opacity: 0 }}
             transition={{delay: 0.1, duration: 0.5}}>
             <div className="lightBoxLayer" id="lightBoxDiv"></div>
             <Room roomIndex={roomIndex} mapAreaTitle={mapAreaTitle} mapAreaType={mapAreaType}
@@ -110,12 +110,14 @@ function App() {
                 animate={{ y: -250, x: -350}}
                 exit={{ y: 1000, x:  -350}}
                 transition={{delay: 0.1, duration: 1}}>
-            <p>About the project</p>
-            <motion.button className="close-about-modal-button" onClick={() => toggleAboutModalOpen()} whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.95 }}>
-              <i className='glyphicon glyphicon-remove'/>
-            </motion.button>
-          </motion.div>
-          <motion.div className="aboutModalLogo"
+              <div className="aboutModalInfo">
+                <Typist className="aboutModalTextParagraph" cursor={{ hideWhenDone: true }} startDelay={1000}>Designed by Bounce Theatre&#8482; &#169; 2021</Typist>
+              </div>
+              <motion.button className="close-about-modal-button" onClick={() => toggleAboutModalOpen()} whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.95 }}>
+                <i className='glyphicon glyphicon-remove'/>
+              </motion.button>
+            </motion.div>
+            <motion.div className="aboutModalLogo"
                 initial={{ y: 1000 }}
                 animate={{ y: -10 }}
                 exit={{ y: 1000 }}
@@ -128,7 +130,7 @@ function App() {
 
       <div className="footer">
         <Typist cursor={{ hideWhenDone: true }} startDelay={3000}>
-          (c) Copyright Bounce Theatre 2020
+           &#169; Copyright Bounce Theatre 2021
           <Typist.Delay ms={1250} />
           <Typist.Backspace count={33} delay={1000} />
           <Typist.Delay ms={1250} />

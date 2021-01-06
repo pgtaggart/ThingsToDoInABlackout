@@ -22,9 +22,6 @@ export default class ResponsiveImageMap extends PureComponent {
 
         this.resize = this.resize.bind(this);
 
-        // Set the icon colour based on which room this is
-        this.iconColour = 'white';
-
     }
 
     resize() {
@@ -116,34 +113,26 @@ export default class ResponsiveImageMap extends PureComponent {
         newElement.classList.add('infoDiv');
         
         // Create the icon that will be used
-        const infoIcon = document.createElement('i');
+        const infoIcon = document.createElement('button');
 
         // Set the icon, size and colour based on what type of area we have
         switch(mapType) {
 
             case 'Audio' : 
-                infoIcon.setAttribute("class", "glyphicon glyphicon-headphones");
-                infoIcon.style.fontSize = "2.5em";  // icon at 2.5em is 35x39 px
-                infoIcon.style.color = this.iconColour;
+                infoIcon.setAttribute("class", "modalButton glyphicon glyphicon-headphones");
                 break;
             
             case 'Image' :
             case 'AudioImage' :
-                infoIcon.setAttribute("class", "bigbob glyphicon glyphicon-picture");
-                infoIcon.style.fontSize = "2.5em";  // icon at 2.5em is 35x39 px
-                infoIcon.style.color = this.iconColour;
+                infoIcon.setAttribute("class", "modalButton glyphicon glyphicon-picture");
                 break;
 
             case 'Text' :
-                infoIcon.setAttribute("class", "glyphicon glyphicon-pencil");
-                infoIcon.style.fontSize = "2.5em";  // icon at 2.5em is 35x39 px
-                infoIcon.style.color = this.iconColour;
+                infoIcon.setAttribute("class", "modalButton glyphicon glyphicon-pencil");
                 break;
 
             default :
-                infoIcon.setAttribute("class", "glyphicon glyphicon-question-sign");
-                infoIcon.style.fontSize = "2.5em";  // icon at 2.5em is 35x39 px
-                infoIcon.style.color = this.iconColour;
+                infoIcon.setAttribute("class", "modalButton glyphicon glyphicon-question-sign");
                 break;
         }
         
