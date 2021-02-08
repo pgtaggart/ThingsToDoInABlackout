@@ -89,7 +89,7 @@ function App() {
 
       <AnimatePresence>     
         {isAboutModalOpen &&(
-          <div>
+          <div className="aboutDivContainer">
             <motion.div className="aboutModalBackgroundLeft"
                 initial={{ x: -1000 }}
                 animate={{ x: 0 }}
@@ -142,19 +142,20 @@ function App() {
         <div className="social-icons">
           <motion.div className="social-icon" whileHover={{ scale: 1.2 }}>
             <SocialMediaIconsReact 
-                icon="twitter" iconSize="8" url="https://twitter.com/your-twitter-handle" iconColor="#000"
+                icon="twitter" iconSize="8" url="https://twitter.com/bouncetheatre" iconColor="#000"
                 size="20" backgroundColor="" borderColor="#000" borderWidth="1" />
           </motion.div>
           <motion.div className="social-icon" whileHover={{ scale: 1.2 }}>
             <SocialMediaIconsReact 
-                icon="facebook" iconSize="8" url="https://twitter.com/your-twitter-handle" iconColor="#000"
+                icon="facebook" iconSize="8" url="https://facebook.com/bouncetheatre" iconColor="#000"
                 size="20" backgroundColor="" borderColor="#000" borderWidth="1" />
           </motion.div>
           <motion.div whileHover={{ scale: 1.2 }}>
             <SocialMediaIconsReact 
-                icon="instagram" iconSize="8" url="https://twitter.com/your-twitter-handle" iconColor="#000"
+                icon="instagram" iconSize="8" url="https://instagram.com/bouncetheatre" iconColor="#000"
                 size="20" backgroundColor="" borderColor="#000" borderWidth="1"/>
           </motion.div>
+          
         </div>
       </div>
 

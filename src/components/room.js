@@ -43,7 +43,7 @@ export default class Room extends PureComponent {
         var roomOneAreaSweets = new ImageMapArea('RoomOne-Sweets', 'RoomOne', '1582,604,1751,685', 'rect', '', 'AudioImage');
 
         imageMap = new ImageMap('RoomOne-imageMap', [roomOneAreaPoster, roomOneAreaDiary, roomOneAreaGasMask, roomOneAreaMilkPail, roomOneAreaWallPicture, roomOneAreaRationBook, roomOneAreaSuitcase, roomOneAreaWindow, roomOneAreaSweets]);
-        backgroundColor = 'rgb(210, 201, 140)';
+        backgroundColor = 'rgb(173, 151, 93)';
     
       } else if (this.props.roomIndex === 1 ) {
         
@@ -65,7 +65,7 @@ export default class Room extends PureComponent {
         imageHeight= '1080'; 
         var roomThreeArea = new ImageMapArea('RoomThree', 'RoomThree', '100,100,200,200', 'rect', '');
         imageMap = new ImageMap('RoomThree-imageMap', [roomThreeArea]);
-        backgroundColor = 'rgb(209, 211, 196)';
+        backgroundColor = 'rgb(80, 84, 70)';
 
       } else if (this.props.roomIndex === 3 ) {
         
@@ -76,7 +76,7 @@ export default class Room extends PureComponent {
         imageHeight= '1080'; 
         var roomFourArea = new ImageMapArea('RoomFour', 'RoomFour', '100,100,200,200', 'rect', '');
         imageMap = new ImageMap('RoomFour-imageMap', [roomFourArea]);
-        backgroundColor = 'rgb(205, 205, 203)';
+        backgroundColor = 'rgb(80, 63, 37)';
 
       } else if (this.props.roomIndex === 4 ) {
         
