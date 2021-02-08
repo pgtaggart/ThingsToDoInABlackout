@@ -132,6 +132,13 @@ nav {
   text-align: center;
 }
 
+.HeritageFund {
+  position: absolute;
+  display: flex;
+  left: 10px;
+  top: -10px;
+}
+
 .social-icons {
   position: absolute;
   display: flex;

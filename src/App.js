@@ -9,7 +9,8 @@ import ScrollableContainer from './components/ScrollableContainer';
 import Room from './components/room';
 import './App.css';
 import './imageGallery.scss';
-import bounceLogo from './images/bounce-logo-purple.svg'
+import bounceLogo from './images/bounce-logo-purple.svg';
+import heritageFund from './images/HeritageFund.png';
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -128,6 +129,9 @@ function App() {
       </AnimatePresence>
 
       <div className="footer">
+        <motion.div className="HeritageFund" whileHover={{ scale: 1.1 }}>
+          <a href="https://www.heritagefund.org.uk"><img src={heritageFund} alt="The Heritage Lottery Fund" width="108px" height="40px" /></a>
+        </motion.div>
         <Typist cursor={{ hideWhenDone: true }} startDelay={3000}>
           Copyright &#169; 2021 Bounce Theatre&#8482; 
           <Typist.Delay ms={1250} />
