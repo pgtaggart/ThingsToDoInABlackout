@@ -68,7 +68,6 @@ nav {
 
 .image-content-modal {
   position: absolute;
-  box-shadow: rgb(255 255 255) 0px 0px 100px 0px;
 }
 
 .text-content-modal {
@@ -301,12 +300,15 @@ nav {
 }
 
 .TypeWriterTextBlock {
-  display: block;
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  width: 80%;
-  transform: translate(-50%, -50%) !important;
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  overflow-y: auto;
+  max-height: 75vh;
 }
 
 .TypeWriterTextHeader {
@@ -316,9 +318,8 @@ nav {
 }
 
 .TypeWriterTextParagraph {
-  font-size: x-large;
+  font-size: large;
   font-family: 'Courier New', Courier, monospace;
-  font-weight: bold;
 }
 
 .aboutButton {
