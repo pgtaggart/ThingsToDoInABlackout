@@ -113,7 +113,55 @@ function App() {
                 exit={{ y: 1000, x:  -350}}
                 transition={{delay: 0.1, duration: 1}}>
               <div className="aboutModalInfo">
-                <Typist className="aboutModalTextParagraph" cursor={{ hideWhenDone: true }} startDelay={1000}>Designed by Bounce Theatre&#8482;, Copyright &#169; 2021</Typist>
+                <Typist className="aboutModalTextParagraph" cursor={{ show: false }} startDelay={1000} avgTypingDelay={10} >
+                  <p>About Things to do in a Blackout</p> 
+                  <br />
+                  <p>During WW2 crime rose by a reported 57%. Fraud, gang culture, looting, and robbery impacted on people’s everyday life. Along with poverty, hunger, illness, and exceptional pressure – what was home really like during the war? Behind closed doors, every house has a story. Dive into our digital art project, which interprets the stories and research we were given access to by individuals, the National Archives and The Imperial War Museum.</p>
+                  <br />
+                  <p>Things to do in a Blackout was a pre-pandemic idea. In early 2020, Bounce Theatre had engaged over 300 young people in Kingston to explore the rise in crime during WW2 and the contemporary parallels – petty crime, food poverty, and our relationship with Europe were some of the topics of conversation. All of the young people were to be invited to take over the National Archives in an evening of mixed art entertainment in May 2020.</p> 
+                  <br />
+                  <p>By March 2020, we were in afterschool clubs, devising split scenes between a WW2 black market and the lack of toilet roll in Tesco. The project took a surreal new parallel. As we went into lockdown, we lost the chance to continue the work with those young people. Over the last year, we have selected elements of the research they were working on and captured some of their responses to turn all the ideas into a digital art piece. We established a digital writing project for young people and have woven their words into each room. Along with this, we have an open invitation to schools to create content for each room and see it uploaded onto the website until May 2021.</p> 
+                  <br />
+                  <p>Our thanks go to The National Lottery Heritage Fund for awarding us a grant and their support in adapting to the impact of Covid.</p>
+                  <br />
+                  <p>Bounce Theatre &#8482;, Copyright &#169; 2021</p> 
+                  <br />
+                  <br />
+                  <p>Acknowledgements</p>
+                  <br />
+                  <p>Made possible thanks to The National Lottery Heritage Fund(Logo)</p>
+                  <br />
+                  <p>Heritage Partners</p>  
+                  <p>The National Archives and The Imperial War Museum</p>
+                  <br />
+                  <p>Pre-Lockdown Collaborators
+                  <p>Anstee Bridge, Chessington School, Coombe Boys School, The Kingston Academy,  Kingston Keep 
+                  <br />
+                  <p>Credits</p>
+                  <br />
+                  <p>Young Writers</p>
+                  <br />
+                  <p>Script Writer</p>
+                  <p>Sharon Kanolik</p>
+                  <br />
+                  </p>Artist Acknowledgements</p>
+                  <br />
+                  <p>Street Scene by Eliza Willmott. Web:  https://elizawillmott.wixsite.com/portfolio/art-installation Instagram: @nellwillmott_art</p> 
+                  <p>Room No. 1 by Charmaine Chaudry. Web: charmainechaudrydesigns.com Instagram: @charmainechaudrydesigns</p>
+                  <p>Room No. 2 by Erin Tsw. Web:  www.erintse.com Instagram: @wingmanerintse and @mycareerisfine</p>
+                  <p>Room No. 3 by Ruth Stewart. Web: ruthdrawsthings.co.uk Instagram: @ruthdrawsthings</p>
+                  <p>Room No. 4 by Eve Martin. Web: evemartindesign.com Instagram: @eve_roisin</p>
+                  <p>Room No. 5 by Luke W. Robson. Web: lukewrobson.com</p>
+                  <p>Room No. 6 by Grace Evans. Web: Instagram: @graces_starlight</p>
+                  <br />
+                  <p>Resource Contributors</p>
+                  <p>Katie Halliday Turner</p>
+                  <p>Stewart Melton</p>
+                  <p>Henry Mendoza</p> 
+                  <br />
+                  <p>Project Management</p>
+                  <p>Louise Pendry and Lauren Purser</p>
+                </Typist>
               </div>
               <motion.button className="close-about-modal-button" onClick={() => toggleAboutModalOpen()} whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.95 }}>
                 <i className='glyphicon glyphicon-remove'/>
