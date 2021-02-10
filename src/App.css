@@ -244,6 +244,7 @@ nav {
 .close-modal-button {
   outline: none;
   border: none;
+  user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -262,6 +263,7 @@ nav {
 .close-about-modal-button {
   outline: none;
   border: none;
+  user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -372,6 +374,14 @@ nav {
   padding: 0px;
 }
 
+.aboutDivContainer {
+  position: fixed;
+  top: 0px;
+  height: 100vh;
+  width: 100vw;
+
+}
+
 .aboutModal {
   overflow-x: hidden;
   background: whitesmoke;
@@ -396,8 +406,6 @@ nav {
   border-radius: 50px;
   border: none;
 }
-
-
 
 .aboutModalBackgroundLeft {
   position: absolute;
