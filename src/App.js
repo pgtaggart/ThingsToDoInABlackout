@@ -14,7 +14,7 @@ import heritageFund from './images/HeritageFund.png';
 
 const sidebar = {
   open: (height = 1000) => ({
-    clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
+    clipPath: `circle(${height * 2 + 200}px at 27px 40px)`,
     zIndex: 1000,
     transition: {
       type: "spring",
@@ -23,7 +23,7 @@ const sidebar = {
     }
   }),
   closed: {
-    clipPath: "circle(30px at 40px 40px)",
+    clipPath: "circle(22px at 27px 40px)",
     zIndex:0,
     transition: {
       delay: 0.5,
@@ -49,7 +49,9 @@ function App() {
   return (
     <>
       <div className="logo">
-        <Typist cursor={{ hideWhenDone: true }} startDelay={1000}>Things to do in a Blackout</Typist>
+        <Typist cursor={{ hideWhenDone: true }} startDelay={1000}>
+          Things to do in a Blackout
+        </Typist>
       </div>
       
       <ScrollableContainer toggleModalFunction={() => toggleModalOpen()} 

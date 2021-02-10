@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import { motion } from 'framer-motion';
 import debounce from 'lodash.debounce';
 import ImageMapArea from './ImageMapArea';
 import ImageMap from './ImageMap';
@@ -34,7 +35,6 @@ export default class ScrollableContainer extends PureComponent {
 
     this.container = null;
     this.childImageMap = null;
-
   }
 
   componentDidMount() {
@@ -75,6 +75,13 @@ export default class ScrollableContainer extends PureComponent {
     this.container.scrollBy({ left: distance, behavior: 'smooth' });
   }
 
+  autoScrollContainer(multiplier) {
+    const { clientWidth } = this.container;
+    const scrollDistance = clientWidth / 2 * multiplier;
+    this.scrollContainerBy(scrollDistance)
+
+  }
+
   render() {
 
     return (
@@ -88,6 +95,12 @@ export default class ScrollableContainer extends PureComponent {
               setRoomIndexFunction ={this.props.setRoomIndexFunction} toggleModalFunction={() => this.props.toggleModalFunction()}/>
           </li>
         </ul>
+        <motion.button className="leftScrollButton" onClick={() => this.autoScrollContainer(-1)} whileHover={{ opacity: 0.9, scale: 1.3 }} whileTap={{ scale: 0.95 }}>
+          <i className='glyphicon glyphicon-backward'/>
+        </motion.button>
+        <motion.button className="rightScrollButton" onClick={() => this.autoScrollContainer(1)} whileHover={{ opacity: 0.9, scale: 1.3 }} whileTap={{ scale: 0.95 }}>
+          <i className='glyphicon glyphicon-forward'/>
+        </motion.button>
       </>
     )
   }

@@ -8,6 +8,48 @@
 
 .StreetScene {
   max-block-size: -webkit-fill-available;
+  user-select: none;
+}
+
+.leftScrollButton {
+  position: fixed;
+  margin-left: 10px;
+  padding-right: 10px;
+  top: 50Vh;
+  outline: none;
+  border: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: pointer;
+  position: absolute;
+  height: 35px;
+  width: 35px;
+  background: whitesmoke;
+  box-shadow: rgb(0, 0, 0) 1px 1px 10px 4px;
+  border-radius: 35px;
+  opacity: 0.6;
+}
+
+.rightScrollButton {
+  position: fixed;
+  margin-right: 10px;
+  padding-left: 10px;
+  top: 50vh;
+  right: 0;
+  outline: none;
+  border: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: pointer;
+  position: absolute;
+  height: 35px;
+  width: 35px;
+  background: whitesmoke;
+  box-shadow: rgb(0, 0, 0) 1px 1px 10px 4px;
+  border-radius: 35px;
+  opacity: 0.6;
 }
 
 .RoomImage {
@@ -57,8 +99,7 @@ nav {
   bottom: 0;
   width: 230px;
   height: 30vh;
-  background: #fff;
-  border-bottom-right-radius: 25px;
+  
   opacity: 0.8;
 }
 
@@ -110,7 +151,7 @@ nav {
 .logo {
   position: absolute;
   top: 19px;
-  left: 80px;
+  left: 55px;
   margin: 0 auto;
   width: 400px;
   font-family: American Typewriter, serif;
@@ -157,10 +198,10 @@ nav {
   -ms-user-select: none;
   cursor: pointer;
   position: absolute;
-  top: 18px;
-  left: 15px;
-  width: 50px;
-  height: 50px;
+  top: 27px;
+  left: 10px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   background: transparent;
 }
@@ -175,7 +216,6 @@ nav {
   position: absolute;
   top: 10px;
   right: 30px;
-  width: 20px;
   height: 35px;
   width: 35px;
   background: whitesmoke;
@@ -195,6 +235,7 @@ nav {
   top: -10px;
   right: -20px;
   height: 30px;
+  width: 30px;
   background: white;
   border-radius: 30px;
   z-index: 10002;
@@ -246,7 +287,9 @@ nav {
   padding-left: 10px;
   position: absolute;
   top: 70px;
-  width: 220px;
+  width: 250px;
+  background: linear-gradient(360deg, white, transparent);
+  border-bottom-right-radius: 25px;
 }
 
 .li-menu {
@@ -354,15 +397,7 @@ nav {
   border: none;
 }
 
-.aboutDivContainer {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
 
-.aboutDivContainer::-webkit-scrollbar {
-  display: none;
-  overflow-x: hidden;
-}
 
 .aboutModalBackgroundLeft {
   position: absolute;
