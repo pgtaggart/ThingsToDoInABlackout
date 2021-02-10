@@ -457,6 +457,10 @@ nav {
   flex-direction: column-reverse;
   overflow-y: scroll;
   max-height: 50vh;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 30px;
+  padding-bottom: 25px;
 }
 
 .aboutModalTextParagraph {

@@ -32,7 +32,7 @@ const li_variants = {
 };
 
 export const Navigation = (properties) => (
-  <motion.ul className="ul-menu" variants={ul_variants}>
+  <motion.ul id="mainMenu" className="ul-menu" variants={ul_variants}>
     <motion.li className="li-menu"
       variants={li_variants}
       whileHover={{ scale: 1.1 }}
@@ -41,7 +41,7 @@ export const Navigation = (properties) => (
         <i className="glyphicon glyphicon-info-sign"/>
       </div>
       <div className="text-placeholder">
-          <button className="aboutButton" onClick={() => {properties.toggleAboutModalOpen(); properties.toggleNavOpen()}}>About</button>
+          <button className="aboutButton" onClick={() => {properties.toggleAboutModalOpen(); properties.toggleNavOpen(); document.getElementById('mainMenu').style.opacity='0'; }}>About</button>
       </div>
     </motion.li>
     <motion.li className="li-menu"

@@ -61,7 +61,7 @@ function App() {
       <motion.nav initial={false} animate={isNavOpen ? "open" : "closed"}>
         <motion.div className="nav-background" variants={sidebar}>
           <Navigation toggleAboutModalOpen={toggleAboutModalOpen} toggleNavOpen={toggleNavOpen}/>
-          <MenuToggle toggle={() => toggleNavOpen()} isAboutModalOpen={isAboutModalOpen} toggleAboutModalOpen={toggleAboutModalOpen}/>
+          <MenuToggle toggle={() => toggleNavOpen()}/>
         </motion.div>
       </motion.nav>
 
@@ -113,7 +113,7 @@ function App() {
                 exit={{ y: 1000, x:  -350}}
                 transition={{delay: 0.1, duration: 1}}>
               <div className="aboutModalInfo">
-                <Typist className="aboutModalTextParagraph" cursor={{ show: false }} startDelay={1000} avgTypingDelay={10} >
+                <Typist className="aboutModalTextParagraph" cursor={{ show: false }} startDelay={1000} avgTypingDelay={1} >
                   <p>About Things to do in a Blackout</p> 
                   <br />
                   <p>During WW2 crime rose by a reported 57%. Fraud, gang culture, looting, and robbery impacted on people’s everyday life. Along with poverty, hunger, illness, and exceptional pressure – what was home really like during the war? Behind closed doors, every house has a story. Dive into our digital art project, which interprets the stories and research we were given access to by individuals, the National Archives and The Imperial War Museum.</p>
@@ -163,7 +163,7 @@ function App() {
                   <p>Louise Pendry and Lauren Purser</p>
                 </Typist>
               </div>
-              <motion.button className="close-about-modal-button" onClick={() => toggleAboutModalOpen()} whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.95 }}>
+              <motion.button className="close-about-modal-button" onClick={() => {toggleAboutModalOpen(); document.getElementById('mainMenu').style.opacity='1';}} whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.95 }}>
                 <i className='glyphicon glyphicon-remove'/>
               </motion.button>
             </motion.div>
