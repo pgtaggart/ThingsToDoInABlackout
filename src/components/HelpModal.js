@@ -23,29 +23,44 @@ export default class HelpModal extends PureComponent {
         
         setInterval(() => { 
             
-            if(this.props.isHelpModalInitialOpen) {
+            if(this.props.isHelpModalBackgroundOpen) {
                 
+                // Incrememnt the count of the number of seconds that have passed
                 var countInc = this.state.count + 1;
                 this.setState({count: countInc});
                 
+                // Wait 3 seconds before we do anything
                 if(this.state.count < 3) return;
 
-                if(this.state.count % 10 === 0) {
-                    var scrollBack = this.state.scroll * -1;
-                    this.setState({scroll: scrollBack});
+                // This is to scroll the initila help screen only when it is open
+                if(this.props.isHelpModalInitialOpen) {
+                    
+                    if(this.state.count % 10 === 0) {
+                        var scrollBack = this.state.scroll * -1;
+                        this.setState({scroll: scrollBack});
+                    }
+    
+                    this.container.scrollBy({ left: this.state.scroll, behavior: 'smooth' });
+                    
+                    if(this.state.count === 14) {
+                        this.props.toggleHelpModalInitialOpen();
+                        this.props.toggleHelpModalRoomOpen();
+                    }
                 }
 
-                this.container.scrollBy({ left: this.state.scroll, behavior: 'smooth' });
-                
-                if(this.state.count === 14) {
-                    this.props.toggleHelpModalInitialOpen();
-                    this.props.toggleHelpModalRoomOpen();
+                // after a while we will close the whole lot
+                if(this.state.count === 25) {
+                    this.figureOutCloseClick();
                 }
             
             } else {
 
-                this.setState({count: 0});
-                this.setState({scroll: 200}); 
+                // reset it for the next time this is active
+                if(this.state.count !== 0) {
+                    this.setState({count: 0});
+                    this.setState({scroll: 200}); 
+                }
+                
             }
             
         }, 1000); 
@@ -53,6 +68,8 @@ export default class HelpModal extends PureComponent {
     }
 
     figureOutCloseClick() {
+
+        console.log('Figure out help close click called');
 
         if(this.props.isHelpModalBackgroundOpen) {
             this.props.toggleHelpModalBackgroundOpen();
