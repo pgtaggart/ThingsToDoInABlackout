@@ -22,7 +22,12 @@ class TextLoader {
                     <Typist.Delay ms={500} />
                     <p>23-year-old Nathan was walking down the corridor. Nathan was in a dramatic car accident when he was 12. He has been in a wheelchair since. Then Nathan turned towards me. I could not bear to look at him. His features were as grey and ashy as a thunder cloud. His eyes were white orbs, as smooth as marble. His nails were as long and jagged as knives. Nathan stumbled towards me. The once young face of the patient I was treating stared back at me for half a second. My vision turned black and a stabbing pain in my shoulders made me want to scream my life away...</p>
                     </Typist>);
-                    
+            
+            case 'RoomOne-Diary' :
+                return (<Typist className="TypeWriterTextHeader" cursor={{ show: false }} startDelay={1000}>
+                        <p>This is whatever you like in here</p>
+                        </Typist>);
+
             default :
                 return (<Typist className="TypeWriterTextHeader" cursor={{ hideWhenDone: true }} startDelay={300}>No Text defined for this modal</Typist>);
         }

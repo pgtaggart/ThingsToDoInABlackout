@@ -6,6 +6,7 @@ import { MenuToggle } from "./components/MenuToggle";
 import { Navigation } from "./components/Navigation";
 import RoomModalClose from './components/RoomModalClose';
 import ScrollableContainer from './components/ScrollableContainer';
+import HelpModal from './components/HelpModal';
 import Room from './components/room';
 import './App.css';
 import './imageGallery.scss';
@@ -39,6 +40,9 @@ function App() {
   const [isNavOpen, toggleNavOpen] = useCycle(false, true); 
   const [isModalOpen, toggleModalOpen] = useCycle(false, true);
   const [isAboutModalOpen, toggleAboutModalOpen] = useCycle(false, true);
+  const [isHelpModalBackgroundOpen, toggleHelpModalBackgroundOpen] = useCycle(false, true);
+  const [isHelpModalInitialOpen, toggleHelpModalInitialOpen] = useCycle(false, true);
+  const [isHelpModalRoomOpen, toggleHelpModalRoomOpen] = useCycle(false, true);
   const [isAudioContentModalOpen, toggleAudioContentModalOpen] = useCycle(false, true);
   const [isImageContentModalOpen, toggleImageContentModalOpen] = useCycle(false, true);
   const [isTextContentModalOpen, toggleTextContentModalOpen] = useCycle(false, true);
@@ -49,11 +53,15 @@ function App() {
   return (
     <>
       <div className="logo">
-        <Typist cursor={{ hideWhenDone: true }} startDelay={1000}>
-          Things to do in a Blackout
+        <Typist cursor={{ show: false }} startDelay={1000}>
+          <p>Things to do in a Blackout</p>
         </Typist>
       </div>
-      
+
+      <motion.div className="helpHome" whileHover={{ opacity: 0.9, scale: 1.2 }}>
+        <i className='glyphicon glyphicon-question-sign' style={{ fontSize: '30px'}} onClick={() => {toggleHelpModalBackgroundOpen(); toggleHelpModalInitialOpen()}}/>
+      </motion.div>
+
       <ScrollableContainer toggleModalFunction={() => toggleModalOpen()} 
                            setRoomIndexFunction={(index) => setRoomIndex(index)}
                            parentElementId = 'StreetImageContainer'/>
@@ -64,6 +72,12 @@ function App() {
           <MenuToggle toggle={() => toggleNavOpen()}/>
         </motion.div>
       </motion.nav>
+
+      <HelpModal 
+        toggleHelpModalBackgroundOpen={toggleHelpModalBackgroundOpen} isHelpModalBackgroundOpen={isHelpModalBackgroundOpen}
+        toggleHelpModalInitialOpen={toggleHelpModalInitialOpen} isHelpModalInitialOpen={isHelpModalInitialOpen}
+        toggleHelpModalRoomOpen={toggleHelpModalRoomOpen} isHelpModalRoomOpen={isHelpModalRoomOpen}
+      />
 
       <AnimatePresence>     
         {isModalOpen &&(
@@ -113,7 +127,7 @@ function App() {
                 exit={{ y: 1000, x:  -350}}
                 transition={{delay: 0.1, duration: 1}}>
               <div className="aboutModalInfo">
-                <Typist className="aboutModalTextParagraph" cursor={{ show: false }} startDelay={1000} avgTypingDelay={1} >
+                <Typist className="aboutModalTextParagraph" cursor={{ show: false }} startDelay={1000} avgTypingDelay={50} >
                   <p>About Things to do in a Blackout</p> 
                   <br />
                   <p>During WW2 crime rose by a reported 57%. Fraud, gang culture, looting, and robbery impacted on people’s everyday life. Along with poverty, hunger, illness, and exceptional pressure – what was home really like during the war? Behind closed doors, every house has a story. Dive into our digital art project, which interprets the stories and research we were given access to by individuals, the National Archives and The Imperial War Museum.</p>
@@ -209,7 +223,6 @@ function App() {
                 icon="instagram" iconSize="8" url="https://instagram.com/bouncetheatre" iconColor="#000"
                 size="20" backgroundColor="" borderColor="#000" borderWidth="1"/>
           </motion.div>
-          
         </div>
       </div>
 

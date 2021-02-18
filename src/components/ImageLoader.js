@@ -35,7 +35,7 @@ class ImageLoader {
         switch (name) {
     
             case 'RoomOne-GasMask' :
-                return [{original: RoomOneGasMask1, Description:'BOB' },{original: RoomOneGasMask2},{original: RoomOneGasMask3},{original: RoomOneGasMask4}];
+                return [{original: RoomOneGasMask1},{original: RoomOneGasMask2},{original: RoomOneGasMask3},{original: RoomOneGasMask4}];
             case 'RoomOne-Poster' :
                 return [{original: RoomOnePoster1},{original: RoomOnePoster2},{original: RoomOnePoster3},{original: RoomOnePoster4},{original: RoomOnePoster5}];
             case 'RoomOne-RationBook' :

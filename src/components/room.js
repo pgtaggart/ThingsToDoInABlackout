@@ -33,7 +33,7 @@ export default class Room extends PureComponent {
         imageHeight= '1080';    
     
         var roomOneAreaPoster = new ImageMapArea('RoomOne-Poster', 'RoomOne', '803,217,998,432', 'rect', '', 'Image');
-        var roomOneAreaDiary = new ImageMapArea('RoomOne-Diary', 'RoomOne', '20,890,269,1058', 'rect', '', 'Image');
+        var roomOneAreaDiary = new ImageMapArea('RoomOne-Diary', 'RoomOne', '20,890,269,1058', 'rect', '', 'Text');
         var roomOneAreaGasMask = new ImageMapArea('RoomOne-GasMask', 'RoomOne', '1694,302,1829,554', 'rect', '', 'Image');
         var roomOneAreaMilkPail = new ImageMapArea('RoomOne-MilkPail', 'RoomOne', '1110,397,1197,517', 'rect', '', 'Text');
         var roomOneAreaWallPicture = new ImageMapArea('RoomOne-WallPicture', 'RoomOne', '201,236,299,324', 'rect', '', 'Text');

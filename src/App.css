@@ -14,7 +14,7 @@
 .leftScrollButton {
   position: fixed;
   margin-left: 10px;
-  padding-right: 10px;
+  padding-left: 2px;
   top: 50Vh;
   outline: none;
   border: none;
@@ -35,7 +35,7 @@
 .rightScrollButton {
   position: fixed;
   margin-right: 10px;
-  padding-left: 10px;
+  padding-right: 2px;
   top: 50vh;
   right: 0;
   outline: none;
@@ -52,6 +52,51 @@
   box-shadow: rgb(0, 0, 0) 1px 1px 10px 4px;
   border-radius: 35px;
   opacity: 0.6;
+}
+
+.leftScrollButtonHelp {
+  position: absolute;
+  margin-left: 10px;
+  padding-left: 5px;
+  padding-top: 5px;
+  top: 25Vh;
+  outline: none;
+  border: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: pointer;
+  position: absolute;
+  height: 35px;
+  width: 35px;
+  background: whitesmoke;
+  box-shadow: rgb(168, 24, 24) 1px 1px 10px 4px;
+  border-radius: 35px;
+  z-index: 10003;
+}
+
+.rightScrollButtonHelp {
+  position: absolute;
+  margin-right: 10px;
+  padding-left: 10px;
+  padding-top: 5px;
+  top: 25vh;
+  right: 0;
+  outline: none;
+  border: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: pointer;
+  position: absolute;
+  height: 35px;
+  width: 35px;
+  background: whitesmoke;
+  box-shadow: rgb(168, 24, 24) 1px 1px 10px 4px;
+  border-radius: 35px;
+  z-index: 10003;
 }
 
 .RoomImage {
@@ -158,6 +203,26 @@ nav {
   width: 400px;
   font-family: American Typewriter, serif;
   font-size: 30px;
+}
+
+.helpHome {
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  outline: none;
+  border: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: pointer;
+  position: absolute;
+  background: whitesmoke;
+  box-shadow: rgb(0, 0, 0) 1px 1px 10px 4px;
+  border-radius: 35px;
+  opacity: 0.8;
 }
 
 .footer {
@@ -284,6 +349,25 @@ nav {
   box-shadow: rgb(0, 0, 0) 1px 1px 10px 4px;
 }
 
+.close-help-modal-button {
+  outline: none;
+  border: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  background: whitesmoke;
+  border-radius: 32px;
+  z-index: 10003;
+  box-shadow: rgb(0, 0, 0) 1px 1px 10px 4px;
+}
+
 .ul-menu,
 .li-menu {
   margin: 0;
@@ -384,10 +468,32 @@ nav {
   top: 0px;
   height: 100vh;
   width: 100vw;
+}
 
+.helpDivContainer {
+  position: fixed;
+  top: 0px;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10002;
 }
 
 .aboutModal {
+  overflow-x: hidden;
+  background: whitesmoke;
+  position: absolute;
+  border: none;
+  box-shadow: rgba(187, 55, 116, 0.5) 0px 22px 70px 4px;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  height: 50vh;
+  width: 50vw;
+  z-index: 10003;
+  overflow: hidden;
+}
+
+.helpModal {
   overflow-x: hidden;
   background: whitesmoke;
   position: absolute;
@@ -402,6 +508,38 @@ nav {
   overflow: hidden;
 }
 
+.helpModalContent {
+  position: relative;
+  height: 40vh;
+  width: 50vw;
+  z-index: 10002;
+  overflow-x: scroll;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.helpModalContent::-webkit-scrollbar {
+  display: none;
+}
+
+.helpModalImage {
+  position: relative;
+  display: flex;
+  max-block-size: -webkit-fill-available;
+  z-index: 10002;
+}
+
+.helpModalImageRoom {
+  position: relative;
+  display: flex;
+  max-width: -webkit-fill-available;
+  z-index: 10002;
+}
+
+.helpModalText {
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
 .modalButton {
   box-shadow: rgb(0, 0, 0) 1px 1px 10px 4px;
   font-size: 2.5em;
@@ -411,6 +549,22 @@ nav {
   border-radius: 50px;
   border: none;
 }
+
+.helpModalBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10001;
+  opacity: 0.9;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  overflow: hidden;
+  z-index: 1001;
+}
+
 
 .aboutModalBackgroundLeft {
   position: absolute;
@@ -450,7 +604,6 @@ nav {
   display: none;
 }
 
-
 .aboutModalInfo {
   position: relative;
   display: flex;
@@ -477,111 +630,5 @@ nav {
 
 .navLink {
   color: black;
-}
-
-.fade-in {
-  animation: fadeIn ease 1s;
-  -webkit-animation: fadeIn ease 1s;
-  -moz-animation: fadeIn ease 1s;
-  -o-animation: fadeIn ease 1s;
-  -ms-animation: fadeIn ease 1s;
-
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity:0.1;
-  }
-  100% {
-    opacity:1;
-  }
-}
-
-@-moz-keyframes fadeIn {
-  0% {
-    opacity:0.1;
-  }
-  100% {
-    opacity:1;
-  }
-}
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity:0.1;
-  }
-  100% {
-    opacity:1;
-  }
-}
-
-@-o-keyframes fadeIn {
-  0% {
-    opacity:0.1;
-  }
-  100% {
-    opacity:1;
-  }
-}
-
-@-ms-keyframes fadeIn {
-  0% {
-    opacity:0.1;
-  }
-  100% {
-    opacity:1;
-  }
-}
-
-.fade-out {
-  animation: fadeOut ease 1s;
-  -webkit-animation: fadeOut ease 1s;
-  -moz-animation: fadeOut ease 1s;
-  -o-animation: fadeOut ease 1s;
-  -ms-animation: fadeOut ease 1s;
-}
-@keyframes fadeOut {
-  0% {
-    opacity:1;
-  }
-  100% {
-    opacity:0.1;
-  }
-}
-
-@-moz-keyframes fadeOut {
-  0% {
-    opacity:1;
-  }
-  100% {
-    opacity:0.1;
-  }
-}
-
-@-webkit-keyframes fadeOut {
-  0% {
-    opacity:1;
-  }
-  100% {
-    opacity:0.1;
-  }
-}
-
-@-o-keyframes fadeOut {
-  0% {
-    opacity:1;
-  }
-  100% {
-    opacity:0.1;
-  }
-}
-
-@-ms-keyframes fadeOut {
-  0% {
-    opacity:1;
-  }
-  100% {
-    opacity:0.1;
-  }
 }
 
