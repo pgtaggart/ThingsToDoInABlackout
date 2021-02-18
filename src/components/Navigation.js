@@ -1,7 +1,5 @@
 import * as React from "react";
 import { motion } from "framer-motion";
-import bounceLogo from '../images/bounce-logo-purple.svg'
-import iwmLogog from '../images/IWM_logo.png';
 
 const ul_variants = {
   open: {
@@ -49,10 +47,10 @@ export const Navigation = (properties) => (
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}>
       <div className="icon-placeholder" >
-        <img src={iwmLogog} alt="IWM" height="20px" width="40px"/>
+        <i className="glyphicon glyphicon-book"/>
       </div>
       <div className="text-placeholder" >
-        <a href='https://www.iwm.org.uk/' className="navLink">Imperial War Museums</a>
+        <a href='#' className="navLink">Research</a>
       </div>
     </motion.li>
     <motion.li className="li-menu"
@@ -60,10 +58,10 @@ export const Navigation = (properties) => (
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}>
       <div className="icon-placeholder" >
-        <img src={bounceLogo} alt="Bounce Theatre dot com"/>
+        <i className="glyphicon glyphicon-folder-open"/>
       </div>
       <div className="text-placeholder" >
-        <a href='https://www.bouncetheatre.com' className="navLink">Bounce Theatre</a>
+        <a href='#' className="navLink">Resources</a>
       </div>
     </motion.li>
   </motion.ul>

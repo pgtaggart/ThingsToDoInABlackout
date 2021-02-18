@@ -538,6 +538,8 @@ nav {
 .helpModalText {
   padding-left: 10px;
   padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
 }
 
 .modalButton {
@@ -621,11 +623,14 @@ nav {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.aboutModalLogo {
-  position: absolute;
-  bottom: 0;
-  right: 20px;
-  z-index: 10001;
+.helpModalTextParagraph {
+  font-size: large;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.abounceLogoLink {
+  padding-right: 10px;
+  margin-top: -15px;
 }
 
 .navLink {

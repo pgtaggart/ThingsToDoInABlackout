@@ -181,13 +181,6 @@ function App() {
                 <i className='glyphicon glyphicon-remove'/>
               </motion.button>
             </motion.div>
-            <motion.div className="aboutModalLogo"
-                initial={{ y: 1000 }}
-                animate={{ y: -10 }}
-                exit={{ y: 1000 }}
-                transition={{delay: 0.1, duration: 2}}>
-                  <img src={bounceLogo} alt="Bounce Theatre dot com" width="100px" height="100px"/>
-            </motion.div>
         </div>      
       )}      
       </AnimatePresence>
@@ -208,6 +201,12 @@ function App() {
           , Instagram, Twitter
         </Typist>
         <div className="social-icons">
+          <motion.div className="abounceLogoLink"
+                whileHover={{ scale: 1.2 }}>
+                  <a href="https://www.bouncetheatre.com">
+                    <img src={bounceLogo} alt="Bounce Theatre dot com" width="50px" height="50px"/>
+                  </a>
+          </motion.div>
           <motion.div className="social-icon" whileHover={{ scale: 1.2 }}>
             <SocialMediaIconsReact 
                 icon="twitter" iconSize="8" url="https://twitter.com/bouncetheatre" iconColor="#000"
