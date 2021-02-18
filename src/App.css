@@ -456,6 +456,19 @@ nav {
   font-family: 'Courier New', Courier, monospace;
 }
 
+.TextTypeWriterHeading {
+  text-align: center;
+  font-size: x-large;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+.TextTypeWriterSubHeading {
+  font-size: large;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
 .aboutButton {
   background-color: transparent;
   border: none;
