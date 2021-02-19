@@ -50,7 +50,7 @@ export const Navigation = (properties) => (
         <i className="glyphicon glyphicon-book"/>
       </div>
       <div className="text-placeholder" >
-        <a href='#' className="navLink">Research</a>
+        <button className="aboutButton">Research</button>
       </div>
     </motion.li>
     <motion.li className="li-menu"
@@ -61,7 +61,7 @@ export const Navigation = (properties) => (
         <i className="glyphicon glyphicon-folder-open"/>
       </div>
       <div className="text-placeholder" >
-        <a href='#' className="navLink">Resources</a>
+      <button className="aboutButton">Resources</button>
       </div>
     </motion.li>
   </motion.ul>
