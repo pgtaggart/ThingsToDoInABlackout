@@ -10,9 +10,11 @@ import HelpModal from './components/HelpModal';
 import Room from './components/room';
 import './App.css';
 import './imageGallery.scss';
+import './VerticalTimeline.css'
 import bounceLogo from './images/bounce-logo-purple.svg';
 import heritageFund from './images/HeritageFund.png';
 import ImageGallery from './components/ImageGallery';
+import ResearchTimeLine from './components/ResearchTimeLine';
 import imageLoader from './components/ImageLoader.js';
 import textLoader from './components/TextLoader.js';
 
@@ -178,27 +180,19 @@ function App() {
 
       <AnimatePresence>     
         {isResearchModalOpen &&(
-          <div className="researchDivContainer">
-            <motion.div className="researchModalBackground"
-                initial={{ x: 3000 }}
-                animate={{ x: 0 }}
-                exit={{ x: 3000 }}
-                transition={{delay: 0.1, duration: 1}}>
-            </motion.div>
             <motion.div
                 key="researchModal"
                 className="researchModal"
-                initial={{ y: 1000, x: -350 }}
-                animate={{ y: -250, x: -350}}
-                exit={{ y: 1000, x:  -350}}
+                initial={{ y: -3000 }}
+                animate={{ y: 0}}
+                exit={{ y: -3000}}
                 transition={{delay: 0.1, duration: 1}}>
-                  
-
+                  <ResearchTimeLine />
                   <motion.button className="close-research-modal-button" onClick={() => {toggleResearchModalOpen(); document.getElementById('mainMenu').style.opacity='1';}} whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.95 }}>
                     <i className='glyphicon glyphicon-remove'/>
                   </motion.button>
             </motion.div>
-          </div>)}
+          )}
       </AnimatePresence>
 
       <div className="footer">
@@ -240,7 +234,7 @@ function App() {
           </motion.div>
         </div>
       </div>
-
+    
     </>
   );
      
