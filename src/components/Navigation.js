@@ -50,7 +50,7 @@ export const Navigation = (properties) => (
         <i className="glyphicon glyphicon-book"/>
       </div>
       <div className="text-placeholder" >
-        <button className="aboutButton">Research</button>
+        <button className="aboutButton" onClick={() => {properties.toggleResearchModalOpen(); properties.toggleNavOpen(); document.getElementById('mainMenu').style.opacity='0'; }}>Research</button>
       </div>
     </motion.li>
     <motion.li className="li-menu"

@@ -18,19 +18,23 @@ const ImageGallery = (properties) => {
         enter: (direction) => {
             return {
                 x: direction > 0 ? 1000 : -1000,
-                opacity: 0
+                opacity: 0,
+                transition: { duration: 1 }
+
             };
         },
         center: {
             zIndex: 1,
             x: 0,
-            opacity: 1
+            opacity: 1,
+            transition: { duration: 1 }
         },
         exit: (direction) => {
             return {
                 zIndex: 0,
                 x: direction < 0 ? 1000 : -1000,
-                opacity: 0
+                opacity: 0,
+                transition: { duration: 1 }
             };
         }
     };
@@ -63,7 +67,7 @@ const ImageGallery = (properties) => {
                     className="resourceImage"
                     transition={{
                         x: { type: "spring", stiffness: 300, damping: 30 },
-                        opacity: { duration: 0.2 }
+                        opacity: { duration: 0.5 }
                     }}
                     drag="x"
                     dragConstraints={{ left: 0, right: 0 }}
@@ -73,8 +77,12 @@ const ImageGallery = (properties) => {
                         swipe < -swipeConfidenceThreshold ? paginate(1) : paginate(-1);}}
                 />
             </AnimatePresence>
-            <div className="nextResource" onClick={() => paginate(1)}>{"‣"}</div>
-            <div className="prevResource" onClick={() => paginate(-1)}>{"‣"}</div>
+            <motion.button className="prevResource" onClick={() => paginate(-1)} whileHover={{ opacity: 0.9, scale: 1.3 }} whileTap={{ scale: 0.95 }}>
+                <i className='glyphicon glyphicon-backward'/>
+            </motion.button>
+            <motion.button className="nextResource" onClick={() => paginate(1)} whileHover={{ opacity: 0.9, scale: 1.3 }} whileTap={{ scale: 0.95 }}>
+                <i className='glyphicon glyphicon-forward'/>
+            </motion.button>
             <div className="resourceExplain"><span className="resourceExplainText">{properties.images[imageIndex].text}</span></div>
         </>
     )
