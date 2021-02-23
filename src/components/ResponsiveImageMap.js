@@ -118,20 +118,21 @@ export default class ResponsiveImageMap extends PureComponent {
         switch(mapType) {
 
             case 'Audio' : 
-                infoIcon.setAttribute("class", "modalButton fade-in fadeinglyphicon glyphicon-headphones");
+            case 'AudioText' : 
+                infoIcon.setAttribute("class", "modalButton glyphicon glyphicon-headphones");
                 break;
             
             case 'Image' :
             case 'AudioImage' :
-                infoIcon.setAttribute("class", "modalButton fade-in glyphicon glyphicon-picture");
+                infoIcon.setAttribute("class", "modalButton glyphicon glyphicon-picture");
                 break;
 
             case 'Text' :
-                infoIcon.setAttribute("class", "modalButton fade-in glyphicon glyphicon-pencil");
+                infoIcon.setAttribute("class", "modalButton glyphicon glyphicon-pencil");
                 break;
 
             default :
-                infoIcon.setAttribute("class", "modalButton fade-in glyphicon glyphicon-question-sign");
+                infoIcon.setAttribute("class", "modalButton glyphicon glyphicon-question-sign");
                 break;
         }
         
@@ -190,13 +191,16 @@ export default class ResponsiveImageMap extends PureComponent {
                 this.props.toggleAudioContentModalFunction();
                 this.props.toggleImageContentModalFunction();
                 break;
+            case 'AudioText' :
+                this.props.toggleAudioContentModalFunction();
+                this.props.toggleTextContentModalFunction();
+                break;
 
             default :
                 // don't do anything if we don't know what type this is
                 break;
         }
     }
-
 
     buildAreaItemsForStreet() {
         return this.map.areas.map((item, index) => {

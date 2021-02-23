@@ -61,7 +61,7 @@ export const Navigation = (properties) => (
         <i className="glyphicon glyphicon-folder-open"/>
       </div>
       <div className="text-placeholder" >
-      <button className="aboutButton">Resources</button>
+      <button className="aboutButton" onClick={() => {properties.toggleResourcesModalOpen(); properties.toggleNavOpen(); document.getElementById('mainMenu').style.opacity='0'; }}>Resources</button>
       </div>
     </motion.li>
   </motion.ul>

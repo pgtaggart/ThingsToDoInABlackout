@@ -168,11 +168,17 @@ nav {
   box-shadow: 5px 10px 8px;
 }
 
-.text-content-modal-body {
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
+.TextModalConatiner {
+  width: -webkit-fill-available;
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+}
+
+.TextModalContent {
+  max-height: 68vh;
+  overflow-y: scroll;
 }
 
 .modal-background {
@@ -368,6 +374,25 @@ nav {
   box-shadow: rgb(0, 0, 0) 1px 1px 10px 4px;
 }
 
+.close-resources-modal-button {
+  outline: none;
+  border: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  background: whitesmoke;
+  border-radius: 32px;
+  z-index: 10003;
+  box-shadow: rgb(0, 0, 0) 1px 1px 10px 4px;
+}
+
 .ul-menu,
 .li-menu {
   margin: 0;
@@ -433,18 +458,6 @@ nav {
   right:2px;
 }
 
-.TypeWriterTextBlock {
-  display: flex;
-  flex-direction: column-reverse;
-  position: relative;
-  padding-left: 15px;
-  padding-top: 15px;
-  padding-right: 15px;
-  padding-bottom: 15px;
-  overflow-y: auto;
-  max-height: 75vh;
-}
-
 .TypeWriterTextHeader {
   font-size: x-large;
   font-family: 'Courier New', Courier, monospace;
@@ -465,6 +478,14 @@ nav {
 
 .TextTypeWriterSubHeading {
   font-size: large;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+.TextTypeWriterTextCenter {
+  font-size: medium;
+  text-align: center;
   font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
 }
@@ -486,6 +507,14 @@ nav {
 }
 
 .helpDivContainer {
+  position: fixed;
+  top: 0px;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10002;
+}
+
+.resourcesDivContainer {
   position: fixed;
   top: 0px;
   height: 100vh;
@@ -519,6 +548,21 @@ nav {
   left: 50%;
   height: 50vh;
   width: 50vw;
+  z-index: 10002;
+  overflow: hidden;
+}
+
+.resourcesModal {
+  overflow-x: hidden;
+  background: black;
+  position: absolute;
+  border: none;
+  box-shadow: rgba(187, 55, 116, 0.5) 0px 22px 70px 4px;
+  border-radius: 10px;
+  top: 40vh;
+  left: 35vw;
+  height: 75vh;
+  width: 75vw;
   z-index: 10002;
   overflow: hidden;
 }
@@ -582,6 +626,69 @@ nav {
   z-index: 1001;
 }
 
+.resourcesModalBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10001;
+  opacity: 0.9;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  overflow: hidden;
+  z-index: 1001;
+}
+
+.resourceExplain {
+  position: fixed;
+  bottom: 0;
+  height: 50px;
+  z-index: 2;
+  width: -webkit-fill-available;
+  background-color: black;
+  opacity: 0.7;
+  text-align: center;
+}
+
+.resourceExplainText {
+  opacity: 1;
+  color: antiquewhite;
+  font-size: x-large;
+}
+
+.nextResource,
+.prevResource {
+  top: calc(50% - 20px);
+  position: absolute;
+  background: white;
+  border-radius: 30px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  z-index: 2;
+}
+
+.nextResource {
+  right: 10px;
+}
+
+.prevResource {
+  left: 10px;
+  transform: scale(-1);
+}
+
+.resourceImage {
+  position: absolute;
+  width: -webkit-fill-available;
+}
 
 .aboutModalBackgroundLeft {
   position: absolute;
@@ -623,17 +730,17 @@ nav {
 
 .aboutModalInfo {
   position: relative;
-  display: flex;
-  flex-direction: column-reverse;
   overflow-y: scroll;
-  max-height: 50vh;
+  height: 45vh;
   padding-left: 25px;
   padding-right: 25px;
-  padding-top: 30px;
+  padding-top: 5px;
   padding-bottom: 25px;
 }
 
-.aboutModalTextParagraph {
+.aboutModalTextHeader {
+  text-align: center;
+  margin: 10px;
   font-size: x-large;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -650,5 +757,111 @@ nav {
 
 .navLink {
   color: black;
+}
+
+.fade-in {
+  animation: fadeIn ease 1s;
+  -webkit-animation: fadeIn ease 1s;
+  -moz-animation: fadeIn ease 1s;
+  -o-animation: fadeIn ease 1s;
+  -ms-animation: fadeIn ease 1s;
+
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity:0.1;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0.1;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0.1;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0.1;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0.1;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+.fade-out {
+  animation: fadeOut ease 1s;
+  -webkit-animation: fadeOut ease 1s;
+  -moz-animation: fadeOut ease 1s;
+  -o-animation: fadeOut ease 1s;
+  -ms-animation: fadeOut ease 1s;
+}
+@keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0.1;
+  }
+}
+
+@-moz-keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0.1;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0.1;
+  }
+}
+
+@-o-keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0.1;
+  }
+}
+
+@-ms-keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0.1;
+  }
 }
 

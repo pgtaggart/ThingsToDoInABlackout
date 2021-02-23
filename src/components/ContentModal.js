@@ -54,9 +54,20 @@ const ContentModal = (properties) => {
                     default :
                         return;
                 }
+
+            case 'AudioText' : // type for text and audio
+
+                switch(properties.className) {
+                    case 'audio-content-modal' :
+                        return audioLoader.loadAudio(properties.mapAreaTitle);
+                    case 'text-content-modal' :
+                        return textLoader.loadText(properties.mapAreaTitle);
+                    default :
+                        return;
+                }
             
             case 'Text' : // These are the text types so use the selector
-                return (<div className="TypeWriterTextBlock">{textLoader.loadText(properties.mapAreaTitle)}</div>);
+                return (textLoader.loadText(properties.mapAreaTitle));
             
             default :
                 return (<div className={properties.childClassName}></div>);

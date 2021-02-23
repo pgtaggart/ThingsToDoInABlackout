@@ -32,17 +32,13 @@ export default class Room extends PureComponent {
         imageWidth = '1920';
         imageHeight= '1080';    
     
-        var roomOneAreaPoster = new ImageMapArea('RoomOne-Poster', 'RoomOne', '803,217,998,432', 'rect', '', 'Image');
         var roomOneAreaDiary = new ImageMapArea('RoomOne-Diary', 'RoomOne', '20,890,269,1058', 'rect', '', 'Text');
-        var roomOneAreaGasMask = new ImageMapArea('RoomOne-GasMask', 'RoomOne', '1694,302,1829,554', 'rect', '', 'Image');
-        var roomOneAreaMilkPail = new ImageMapArea('RoomOne-MilkPail', 'RoomOne', '1110,397,1197,517', 'rect', '', 'Text');
-        var roomOneAreaWallPicture = new ImageMapArea('RoomOne-WallPicture', 'RoomOne', '201,236,299,324', 'rect', '', 'Text');
-        var roomOneAreaRationBook = new ImageMapArea('RoomOne-RationBook', 'RoomOne', '1166,939,1398,1075', 'rect', '', 'AudioImage');
-        var roomOneAreaSuitcase = new ImageMapArea('RoomOne-Suitcase', 'RoomOne', '194,575,403,741', 'rect', '', 'AudioImage');
-        var roomOneAreaWindow = new ImageMapArea('RoomOne-Window', 'RoomOne', '423,134,751,439', 'rect', '', 'AudioImage');
-        var roomOneAreaSweets = new ImageMapArea('RoomOne-Sweets', 'RoomOne', '1582,604,1751,685', 'rect', '', 'AudioImage');
+        var roomOneAreaGasMask = new ImageMapArea('RoomOne-GasMask', 'RoomOne', '1694,302,1829,554', 'rect', '', 'Text');
+        var roomOneAreaRationBook = new ImageMapArea('RoomOne-RationBook', 'RoomOne', '1166,939,1398,1075', 'rect', '', 'Text');
+        var roomOneAreaSuitcase = new ImageMapArea('RoomOne-Suitcase', 'RoomOne', '194,575,403,741', 'rect', '', 'AudioText');
+        var roomOneAreaWindow = new ImageMapArea('RoomOne-Window', 'RoomOne', '423,134,751,439', 'rect', '', 'Text');
 
-        imageMap = new ImageMap('RoomOne-imageMap', [roomOneAreaPoster, roomOneAreaDiary, roomOneAreaGasMask, roomOneAreaMilkPail, roomOneAreaWallPicture, roomOneAreaRationBook, roomOneAreaSuitcase, roomOneAreaWindow, roomOneAreaSweets]);
+        imageMap = new ImageMap('RoomOne-imageMap', [roomOneAreaDiary, roomOneAreaGasMask, roomOneAreaRationBook, roomOneAreaSuitcase, roomOneAreaWindow]);
         backgroundColor = 'rgb(173, 151, 93)';
     
       } else if (this.props.roomIndex === 1 ) {
@@ -52,8 +48,10 @@ export default class Room extends PureComponent {
         parentElementId = 'RoomTwo';
         imageWidth = '1920';
         imageHeight= '1080';
-        var roomTwoArea = new ImageMapArea('RoomTwo', 'RoomTwo', '100,100,200,200', 'rect', '');
-        imageMap = new ImageMap('RoomTwo-imageMap', [roomTwoArea]);
+        var roomTwoAreaNewspaper = new ImageMapArea('RoomTwo-Newspaper', 'RoomTwo', '1244,270,1434,476', 'rect', '', 'AudioText');
+        var roomTwoAreaBedroll = new ImageMapArea('RoomTwo-Bedroll', 'RoomTwo', '637,1022,25,797', 'rect', '', 'Text');
+
+        imageMap = new ImageMap('RoomTwo-imageMap', [roomTwoAreaNewspaper, roomTwoAreaBedroll]);
         backgroundColor = 'rgb(33, 32, 27)';
         
        } else if (this.props.roomIndex === 2 ) {
@@ -63,8 +61,11 @@ export default class Room extends PureComponent {
         parentElementId = 'RoomThree';
         imageWidth = '1920';
         imageHeight= '1080'; 
-        var roomThreeArea = new ImageMapArea('RoomThree', 'RoomThree', '100,100,200,200', 'rect', '');
-        imageMap = new ImageMap('RoomThree-imageMap', [roomThreeArea]);
+        var roomThreeAreaBox = new ImageMapArea('RoomThree-Box', 'RoomThree', '883,671,1237,948', 'rect', '', 'Text');
+        var roomThreeAreaTrunk = new ImageMapArea('RoomThree-Trunk', 'RoomThree', '1490,626,1878,1034', 'rect', '', 'Text');
+        var roomThreeAreaNecklace = new ImageMapArea('RoomThree-Necklace', 'RoomThree', '221,619,371,775', 'rect', '', 'Text');
+        var roomThreeAreaBrokenRadio = new ImageMapArea('RoomThree-BrokenRadio', 'RoomThree', '155,324,335,480', 'rect', '', 'Text');
+        imageMap = new ImageMap('RoomThree-imageMap', [roomThreeAreaBox, roomThreeAreaTrunk, roomThreeAreaNecklace, roomThreeAreaBrokenRadio]);
         backgroundColor = 'rgb(80, 84, 70)';
 
       } else if (this.props.roomIndex === 3 ) {
