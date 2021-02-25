@@ -125,6 +125,7 @@
   padding: 0;
   margin: 0;
   z-index: 1000;
+  scrollbar-width: none;
 }
 
 .house-container::-webkit-scrollbar {
@@ -179,6 +180,7 @@ nav {
 .TextModalContent {
   max-height: 68vh;
   overflow-y: scroll;
+  scrollbar-width: none;
 }
 
 .modal-background {
@@ -229,6 +231,12 @@ nav {
   box-shadow: rgb(0, 0, 0) 1px 1px 10px 4px;
   border-radius: 35px;
   opacity: 0.8;
+}
+
+@-moz-document url-prefix() {
+  .helpHome {
+    height: 31px;
+  }
 }
 
 .footer {
@@ -297,6 +305,13 @@ nav {
   box-shadow: rgb(0, 0, 0) 1px 1px 10px 4px;
   border-radius: 35px;
   z-index: 10003;
+}
+
+@-moz-document url-prefix() {
+  .room-close-modal-button {
+    height: 38px;
+    width: 38px;
+  }
 }
 
 .close-audio-modal-button {
@@ -548,8 +563,6 @@ nav {
   border: none;
   box-shadow: rgba(187, 55, 116, 0.5) 0px 22px 70px 4px;
   border-radius: 10px;
-  top: 50%;
-  left: 50%;
   height: 50vh;
   width: 50vw;
   z-index: 10003;
@@ -563,8 +576,6 @@ nav {
   border: none;
   box-shadow: rgba(187, 55, 116, 0.5) 0px 22px 70px 4px;
   border-radius: 10px;
-  top: 50%;
-  left: 50%;
   height: 50vh;
   width: 50vw;
   z-index: 10002;
@@ -573,17 +584,29 @@ nav {
 
 .resourcesModal {
   overflow-x: hidden;
-  background: black;
+  background: whitesmoke;
   position: absolute;
   border: none;
   box-shadow: rgba(187, 55, 116, 0.5) 0px 22px 70px 4px;
   border-radius: 10px;
-  top: 40vh;
-  left: 35vw;
-  height: 75vh;
-  width: 75vw;
+  height: 50vh;
+  width: 50vw;
   z-index: 10002;
   overflow: hidden;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.HFH_Image {
+  margin: 5px;
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+
+.resourcesHeader {
+  padding-bottom: 10px;
+  padding-left: 10px;
+  text-align: center;
 }
 
 .researchModal {
@@ -598,6 +621,7 @@ nav {
   z-index: 10002;
   overflow-y: scroll;
   opacity: 0.95;
+  scrollbar-width: none;
 }
 
 .ResearchTimeLineHeader {
@@ -613,6 +637,8 @@ nav {
   width: 50vw;
   z-index: 10002;
   overflow-x: scroll;
+  overflow-y: hidden;
+  scrollbar-width: none;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -624,6 +650,7 @@ nav {
   position: relative;
   display: flex;
   max-block-size: -webkit-fill-available;
+  max-width: -moz-available;
   z-index: 10002;
 }
 
@@ -631,6 +658,7 @@ nav {
   position: relative;
   display: flex;
   max-width: -webkit-fill-available;
+  max-width: -moz-available;
   z-index: 10002;
 }
 

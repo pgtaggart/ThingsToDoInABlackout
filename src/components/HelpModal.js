@@ -50,7 +50,7 @@ export default class HelpModal extends PureComponent {
 
                 // after a while we will close the whole lot
                 if(this.state.count === 25) {
-                    this.figureOutCloseClick();
+                    //this.figureOutCloseClick();
                 }
             
             } else {
@@ -104,8 +104,8 @@ export default class HelpModal extends PureComponent {
                         <motion.div
                             key="helpModal"
                             className="helpModal"
-                            initial={{ y: 1000, x: -350 }}
-                            animate={{ y: -250, x: -350}}
+                            initial={{ y: 2000, x: '50%' }}
+                            animate={{ y: '50%', x: '50%'}}
                             exit={{ opacity: 0}}
                             transition={{delay: 0, duration: 1}}>
                         
@@ -157,8 +157,8 @@ export default class HelpModal extends PureComponent {
                         <motion.div
                             key="helpModal"
                             className="helpModal"
-                            initial={{ y: -250, x: -350, scale: 0 }}
-                            animate={{ scale: 1}}
+                            initial={{ scale: 0, x:'50%', y: '50%' }}
+                            animate={{ scale: 1, x:'50%', y: '50%'}}
                             exit={{ opacity: 0}}
                             transition={{delay: 0, duration: 1}}>
                         
