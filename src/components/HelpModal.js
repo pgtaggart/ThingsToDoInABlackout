@@ -69,8 +69,6 @@ export default class HelpModal extends PureComponent {
 
     figureOutCloseClick() {
 
-        console.log('Figure out help close click called');
-
         if(this.props.isHelpModalBackgroundOpen) {
             this.props.toggleHelpModalBackgroundOpen();
         }

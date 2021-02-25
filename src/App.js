@@ -183,9 +183,9 @@ function App() {
             <motion.div
                 key="researchModal"
                 className="researchModal"
-                initial={{ y: -3000 }}
-                animate={{ y: 0}}
-                exit={{ y: -3000}}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 0.95}}
+                exit={{ opacity: 0}}
                 transition={{delay: 0.1, duration: 1}}>
                   <ResearchTimeLine />
                   <motion.button className="close-research-modal-button" onClick={() => {toggleResearchModalOpen(); document.getElementById('mainMenu').style.opacity='1';}} whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.95 }}>

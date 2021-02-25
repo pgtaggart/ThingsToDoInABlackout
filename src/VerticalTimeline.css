@@ -81,6 +81,13 @@
     border-radius: 50%;
     box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
   }
+
+  .vertical-timeline-element-icon .glyphicon {
+    font-size: 25px;
+    padding-top: 7px;
+    padding-left: 7px;
+  }
+
   .vertical-timeline--one-column-right .vertical-timeline-element-icon {
     right: 0;
     left: unset;
@@ -104,6 +111,13 @@
       left: 50%;
       margin-left: -30px;
     }
+
+    .vertical-timeline-element-icon .glyphicon {
+        font-size: 40px;
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+
   }
   
   /* Icon animations */
@@ -183,9 +197,8 @@
     position: relative;
     margin-left: 60px;
     background: white;
-    border-radius: 0.25em;
+    border-radius: 0.5em;
     padding: 1em;
-    box-shadow: 0 3px 0 #ddd;
   }
   
   .vertical-timeline--one-column-right .vertical-timeline-element-content {
@@ -207,15 +220,14 @@
   }
   .vertical-timeline-element-content p, .vertical-timeline-element-content .vertical-timeline-element-date {
     font-size: 13px;
-    font-size: 0.8125rem;
     font-weight: 500;
   }
+  .vertical-timeline-element-content h3 {
+      padding-bottom: 10px;
+  }
+
   .vertical-timeline-element-content .vertical-timeline-element-date {
     display: inline-block;
-  }
-  .vertical-timeline-element-content p {
-    margin: 1em 0 0;
-    line-height: 1.6;
   }
   
   .vertical-timeline-element-title {
@@ -229,7 +241,6 @@
   .vertical-timeline-element-content .vertical-timeline-element-date {
     float: left;
     padding: .8em 0;
-    opacity: .7;
   }
   .vertical-timeline-element-content-arrow {
     content: '';
@@ -276,14 +287,25 @@
     }
     .vertical-timeline-element-content p {
       font-size: 16px;
-      font-size: 1rem;
+    }
+    .vertical-timeline-element-content h3 {
+        padding-bottom: 10px;
     }
     .vertical-timeline-element-content .vertical-timeline-element-date {
       font-size: 14px;
-      font-size: 0.875rem;
+    }
+    .vertical-timeline-element-icon .glyphicon {
+        font-size: 25px;
+        padding-top: 7px;
+        padding-left: 7px;
     }
   }
   @media only screen and (min-width: 1170px) {
+    .vertical-timeline-element-icon .glyphicon {
+        font-size: 40px;
+        padding-top: 9px;
+        padding-left: 10px;
+    }
     .vertical-timeline--two-columns .vertical-timeline-element-content {
       margin-left: 0;
       padding: 1.5em;
@@ -301,7 +323,6 @@
       left: 124%;
       top: 6px;
       font-size: 16px;
-      font-size: 1rem;
     }
   
     .vertical-timeline--two-columns .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left) .vertical-timeline-element-content,

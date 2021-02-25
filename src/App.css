@@ -587,8 +587,8 @@ nav {
 }
 
 .researchModal {
-  background: rgb(203,203,203);
-  background: radial-gradient(circle, rgba(203,203,203,1) 0%, rgba(65,70,75,1) 100%);
+  background: rgb(161,161,161);
+  background: radial-gradient(circle, rgba(161,161,161,1) 0%, rgba(0,0,0,1) 64%);
   position: absolute;
   border: none;
   top: 0;
@@ -603,6 +603,7 @@ nav {
 .ResearchTimeLineHeader {
   text-align: center;
   opacity: 1;
+  color: white;
 
 }
 
