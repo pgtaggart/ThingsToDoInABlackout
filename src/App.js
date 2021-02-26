@@ -179,61 +179,128 @@ function App() {
               exit={{ opacity: 0 }}
               transition={{ delay: 0.1, duration: 1 }}>
 
-              <h3 className="resourcesHeader">Heritage From Home Magazine</h3>
-              <div className="container-fluid">
-                <div className="row">
-                  <div className="col-md-3">
-                    <a href="#" >
-                      <motion.img alt="Heritage from Home Issue 1" src={hfh1} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
-                    </a>
-                  </div>
-                  <div className="col-md-3">
-                    <a href="#" >
-                      <motion.img alt="Heritage from Home Issue 2" src={hfh2} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
-                    </a>
-                  </div>
-                  <div className="col-md-3">
-                    <a href="#" >
-                      <motion.img alt="Heritage from Home Issue 3" src={hfh3} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
-                    </a>
-                  </div>
-                  <div className="col-md-3">
-                    <a href="#" >
-                      <motion.img alt="Heritage from Home Issue 4" src={hfh4} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
-                    </a>
-                  </div>
-                  <div className="col-md-3">
-                    <a href="#" >
-                      <motion.img alt="Heritage from Home Issue 5" src={hfh5} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
-                    </a>
-                  </div>
-                  <div className="col-md-3">
-                    <a href="#" >
-                      <motion.img alt="Heritage from Home Issue 6" src={hfh6} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
-                    </a>
-                  </div>
-                  <div className="col-md-3">
-                    <a href="#" >
-                      <motion.img alt="Heritage from Home Issue 7" src={hfh7} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
-                    </a>
-                  </div>
-                  <div className="col-md-3">
-                    <a href="#" >
-                      <motion.img alt="Heritage from Home Issue 8" src={hfh8} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
-                    </a>
-                  </div>
-                  <div className="col-md-3">
-                    <a href="#" >
-                      <motion.img alt="Heritage from Home Issue 9" src={hfh9} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <h3 className="resourcesHeader">Stories from the Blackout Radio Plays</h3>
-
               <motion.button className="close-resources-modal-button" onClick={() => { toggleResourcesModalOpen(); document.getElementById('mainMenu').style.opacity = '1'; }} whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.95 }}>
                 <i className='glyphicon glyphicon-remove' />
               </motion.button>
+
+              <div className="resourcesModalContent">
+
+                <div className="resourcesModalContentSection">
+                  <h3 className="resourcesHeader">Heritage From Home Magazine</h3>
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-md-4">
+                        <a href="#" >
+                          <motion.img alt="Heritage from Home Issue 1" src={hfh1} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
+                        </a>
+                        <h5 className="resourcesImageExplain">#1</h5>
+                      </div>
+                      <div className="col-md-4">
+                        <a href="#" >
+                          <motion.img alt="Heritage from Home Issue 2" src={hfh2} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
+                        </a>
+                        <h5 className="resourcesImageExplain">#2</h5>
+                      </div>
+                      <div className="col-md-4">
+                        <a href="#" >
+                          <motion.img alt="Heritage from Home Issue 3" src={hfh3} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
+                        </a>
+                        <h5 className="resourcesImageExplain">#3</h5>
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className="col-md-4">
+                        <a href="#" >
+                          <motion.img alt="Heritage from Home Issue 4" src={hfh4} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
+                        </a>
+                        <h5 className="resourcesImageExplain">#4</h5>
+                      </div>
+                      <div className="col-md-4">
+                        <a href="#" >
+                          <motion.img alt="Heritage from Home Issue 5" src={hfh5} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
+                        </a>
+                        <h5 className="resourcesImageExplain">#5</h5>
+                      </div>
+                      <div className="col-md-4">
+                        <a href="#" >
+                          <motion.img alt="Heritage from Home Issue 6" src={hfh6} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
+                        </a>
+                        <h5 className="resourcesImageExplain">#6</h5>
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className="col-md-4">
+                        <a href="#" >
+                          <motion.img alt="Heritage from Home Issue 7" src={hfh7} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
+                        </a>
+                        <h5 className="resourcesImageExplain">#7</h5>
+                      </div>
+                      <div className="col-md-4">
+                        <a href="#" >
+                          <motion.img alt="Heritage from Home Issue 8" src={hfh8} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
+                        </a>
+                        <h5 className="resourcesImageExplain">#8</h5>
+                      </div>
+                      <div className="col-md-4">
+                        <a href="#" >
+                          <motion.img alt="Heritage from Home Issue 9" src={hfh9} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
+                        </a>
+                        <h5 className="resourcesImageExplain">#9</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="resourcesModalContentSection">
+                  <h3 className="resourcesHeader">Stories from the Blackout Radio Plays</h3>
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-md-4">
+                        <a href="#" >
+                          <motion.img alt="Heritage from Home Issue 1" src={hfh1} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
+                        </a>
+                        <h5 className="resourcesImageExplain">#1</h5>
+                      </div>
+                      <div className="col-md-4">
+                        <a href="#" >
+                          <motion.img alt="Heritage from Home Issue 2" src={hfh2} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
+                        </a>
+                        <h5 className="resourcesImageExplain">#2</h5>
+                      </div>
+                      <div className="col-md-4">
+                        <a href="#" >
+                          <motion.img alt="Heritage from Home Issue 3" src={hfh3} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
+                        </a>
+                        <h5 className="resourcesImageExplain">#3</h5>
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className="col-md-4">
+                        <a href="#" >
+                          <motion.img alt="Heritage from Home Issue 4" src={hfh4} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
+                        </a>
+                        <h5 className="resourcesImageExplain">#4</h5>
+                      </div>
+                      <div className="col-md-4">
+                        <a href="#" >
+                          <motion.img alt="Heritage from Home Issue 5" src={hfh5} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
+                        </a>
+                        <h5 className="resourcesImageExplain">#5</h5>
+                      </div>
+                      <div className="col-md-4">
+                        <a href="#" >
+                          <motion.img alt="Heritage from Home Issue 6" src={hfh6} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
+                        </a>
+                        <h5 className="resourcesImageExplain">#6</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div className="resourcesModalContentPaging">oo</div>
+
             </motion.div>
           </div>)}
       </AnimatePresence>

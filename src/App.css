@@ -589,24 +589,37 @@ nav {
   border: none;
   box-shadow: rgba(187, 55, 116, 0.5) 0px 22px 70px 4px;
   border-radius: 10px;
-  height: 50vh;
+  height: 55vh;
   width: 50vw;
   z-index: 10002;
   overflow: hidden;
+}
+
+.resourcesModalContent {
   overflow-y: scroll;
   scrollbar-width: none;
+  z-index: 10002;
+  max-height: -webkit-fill-available;
 }
 
 .HFH_Image {
-  margin: 5px;
   -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
   box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
 }
 
 .resourcesHeader {
-  padding-bottom: 10px;
+  padding-bottom: 15px;
   padding-left: 10px;
   text-align: center;
+  font-family: American Typewriter, serif;
+}
+
+.resourcesImageExplain {
+  text-align: center;
+}
+
+.container {
+  max-width: 40vw;
 }
 
 .researchModal {
@@ -628,7 +641,7 @@ nav {
   text-align: center;
   opacity: 1;
   color: white;
-
+  font-family: American Typewriter, serif;
 }
 
 .helpModalContent {
@@ -667,6 +680,7 @@ nav {
   padding-top: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
+  font-family: American Typewriter, serif;
 }
 
 .modalButton {
@@ -806,18 +820,20 @@ nav {
   padding-right: 25px;
   padding-top: 5px;
   padding-bottom: 25px;
+  font-family: American Typewriter, serif;
 }
 
 .aboutModalTextHeader {
   text-align: center;
   margin: 10px;
   font-size: x-large;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: American Typewriter, serif;
 }
 
 .helpModalTextParagraph {
   font-size: large;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: American Typewriter, serif;
+  text-align: center;
 }
 
 .abounceLogoLink {

@@ -220,7 +220,7 @@ const ResearchTimeLine = () => {
                 contentArrowStyle={{ borderRight: defaultArrowStyle }}
                 date="14th November 1940"
                 iconStyle={{ background: defaultIconBackground, color: defaultIconForeground }}
-                icon={<i className='glyphicon glyphicon-warning'/>}>
+                icon={<i className='glyphicon glyphicon-fire'/>}>
                 <h3 className="vertical-timeline-element-title">Coventry bombed in the Blitz</h3>
                 <p>Coventry bombed in the Blitz for the first time. In that one night, over 30,000 incendiary bombs were dropped, 554 people were killed, and 50,000 houses were destroyed. </p>
             </VerticalTimelineElement>
@@ -488,7 +488,7 @@ const ResearchTimeLine = () => {
                 contentArrowStyle={{ borderRight: defaultArrowStyle }}
                 date="30th April 1945"
                 iconStyle={{ background: defaultIconBackground, color: defaultIconForeground }}
-                icon={<i className='glyphicon glyphicon-warning'/>}>
+                icon={<i className='glyphicon glyphicon-warning-sign'/>}>
                 <h3 className="vertical-timeline-element-title">Hitler commits suicide in his Berlin bunker</h3>
                 <p></p>
             </VerticalTimelineElement>
@@ -558,7 +558,7 @@ const ResearchTimeLine = () => {
                 contentArrowStyle={{ borderRight: defaultArrowStyle }}
                 date="24th October 1945"
                 iconStyle={{ background: defaultIconBackground, color: defaultIconForeground }}
-                icon={<i className='glyphicon glyphicon-'/>}>
+                icon={<i className='glyphicon glyphicon-star'/>}>
                 <h3 className="vertical-timeline-element-title">The United Nations</h3>
                 <p>The Charter of the United Nations is signed by the British Government – the charter aims to: 
                     “Save succeeding generations from the scourge of war, which twice in our lifetime has brought untold sorrow to mankind”. </p>
