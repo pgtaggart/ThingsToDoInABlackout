@@ -299,8 +299,6 @@ function App() {
 
               </div>
 
-              <div className="resourcesModalContentPaging">oo</div>
-
             </motion.div>
           </div>)}
       </AnimatePresence>

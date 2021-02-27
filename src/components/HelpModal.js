@@ -50,7 +50,7 @@ export default class HelpModal extends PureComponent {
 
                 // after a while we will close the whole lot
                 if(this.state.count === 25) {
-                    //this.figureOutCloseClick();
+                    this.figureOutCloseClick();
                 }
             
             } else {
