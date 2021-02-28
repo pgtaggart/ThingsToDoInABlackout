@@ -612,34 +612,6 @@ class TextLoader {
                         </motion.div>
                     </div>);
 
-            case 'RoomFive-Photo6':
-                return (
-                    <div className="TextModalConatiner">
-                        <div className="TextModalHeader"></div>
-                        <motion.div className="TextModalContent"
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ delay: 0.5, duration: 3 }}>
-                            <br />
-                            <span className="TextTypeWriterTextCenter">
-                                <p>When will we see again? <br />
-                                A question on everybody's hearts. <br />
-                                When will the darkness go away? <br />
-                                Is what nobody ever asks. <br />
-                                When will the curtains swish aside, revealing squares of light? <br />
-                                When will no one have to worry about bombing in the night? <br />
-                                We walk past shut-up cinemas and we miss illumination. <br />
-                                But going out has long been but a hallucination. <br />
-                                When will we all see again? <br />
-                                And chase out all the dark? <br />
-                                When will we kiss and hug our friends, not afraid of a laugh? <br />
-                                The darkness hides inside our eyes, and the cold won't go away - <br />
-                                But we all know we'll wake again, and trudge through another day.<br /><br />
-                                Adelka Devante</p>
-                            </span>
-                        </motion.div>
-                    </div>);
-
             case 'RoomSix-Door':
                 return (
                     <div className="TextModalConatiner">
@@ -653,7 +625,7 @@ class TextLoader {
                         <motion.div className="TextModalContent"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
-                            transition={{ delay: 0.5, duration: 3 }}>
+                            transition={{ delay: 1.5, duration: 3 }}>
                             <br />
                             <span className="TextTypeWriterTextCenter">
                                 <p>I’m eight years old and today my Papa went away. He was in the garden sanding a table when two policeman knocked on the door.</p>
@@ -674,7 +646,7 @@ class TextLoader {
                         <motion.div className="TextModalContent"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
-                            transition={{ delay: 0.5, duration: 3 }}>
+                            transition={{ delay: 1.5, duration: 3 }}>
                             <br />
                             <span className="TextTypeWriterTextCenter">
                                 <p>I paint pictures of Papa in the few colours I have. Paint is my favourite now because I’m now allowed anything else. 
@@ -706,7 +678,7 @@ class TextLoader {
                         <motion.div className="TextModalContent"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
-                            transition={{ delay: 0.5, duration: 3 }}>
+                            transition={{ delay: 1.5, duration: 3 }}>
                             <br />
                             <span className="TextTypeWriterTextCenter">
                                 <p>The new rule is we do Art School every day. The Doctor’s friend with the funny moustache brings us paper, ink and rulers after dark and I draw for hours and hours. 
@@ -730,7 +702,7 @@ class TextLoader {
                         <motion.div className="TextModalContent"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
-                            transition={{ delay: 0.5, duration: 3 }}>
+                            transition={{ delay: 1.5, duration: 3 }}>
                             <br />
                             <span className="TextTypeWriterTextCenter">
                                 <p>I’m thirteen years old now, which makes me officially a teenager. Neville is six which is middle aged in cat years, Walter is 15, which makes him officially even more annoying. 
@@ -757,7 +729,7 @@ class TextLoader {
                         <motion.div className="TextModalContent"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
-                            transition={{ delay: 0.5, duration: 3 }}>
+                            transition={{ delay: 1.5, duration: 3 }}>
                             <br />
                             <span className="TextTypeWriterTextCenter">
                                 <p>I went outside especially because it had always been so dark. They said the lighting would be coming. So I went out and saw the street lights come back.</p>
