@@ -95,11 +95,19 @@ export default class ScrollableContainer extends PureComponent {
               setRoomIndexFunction ={this.props.setRoomIndexFunction} toggleModalFunction={() => this.props.toggleModalFunction()}/>
           </li>
         </ul>
-        <motion.button className="leftScrollButton" onClick={() => this.autoScrollContainer(-1)} whileHover={{ opacity: 0.9, scale: 1.3 }} whileTap={{ scale: 0.95 }}>
-          <i className='glyphicon glyphicon-backward'/>
+        <motion.button 
+          className="leftScrollButton"
+          onClick={() => this.autoScrollContainer(-1)} 
+          whileHover={{ opacity: 0.9, scale: 1.3 }} 
+          whileTap={{ scale: 0.95 }}>
+            <i className='glyphicon glyphicon-backward'/>
         </motion.button>
-        <motion.button className="rightScrollButton" onClick={() => this.autoScrollContainer(1)} whileHover={{ opacity: 0.9, scale: 1.3 }} whileTap={{ scale: 0.95 }}>
-          <i className='glyphicon glyphicon-forward'/>
+        <motion.button 
+          className="rightScrollButton"
+          onClick={() => this.autoScrollContainer(1)} 
+          whileHover={{ opacity: 0.9, scale: 1.3 }} 
+          whileTap={{ scale: 0.95 }}>
+            <i className='glyphicon glyphicon-forward'/>
         </motion.button>
       </>
     )
