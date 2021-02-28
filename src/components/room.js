@@ -32,13 +32,14 @@ export default class Room extends PureComponent {
         imageWidth = '1920';
         imageHeight= '1080';    
     
-        var roomOneAreaDiary = new ImageMapArea('RoomOne-Diary', 'RoomOne', '20,890,269,1058', 'rect', '', 'Text');
-        var roomOneAreaGasMask = new ImageMapArea('RoomOne-GasMask', 'RoomOne', '1694,302,1829,554', 'rect', '', 'Text');
-        var roomOneAreaRationBook = new ImageMapArea('RoomOne-RationBook', 'RoomOne', '1166,939,1398,1075', 'rect', '', 'Text');
-        var roomOneAreaSuitcase = new ImageMapArea('RoomOne-Suitcase', 'RoomOne', '194,575,403,741', 'rect', '', 'AudioText');
-        var roomOneAreaWindow = new ImageMapArea('RoomOne-Window', 'RoomOne', '423,134,751,439', 'rect', '', 'Text');
+        var roomOneAreaDiary = new ImageMapArea('RoomOne-Diary', 'RoomOne', '17,883,271,1060', 'rect', '', 'Text');
+        var roomOneAreaGasMask = new ImageMapArea('RoomOne-GasMask', 'RoomOne', '1688,305,1832,559', 'rect', '', 'Text');
+        var roomOneCurtains = new ImageMapArea('RoomOne-Curtains', 'RoomOne', '446,185,740,446', 'rect', '', 'Text');
+        var roomOneBed = new ImageMapArea('RoomOne-Bed', 'RoomOne', '760,541,1026,792', 'rect', '', 'Text');
+        var roomOneAreaSuitcase = new ImageMapArea('RoomOne-Suitcase', 'RoomOne', '195,556,402,754', 'rect', '', 'Text');
+        var roomOneAreaPhoto = new ImageMapArea('RoomOne-Photo', 'RoomOne', '1467,200,1605,297', 'rect', '', 'Text');
 
-        imageMap = new ImageMap('RoomOne-imageMap', [roomOneAreaDiary, roomOneAreaGasMask, roomOneAreaRationBook, roomOneAreaSuitcase, roomOneAreaWindow]);
+        imageMap = new ImageMap('RoomOne-imageMap', [roomOneAreaDiary, roomOneAreaGasMask, roomOneCurtains, roomOneBed, roomOneAreaSuitcase, roomOneAreaPhoto]);
         backgroundColor = 'rgb(173, 151, 93)';
     
       } else if (this.props.roomIndex === 1 ) {
@@ -48,10 +49,14 @@ export default class Room extends PureComponent {
         parentElementId = 'RoomTwo';
         imageWidth = '1920';
         imageHeight= '1080';
-        var roomTwoAreaNewspaper = new ImageMapArea('RoomTwo-Newspaper', 'RoomTwo', '1244,270,1434,476', 'rect', '', 'AudioText');
-        var roomTwoAreaBedroll = new ImageMapArea('RoomTwo-Bedroll', 'RoomTwo', '637,1022,25,797', 'rect', '', 'Text');
 
-        imageMap = new ImageMap('RoomTwo-imageMap', [roomTwoAreaNewspaper, roomTwoAreaBedroll]);
+        var roomTwoAreaDiary = new ImageMapArea('RoomTwo-Diary', 'RoomTwo', '334,890,619,1038', 'rect', '', 'Text');
+        var roomTwoAreaWindow = new ImageMapArea('RoomTwo-Window', 'RoomTwo', '168,142,434,502', 'rect', '', 'Text');
+        var roomTwoAreaRope = new ImageMapArea('RoomTwo-Rope', 'RoomTwo', '834,956,1024,1055', 'rect', '', 'Text');
+        var roomTwoAreaBookcase = new ImageMapArea('RoomTwo-Bookcase', 'RoomTwo', '1328,588,1433,793', 'rect', '', 'Text');
+        var roomTwoAreaNewspaper = new ImageMapArea('RoomTwo-Newspaper', 'RoomTwo', '1426,476,1255,273', 'rect', '', 'Text');
+        
+        imageMap = new ImageMap('RoomTwo-imageMap', [roomTwoAreaDiary, roomTwoAreaWindow, roomTwoAreaRope, roomTwoAreaBookcase, roomTwoAreaNewspaper]);
         backgroundColor = 'rgb(33, 32, 27)';
         
        } else if (this.props.roomIndex === 2 ) {
@@ -61,11 +66,10 @@ export default class Room extends PureComponent {
         parentElementId = 'RoomThree';
         imageWidth = '1920';
         imageHeight= '1080'; 
-        var roomThreeAreaBox = new ImageMapArea('RoomThree-Box', 'RoomThree', '883,671,1237,948', 'rect', '', 'Text');
-        var roomThreeAreaTrunk = new ImageMapArea('RoomThree-Trunk', 'RoomThree', '1490,626,1878,1034', 'rect', '', 'Text');
-        var roomThreeAreaNecklace = new ImageMapArea('RoomThree-Necklace', 'RoomThree', '221,619,371,775', 'rect', '', 'Text');
-        var roomThreeAreaBrokenRadio = new ImageMapArea('RoomThree-BrokenRadio', 'RoomThree', '155,324,335,480', 'rect', '', 'Text');
-        imageMap = new ImageMap('RoomThree-imageMap', [roomThreeAreaBox, roomThreeAreaTrunk, roomThreeAreaNecklace, roomThreeAreaBrokenRadio]);
+        
+        var roomThreeAreaLetter = new ImageMapArea('RoomThree-Letter', 'RoomThree', '272,682,476,925', 'rect', '', 'Text');
+
+        imageMap = new ImageMap('RoomThree-imageMap', [roomThreeAreaLetter]);
         backgroundColor = 'rgb(80, 84, 70)';
 
       } else if (this.props.roomIndex === 3 ) {
@@ -74,9 +78,11 @@ export default class Room extends PureComponent {
         roomImageId = 'RoomImage4';
         parentElementId = 'RoomFour';
         imageWidth = '1920';
-        imageHeight= '1080'; 
-        var roomFourArea = new ImageMapArea('RoomFour', 'RoomFour', '100,100,200,200', 'rect', '');
-        imageMap = new ImageMap('RoomFour-imageMap', [roomFourArea]);
+        imageHeight= '1080';
+
+        var roomFourAreaChair = new ImageMapArea('RoomFour-Chair', 'RoomFour', '795,509,1018,843', 'rect', '', 'Text');
+
+        imageMap = new ImageMap('RoomFour-imageMap', [roomFourAreaChair]);
         backgroundColor = 'rgb(80, 63, 37)';
 
       } else if (this.props.roomIndex === 4 ) {
@@ -85,9 +91,16 @@ export default class Room extends PureComponent {
         roomImageId = 'RoomImage5';
         parentElementId = 'RoomFive';
         imageWidth = '1920';
-        imageHeight= '1080'; 
-        var roomFiveArea = new ImageMapArea('RoomFive', 'RoomFive', '100,100,200,200', 'rect', '');
-        imageMap = new ImageMap('RoomFive-imageMap', [roomFiveArea]);
+        imageHeight= '1080';
+
+        var roomFiveAreaPhoto1 = new ImageMapArea('RoomFive-Photo1', 'RoomFive', '383,239,492,387', 'rect', '', 'Text');
+        var roomFiveAreaPhoto2 = new ImageMapArea('RoomFive-Photo2', 'RoomFive', '523,235,618,377', 'rect', '', 'Text');
+        var roomFiveAreaPhoto3 = new ImageMapArea('RoomFive-Photo3', 'RoomFive', '659,237,756,385', 'rect', '', 'Text');
+        var roomFiveAreaPhoto4 = new ImageMapArea('RoomFive-Photo4', 'RoomFive', '1145,214,1265,373', 'rect', '', 'Text');
+        var roomFiveAreaPhoto5 = new ImageMapArea('RoomFive-Photo5', 'RoomFive', '1304,223,1409,379', 'rect', '', 'Text');
+        var roomFiveAreaPhoto6 = new ImageMapArea('RoomFive-Photo6', 'RoomFive', '1444,225,1562,371', 'rect', '', 'Text');
+
+        imageMap = new ImageMap('RoomFive-imageMap', [roomFiveAreaPhoto1, roomFiveAreaPhoto2, roomFiveAreaPhoto3, roomFiveAreaPhoto4, roomFiveAreaPhoto5, roomFiveAreaPhoto6]);
         backgroundColor = 'rgb(190, 180, 169)';
 
       } else if (this.props.roomIndex === 5 ) {
@@ -97,9 +110,16 @@ export default class Room extends PureComponent {
         parentElementId = 'RoomSix';
         imageWidth = '1920';
         imageHeight= '1080';
-        var roomSixArea = new ImageMapArea('RoomSix', 'RoomSix', '100,100,200,200', 'rect', '');
-        imageMap = new ImageMap('RoomSix-imageMap', [roomSixArea]);
+
+        var roomSixAreaDoor = new ImageMapArea('RoomSix-Door', 'RoomSix', '1215,249,1314,606', 'rect', '', 'Text');
+        var roomSixAreaRationBook = new ImageMapArea('RoomSix-RationBook', 'RoomSix', '863,878,993,979', 'rect', '', 'Text');
+        var roomSixAreaScale = new ImageMapArea('RoomSix-Scale', 'RoomSix', '1559,573,1720,773', 'rect', '', 'Text');
+        var roomSixAreaChair = new ImageMapArea('RoomSix-Chair', 'RoomSix', '431,690,630,1045', 'rect', '', 'Text');
+        var roomSixAreaWindow = new ImageMapArea('RoomSix-Window', 'RoomSix', '538,235,754,425', 'rect', '', 'Text');
+
+        imageMap = new ImageMap('RoomSix-imageMap', [roomSixAreaDoor, roomSixAreaRationBook, roomSixAreaScale, roomSixAreaChair, roomSixAreaWindow]);
         backgroundColor = 'rgb(215, 205, 185)';
+
       }
 
       return (
