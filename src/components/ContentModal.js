@@ -21,11 +21,7 @@ const ContentModal = (properties) => {
 
     // Choose the innder div type based on the type of modal we are creating
     const renderModalType = () => {
-
-        console.log('Modal Title: ' + properties.mapAreaTitle);
-        console.log('Modal Type: ' + properties.className);
-        console.log('Map Area type: ' + properties.mapAreaType);
-
+        
         switch(properties.mapAreaType) {
             
             case 'Image' : // These are the image gallery only types
