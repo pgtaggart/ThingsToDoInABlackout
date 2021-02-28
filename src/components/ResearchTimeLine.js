@@ -9,11 +9,17 @@ const ResearchTimeLine = () => {
     const defaultIconBackground = 'rgb(0, 0, 0)';
     const defaultIconForeground = '#fff';
 
-    const commentTimelineBackground = 'rgba(130, 194, 117, 1)';
+    const commentTimelineBackground = 'rgb(130, 194, 117)';
     const commentTextColor = '#fff';
-    const commentArrowStyle = '7px solid  rgba(130, 194, 117, 1)';
-    const commentIconBackground = 'rgba(130, 194, 117, 1)';
+    const commentArrowStyle = '7px solid  rgb(130, 194, 117)';
+    const commentIconBackground = 'rgb(130, 194, 117)';
     const commentIconForeground = '#fff';
+
+    const fireTimelineBackground = 'rgb(255, 102, 102)';
+    const fireTextColor = '#fff';
+    const fireArrowStyle = '7px solid  rgb(255, 102, 102)';
+    const fireIconBackground = 'rgb(255, 102, 102)';
+    const fireIconForeground = '#fff';
 
     return (
 
@@ -186,10 +192,10 @@ const ResearchTimeLine = () => {
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                contentStyle={{ background: defaultTimelineBackground, color: defaultTextColor }}
-                contentArrowStyle={{ borderRight: defaultArrowStyle }}
+                contentStyle={{ background: fireTimelineBackground, color: fireTextColor }}
+                contentArrowStyle={{ borderRight: fireArrowStyle }}
                 date="7th September - 2nd November 1940"
-                iconStyle={{ background: defaultIconBackground, color: defaultIconForeground }}
+                iconStyle={{ background: fireIconBackground, color: fireIconForeground }}
                 icon={<i className='glyphicon glyphicon-fire'/>}>
                 <h3 className="vertical-timeline-element-title">London is bombed in the Blitz</h3>
                 <p>London is bombed in the Blitz every night during this period. 13,500 tons of high-explosive bombs dropped in 57 raids. Over 15,000 people are killed. 250,000 are made homeless. Important buildings such as St Paul's Cathedral, 
@@ -216,10 +222,10 @@ const ResearchTimeLine = () => {
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                contentStyle={{ background: defaultTimelineBackground, color: defaultTextColor }}
-                contentArrowStyle={{ borderRight: defaultArrowStyle }}
+                contentStyle={{ background: fireTimelineBackground, color: fireTextColor }}
+                contentArrowStyle={{ borderRight: fireArrowStyle }}
                 date="14th November 1940"
-                iconStyle={{ background: defaultIconBackground, color: defaultIconForeground }}
+                iconStyle={{ background: fireIconBackground, color: fireIconForeground }}
                 icon={<i className='glyphicon glyphicon-fire'/>}>
                 <h3 className="vertical-timeline-element-title">Coventry bombed in the Blitz</h3>
                 <p>Coventry bombed in the Blitz for the first time. In that one night, over 30,000 incendiary bombs were dropped, 554 people were killed, and 50,000 houses were destroyed. </p>
@@ -235,30 +241,30 @@ const ResearchTimeLine = () => {
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                contentStyle={{ background: defaultTimelineBackground, color: defaultTextColor }}
-                contentArrowStyle={{ borderRight: defaultArrowStyle }}
+                contentStyle={{ background: fireTimelineBackground, color: fireTextColor }}
+                contentArrowStyle={{ borderRight: fireArrowStyle }}
                 date="19th - 21st February 1941"
-                iconStyle={{ background: defaultIconBackground, color: defaultIconForeground }}
+                iconStyle={{ background: fireIconBackground, color: fireIconForeground }}
                 icon={<i className='glyphicon glyphicon-fire'/>}>
                 <h3 className="vertical-timeline-element-title">Swansea is hit by the Blitz</h3>
                 <p>The port, docks, and nearby oil refinery are all targeted. 230 people are killed, 397 injured.</p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                contentStyle={{ background: defaultTimelineBackground, color: defaultTextColor }}
-                contentArrowStyle={{ borderRight: defaultArrowStyle }}
+                contentStyle={{ background: commentTimelineBackground, color: commentTextColor }}
+                contentArrowStyle={{ borderRight: commentArrowStyle }}
                 date="8th March 1941"
-                iconStyle={{ background: defaultIconBackground, color: defaultIconForeground }}
+                iconStyle={{ background: commentIconBackground, color: commentIconForeground }}
                 icon={<i className='glyphicon glyphicon-comment'/>}>
                 <p>Café de Paris, a well-known nightclub, often attended by celebrities, soldiers, and the upper classes, suffers a direct hit in the Blitz. Rescuers who attended the scene afterwards 
                     are shocked to find looters were among them, yanking brooches and rings from the bodies of the revellers.</p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                contentStyle={{ background: defaultTimelineBackground, color: defaultTextColor }}
-                contentArrowStyle={{ borderRight: defaultArrowStyle }}
+                contentStyle={{ background: fireTimelineBackground, color: fireTextColor }}
+                contentArrowStyle={{ borderRight: fireArrowStyle }}
                 date="April - May 1941"
-                iconStyle={{ background: defaultIconBackground, color: defaultIconForeground }}
+                iconStyle={{ background: fireIconBackground, color: fireIconForeground }}
                 icon={<i className='glyphicon glyphicon-fire'/>}>
                 <h3 className="vertical-timeline-element-title">The Belfast Blitz</h3>
                 <p>Four attacks in the period. On Easter Tuesday, approximately 900 people die, 1,500 are injured. Many houses are seriously damaged. 150,000 people made homeless.</p>
@@ -275,10 +281,10 @@ const ResearchTimeLine = () => {
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                contentStyle={{ background: defaultTimelineBackground, color: defaultTextColor }}
-                contentArrowStyle={{ borderRight: defaultArrowStyle }}
+                contentStyle={{ background: commentTimelineBackground, color: commentTextColor }}
+                contentArrowStyle={{ borderRight: commentArrowStyle }}
                 date=""
-                iconStyle={{ background: defaultIconBackground, color: defaultIconForeground }}
+                iconStyle={{ background: commentIconBackground, color: commentIconForeground }}
                 icon={<i className='glyphicon glyphicon-comment'/>}>
                 <p>In 1941, several London hotels were fined for illegally buying over 150,000 eggs from a dealer in Folkestone. The hotels paid up to twice the controlled price for the eggs, claiming they were “desperate to feed the guests”. 
                     The dealer is sentenced to three months' hard labour.</p>
@@ -316,20 +322,20 @@ const ResearchTimeLine = () => {
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                contentStyle={{ background: defaultTimelineBackground, color: defaultTextColor }}
-                contentArrowStyle={{ borderRight: defaultArrowStyle }}
+                contentStyle={{ background: fireTimelineBackground, color: fireTextColor }}
+                contentArrowStyle={{ borderRight: fireArrowStyle }}
                 date="7th December 1941"
-                iconStyle={{ background: defaultIconBackground, color: defaultIconForeground }}
+                iconStyle={{ background: fireIconBackground, color: fireIconForeground }}
                 icon={<i className='glyphicon glyphicon-fire'/>}>
                 <h3 className="vertical-timeline-element-title">Pearl Harbor Attacked!</h3>
                 <p>Pearl Harbor is attacked by the Japanese and the USA enters the war.</p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                contentStyle={{ background: defaultTimelineBackground, color: defaultTextColor }}
-                contentArrowStyle={{ borderRight: defaultArrowStyle }}
+                contentStyle={{ background: fireTimelineBackground, color: fireTextColor }}
+                contentArrowStyle={{ borderRight: fireArrowStyle }}
                 date="1942"
-                iconStyle={{ background: defaultIconBackground, color: defaultIconForeground }}
+                iconStyle={{ background: fireIconBackground, color: fireIconForeground }}
                 icon={<i className='glyphicon glyphicon-fire'/>}>
                 <h3 className="vertical-timeline-element-title">Cathedral Cities Targeted</h3>
                 <p>British Cathedral Cities were strategically targeted in bombing raids by the Luftwaffe (German Air Force).</p>
@@ -376,10 +382,10 @@ const ResearchTimeLine = () => {
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                contentStyle={{ background: defaultTimelineBackground, color: defaultTextColor }}
-                contentArrowStyle={{ borderRight: defaultArrowStyle }}
+                contentStyle={{ background: commentTimelineBackground, color: commentTextColor }}
+                contentArrowStyle={{ borderRight: commentArrowStyle }}
                 date="1943"
-                iconStyle={{ background: defaultIconBackground, color: defaultIconForeground }}
+                iconStyle={{ background: commentIconBackground, color: commentIconForeground }}
                 icon={<i className='glyphicon glyphicon-comment'/>}>
                 <p>“By 1943, virtually every household item was either in short supply and had to be queued for, or was unobtainable.” (Charman, Imperial War Museum, Jan 2018)</p>
                 <p>Although we often think of rationing in terms of food, like with the examples above, the black market also found its way into other areas of rationing. In 1943, five million clothing coupons were stolen in one go, and the government had to cancel the entire issue. </p>
@@ -415,10 +421,10 @@ const ResearchTimeLine = () => {
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                contentStyle={{ background: defaultTimelineBackground, color: defaultTextColor }}
-                contentArrowStyle={{ borderRight: defaultArrowStyle }}
+                contentStyle={{ background: commentTimelineBackground, color: commentTextColor }}
+                contentArrowStyle={{ borderRight: commentArrowStyle }}
                 date="September 1943"
-                iconStyle={{ background: defaultIconBackground, color: defaultIconForeground }}
+                iconStyle={{ background: commentIconBackground, color: commentIconForeground }}
                 icon={<i className='glyphicon glyphicon-comment'/>}>
                 <p>Five million clothing coupons are stolen from a War Office depot in South West London. The Board of Trade is forced to cancel the entire issue of five-coupon vouchers while 
                     reassuring the public that the number stolen represents less than 1% of all coupons in circulation (Roodhouse, 2013: 88).</p>
@@ -465,10 +471,10 @@ const ResearchTimeLine = () => {
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                contentStyle={{ background: defaultTimelineBackground, color: defaultTextColor }}
-                contentArrowStyle={{ borderRight: defaultArrowStyle }}
+                contentStyle={{ background: commentTimelineBackground, color: commentTextColor }}
+                contentArrowStyle={{ borderRight: commentArrowStyle }}
                 date=""
-                iconStyle={{ background: defaultIconBackground, color: defaultIconForeground }}
+                iconStyle={{ background: commentIconBackground, color: commentIconForeground }}
                 icon={<i className='glyphicon glyphicon-comment'/>}>
                 <p>Even celebrities became infamous for black marketeering; Ivor Novello, the Welsh composer and actor, was sentenced to a month in prison in 1944 for misuse of petrol coupons, offered to him by a fan. </p>
             </VerticalTimelineElement>
@@ -494,10 +500,10 @@ const ResearchTimeLine = () => {
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                contentStyle={{ background: defaultTimelineBackground, color: defaultTextColor }}
-                contentArrowStyle={{ borderRight: defaultArrowStyle }}
+                contentStyle={{ background: commentTimelineBackground, color: commentTextColor }}
+                contentArrowStyle={{ borderRight: commentArrowStyle }}
                 date=""
-                iconStyle={{ background: defaultIconBackground, color: defaultIconForeground }}
+                iconStyle={{ background: commentIconBackground, color: commentIconForeground }}
                 icon={<i className='glyphicon glyphicon-comment'/>}>
                 <p>By 1945 more than 114,000 prosecutions for black market activities had taken place.</p>
             </VerticalTimelineElement>
@@ -565,10 +571,10 @@ const ResearchTimeLine = () => {
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                contentStyle={{ background: defaultTimelineBackground, color: defaultTextColor }}
-                contentArrowStyle={{ borderRight: defaultArrowStyle }}
+                contentStyle={{ background: commentTimelineBackground, color: commentTextColor }}
+                contentArrowStyle={{ borderRight: commentArrowStyle }}
                 date=""
-                iconStyle={{ background: defaultIconBackground, color: defaultIconForeground }}
+                iconStyle={{ background: commentIconBackground, color: commentIconForeground }}
                 icon={<i className='glyphicon glyphicon-comment'/>}>
                 <p>Despite the odd spell back in prison, by war’s end professional crook, Billy Hill, was a wealthy man, and came to be known as 
                     the boss of Britain’s underworld after the war. “They were roaring days. Money was easy, the villains were well loaded with dough, and we were all busy.”</p>
