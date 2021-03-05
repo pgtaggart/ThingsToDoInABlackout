@@ -11,8 +11,8 @@ const Path = props => (
   />
 );
 
-export const MenuToggle = ({ toggle, isAboutModalOpen, toggleAboutModalOpen }) => (
-  <button className="menu-button" onClick={() => { toggle() }}>
+export const MenuToggle = ({ toggle}) => (
+  <button className="menu-button" onClick={() => { toggle() }} aria-label="Open the menu" >
     <svg width="23" height="23" viewBox="0 0 23 23">
       <Path
         variants={{

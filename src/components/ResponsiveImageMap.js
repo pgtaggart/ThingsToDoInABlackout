@@ -205,7 +205,7 @@ export default class ResponsiveImageMap extends PureComponent {
     buildAreaItemsForStreet() {
         return this.map.areas.map((item, index) => {
             return (
-                <area key={index} target={item.target} alt="" title="" href="#" id={this.imageId + '_map' + index}
+                <area key={index} target={item.target} alt={item.alt} title="" href="#" id={this.imageId + '_map' + index}
                       coords={item.newCoords} shape={item.shape} 
                       onClick={(e) => {e.preventDefault(); this.props.setRoomIndexFunction(index); this.props.toggleModalFunction() }}/>
             );
@@ -215,7 +215,7 @@ export default class ResponsiveImageMap extends PureComponent {
     buildAreaItems() {
         return this.map.areas.map((item, index) => {
             return (
-                <area key={index} target={item.target} alt="" title="" href="#"
+                <area key={index} target={item.target} alt={item.alt} title="" href="#"
                       coords={item.newCoords} shape={item.shape} 
                       onMouseOver={()=>this.mouseOverArea(item.newCoords, item.type)}
                       onMouseOut={()=>this.mouseOutArea()}

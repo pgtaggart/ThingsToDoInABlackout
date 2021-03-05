@@ -15,6 +15,7 @@ import bounceLogo from './images/bounce-logo-purple.svg';
 import heritageFund from './images/HeritageFund.png';
 import ResearchTimeLine from './components/ResearchTimeLine';
 import textLoader from './components/TextLoader.js';
+import useEventListener from './components/UseEventListener.js'
 
 import hfh1 from './images/resources/HFH_1.jpg'
 import hfh2 from './images/resources/HFH_2.jpg'
@@ -64,12 +65,103 @@ function App() {
   const [roomIndex, setRoomIndex] = useState(0);
   const [mapAreaTitle, setMapAreaTitle] = useState('unknown');
   const [mapAreaType, setMapAreaType] = useState('unknown');
+  const ESCAPE_KEYS = ['27', 'Escape'];
+  const ARROW_DOWN = ['40', 'ArrowDown'];
+  const ARROW_UP = ['38', 'ArrowUp'];
+  var container = null;
+
+
+  // This is the handler for the keys we will bind in the app
+  function handler({ key }) {
+
+    if (ESCAPE_KEYS.includes(String(key))) {
+
+      if (isNavOpen) {
+        toggleNavOpen();
+      }
+
+      var closingNav = false;
+
+      if (isAudioContentModalOpen) {
+        toggleAudioContentModalOpen();
+        closingNav = true;
+      }
+
+      if (isImageContentModalOpen) {
+        toggleImageContentModalOpen();
+        closingNav = true;
+      }
+
+      if (isTextContentModalOpen) {
+        toggleTextContentModalOpen();
+        closingNav = true;
+      }
+
+      if (closingNav) {
+        // return the roomImage to full opacity
+        document.getElementById('RoomImage' + (roomIndex + 1)).style.opacity = '1';
+        document.getElementById('RoomImage' + (roomIndex + 1)).classList.remove("fade-out");
+        document.getElementById('RoomImage' + (roomIndex + 1)).classList.add("fade-in");
+      }
+
+      if (isModalOpen) {
+        if (!closingNav)
+          toggleModalOpen();
+      }
+
+      if (isAboutModalOpen) {
+        document.getElementById('mainMenu').style.opacity = '1';
+        toggleAboutModalOpen();
+      }
+
+      if (isResourcesModalOpen) {
+        document.getElementById('mainMenu').style.opacity = '1';
+        toggleResourcesModalOpen();
+      }
+
+      if (isHelpModalBackgroundOpen) {
+        toggleHelpModalBackgroundOpen();
+      }
+
+      if (isHelpModalInitialOpen) {
+        toggleHelpModalInitialOpen();
+      }
+
+      if (isHelpModalRoomOpen) {
+        toggleHelpModalRoomOpen();
+      }
+
+      if (isResearchModalOpen) {
+        document.getElementById('mainMenu').style.opacity = '1';
+        toggleResearchModalOpen();
+      }
+
+    }
+
+    if (ARROW_DOWN.includes(String(key))) {
+
+      if (isResearchModalOpen) {
+        container.scrollBy({ top: 100, behavior: 'smooth' });
+      }
+    }
+
+    if (ARROW_UP.includes(String(key))) {
+
+      if (isResearchModalOpen) {
+        container.scrollBy({ top: -100, behavior: 'smooth' });
+      }
+    }
+
+  }
+
+  // Add the key press handler to the app
+  useEventListener('keydown', handler);
 
   return (
     <>
       <div className="logo">
         <Typist cursor={{ show: false }} startDelay={1000}>
-          <p>Things to do in a Blackout</p>
+          <h1 id="main_page_title">Things to do in a Blackout</h1>
         </Typist>
       </div>
 
@@ -111,13 +203,11 @@ function App() {
               isImageContentModalOpen={isImageContentModalOpen} toggleImageContentModalOpen={toggleImageContentModalOpen}
               isTextContentModalOpen={isTextContentModalOpen} toggleTextContentModalOpen={toggleTextContentModalOpen}
               setMapAreaTitleFunction={(modalTitle) => setMapAreaTitle(modalTitle)}
-              setMapAreaTypeFunction={(mapAreaType) => setMapAreaType(mapAreaType)}
-            />
+              setMapAreaTypeFunction={(mapAreaType) => setMapAreaType(mapAreaType)} />
             <RoomModalClose toggle={() => toggleModalOpen()} roomIndex={roomIndex}
               isAudioContentModalOpen={isAudioContentModalOpen} toggleAudioContentModalOpen={toggleAudioContentModalOpen}
               isImageContentModalOpen={isImageContentModalOpen} toggleImageContentModalOpen={toggleImageContentModalOpen}
-              isTextContentModalOpen={isTextContentModalOpen} toggleTextContentModalOpen={toggleTextContentModalOpen}
-            />
+              isTextContentModalOpen={isTextContentModalOpen} toggleTextContentModalOpen={toggleTextContentModalOpen} />
           </motion.div>
         )}
       </AnimatePresence>
@@ -154,7 +244,11 @@ function App() {
                 transition={{ delay: 3, duration: 2 }}>
                 {textLoader.loadText('About-Project')}
               </motion.div>
-              <motion.button className="close-about-modal-button" onClick={() => { toggleAboutModalOpen(); document.getElementById('mainMenu').style.opacity = '1'; }} whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.95 }}>
+              <motion.button className="close-about-modal-button"
+                onClick={() => { toggleAboutModalOpen(); document.getElementById('mainMenu').style.opacity = '1'; }}
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.95 }}
+                aria-label="Close About Popup">
                 <i className='glyphicon glyphicon-remove' />
               </motion.button>
             </motion.div>
@@ -179,7 +273,11 @@ function App() {
               exit={{ opacity: 0 }}
               transition={{ delay: 0.1, duration: 1 }}>
 
-              <motion.button className="close-resources-modal-button" onClick={() => { toggleResourcesModalOpen(); document.getElementById('mainMenu').style.opacity = '1'; }} whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.95 }}>
+              <motion.button className="close-resources-modal-button"
+                onClick={() => { toggleResourcesModalOpen(); document.getElementById('mainMenu').style.opacity = '1'; }}
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.95 }}
+                aria-label="Close resources popup">
                 <i className='glyphicon glyphicon-remove' />
               </motion.button>
 
@@ -306,6 +404,7 @@ function App() {
       <AnimatePresence>
         {isResearchModalOpen && (
           <motion.div
+            ref={node => { container = node }}
             key="researchModal"
             className="researchModal"
             initial={{ opacity: 0 }}
@@ -313,7 +412,11 @@ function App() {
             exit={{ opacity: 0 }}
             transition={{ delay: 0.1, duration: 1 }}>
             <ResearchTimeLine />
-            <motion.button className="close-research-modal-button" onClick={() => { toggleResearchModalOpen(); document.getElementById('mainMenu').style.opacity = '1'; }} whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.95 }}>
+            <motion.button className="close-research-modal-button"
+              onClick={() => { toggleResearchModalOpen(); document.getElementById('mainMenu').style.opacity = '1'; }}
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.95 }}
+              aria-label="Close Research Popup">
               <i className='glyphicon glyphicon-remove' />
             </motion.button>
           </motion.div>
@@ -324,17 +427,6 @@ function App() {
         <motion.div className="HeritageFund" whileHover={{ scale: 1.1 }}>
           <a href="https://www.heritagefund.org.uk"><img src={heritageFund} alt="The Heritage Lottery Fund" width="108px" height="40px" /></a>
         </motion.div>
-        <Typist cursor={{ hideWhenDone: true }} startDelay={3000}>
-          Copyright &#169; 2021 Bounce Theatre&#8482;
-          <Typist.Delay ms={1250} />
-          <Typist.Backspace count={34} delay={1000} />
-          <Typist.Delay ms={1250} />
-          Follow us on social media
-          <Typist.Backspace count={12} delay={1000} />
-          Facebook
-          <Typist.Delay ms={1250} />
-          , Instagram, Twitter
-        </Typist>
         <div className="social-icons">
           <motion.div className="abounceLogoLink"
             whileHover={{ scale: 1.2 }}>
@@ -342,20 +434,20 @@ function App() {
               <img src={bounceLogo} alt="Bounce Theatre dot com" width="50px" height="50px" />
             </a>
           </motion.div>
-          <motion.div className="social-icon" whileHover={{ scale: 1.2 }}>
+          <motion.div className="social-icon" whileHover={{ scale: 1.2 }} aria-label="Twitter Link">
             <SocialMediaIconsReact
               icon="twitter" iconSize="8" url="https://twitter.com/bouncetheatre" iconColor="#000"
-              size="20" backgroundColor="" borderColor="#000" borderWidth="1" />
+              size="20" backgroundColor="" borderColor="#000" borderWidth="1" id="twitterLink" />
           </motion.div>
-          <motion.div className="social-icon" whileHover={{ scale: 1.2 }}>
+          <motion.div className="social-icon" whileHover={{ scale: 1.2 }} aria-label="Facebook Link">
             <SocialMediaIconsReact
               icon="facebook" iconSize="8" url="https://facebook.com/bouncetheatre" iconColor="#000"
-              size="20" backgroundColor="" borderColor="#000" borderWidth="1" />
+              size="20" backgroundColor="" borderColor="#000" borderWidth="1" id="facebookLink" />
           </motion.div>
-          <motion.div whileHover={{ scale: 1.2 }}>
+          <motion.div whileHover={{ scale: 1.2 }} aria-label="Instagram Link">
             <SocialMediaIconsReact
               icon="instagram" iconSize="8" url="https://instagram.com/bouncetheatre" iconColor="#000"
-              size="20" backgroundColor="" borderColor="#000" borderWidth="1" />
+              size="20" backgroundColor="" borderColor="#000" borderWidth="1" id="instagramLink" />
           </motion.div>
         </div>
       </div>
