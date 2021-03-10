@@ -205,8 +205,8 @@ export default class ResponsiveImageMap extends PureComponent {
     buildAreaItemsForStreet() {
         return this.map.areas.map((item, index) => {
             return (
-                <area key={index} target={item.target} alt="" title="" href="#" id={this.imageId + '_map' + index}
-                      coords={item.newCoords} shape={item.shape} 
+                <area key={index} target={item.target} alt={item.alt} title="" href="#" id={this.imageId + '_map' + index}
+                      coords={item.newCoords} shape={item.shape} className="aMap"
                       onClick={(e) => {e.preventDefault(); this.props.setRoomIndexFunction(index); this.props.toggleModalFunction() }}/>
             );
         });
@@ -215,8 +215,8 @@ export default class ResponsiveImageMap extends PureComponent {
     buildAreaItems() {
         return this.map.areas.map((item, index) => {
             return (
-                <area key={index} target={item.target} alt="" title="" href="#"
-                      coords={item.newCoords} shape={item.shape} 
+                <area key={index} target={item.target} alt={item.alt} title="" href="#" id={this.imageId + '_map' + index}
+                      coords={item.newCoords} shape={item.shape} className="aMap"
                       onMouseOver={()=>this.mouseOverArea(item.newCoords, item.type)}
                       onMouseOut={()=>this.mouseOutArea()}
                       onClick={(e) => {e.preventDefault();  this.selectContentModalToOpen(item.type, item.title)}}/>
@@ -227,7 +227,7 @@ export default class ResponsiveImageMap extends PureComponent {
     render() {
         return (
             <>
-                <img src={this.image} useMap={'#' + this.map.name} className={this.className} alt='' hidefocus="true" id={this.imageId}/>
+                <img src={this.image} useMap={'#' + this.map.name} className={this.className} alt='' hidefocus="false" id={this.imageId}/>
                 <map name={this.map.name}>
                     { this.useViewHeight === 'true' ? this.buildAreaItemsForStreet() : this.buildAreaItems() }
                 </map>

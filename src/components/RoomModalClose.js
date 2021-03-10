@@ -1,33 +1,39 @@
 import * as React from "react";
 import { motion } from 'framer-motion';
+import { PureComponent } from "react";
 
-const RoomModalClose = (properties) => {
+export default class RoomModalClose extends PureComponent {
 
-  const onMouseClick = (event) => {
-    
+  onMouseClick = (event) => {
+
     // We are closing the room, so we need to close any open modals
-    if(properties.isAudioContentModalOpen) {
-      properties.toggleAudioContentModalOpen();
+    if (this.props.isAudioContentModalOpen) {
+      this.props.toggleAudioContentModalOpen();
     }
 
-    if(properties.isImageContentModalOpen) {
-      properties.toggleImageContentModalOpen();
+    if (this.props.isImageContentModalOpen) {
+      this.props.toggleImageContentModalOpen();
     }
 
-    if(properties.isTextContentModalOpen) {
-      properties.toggleTextContentModalOpen();
+    if (this.props.isTextContentModalOpen) {
+      this.props.toggleTextContentModalOpen();
     }
 
     // Close the room modal
-    properties.toggle();
+    this.props.toggle();
   }
 
-  return (
-    <motion.button className="room-close-modal-button" onClick={() => onMouseClick()} whileHover={{ scale: 1.3 }} whileTap={{ scale: 0.95 }}>
-      <i className='glyphicon glyphicon-home'/>
-    </motion.button>
-  )
+  render() {
 
+    return (
+      <motion.button className="room-close-modal-button" 
+        id="CloseRoomModalButton"
+        onClick={() => this.onMouseClick()}
+        whileHover={{ scale: 1.3 }}
+        whileTap={{ scale: 0.95 }}
+        aria-label="Close Room">
+        <i className='glyphicon glyphicon-home' />
+      </motion.button>
+    )
+  }
 }
-
-export default RoomModalClose;

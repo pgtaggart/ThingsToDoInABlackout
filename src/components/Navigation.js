@@ -39,7 +39,9 @@ export const Navigation = (properties) => (
         <i className="glyphicon glyphicon-info-sign"/>
       </div>
       <div className="text-placeholder">
-          <button className="aboutButton" onClick={() => {properties.toggleAboutModalOpen(); properties.toggleNavOpen(); document.getElementById('mainMenu').style.opacity='0'; }}>About</button>
+          <button id="navAboutButton" className="aboutButton aButton" 
+                  onClick={() => {properties.toggleAboutModalOpen(); properties.toggleNavOpen(); document.getElementById('mainMenu').style.opacity='0'; }}
+                  aria-label="Open About Project Information">About</button>
       </div>
     </motion.li>
     <motion.li className="li-menu"
@@ -50,7 +52,9 @@ export const Navigation = (properties) => (
         <i className="glyphicon glyphicon-book"/>
       </div>
       <div className="text-placeholder" >
-        <button className="aboutButton" onClick={() => {properties.toggleResearchModalOpen(); properties.toggleNavOpen(); document.getElementById('mainMenu').style.opacity='0'; }}>Research</button>
+        <button id="navResearchButton" className="aboutButton aButton" 
+                onClick={() => {properties.toggleResearchModalOpen(); properties.toggleNavOpen(); document.getElementById('mainMenu').style.opacity='0'; }}
+                aria-label="Open Project Research">Research</button>
       </div>
     </motion.li>
     <motion.li className="li-menu"
@@ -61,7 +65,9 @@ export const Navigation = (properties) => (
         <i className="glyphicon glyphicon-folder-open"/>
       </div>
       <div className="text-placeholder" >
-      <button className="aboutButton" onClick={() => {properties.toggleResourcesModalOpen(); properties.toggleNavOpen(); document.getElementById('mainMenu').style.opacity='0'; }}>Resources</button>
+      <button id="navResourcesButton" className="aboutButton aButton" 
+              onClick={() => {properties.toggleResourcesModalOpen(); properties.toggleNavOpen(); document.getElementById('mainMenu').style.opacity='0'; }}
+              aria-label="open Project Resources">Resources</button>
       </div>
     </motion.li>
   </motion.ul>

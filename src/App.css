@@ -17,7 +17,6 @@
   padding-left: 2px;
   top: 50Vh;
   left: 0;
-  outline: none;
   border: none;
   user-select: none;
   -webkit-user-select: none;
@@ -39,7 +38,7 @@
   padding-right: 2px;
   top: 50vh;
   right: 0;
-  outline: none;
+  ;
   border: none;
   user-select: none;
   -webkit-user-select: none;
@@ -61,7 +60,7 @@
   padding-left: 5px;
   padding-top: 5px;
   top: 25Vh;
-  outline: none;
+  ;
   border: none;
   user-select: none;
   -webkit-user-select: none;
@@ -84,7 +83,7 @@
   padding-top: 5px;
   top: 25vh;
   right: 0;
-  outline: none;
+  ;
   border: none;
   user-select: none;
   -webkit-user-select: none;
@@ -206,21 +205,19 @@ nav {
 
 .logo {
   position: absolute;
-  top: 19px;
   left: 55px;
   margin: 0 auto;
-  width: 400px;
   font-family: American Typewriter, serif;
   font-size: 30px;
+  z-index: 1001;
 }
 
 .helpHome {
   position: absolute;
-  top: 30px;
+  top: 20px;
   right: 10px;
-  width: 30px;
-  height: 30px;
-  outline: none;
+  width: 40px;
+  height: 40px;
   border: none;
   user-select: none;
   -webkit-user-select: none;
@@ -228,16 +225,13 @@ nav {
   -ms-user-select: none;
   cursor: pointer;
   position: absolute;
-  background: whitesmoke;
+  background: white;
   box-shadow: rgb(0, 0, 0) 1px 1px 10px 4px;
-  border-radius: 35px;
+  border-radius: 40px;
   opacity: 0.8;
-}
-
-@-moz-document url-prefix() {
-  .helpHome {
-    height: 31px;
-  }
+  font-size: 30px;
+  font-weight: 900;
+  font-family: American Typewriter, serif;
 }
 
 .footer {
@@ -254,11 +248,17 @@ nav {
   text-align: center;
 }
 
+.footerTypist {
+  z-index: 1002;
+}
+
 .HeritageFund {
   position: absolute;
   display: flex;
   left: 10px;
   top: -10px;
+  border: none;
+  background: transparent;
 }
 
 .social-icons {
@@ -273,7 +273,6 @@ nav {
 }
 
 .menu-button {
-  outline: none;
   border: none;
   user-select: none;
   -webkit-user-select: none;
@@ -290,7 +289,6 @@ nav {
 }
 
 .room-close-modal-button {
-  outline: none;
   border: none;
   user-select: none;
   -webkit-user-select: none;
@@ -316,7 +314,6 @@ nav {
 }
 
 .close-audio-modal-button {
-  outline: none;
   border: none;
   user-select: none;
   -webkit-user-select: none;
@@ -334,7 +331,6 @@ nav {
 }
 
 .close-modal-button {
-  outline: none;
   border: none;
   user-select: none;
   -webkit-user-select: none;
@@ -353,7 +349,6 @@ nav {
 }
 
 .close-about-modal-button {
-  outline: none;
   border: none;
   user-select: none;
   -webkit-user-select: none;
@@ -372,7 +367,6 @@ nav {
 }
 
 .close-help-modal-button {
-  outline: none;
   border: none;
   user-select: none;
   -webkit-user-select: none;
@@ -391,7 +385,6 @@ nav {
 }
 
 .close-resources-modal-button {
-  outline: none;
   border: none;
   user-select: none;
   -webkit-user-select: none;
@@ -410,7 +403,6 @@ nav {
 }
 
 .close-research-modal-button {
-  outline: none;
   border: none;
   user-select: none;
   -webkit-user-select: none;
@@ -593,7 +585,7 @@ nav {
   height: 55vh;
   width: 50vw;
   z-index: 10002;
-  overflow: hidden;
+  
 }
 
 .resourcesModalContent {

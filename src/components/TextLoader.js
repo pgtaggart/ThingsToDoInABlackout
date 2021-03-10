@@ -439,6 +439,7 @@ class TextLoader {
                                 Crisp and freshly laundered by my cleaner this morning.
                             <br /><br />
                                     <b><u>WAIT. I DON'T HAVE A CLEANER!</u></b>
+                            <br /><br />
                             I awake from a troubled sleep filled with childish dreams filled with ghost cleaners and zombie patients.
                             Slipping out of bed I scramble for my clothes. These are neatly folded. 'Honestly I need to investigate this ghost cleaner!'
                             I say to myself as I slip on my black mackintosh. I stride down the stairs and down the street.
