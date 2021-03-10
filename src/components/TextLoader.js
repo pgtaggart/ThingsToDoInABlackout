@@ -391,7 +391,7 @@ class TextLoader {
                                     <br /><br /><br />
                                 Dead End Kids<br />
                                 Horses panicking, flame dancing, Dead End Kids running, clothes flaming, running out the stables with terrified cries.
-                                <br /><br />
+                                <br /><br /><br />
                                     <i>Maia Wooton</i>
                                 </p>
                             </span>
@@ -649,17 +649,17 @@ class TextLoader {
                             transition={{ delay: 1.5, duration: 3 }}>
                             <br />
                             <span className="TextTypeWriterTextCenter">
-                                <p>I paint pictures of Papa in the few colours I have. Paint is my favourite now because I’m now allowed anything else. 
-                                Papa has been gone for two months and we don’t know when he’ll be back. The rules are that we try to still be cheerful because Papa is helping with the silly war, 
-                                so I have taken it upon myself to sing as often as possible. I am not sure if it is helping but I still carry on. Neville helps out too when he’s not out eating mice and meeting other neighbourhood cats. 
+                                <p>I paint pictures of Papa in the few colours I have. Paint is my favourite now because I’m now allowed anything else.
+                                Papa has been gone for two months and we don’t know when he’ll be back. The rules are that we try to still be cheerful because Papa is helping with the silly war,
+                                so I have taken it upon myself to sing as often as possible. I am not sure if it is helping but I still carry on. Neville helps out too when he’s not out eating mice and meeting other neighbourhood cats.
                                 Mama is the man of the house, except that she’s not a man so she is actually the woman of the house, but she’s in charge. Walter is her deputy, I’m in charge of art. And also singing. I just added that one. I don’t think they’ll mind.
-                                <br /> 
-                                We’re going to sell all of the things we don’t need anymore. Clothes, books. We go with Mama to Hatton Garden to sell her jewellery. I see a tear fall onto the counter in the shop when she parts with a broach from Grandma. 
+                                <br />
+                                We’re going to sell all of the things we don’t need anymore. Clothes, books. We go with Mama to Hatton Garden to sell her jewellery. I see a tear fall onto the counter in the shop when she parts with a broach from Grandma.
                                 I still don’t really understand why we’re doing this but I hold Mama’s hand. She doesn’t speak much on the way home.
-                                <br /> 
+                                <br />
                                 We ask Mr Hart at the Butchers shop for bones for Neville. And then we use the bones to make soup which Neville doesn’t eat because he doesn’t like soup, he prefers a tasty mouse or bird. Luckily we don’t have to eat those Jellied Eels any more.
                                 <br />
-                                I wake up in the morning, often Mama’s already in the kitchen. Sometimes I’m not even sure if she’s been to sleep and she doesn’t eat much these days. One day, our neighbour Dr Sutton comes to visit, he talks a bit like the King and gives me an apple to eat while I paint a picture in the kitchen. 
+                                I wake up in the morning, often Mama’s already in the kitchen. Sometimes I’m not even sure if she’s been to sleep and she doesn’t eat much these days. One day, our neighbour Dr Sutton comes to visit, he talks a bit like the King and gives me an apple to eat while I paint a picture in the kitchen.
                                 </p>
                             </span>
                         </motion.div>
@@ -681,8 +681,8 @@ class TextLoader {
                             transition={{ delay: 1.5, duration: 3 }}>
                             <br />
                             <span className="TextTypeWriterTextCenter">
-                                <p>The new rule is we do Art School every day. The Doctor’s friend with the funny moustache brings us paper, ink and rulers after dark and I draw for hours and hours. 
-                                Walter takes a ruler and makes sure everything is straight. 
+                                <p>The new rule is we do Art School every day. The Doctor’s friend with the funny moustache brings us paper, ink and rulers after dark and I draw for hours and hours.
+                                Walter takes a ruler and makes sure everything is straight.
                                 Mama says we’re helping more people to get clothes which I’m happy about.
                                 </p>
                             </span>
@@ -705,9 +705,9 @@ class TextLoader {
                             transition={{ delay: 1.5, duration: 3 }}>
                             <br />
                             <span className="TextTypeWriterTextCenter">
-                                <p>I’m thirteen years old now, which makes me officially a teenager. Neville is six which is middle aged in cat years, Walter is 15, which makes him officially even more annoying. 
-                                The rules are that art school is our official family business. Every morning we have breakfast together and then we get to work, Papa and Walter on goods and trading, 
-                                Mama and I on making more ration books. We break for lunch and play with Neville. Papa says it’s- Quality time. The rules are. we’re still Jewish And a bit German. 
+                                <p>I’m thirteen years old now, which makes me officially a teenager. Neville is six which is middle aged in cat years, Walter is 15, which makes him officially even more annoying.
+                                The rules are that art school is our official family business. Every morning we have breakfast together and then we get to work, Papa and Walter on goods and trading,
+                                Mama and I on making more ration books. We break for lunch and play with Neville. Papa says it’s- Quality time. The rules are. we’re still Jewish And a bit German.
                                 And a bit English. We’re just us, people in the world.<br />
                                 One day, we hear an announcement on the radio.<br />
                                 The war is over.
