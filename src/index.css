@@ -28,10 +28,11 @@ a:visited {
   text-decoration: none;
 }
 
-img.map, map area{
+.aButton:focus {
+  outline:none;
+}
+
+.aMap {
   outline: none;
 }
 
-*:focus {
-  outline: 0;
-}

@@ -108,7 +108,7 @@ export default class HelpModal extends PureComponent {
                                 exit={{ opacity: 0 }}
                                 transition={{ delay: 0, duration: 1 }}>
 
-                                <motion.button className="close-help-modal-button"
+                                <motion.button className="close-help-modal-button aButton" id="closeHelpModalButton"
                                     onClick={() => this.figureOutCloseClick()}
                                     whileHover={{ scale: 1.2 }}
                                     whileTap={{ scale: 0.95 }}
@@ -166,7 +166,7 @@ export default class HelpModal extends PureComponent {
                                 transition={{ delay: 0, duration: 1 }}>
 
                                 <motion.button
-                                    className="close-help-modal-button"
+                                    className="close-help-modal-button aButton" id="closeHelpModalButton"
                                     onClick={() => this.figureOutCloseClick()}
                                     whileHover={{ scale: 1.2 }}
                                     whileTap={{ scale: 0.95 }}

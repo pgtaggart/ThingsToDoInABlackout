@@ -6,7 +6,8 @@ export const ModalClose = ({ toggle, icon, className }) => (
                  onClick={toggle} 
                  whileHover={{ scale: 1.3 }} 
                  whileTap={{ scale: 0.95 }}
-                 aria-label="Close Content Popup">
+                 aria-label="Close Content Popup"
+                 id="CloseRoomContentButton">
     <i className={icon}/>
   </motion.button>
 );

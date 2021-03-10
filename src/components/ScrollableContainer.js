@@ -103,7 +103,7 @@ export default class ScrollableContainer extends PureComponent {
 
     return (
       <>
-        <ul className="house-container" ref={node => { this.container = node}}>
+        <ul className="house-container" ref={node => { this.container = node}} id="StreetImageContainerOuter">
           <li className="house-item" key={StreetScene} id={this.parentElementId}>
             <ResponsiveImageMap image={StreetScene} originalWidth='4589' originalHeight='1080'
               map={this.StreetSceneImageMap} className='StreetScene' parentElementId={this.parentElementId}
@@ -113,15 +113,17 @@ export default class ScrollableContainer extends PureComponent {
           </li>
         </ul>
         <motion.button 
-          className="leftScrollButton"
+          id="mainLeftScrollButton"
+          className="leftScrollButton aButton"
           aria-label="Scroll Street left"
           onClick={() => this.autoScrollContainer(-1)} 
           whileHover={{ opacity: 0.9, scale: 1.3 }} 
           whileTap={{ scale: 0.95 }}>
             <i className='glyphicon glyphicon-backward'/>
         </motion.button>
-        <motion.button 
-          className="rightScrollButton"
+        <motion.button
+          id="mainRightScrollButton" 
+          className="rightScrollButton aButton"
           aria-label="Scroll Street right"
           onClick={() => this.autoScrollContainer(1)} 
           whileHover={{ opacity: 0.9, scale: 1.3 }} 
