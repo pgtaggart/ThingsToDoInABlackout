@@ -455,6 +455,10 @@ function App() {
   return (
     <>
 
+      <div className="displayWarning" >
+        <h2 className="displayWarningHeader">For the best experience please use this website in landscape mode on a device supporting at least 800px width.</h2>
+      </div> 
+
       <motion.nav initial={false} animate={isNavOpen ? "open" : "closed"}>
         <motion.div className="nav-background" variants={sidebar}>
           <Navigation toggleAboutModalOpen={toggleAboutModalOpen}
