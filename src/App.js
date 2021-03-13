@@ -587,19 +587,19 @@ function App() {
                   <div className="container">
                     <div className="row">
                       <div className="col-md-4">
-                        <a href="https://issuu.com/bouncetheatre/docs/issue_1" id="HeritageMagazine_1" target="_blank">
+                        <a href="https://issuu.com/bouncetheatre/docs/issue_1" id="HeritageMagazine_1" target="_blank" rel="noopener noreferrer">
                           <motion.img alt="Heritage from Home Issue 1" src={hfh1} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
                         </a>
                         <h5 className="resourcesImageExplain">#1</h5>
                       </div>
                       <div className="col-md-4">
-                        <a href="https://issuu.com/bouncetheatre/docs/issue_2" id="HeritageMagazine_2" target="_blank">
+                        <a href="https://issuu.com/bouncetheatre/docs/issue_2" id="HeritageMagazine_2" target="_blank" rel="noopener noreferrer">
                           <motion.img alt="Heritage from Home Issue 2" src={hfh2} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
                         </a>
                         <h5 className="resourcesImageExplain">#2</h5>
                       </div>
                       <div className="col-md-4">
-                        <a href="https://issuu.com/bouncetheatre/docs/issue_3" id="HeritageMagazine_3" target="_blank">
+                        <a href="https://issuu.com/bouncetheatre/docs/issue_3" id="HeritageMagazine_3" target="_blank" rel="noopener noreferrer">
                           <motion.img alt="Heritage from Home Issue 3" src={hfh3} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
                         </a>
                         <h5 className="resourcesImageExplain">#3</h5>
@@ -607,19 +607,19 @@ function App() {
                     </div>
                     <div className="row">
                       <div className="col-md-4">
-                        <a href="https://issuu.com/bouncetheatre/docs/issue_4" id="HeritageMagazine_4" target="_blank">
+                        <a href="https://issuu.com/bouncetheatre/docs/issue_4" id="HeritageMagazine_4" target="_blank" rel="noopener noreferrer">
                           <motion.img alt="Heritage from Home Issue 4" src={hfh4} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
                         </a>
                         <h5 className="resourcesImageExplain">#4</h5>
                       </div>
                       <div className="col-md-4">
-                        <a href="https://issuu.com/bouncetheatre/docs/issue_5" id="HeritageMagazine_5" target="_blank">
+                        <a href="https://issuu.com/bouncetheatre/docs/issue_5" id="HeritageMagazine_5" target="_blank" rel="noopener noreferrer">
                           <motion.img alt="Heritage from Home Issue 5" src={hfh5} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
                         </a>
                         <h5 className="resourcesImageExplain">#5</h5>
                       </div>
                       <div className="col-md-4">
-                        <a href="https://issuu.com/bouncetheatre/docs/issue_6" id="HeritageMagazine_6" target="_blank">
+                        <a href="https://issuu.com/bouncetheatre/docs/issue_6" id="HeritageMagazine_6" target="_blank" rel="noopener noreferrer">
                           <motion.img alt="Heritage from Home Issue 6" src={hfh6} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
                         </a>
                         <h5 className="resourcesImageExplain">#6</h5>
@@ -627,19 +627,19 @@ function App() {
                     </div>
                     <div className="row">
                       <div className="col-md-4">
-                        <a href="https://issuu.com/bouncetheatre/docs/issue_7" id="HeritageMagazine_7" target="_blank">
+                        <a href="https://issuu.com/bouncetheatre/docs/issue_7" id="HeritageMagazine_7" target="_blank" rel="noopener noreferrer">
                           <motion.img alt="Heritage from Home Issue 7" src={hfh7} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
                         </a>
                         <h5 className="resourcesImageExplain">#7</h5>
                       </div>
                       <div className="col-md-4">
-                        <a href="https://issuu.com/bouncetheatre/docs/issue_8" id="HeritageMagazine_8" target="_blank">
+                        <a href="https://issuu.com/bouncetheatre/docs/issue_8" id="HeritageMagazine_8" target="_blank" rel="noopener noreferrer">
                           <motion.img alt="Heritage from Home Issue 8" src={hfh8} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
                         </a>
                         <h5 className="resourcesImageExplain">#8</h5>
                       </div>
                       <div className="col-md-4">
-                        <a href="https://issuu.com/bouncetheatre/docs/issue_9" id="HeritageMagazine_9" target="_blank">
+                        <a href="https://issuu.com/bouncetheatre/docs/issue_9" id="HeritageMagazine_9" target="_blank" rel="noopener noreferrer">
                           <motion.img alt="Heritage from Home Issue 9" src={hfh9} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
                         </a>
                         <h5 className="resourcesImageExplain">#9</h5>
@@ -653,19 +653,19 @@ function App() {
                   <div className="container">
                     <div className="row">
                       <div className="col-md-4">
-                        <a href="#" id="RadioPlay_1" target="_blank">
+                        <a href="#" id="RadioPlay_1" target="_blank" rel="noopener noreferrer">
                           <motion.img alt="Heritage from Home Issue 1" src={hfh1} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
                         </a>
                         <h5 className="resourcesImageExplain">#1</h5>
                       </div>
                       <div className="col-md-4">
-                        <a href="#" id="RadioPlay_2" target="_blank">
+                        <a href="#" id="RadioPlay_2" target="_blank" rel="noopener noreferrer">
                           <motion.img alt="Heritage from Home Issue 2" src={hfh2} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
                         </a>
                         <h5 className="resourcesImageExplain">#2</h5>
                       </div>
                       <div className="col-md-4">
-                        <a href="#" id="RadioPlay_3" target="_blank">
+                        <a href="#" id="RadioPlay_3" target="_blank" rel="noopener noreferrer">
                           <motion.img alt="Heritage from Home Issue 3" src={hfh3} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
                         </a>
                         <h5 className="resourcesImageExplain">#3</h5>
@@ -673,19 +673,19 @@ function App() {
                     </div>
                     <div className="row">
                       <div className="col-md-4">
-                        <a href="#" id="RadioPlay_4" target="_blank">
+                        <a href="#" id="RadioPlay_4" target="_blank" rel="noopener noreferrer">
                           <motion.img alt="Heritage from Home Issue 4" src={hfh4} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
                         </a>
                         <h5 className="resourcesImageExplain">#4</h5>
                       </div>
                       <div className="col-md-4">
-                        <a href="#" id="RadioPlay_5" target="_blank">
+                        <a href="#" id="RadioPlay_5" target="_blank" rel="noopener noreferrer">
                           <motion.img alt="Heritage from Home Issue 5" src={hfh5} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
                         </a>
                         <h5 className="resourcesImageExplain">#5</h5>
                       </div>
                       <div className="col-md-4">
-                        <a href="#" id="RadioPlay_6" target="_blank">
+                        <a href="#" id="RadioPlay_6" target="_blank" rel="noopener noreferrer">
                           <motion.img alt="Heritage from Home Issue 6" src={hfh6} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
                         </a>
                         <h5 className="resourcesImageExplain">#6</h5>
