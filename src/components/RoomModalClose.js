@@ -32,7 +32,7 @@ export default class RoomModalClose extends PureComponent {
         whileHover={{ scale: 1.3 }}
         whileTap={{ scale: 0.95 }}
         aria-label="Close Room">
-        <i className='glyphicon glyphicon-home' />
+        <i className='glyphicon glyphicon-remove' />
       </motion.button>
     )
   }

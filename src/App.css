@@ -23,7 +23,7 @@
   color: white;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 800px) and (min-height: 600px) {
   .displayWarning {
     width:0;
     height:0;
@@ -135,6 +135,14 @@
   -webkit-user-drag: none;
   -ms-user-select: none;
 }
+
+/* Minimum aspect ratio */
+@media (min-aspect-ratio: 17/9) {
+  .RoomImage {
+    height: 600px;
+  }
+}
+
 
 .infoDiv {
   position: fixed;

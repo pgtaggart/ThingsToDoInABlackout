@@ -40,13 +40,11 @@ export default class ScrollableContainer extends PureComponent {
   componentDidMount() {
     
     this.container.addEventListener('scroll', this.debounceCheckForScrollPosition);
-
     window.addEventListener('keydown', this.handleKeyDown);
 
     // This is to scroll the container to the middle but needs some final tweaks
     setTimeout(() => {
-      const {clientWidth } = this.container
-      this.scrollContainerBy(clientWidth / 2.0)
+      this.scrollContainerBy(10)
     }, 500);
   }
 
