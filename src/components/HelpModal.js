@@ -143,7 +143,7 @@ export default class HelpModal extends PureComponent {
                                     exit={{ y: 1000 }}
                                     transition={{ delay: 1, duration: 1 }}>
                                     <Typist className="helpModalTextParagraph" cursor={{ show: false }} startDelay={1000} avgTypingDelay={50} >
-                                        <p>Use the scroll buttons or your trackpad to scroll along the street.</p>
+                                        <p>Use the scroll buttons, the left/right arrow keys or your trackpad to scroll along the street.</p>
                                         <Typist.Backspace count={67} delay={1000} />
                                         <p>Click on any one of the six houses to enter a room in the house.</p>
                                     </Typist>
@@ -189,7 +189,7 @@ export default class HelpModal extends PureComponent {
                                     exit={{ y: 1000 }}
                                     transition={{ delay: 1, duration: 1 }}>
                                     <Typist className="helpModalTextParagraph" cursor={{ show: false }} startDelay={1000} avgTypingDelay={50} >
-                                        <p>Look around the room to discover the secrets of the room</p>
+                                        <p>Look around the room to discover the secrets of the room.</p>
                                     </Typist>
 
                                 </motion.div>

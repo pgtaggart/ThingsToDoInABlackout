@@ -14,7 +14,7 @@ export default class ResponsiveImageMap extends PureComponent {
         this.backgroundColor = props.backgroundColor;
         this.useViewHeight = props.useViewHeight;
         this.type = props.type;
-        
+
         this.state = {
             imageWidth: props.originalWidth,
             imageHeight: props.originalHeight
@@ -28,7 +28,7 @@ export default class ResponsiveImageMap extends PureComponent {
 
         const parentElement = document.getElementById(this.parentElementId);
 
-        if(!parentElement) {
+        if (!parentElement) {
             console.log('WARNING: resize called for unmounted image: ' + this.image);
             return;
         }
@@ -38,24 +38,17 @@ export default class ResponsiveImageMap extends PureComponent {
 
         var ratioWidth = newWidth / this.originalWidth;
         var ratioHeight = newHeight / this.originalHeight;
-        
+
         var body = document.body;
         var html = document.documentElement;
 
-        if(this.useViewHeight === 'true') {
-            
-            var viewHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+        var viewHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
 
-            if(viewHeight !== newHeight) {
-                const imageElement = document.getElementById(this.imageId);
-                imageElement.height = viewHeight;
-                newHeight = viewHeight;
-                ratioHeight = viewHeight / this.originalHeight;
-            }
-
-        } else {
-             
-            ratioHeight = ratioWidth;
+        if (viewHeight !== newHeight) {
+            const imageElement = document.getElementById(this.imageId);
+            imageElement.height = viewHeight;
+            newHeight = viewHeight;
+            ratioHeight = viewHeight / this.originalHeight;
         }
 
         for (const area of this.map.areas) {
@@ -76,8 +69,8 @@ export default class ResponsiveImageMap extends PureComponent {
             modalBackground[i].style.backgroundColor = this.backgroundColor;
         }
 
-        this.setState({ imageWidth: newWidth, imageHeight: newHeight});
-        
+        this.setState({ imageWidth: newWidth, imageHeight: newHeight });
+
         return true;
     }
 
@@ -85,7 +78,7 @@ export default class ResponsiveImageMap extends PureComponent {
         window.addEventListener('resize', this.resize, false);
         this.resize();
     }
-    
+
     componentWillUnmount() {
         window.removeEventListener('resize', this.resize, false);
     }
@@ -99,13 +92,13 @@ export default class ResponsiveImageMap extends PureComponent {
         // Don't show these if the modal is active
         var imageModal = document.getElementById('image-content-modal-id');
         var textModal = document.getElementById('text-content-modal-id');
-        if(imageModal || textModal) {
+        if (imageModal || textModal) {
             return;
         }
 
         const coordsArr = coords.split(',');
         const parentElement = document.getElementById(this.parentElementId);
-        
+
         // Create the div and set it's location
         const newElement = document.createElement('div');
         newElement.setAttribute('id', 'infoDiv');
@@ -115,35 +108,35 @@ export default class ResponsiveImageMap extends PureComponent {
         const infoIcon = document.createElement('button');
 
         // Set the icon, size and colour based on what type of area we have
-        switch(mapType) {
+        switch (mapType) {
 
-            case 'Audio' : 
-            case 'AudioText' : 
+            case 'Audio':
+            case 'AudioText':
                 infoIcon.setAttribute("class", "modalButton glyphicon glyphicon-headphones");
                 break;
-            
-            case 'Image' :
-            case 'AudioImage' :
+
+            case 'Image':
+            case 'AudioImage':
                 infoIcon.setAttribute("class", "modalButton glyphicon glyphicon-picture");
                 break;
 
-            case 'Text' :
+            case 'Text':
                 infoIcon.setAttribute("class", "modalButton glyphicon glyphicon-pencil");
                 break;
 
-            default :
+            default:
                 infoIcon.setAttribute("class", "modalButton glyphicon glyphicon-question-sign");
                 break;
         }
-        
+
         // Calculate the offsets so the icon is in the middle of the map
-        const xOffset = parseInt(coordsArr[0]) + parseInt((coordsArr[2] - coordsArr[0]) / 2.0 ) - 17.5;
-        const yOffset = parseInt(coordsArr[1]) + parseInt((coordsArr[3] - coordsArr[1]) / 2.0 ) - 19.5;
-        
+        const xOffset = parseInt(coordsArr[0]) + parseInt((coordsArr[2] - coordsArr[0]) / 2.0) - 17.5;
+        const yOffset = parseInt(coordsArr[1]) + parseInt((coordsArr[3] - coordsArr[1]) / 2.0) - 19.5;
+
         // Set the location of the Div that will contain the icon
-        newElement.style.top  =  yOffset + "px";
-        newElement.style.left =  xOffset + "px";      
-        
+        newElement.style.top = yOffset + "px";
+        newElement.style.left = xOffset + "px";
+
         // Add the icon to the div and the div to the parent
         newElement.appendChild(infoIcon);
         parentElement.appendChild(newElement);
@@ -152,10 +145,10 @@ export default class ResponsiveImageMap extends PureComponent {
     mouseOutArea() {
         const parentElement = document.getElementById(this.parentElementId);
         const infoDiv = document.getElementById('infoDiv');
-        if(infoDiv) {
+        if (infoDiv) {
             parentElement.removeChild(infoDiv);
         }
-        
+
     }
 
     selectContentModalToOpen(type, title) {
@@ -167,9 +160,9 @@ export default class ResponsiveImageMap extends PureComponent {
         this.props.setMapAreaTypeFunction(type);
 
         // If any of the modals are open then close them first
-        if(this.props.isAudioContentModalOpen) this.props.toggleAudioContentModalFunction();
-        if(this.props.isImageContentModalOpen) this.props.toggleImageContentModalFunction();
-        if(this.props.isTextContentModalOpen) this.props.toggleTextContentModalFunction();
+        if (this.props.isAudioContentModalOpen) this.props.toggleAudioContentModalFunction();
+        if (this.props.isImageContentModalOpen) this.props.toggleImageContentModalFunction();
+        if (this.props.isTextContentModalOpen) this.props.toggleTextContentModalFunction();
 
         // Hide the room image
         document.getElementById(this.props.imageId).style.opacity = '0.1';
@@ -177,26 +170,26 @@ export default class ResponsiveImageMap extends PureComponent {
         document.getElementById(this.props.imageId).classList.add("fade-out");
 
         // Now trigger the new open of the modal
-        switch(type) {
-            case 'Audio' : 
+        switch (type) {
+            case 'Audio':
                 this.props.toggleAudioContentModalFunction();
                 break;
-            case 'Image' :
+            case 'Image':
                 this.props.toggleImageContentModalFunction();
                 break;
-            case 'Text' :
+            case 'Text':
                 this.props.toggleTextContentModalFunction();
                 break;
-            case 'AudioImage' :
+            case 'AudioImage':
                 this.props.toggleAudioContentModalFunction();
                 this.props.toggleImageContentModalFunction();
                 break;
-            case 'AudioText' :
+            case 'AudioText':
                 this.props.toggleAudioContentModalFunction();
                 this.props.toggleTextContentModalFunction();
                 break;
 
-            default :
+            default:
                 // don't do anything if we don't know what type this is
                 break;
         }
@@ -206,8 +199,8 @@ export default class ResponsiveImageMap extends PureComponent {
         return this.map.areas.map((item, index) => {
             return (
                 <area key={index} target={item.target} alt={item.alt} title="" href="#" id={this.imageId + '_map' + index}
-                      coords={item.newCoords} shape={item.shape} className="aMap"
-                      onClick={(e) => {e.preventDefault(); this.props.setRoomIndexFunction(index); this.props.toggleModalFunction() }}/>
+                    coords={item.newCoords} shape={item.shape} className="aMap"
+                    onClick={(e) => { e.preventDefault(); this.props.setRoomIndexFunction(index); this.props.toggleModalFunction() }} />
             );
         });
     }
@@ -216,10 +209,10 @@ export default class ResponsiveImageMap extends PureComponent {
         return this.map.areas.map((item, index) => {
             return (
                 <area key={index} target={item.target} alt={item.alt} title="" href="#" id={this.imageId + '_map' + index}
-                      coords={item.newCoords} shape={item.shape} className="aMap"
-                      onMouseOver={()=>this.mouseOverArea(item.newCoords, item.type)}
-                      onMouseOut={()=>this.mouseOutArea()}
-                      onClick={(e) => {e.preventDefault();  this.selectContentModalToOpen(item.type, item.title)}}/>
+                    coords={item.newCoords} shape={item.shape} className="aMap"
+                    onMouseOver={() => this.mouseOverArea(item.newCoords, item.type)}
+                    onMouseOut={() => this.mouseOutArea()}
+                    onClick={(e) => { e.preventDefault(); this.selectContentModalToOpen(item.type, item.title) }} />
             );
         });
     }
@@ -227,9 +220,9 @@ export default class ResponsiveImageMap extends PureComponent {
     render() {
         return (
             <>
-                <img src={this.image} useMap={'#' + this.map.name} className={this.className} alt='' hidefocus="false" id={this.imageId}/>
+                <img src={this.image} useMap={'#' + this.map.name} className={this.className} alt='' hidefocus="false" id={this.imageId} />
                 <map name={this.map.name}>
-                    { this.useViewHeight === 'true' ? this.buildAreaItemsForStreet() : this.buildAreaItems() }
+                    {this.useViewHeight === 'true' ? this.buildAreaItemsForStreet() : this.buildAreaItems()}
                 </map>
             </>
         );
