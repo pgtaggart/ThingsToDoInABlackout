@@ -64,7 +64,6 @@
   padding-right: 2px;
   top: 50vh;
   right: 0;
-  ;
   border: none;
   user-select: none;
   -webkit-user-select: none;
@@ -86,7 +85,6 @@
   padding-left: 5px;
   padding-top: 5px;
   top: 25Vh;
-  ;
   border: none;
   user-select: none;
   -webkit-user-select: none;
@@ -109,7 +107,6 @@
   padding-top: 5px;
   top: 25vh;
   right: 0;
-  ;
   border: none;
   user-select: none;
   -webkit-user-select: none;
@@ -126,7 +123,7 @@
 }
 
 .RoomImage {
-  width: 100%;
+  width: 100vw;
   height: auto;
   object-fit: cover;
   -moz-user-select: none;
@@ -137,9 +134,13 @@
 }
 
 /* Minimum aspect ratio */
-@media (min-aspect-ratio: 17/9) {
+@media (min-aspect-ratio: 16/9) {
   .RoomImage {
-    height: 600px;
+    height: 100vh;
+    width: auto;
+  }
+  .modal-foreground {
+    text-align: center;
   }
 }
 
