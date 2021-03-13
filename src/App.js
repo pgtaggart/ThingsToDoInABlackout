@@ -485,7 +485,7 @@ function App() {
                       duration: 2,
                       ease: "easeInOut",
                       times: [0.2, 0.4, 0.6, 0.8, 1.0],
-                      loop: Infinity,
+                      loop: 10,
                       repeatDelay: 0.2
                     }}>
                     <p>?</p>
