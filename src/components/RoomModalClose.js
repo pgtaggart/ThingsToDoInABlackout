@@ -26,7 +26,7 @@ export default class RoomModalClose extends PureComponent {
   render() {
 
     return (
-      <motion.button className="room-close-modal-button" 
+      <motion.button className="room-close-modal-button aButton" 
         id="CloseRoomModalButton"
         onClick={() => this.onMouseClick()}
         whileHover={{ scale: 1.3 }}

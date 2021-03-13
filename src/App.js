@@ -55,8 +55,8 @@ function App() {
   const [isModalOpen, toggleModalOpen] = useCycle(false, true);
   const [isAboutModalOpen, toggleAboutModalOpen] = useCycle(false, true);
   const [isResourcesModalOpen, toggleResourcesModalOpen] = useCycle(false, true);
-  const [isHelpModalBackgroundOpen, toggleHelpModalBackgroundOpen] = useCycle(true, false);
-  const [isHelpModalInitialOpen, toggleHelpModalInitialOpen] = useCycle(true, false);
+  const [isHelpModalBackgroundOpen, toggleHelpModalBackgroundOpen] = useCycle(false, true);
+  const [isHelpModalInitialOpen, toggleHelpModalInitialOpen] = useCycle(false, true);
   const [isHelpModalRoomOpen, toggleHelpModalRoomOpen] = useCycle(false, true);
   const [isResearchModalOpen, toggleResearchModalOpen] = useCycle(false, true);
   const [isAudioContentModalOpen, toggleAudioContentModalOpen] = useCycle(false, true);
@@ -448,11 +448,10 @@ function App() {
   useEventListener('keydown', downHandler);
   useEventListener('keyup', upHandler);
 
-
   /**
    * This is the main section that will actually render the website
    */
-  return (
+  return (    
     <>
 
       <div className="displayWarning" >
@@ -475,8 +474,22 @@ function App() {
         </Typist>
       </div>
 
-      <motion.button id="mainHelpButton" className="helpHome aButton" aria-label="Website Help"
-        whileHover={{ opacity: 1, scale: 1.2 }} onClick={() => { toggleHelpModalBackgroundOpen(); toggleHelpModalInitialOpen() }}>?</motion.button>
+      <motion.button id="mainHelpButton" 
+                     className="helpHome aButton" 
+                     aria-label="Website Help"
+                     onClick={() => { toggleHelpModalBackgroundOpen(); toggleHelpModalInitialOpen() }}
+                     animate={{
+                      scale: [1, 1.3, 1.3, 1.3, 1]
+                    }}
+                    transition={{
+                      duration: 2,
+                      ease: "easeInOut",
+                      times: [0.2, 0.4, 0.6, 0.8, 1.0],
+                      loop: Infinity,
+                      repeatDelay: 0.2
+                    }}>
+                    <p>?</p>
+      </motion.button>
 
       <ScrollableContainer toggleModalFunction={() => toggleModalOpen()}
         setRoomIndexFunction={(index) => setRoomIndex(index)}

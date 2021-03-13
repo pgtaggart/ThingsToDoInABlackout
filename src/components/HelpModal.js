@@ -106,7 +106,7 @@ export default class HelpModal extends PureComponent {
                                 initial={{ y: 2000, x: '50%' }}
                                 animate={{ y: '50%', x: '50%' }}
                                 exit={{ opacity: 0 }}
-                                transition={{ delay: 0, duration: 1 }}>
+                                transition={{ delay: 0.1, duration: 1 }}>
 
                                 <motion.button className="close-help-modal-button aButton" id="closeHelpModalButton"
                                     onClick={() => this.figureOutCloseClick()}
@@ -142,12 +142,8 @@ export default class HelpModal extends PureComponent {
                                     animate={{ y: 0 }}
                                     exit={{ y: 1000 }}
                                     transition={{ delay: 1, duration: 1 }}>
-                                    <Typist className="helpModalTextParagraph" cursor={{ show: false }} startDelay={1000} avgTypingDelay={50} >
-                                        <p>Use the scroll buttons, the left/right arrow keys or your trackpad to scroll along the street.</p>
-                                        <Typist.Backspace count={67} delay={1000} />
+                                        <p>Scroll along the street with the left/right arrow keys or your trackpad.</p>
                                         <p>Click on any one of the six houses to enter a room in the house.</p>
-                                    </Typist>
-
                                 </motion.div>
                             </motion.div>
                         </div>
@@ -188,10 +184,7 @@ export default class HelpModal extends PureComponent {
                                     animate={{ y: 0 }}
                                     exit={{ y: 1000 }}
                                     transition={{ delay: 1, duration: 1 }}>
-                                    <Typist className="helpModalTextParagraph" cursor={{ show: false }} startDelay={1000} avgTypingDelay={50} >
-                                        <p>Look around the room to discover the secrets of the room.</p>
-                                    </Typist>
-
+                                        <p>Explore the room and try to find the hidden clues that reveal the history of the room.</p>
                                 </motion.div>
                             </motion.div>
                         </div>

@@ -44,7 +44,7 @@ export default class ScrollableContainer extends PureComponent {
 
     // This is to scroll the container to the middle but needs some final tweaks
     setTimeout(() => {
-      this.scrollContainerBy(10)
+      this.scrollContainerBy(10);
     }, 500);
   }
 

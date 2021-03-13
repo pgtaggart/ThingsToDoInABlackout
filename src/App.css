@@ -709,6 +709,8 @@ nav {
   padding-right: 10px;
   padding-bottom: 10px;
   font-family: American Typewriter, serif;
+  font-size: larger;
+  text-align: center;
 }
 
 .modalButton {
