@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import Typist from 'react-typist';
 import StreetScene from '../images/StreetScene.jpg';
 import houseExample from '../images/RoomTwo.jpg'
 

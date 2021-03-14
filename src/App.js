@@ -739,14 +739,14 @@ function App() {
         <motion.button id="HeritageFundLogo"
           className="HeritageFund"
           whileHover={{ scale: 1.1 }}>
-          <a href="https://www.heritagefund.org.uk" tabIndex='-1'>
+          <a href="https://www.heritagefund.org.uk" tabIndex='-1' target="_blank" rel="noopener noreferrer">
             <img src={heritageFund} alt="The Heritage Lottery Fund" width="108px" height="40px" />
           </a>
         </motion.button>
         <div className="social-icons">
           <motion.div className="abounceLogoLink"
             whileHover={{ scale: 1.2 }}>
-            <a href="https://www.bouncetheatre.com">
+            <a href="https://www.bouncetheatre.com" target="_blank" rel="noopener noreferrer">
               <img src={bounceLogo} alt="Bounce Theatre dot com" width="50px" height="50px" />
             </a>
           </motion.div>

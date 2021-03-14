@@ -153,7 +153,7 @@ export default class ResponsiveImageMap extends PureComponent {
         // Calculate the offsets so the icon is in the middle of the map
         var xOffset = 0;
 
-        if(imageElement.offsetWidth != parentElement.offsetWidth) {
+        if(imageElement.offsetWidth !== parentElement.offsetWidth) {
             xOffset = (parseInt(coordsArr[0]) + parseInt((coordsArr[2] - coordsArr[0]) / 2.0) - 17.5) + ((parentElement.offsetWidth - imageElement.offsetWidth) / 2.0);
         } else {
             xOffset = parseInt(coordsArr[0]) + parseInt((coordsArr[2] - coordsArr[0]) / 2.0) - 17.5;
