@@ -57,6 +57,7 @@ function App() {
   const [isResourcesModalOpen, toggleResourcesModalOpen] = useCycle(false, true);
   const [isHelpModalBackgroundOpen, toggleHelpModalBackgroundOpen] = useCycle(false, true);
   const [isHelpModalInitialOpen, toggleHelpModalInitialOpen] = useCycle(false, true);
+  const [isHelpModalStreetOpen, toggleHelpModalStreetOpen] = useCycle(false, true);
   const [isHelpModalRoomOpen, toggleHelpModalRoomOpen] = useCycle(false, true);
   const [isResearchModalOpen, toggleResearchModalOpen] = useCycle(false, true);
   const [isAudioContentModalOpen, toggleAudioContentModalOpen] = useCycle(false, true);
@@ -451,12 +452,12 @@ function App() {
   /**
    * This is the main section that will actually render the website
    */
-  return (    
+  return (
     <>
 
       <div className="displayWarning" >
         <h2 className="displayWarningHeader">For the best experience please use this website in landscape mode on a device supporting at least an 800x600 resolution.</h2>
-      </div> 
+      </div>
 
       <motion.nav initial={false} animate={isNavOpen ? "open" : "closed"}>
         <motion.div className="nav-background" variants={sidebar}>
@@ -474,30 +475,24 @@ function App() {
         </Typist>
       </div>
 
-      <motion.button id="mainHelpButton" 
-                     className="helpHome aButton" 
-                     aria-label="Website Help"
-                     onClick={() => { toggleHelpModalBackgroundOpen(); toggleHelpModalInitialOpen() }}
-                     animate={{
-                      scale: [1, 1.3, 1.3, 1.3, 1]
-                    }}
-                    transition={{
-                      duration: 2,
-                      ease: "easeInOut",
-                      times: [0.2, 0.4, 0.6, 0.8, 1.0],
-                      loop: 10,
-                      repeatDelay: 0.2
-                    }}>
-                    <p>?</p>
+      <motion.button id="mainHelpButton"
+        className="helpHome aButton"
+        aria-label="Website Help"
+        onClick={() => { toggleHelpModalBackgroundOpen(); toggleHelpModalInitialOpen() }}
+        whileHover={{ scale: 1.2 }}
+        whileTap={{ scale: 0.95 }}>
+        <p>?</p>
       </motion.button>
 
       <ScrollableContainer toggleModalFunction={() => toggleModalOpen()}
         setRoomIndexFunction={(index) => setRoomIndex(index)}
+        toggleHelpFunction={() => { toggleHelpModalBackgroundOpen(); toggleHelpModalInitialOpen() }}
         parentElementId='StreetImageContainer' />
 
       <HelpModal
         toggleHelpModalBackgroundOpen={toggleHelpModalBackgroundOpen} isHelpModalBackgroundOpen={isHelpModalBackgroundOpen}
         toggleHelpModalInitialOpen={toggleHelpModalInitialOpen} isHelpModalInitialOpen={isHelpModalInitialOpen}
+        toggleHelpModalStreetOpen={toggleHelpModalStreetOpen} isHelpModalStreetOpen={isHelpModalStreetOpen}
         toggleHelpModalRoomOpen={toggleHelpModalRoomOpen} isHelpModalRoomOpen={isHelpModalRoomOpen} />
 
       <AnimatePresence>
@@ -666,42 +661,42 @@ function App() {
                   <div className="container">
                     <div className="row">
                       <div className="col-md-4">
-                        <a href="#" id="RadioPlay_1" target="_blank" rel="noopener noreferrer">
-                          <motion.img alt="Heritage from Home Issue 1" src={hfh1} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
+                        <a href="https://issuu.com/bouncetheatre/docs/playscript_1_-_big_smoke" id="RadioPlay_1" target="_blank" rel="noopener noreferrer">
+                          <motion.img alt="Big Smoke" src={hfh1} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
                         </a>
-                        <h5 className="resourcesImageExplain">#1</h5>
+                        <h5 className="resourcesImageExplain">Big Smoke</h5>
                       </div>
                       <div className="col-md-4">
-                        <a href="#" id="RadioPlay_2" target="_blank" rel="noopener noreferrer">
-                          <motion.img alt="Heritage from Home Issue 2" src={hfh2} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
+                        <a href="https://issuu.com/bouncetheatre/docs/playscript_2_-_the_dead_end_kids" id="RadioPlay_2" target="_blank" rel="noopener noreferrer">
+                          <motion.img alt="The Dead End Kids" src={hfh2} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
                         </a>
-                        <h5 className="resourcesImageExplain">#2</h5>
+                        <h5 className="resourcesImageExplain">The Dead End Kids</h5>
                       </div>
                       <div className="col-md-4">
-                        <a href="#" id="RadioPlay_3" target="_blank" rel="noopener noreferrer">
-                          <motion.img alt="Heritage from Home Issue 3" src={hfh3} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
+                        <a href="https://issuu.com/bouncetheatre/docs/playscript_3_-_aida___alfie" id="RadioPlay_3" target="_blank" rel="noopener noreferrer">
+                          <motion.img alt="Aida and Alfie" src={hfh3} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
                         </a>
-                        <h5 className="resourcesImageExplain">#3</h5>
+                        <h5 className="resourcesImageExplain">Aida and Alfie</h5>
                       </div>
                     </div>
                     <div className="row">
                       <div className="col-md-4">
-                        <a href="#" id="RadioPlay_4" target="_blank" rel="noopener noreferrer">
-                          <motion.img alt="Heritage from Home Issue 4" src={hfh4} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
+                        <a href="https://issuu.com/bouncetheatre/docs/playscript_4_-_a_tonic" id="RadioPlay_4" target="_blank" rel="noopener noreferrer">
+                          <motion.img alt="A Tonic" src={hfh4} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
                         </a>
-                        <h5 className="resourcesImageExplain">#4</h5>
+                        <h5 className="resourcesImageExplain">A Tonic</h5>
                       </div>
                       <div className="col-md-4">
-                        <a href="#" id="RadioPlay_5" target="_blank" rel="noopener noreferrer">
-                          <motion.img alt="Heritage from Home Issue 5" src={hfh5} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
+                        <a href="https://issuu.com/bouncetheatre/docs/playscript_5_-_the_deserters" id="RadioPlay_5" target="_blank" rel="noopener noreferrer">
+                          <motion.img alt="The Deserters" src={hfh5} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
                         </a>
-                        <h5 className="resourcesImageExplain">#5</h5>
+                        <h5 className="resourcesImageExplain">The Deserters</h5>
                       </div>
                       <div className="col-md-4">
-                        <a href="#" id="RadioPlay_6" target="_blank" rel="noopener noreferrer">
-                          <motion.img alt="Heritage from Home Issue 6" src={hfh6} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
+                        <a href="https://issuu.com/bouncetheatre/docs/playscript_6_-_the_rules" id="RadioPlay_6" target="_blank" rel="noopener noreferrer">
+                          <motion.img alt="The Rules" src={hfh6} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
                         </a>
-                        <h5 className="resourcesImageExplain">#6</h5>
+                        <h5 className="resourcesImageExplain">The Rules</h5>
                       </div>
                     </div>
                   </div>

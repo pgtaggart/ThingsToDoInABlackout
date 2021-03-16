@@ -272,6 +272,7 @@ nav {
 .footer {
   position: fixed;
   bottom: 0;
+  left: 0;
   height: 30px;
   border-top-width: 1px;
   border-top-style: solid;
@@ -672,9 +673,16 @@ nav {
   font-family: American Typewriter, serif;
 }
 
+.helpModalWelcome {
+  text-align: center;
+  opacity: 1;
+  font-family: American Typewriter, serif;
+  padding-bottom: 20px;
+}
+
 .helpModalContent {
   position: relative;
-  height: 40vh;
+  height: 32vh;
   width: 50vw;
   z-index: 10002;
   overflow-x: scroll;
@@ -852,6 +860,7 @@ nav {
   padding-top: 5px;
   padding-bottom: 25px;
   font-family: American Typewriter, serif;
+  font-size: larger;
 }
 
 .aboutModalTextHeader {
@@ -862,7 +871,7 @@ nav {
 }
 
 .helpModalTextParagraph {
-  font-size: large;
+  font-size: larger;
   font-family: American Typewriter, serif;
   text-align: center;
 }
