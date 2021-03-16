@@ -682,7 +682,7 @@ nav {
 
 .helpModalContent {
   position: relative;
-  height: 32vh;
+  height: 30vh;
   width: 50vw;
   z-index: 10002;
   overflow-x: scroll;
