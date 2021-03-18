@@ -1,6 +1,14 @@
 import React from 'react';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 
+import ChurchillSpeech from '../images/timeline/1940_ChurchillFirstSpeech.jpg';
+import ClothesRationing from '../images/timeline/1941_ClothesRationing.jpg';
+import Rationing  from '../images/timeline/1942_Rationing.jpg';
+import SoapRationing  from '../images/timeline/1942_SoapRationing.jpg';
+import Auschwitz from '../images/timeline/1945_AuschwitzLiberated.jpg';
+import BlackoutRelaxed from '../images/timeline/1944_BlackoutRelaxed.jpg';
+import BreadRationed from '../images/timeline/1946_BreadRationed.jpg';
+
 const ResearchTimeLine = () => {
 
     const defaultTimelineBackground = 'rgb(140, 140, 140)';
@@ -134,7 +142,7 @@ const ResearchTimeLine = () => {
                 date="10th May 1940"
                 iconStyle={{ background: defaultIconBackground, color: defaultIconForeground }}
                 icon={<i className='glyphicon glyphicon-king'/>}>
-                <h3 className="vertical-timeline-element-title">Winston Churchill becomes Prime Minister</h3>
+                <h3 className="vertical-timeline-element-title">Churchill becomes Prime Minister</h3>
                 <p>Winston Churchill becomes Prime Minister, following Neville Chamberlain’s resignation. Churchill forms the Churchill War Ministry – a coalition of the Conservative, Labour, and Liberal Parties</p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
@@ -144,8 +152,8 @@ const ResearchTimeLine = () => {
                 date="13th May 1940 "
                 iconStyle={{ background: defaultIconBackground, color: defaultIconForeground }}
                 icon={<i className='glyphicon glyphicon-camera'/>}>
-                <h3 className="vertical-timeline-element-title">Churchill's first speech as Prime Minister</h3>
-                <p></p>
+                <h3 className="vertical-timeline-element-title">Churchill's first speech as P.M.</h3>
+                <p className="TimeLineImage"><img src={ChurchillSpeech} width="200" alt="Churchill's First Speech as Prime Minister"/></p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
@@ -277,7 +285,7 @@ const ResearchTimeLine = () => {
                 iconStyle={{ background: defaultIconBackground, color: defaultIconForeground }}
                 icon={<i className='glyphicon glyphicon-camera'/>}>
                 <h3 className="vertical-timeline-element-title">Clothes rationing introduced in the UK</h3>
-                <p></p>
+                <p className="TimeLineImage"><img src={ClothesRationing} width="200" alt="Clothes Rationing"/></p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
@@ -358,7 +366,7 @@ const ResearchTimeLine = () => {
                 iconStyle={{ background: defaultIconBackground, color: defaultIconForeground }}
                 icon={<i className='glyphicon glyphicon-camera'/>}>
                 <h3 className="vertical-timeline-element-title">More Rationing</h3>
-                <p>Soap Rationing is introduced.</p>
+                <p className="TimeLineImage"><img src={Rationing} width="200" alt="Yet more rationing introduced"/></p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
@@ -367,8 +375,8 @@ const ResearchTimeLine = () => {
                 date="26th July 1942"
                 iconStyle={{ background: defaultIconBackground, color: defaultIconForeground }}
                 icon={<i className='glyphicon glyphicon-camera'/>}>
-                <h3 className="vertical-timeline-element-title">... And more Rationing!</h3>
-                <p>Sweet Rationing is introduced</p>
+                <h3 className="vertical-timeline-element-title">Soap Rationing Introduced</h3>
+                <p className="TimeLineImage"><img src={SoapRationing} width="200" alt="Soap rationing introduced"/></p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
@@ -467,7 +475,7 @@ const ResearchTimeLine = () => {
                 iconStyle={{ background: defaultIconBackground, color: defaultIconForeground }}
                 icon={<i className='glyphicon glyphicon-camera'/>}>
                 <h3 className="vertical-timeline-element-title">Blackout restrictions relaxed</h3>
-                <p></p>
+                <p className="TimeLineImage"><img src={BlackoutRelaxed} width="200" alt="Blackout Restrictions eased"/></p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
@@ -484,9 +492,9 @@ const ResearchTimeLine = () => {
                 contentArrowStyle={{ borderRight: defaultArrowStyle }}
                 date="27th January 1945"
                 iconStyle={{ background: defaultIconBackground, color: defaultIconForeground }}
-                icon={<i className='glyphicon glyphicon-flag'/>}>
+                icon={<i className='glyphicon glyphicon-camera'/>}>
                 <h3 className="vertical-timeline-element-title">Auschwitz is liberated by Soviet troops</h3>
-                <p></p>
+                <p className="TimeLineImage"><img src={Auschwitz} width="200" alt="Auschwitz Liberated"/></p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
@@ -587,7 +595,7 @@ const ResearchTimeLine = () => {
                 iconStyle={{ background: defaultIconBackground, color: defaultIconForeground }}
                 icon={<i className='glyphicon glyphicon-camera'/>}>
                 <h3 className="vertical-timeline-element-title">Bread Rationed</h3>
-                <p></p>
+                <p className="TimeLineImage"><img src={BreadRationed} width="200" alt="Bread Rationed"/></p>
             </VerticalTimelineElement>
             <VerticalTimelineElement iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }} icon={<i className='glyphicon glyphicon-asterisk'/>}/>
         </VerticalTimeline>

@@ -651,6 +651,10 @@ nav {
   font-family: American Typewriter, serif;
 }
 
+.TimeLineImage {
+  text-align: center;
+}
+
 .helpModalWelcome {
   text-align: center;
   opacity: 1;
