@@ -26,6 +26,7 @@ import hfh6 from './images/resources/HFH_6.jpg'
 import hfh7 from './images/resources/HFH_7.jpg'
 import hfh8 from './images/resources/HFH_8.jpg'
 import hfh9 from './images/resources/HFH_9.jpg'
+import scriptImage from './images/resources/Scripts.jpg'
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -662,19 +663,19 @@ function App() {
                     <div className="row">
                       <div className="col-md-4">
                         <a href="https://issuu.com/bouncetheatre/docs/playscript_1_-_big_smoke" id="RadioPlay_1" target="_blank" rel="noopener noreferrer">
-                          <motion.img alt="Big Smoke" src={hfh1} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
+                          <motion.img alt="Big Smoke" src={scriptImage} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
                         </a>
                         <h5 className="resourcesImageExplain">Big Smoke</h5>
                       </div>
                       <div className="col-md-4">
                         <a href="https://issuu.com/bouncetheatre/docs/playscript_2_-_the_dead_end_kids" id="RadioPlay_2" target="_blank" rel="noopener noreferrer">
-                          <motion.img alt="The Dead End Kids" src={hfh2} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
+                          <motion.img alt="The Dead End Kids" src={scriptImage} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
                         </a>
                         <h5 className="resourcesImageExplain">The Dead End Kids</h5>
                       </div>
                       <div className="col-md-4">
                         <a href="https://issuu.com/bouncetheatre/docs/playscript_3_-_aida___alfie" id="RadioPlay_3" target="_blank" rel="noopener noreferrer">
-                          <motion.img alt="Aida and Alfie" src={hfh3} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
+                          <motion.img alt="Aida and Alfie" src={scriptImage} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
                         </a>
                         <h5 className="resourcesImageExplain">Aida and Alfie</h5>
                       </div>
@@ -682,19 +683,19 @@ function App() {
                     <div className="row">
                       <div className="col-md-4">
                         <a href="https://issuu.com/bouncetheatre/docs/playscript_4_-_a_tonic" id="RadioPlay_4" target="_blank" rel="noopener noreferrer">
-                          <motion.img alt="A Tonic" src={hfh4} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
+                          <motion.img alt="A Tonic" src={scriptImage} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
                         </a>
                         <h5 className="resourcesImageExplain">A Tonic</h5>
                       </div>
                       <div className="col-md-4">
                         <a href="https://issuu.com/bouncetheatre/docs/playscript_5_-_the_deserters" id="RadioPlay_5" target="_blank" rel="noopener noreferrer">
-                          <motion.img alt="The Deserters" src={hfh5} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
+                          <motion.img alt="The Deserters" src={scriptImage} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
                         </a>
                         <h5 className="resourcesImageExplain">The Deserters</h5>
                       </div>
                       <div className="col-md-4">
                         <a href="https://issuu.com/bouncetheatre/docs/playscript_6_-_the_rules" id="RadioPlay_6" target="_blank" rel="noopener noreferrer">
-                          <motion.img alt="The Rules" src={hfh6} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
+                          <motion.img alt="The Rules" src={scriptImage} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
                         </a>
                         <h5 className="resourcesImageExplain">The Rules</h5>
                       </div>
