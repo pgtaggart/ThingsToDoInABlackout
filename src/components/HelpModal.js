@@ -8,7 +8,7 @@ export default class HelpModal extends PureComponent {
     constructor(props) {
         super(props);
         this.container = null;
-        this.state = { count: 0, scroll: 200 };
+        this.state = { count: 0, scroll: 50 };
 
     }
 
@@ -20,51 +20,25 @@ export default class HelpModal extends PureComponent {
 
         setInterval(() => {
 
-            if (this.props.isHelpModalBackgroundOpen) {
+            // This is to scroll the street help screen only when it is open
+            if (this.props.isHelpModalStreetOpen) {
 
                 // Incrememnt the count of the number of seconds that have passed
                 this.setState({ count: this.state.count + 1 });
 
-                // Wait 3 seconds before we do anything
-                if (this.state.count < 3) return;
-
-                if (this.props.isHelpModalInitialOpen) {
-
-                    if (this.state.count === 10) {
-                        this.props.toggleHelpModalInitialOpen();
-                        this.props.toggleHelpModalStreetOpen();
-                    }
+                if (this.state.count % 5 === 0) {
+                    var scrollBack = this.state.scroll * -1;
+                    this.setState({ scroll: scrollBack });
                 }
 
-                // This is to scroll the initial help screen only when it is open
-                if (this.props.isHelpModalStreetOpen) {
-
-                    if (this.state.count % 15 === 0) {
-                        var scrollBack = this.state.scroll * -1;
-                        this.setState({ scroll: scrollBack });
-                    }
-
-                    if(this.state.count > 11) {
-                        this.container.scrollBy({ left: this.state.scroll, behavior: 'smooth' });
-                    }
-                    
-                    if (this.state.count === 20) {
-                        this.props.toggleHelpModalStreetOpen();
-                        this.props.toggleHelpModalRoomOpen();
-                    }
-                }
-
-                // after a while we will close the whole lot
-                if (this.state.count === 32) {
-                    this.figureOutCloseClick();
-                }
+                this.container.scrollBy({ left: this.state.scroll, behavior: 'smooth' });
 
             } else {
 
                 // reset it for the next time this is active
                 if (this.state.count !== 0) {
                     this.setState({ count: 0 });
-                    this.setState({ scroll: 200 });
+                    this.setState({ scroll: 50 });
                 }
 
             }
@@ -96,7 +70,6 @@ export default class HelpModal extends PureComponent {
 
         return (
             <>
-
                 <AnimatePresence>
                     {this.props.isHelpModalBackgroundOpen && (
                         <motion.div className="helpModalBackground"
@@ -116,7 +89,7 @@ export default class HelpModal extends PureComponent {
                                 className="helpModal"
                                 initial={{ y: 2000, x: '50%' }}
                                 animate={{ y: '50%', x: '50%' }}
-                                exit={{ opacity: 0 }}
+                                exit={{ y: '50%', x: -3000}}
                                 transition={{ delay: 0.1, duration: 1 }}>
 
                                 <motion.button className="close-help-modal-button aButton" id="closeHelpModalButton"
@@ -126,6 +99,12 @@ export default class HelpModal extends PureComponent {
                                     aria-label="Close Help Popup">
                                     <i className='glyphicon glyphicon-remove' />
                                 </motion.button>
+
+                                <motion.div className="rightScrollButtonHelp"
+                                    onClick={() => { this.props.toggleHelpModalInitialOpen(); this.props.toggleHelpModalStreetOpen(); }}
+                                    whileHover={{ scale: 1.2 }}
+                                    whileTap={{ scale: 0.95 }}
+                                ><i className='glyphicon glyphicon-arrow-right' /></motion.div>
 
                                 <motion.div className="helpModalText"
                                     initial={{ opacity: 0 }}
@@ -147,7 +126,7 @@ export default class HelpModal extends PureComponent {
                             <motion.div
                                 key="helpModalStreet"
                                 className="helpModal"
-                                initial={{ y: 2000, x: '50%' }}
+                                initial={{ y: '50%', x: 5000 }}
                                 animate={{ y: '50%', x: '50%' }}
                                 exit={{ opacity: 0 }}
                                 transition={{ delay: 0.1, duration: 1 }}>
@@ -169,24 +148,18 @@ export default class HelpModal extends PureComponent {
                                     <img src={StreetScene} className="helpModalImage" alt="Home screen help" />
                                 </motion.div>
 
-                                <motion.div className="leftScrollButtonHelp"
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: 1 }}
-                                    exit={{ opacity: 0 }}
-                                    transition={{ delay: 1.5, duration: 1 }}><i className='glyphicon glyphicon-backward' /></motion.div>
-
                                 <motion.div className="rightScrollButtonHelp"
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: 1 }}
-                                    exit={{ opacity: 0 }}
-                                    transition={{ delay: 1.5, duration: 1 }}><i className='glyphicon glyphicon-forward' /></motion.div>
+                                    onClick={() => { this.props.toggleHelpModalStreetOpen(); this.props.toggleHelpModalRoomOpen(); }}
+                                    whileHover={{ scale: 1.2 }}
+                                    whileTap={{ scale: 0.95 }}
+                                ><i className='glyphicon glyphicon-arrow-right' /></motion.div>
 
                                 <motion.div className="helpModalText"
                                     initial={{ y: 1000 }}
                                     animate={{ y: 0 }}
                                     exit={{ y: 1000 }}
                                     transition={{ delay: 1, duration: 1 }}>
-                                    <p><br/>Scroll through the street. Click on a house to learn more about it’s residents.</p>
+                                    <p><br />Scroll through the street. Click on a house to learn more about it’s residents.</p>
                                     <p>Explore them in sequence to get a timeline of the increase in crime as the war went on.</p>
                                 </motion.div>
                             </motion.div>
@@ -228,9 +201,9 @@ export default class HelpModal extends PureComponent {
                                     exit={{ y: 1000 }}
                                     transition={{ delay: 1, duration: 1 }}>
                                     <p>Inside each room you will see:</p>
-                                    <p><i className="glyphicon glyphicon-headphones"/> - Introduces you to the person</p>
-                                    <p><i className="glyphicon glyphicon-pencil"/> - Gives you snippets of their story</p>
-                                    <p><i className="glyphicon glyphicon-picture"/> - Imagines what life might have looked like for them</p>
+                                    <p><i className="glyphicon glyphicon-headphones" /> - Introduces you to the person</p>
+                                    <p><i className="glyphicon glyphicon-pencil" /> - Gives you snippets of their story</p>
+                                    <p><i className="glyphicon glyphicon-picture" /> - Imagines what life might have looked like for them</p>
                                 </motion.div>
                             </motion.div>
                         </div>
