@@ -688,6 +688,7 @@ nav {
 .helpModalImageRoom {
   position: relative;
   display: flex;
+  width: 100%;
   max-width: -webkit-fill-available;
   max-width: -moz-available;
   z-index: 10002;
