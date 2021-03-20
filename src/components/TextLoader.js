@@ -10,75 +10,57 @@ class TextLoader {
 
             case 'About-Project':
                 return (
-                    <p>During WW2 crime rose by a reported 57%. Fraud, gang culture, looting, and robbery impacted on people’s everyday life.
-                    Along with poverty, hunger, illness, and exceptional pressure – what was home really like during the war?
-                    Behind closed doors, every house has a story. Dive into our digital art project, which interprets the stories and
-                    research we were given access to by individuals, the National Archives and The Imperial War Museum.
-                        <br />
-                        <br />
-                    Things to do in a Blackout was a pre-pandemic idea. In early 2020, Bounce Theatre had engaged over 300 young people in Kingston to explore
-                    the rise in crime during WW2 and the contemporary parallels – petty crime, food poverty, and our relationship with Europe were some of
-                    the topics of conversation. All of the young people were to be invited to take over the National Archives in an evening of mixed art
-                    entertainment in May 2020.
-                        <br />
-                        <br />
-                    By March 2020, we were in afterschool clubs, devising split scenes between a WW2 black market and the lack of toilet roll in Tesco.
-                    The project took a surreal new parallel. As we went into lockdown, we lost the chance to continue the work with those young people.
-                    Over the last year, we have selected elements of the research they were working on and captured some of their responses to turn all
-                    the ideas into a digital art piece. We established a digital writing project for young people and have woven their words into each room.
-                    Along with this, we have an open invitation to schools to create content for each room and see it uploaded onto the website until May 2021.
-                        <br />
-                        <br />
-                    Our thanks go to The National Lottery Heritage Fund for awarding us a grant and their support in adapting to the impact of Covid.
-                        <br />
-                        <br />
-                    Bounce Theatre &#8482;, Copyright &#169; 2021
-                        <br />
-                        <br />
-                        <b>Acknowledgements</b>
-                        <br />
-                    Made possible thanks to The National Lottery Heritage Fund
-                        <br />
-                        <br />
-                        <b>Heritage Partners</b>
-                        <br />
-                    The National Archives and The Imperial War Museum
-                        <br />
-                        <br />
-                        <b>Pre-Lockdown Collaborators</b>
-                        <br />
-                    Anstee Bridge, Chessington School, Coombe Boys School, The Kingston Academy, Kingston Keep
-                        <br />
-                        <br />
-                        <b>Credits</b>
-                        <br />
-                    Young Writers
-                        <br />
-                        <br />
-                        <b>Script Writer</b>
-                        <br />
-                    Sharon Kanolik
-                        <br />
-                        <br />
-                        <b>Artist Acknowledgements</b>
-                        <br />
-                    Street Scene by Eliza Willmott. <a href="https://elizawillmott.wixsite.com/portfolio/art-installation">Website</a> <a href="https://www.instagram.com/nellwillmott_art">@nellwillmott_art</a><br />
-                    Room 1 by Charmaine Chaudry. <a href="http://www.charmainechaudrydesigns.com">Website</a> <a href="https://www.instagram.com/charmainechaudrydesigns">@charmainechaudrydesigns</a><br />
-                    Room 2 by Erin Tsw. <a href="http://www.erintse.com">Website</a> <a href="https://www.instagram.com/wingmanerintse">@wingmanerintse</a> and <a href="https://www.instagram/mycareerisfine">@mycareerisfine</a><br />
-                    Room 3 by Ruth Stewart. <a href="http://www.ruthdrawsthings.co.uk">Website</a> <a href="https://www.instagram.com/ruthdrawsthings">@ruthdrawsthings</a><br />
-                    Room 4 by Eve Martin. <a href="http://www.evemartindesign.com">Website</a> <a href="https://www.instagram.com/eve_roisin">@eve_roisin</a><br />
-                    Room 5 by Luke W. Robson. <a href="http://www.lukewrobson.com">Website</a><br />
-                    Room 6 by Grace Evans. <a href="https://www.instagram.com/graces_starlight">@graces_starlight</a><br />
-                        <br />
-                        <b>Resource Contributors</b>
-                        <br />
-                    Katie Halliday Turner<br />
-                    Stewart Melton<br />
-                    Henry Mendoza<br />
-                        <br />
-                        <b>Project Management</b>
-                        <br />
-                    Louise Pendry and Lauren Purser</p>
+                    <p>During WW2 crime rose by a reported 57%. Fraud, gang culture, looting, and robbery impacted on people’s everyday life. Along with poverty, hunger, illness, and exceptional pressure – what was home really like during the war?<br /><br />
+                    Things to do in a Blackout was a pre-pandemic idea. In early 2020, Bounce Theatre had engaged over 300 young people in schools across Kingston to explore the rise in crime during WW2 and the contemporary parallels – petty crime,
+                    food poverty, and our relationship with Europe were some of the topics of conversation. All of the young people were to be invited to take over the National Archives in an evening of mixed art entertainment in May 2020.<br /><br />
+                    As news of Covid-19 was beginning to appear in the news, students were beginning to devise split scenes between a WW2 black market and the lack of toilet roll in Tesco. The project found a new parallel. As we went into lockdown,
+                    we lost the chance to continue the work with those young people. So, over the following year, we reimagined the idea digitally.<br /><br />
+                    Take a look at our digital street. Open up the stories of the people we imagined lived there through the war, or, work your way through our resources.
+                    On our home page, see some of the writing from young people which highlights some of the surreal links to their lived experiences of the pandemic.<br /><br />
+                    We envisage the website as a gallery that may change over time. If you would like to create content for it, share a photo or a story, please don’t hesitate to contact us and contribute your ideas and work.<br /><br />
+                    Our thanks go to The National Lottery Heritage Fund for awarding us a grant and their support in adapting to the impact of Covid.<br /><br />
+                    Bounce Theatre™, Copyright ©2021<br /><br />
+                    Made possible thanks to The National Lottery Heritage Fund<br /><br />
+                        <b>Heritage Partners</b><br />
+                    The National Archives and The Imperial War Museum<br /><br />
+                        <b>Creative Team</b><br /><br />
+                        <b>House 1</b><br />
+                    Artwork: Charmaine Chaudry. <a href="https://charmainechaudrydesigns.com" id="webLinkWeb1" target="_blank" rel="noopener noreferrer">Website</a>, <a href="https://www.instagram.com/charmainechaudrydesigns" id="webLinkWeb1" target="_blank" rel="noopener noreferrer">Instagram</a><br />
+                    Voice over - Bethany Skinner<br /><br />
+                        <b>House 2</b><br />
+                    Artwork Erin Tse.  <a href="https://www.erintse.com" id="webLinkWeb2" target="_blank" rel="noopener noreferrer">Website</a>, <a href="https://www.instagram.com/wingmanerintse" id="webLinkWeb1" target="_blank" rel="noopener noreferrer">Instagram</a> and <a href="https://www.instagram.com/mycareerisfine" id="webLinkWeb1" target="_blank" rel="noopener noreferrer">Instagram</a><br />
+                    Voice over - Alex Mouette<br /><br />
+                        <b>House 3</b><br />
+                    Artwork Ruth Stewart. <a href="https://www.ruthdrawsthings.co.uk" id="webLinkWeb3" target="_blank" rel="noopener noreferrer">Website</a>, <a href="https://www.instagram.com/ruthdrawsthings" id="webLinkWeb1" target="_blank" rel="noopener noreferrer">Instagram</a><br /><br />
+                        <b>House 4</b><br />
+                    Artwork Eve Martin. <a href="https://www.evemartindesign.com" id="webLinkWeb4" target="_blank" rel="noopener noreferrer">Website</a>, <a href="https://www.instagram.com/eve_roisin" id="webLinkWeb1" target="_blank" rel="noopener noreferrer">Instagram</a><br />
+                    Voice over - Luke Lawrence<br />
+                    Radio - News - Henry Mendoza<br />
+                    Dream One - Mia Wootton<br /><br />
+                        <b>House 5</b><br />
+                    Artwork by Luke W. Robson. <a href="https://www.lukewrobson.com" id="webLinkWeb5" target="_blank" rel="noopener noreferrer">Website</a><br />
+                    Book - A dream - Alex Mouette<br />
+                    Book - Look Down - Luna Middleton<br />
+                    Book - Late - Coombe Boys Workshop<br />
+                    Family Picture - Poem - Adelka Devante<br /><br />
+                        <b>House 6</b><br />
+                    Artwork by Grace Evans. <a href="https://www.instagram.com/graces_starlight" id="webLinkWeb1" target="_blank" rel="noopener noreferrer">Instagram</a><br />
+                    Voice Over - Poppy Mouette<br />
+                    Family Portrait - diary of an evacuee - Luke Lawrence<br />
+                    Under the Floorboards- Poppy Mouette<br /><br />
+                        <b>Homepage</b><br />
+                    Street Scene by Eliza Willmott. <a href="https://elizawillmott.wixsite.com/portfolio/art-installation" id="webLinkWeb6" target="_blank" rel="noopener noreferrer">Website</a>, <a  href="https://www.instagram.com/nellwillmott_art" id="webLinkWeb1" target="_blank" rel="noopener noreferrer">Instagram</a><br /><br />
+                        <b>Writing</b><br />
+                    Maia Wootton<br />
+                    Luke Lawrence<br />
+                    Ilya Latif <br />
+                    Henry Mendoza<br /><br />
+                    All other writing and audio in each room has been adapted from scrips from Sharon Kanolik and reminiscence interviews.<br /><br />
+                        <b>Creative Team</b><br />
+                    Sharon Kanolik , Katie Halliday Turner, Stewart Melton, Henry Mendoza, Louise Pendry, Lauren Purser.<br /><br />
+                        <b>With thanks</b><br />
+                    To all the young people and staff who helped start the project off.<br />
+                    Anstee Bridge, Chessington School, Coombe Boys School, The Kingston Academy, Kingston Keep Military Families</p>
                 );
 
             case 'RoomOne-Diary':
@@ -1468,7 +1450,7 @@ class TextLoader {
                                 Well, I have officially gotten through my first half term of school in Devon! No school for another week now but to be perfectly honest, I am pretty miserable. You see, dear Diary, I have actually started making friends at school, who refuse to call me “new kid”.
                                 One of them is also a refugee from London called Robert Taylor; he is a splendid boy, who is incredibly competitive when we do games. His twin sister, Betty Taylor, also goes to my school and is competitive as well. However, there is one boy who is my best friend in the entire world.
                                 He also came here from Germany to escape Hitler. Now, dear Diary, I must point out that he is not a Jew like me. This boy is pure German but his family did not like the rules Mr Hitler was going to introduce and this boy is called Wolfgang Friedrich; his surname, in German, is composed of the German for peace and “rihhi”, which translates as prince.
-                                One time, I went to his home and met his father, Manfred, his mother, Heidi, and his younger sister, Rita. They all seemed very nice people and they seemed to like me too. Overall, my first term in Devon has been terrific fun.<br/><br/>
+                                One time, I went to his home and met his father, Manfred, his mother, Heidi, and his younger sister, Rita. They all seemed very nice people and they seemed to like me too. Overall, my first term in Devon has been terrific fun.<br /><br />
                                 Meanwhile, with the Darlingtons, it has also been splendid: after I solved the missing potato peeler case, Mrs Darlington, the following night, knocked on the basement door and asked if I would like to eat with them at the dinner table that night.
                                 I finally enjoyed a meal with people again; even though it was not with my proper family, I am glad that it was not with total strangers. I still think about mother and father a lot; I occasionally write to them and they always write back. I miss them. I wish they could see me now: an amateur detective, a friend to some, a person who finally belongs in Devon.
                                 The war still continues; I, still, believe that the United Kingdom will win the war. Mr Hitler has changed my homeland for the worst, not for the better. Thankfully, Wolfgang agrees with me. Oh, Mrs Darlington’s calling me for dinner.
