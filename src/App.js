@@ -101,12 +101,13 @@ function App() {
     'HeritageMagazine_5', 'HeritageMagazine_6', 'HeritageMagazine_7', 'HeritageMagazine_8', 'HeritageMagazine_9',
     'RadioPlay_1', 'RadioPlay_2', 'RadioPlay_3', 'RadioPlay_4', 'RadioPlay_5', 'RadioPlay_6'];
 
-  const roomOneScreenTabOrder = ['RoomImage1_map0', 'RoomImage1_map1', 'RoomImage1_map2', 'RoomImage1_map3', 'RoomImage1_map4', 'RoomImage1_map5'];
+  const roomOneScreenTabOrder = ['RoomImage1_map0', 'RoomImage1_map1', 'RoomImage1_map2', 'RoomImage1_map3', 'RoomImage1_map4', 'RoomImage1_map5', 'RoomImage1_map6', 'RoomImage1_map7'];
   const roomTwoScreenTabOrder = ['RoomImage2_map0', 'RoomImage2_map1', 'RoomImage2_map2', 'RoomImage2_map3', 'RoomImage2_map4'];
-  const roomThreeScreenTabOrder = ['RoomImage3_map0'];
-  const roomFourScreenTabOrder = ['RoomImage4_map0'];
-  const roomFiveScreenTabOrder = ['RoomImage5_map0', 'RoomImage5_map1', 'RoomImage5_map2', 'RoomImage5_map3', 'RoomImage5_map4', 'RoomImage5_map5'];
-  const roomSixScreenTabOrder = ['RoomImage6_map0', 'RoomImage6_map1', 'RoomImage6_map2', 'RoomImage6_map3', 'RoomImage6_map4'];
+  const roomThreeScreenTabOrder = ['RoomImage3_map0', 'RoomImage3_map1', 'RoomImage3_map2', 'RoomImage3_map3', 'RoomImage3_map4'];
+  const roomFourScreenTabOrder = ['RoomImage4_map0','RoomImage4_map1','RoomImage4_map2','RoomImage4_map3'];
+  const roomFiveScreenTabOrder = ['RoomImage5_map0', 'RoomImage5_map1', 'RoomImage5_map2', 'RoomImage5_map3', 'RoomImage5_map4'];
+  const roomSixScreenTabOrder = ['RoomImage6_map0', 'RoomImage6_map1', 'RoomImage6_map2', 'RoomImage6_map3', 'RoomImage6_map4', 'RoomImage6_map5', 
+    'RoomImage6_map6', 'RoomImage6_map7', 'RoomImage6_map8', 'RoomImage6_map9', 'RoomImage6_map10', 'RoomImage6_map11', 'RoomImage6_map12', 'RoomImage6_map13'];
 
   // This is the function that will handle keyup's for the accessibility
   function upHandler({ key }) {

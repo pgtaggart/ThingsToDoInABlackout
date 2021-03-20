@@ -38,8 +38,10 @@ export default class Room extends PureComponent {
         var roomOneBed = new ImageMapArea('RoomOne-Bed', 'RoomOne', '760,541,1026,792', 'rect', 'A Bed', 'Text');
         var roomOneAreaSuitcase = new ImageMapArea('RoomOne-Suitcase', 'RoomOne', '195,556,402,754', 'rect', 'a Suitcase', 'Text');
         var roomOneAreaPhoto = new ImageMapArea('RoomOne-Photo', 'RoomOne', '1467,200,1605,297', 'rect', 'A photograph', 'Text');
+        var roomOneAreaBookcase = new ImageMapArea('RoomOne-Bookcase', 'RoomOne', '1445,620,1629,775', 'rect', 'A Bookcase', 'Text');
+        var roomOneAreaRationBook = new ImageMapArea('RoomOne-RationBook', 'RoomOne', '1155,931,1394,1078', 'rect', 'A Ration Book', 'Text');
 
-        imageMap = new ImageMap('RoomOne-imageMap', [roomOneAreaDiary, roomOneAreaGasMask, roomOneCurtains, roomOneBed, roomOneAreaSuitcase, roomOneAreaPhoto]);
+        imageMap = new ImageMap('RoomOne-imageMap', [roomOneAreaDiary, roomOneAreaGasMask, roomOneCurtains, roomOneBed, roomOneAreaSuitcase, roomOneAreaPhoto, roomOneAreaBookcase, roomOneAreaRationBook]);
         backgroundColor = 'rgb(173, 151, 93)';
     
       } else if (this.props.roomIndex === 1 ) {
@@ -68,8 +70,12 @@ export default class Room extends PureComponent {
         imageHeight= '1080'; 
         
         var roomThreeAreaLetter = new ImageMapArea('RoomThree-Letter', 'RoomThree', '272,682,476,925', 'rect', 'A Letter', 'Text');
+        var roomThreeAreaScarf = new ImageMapArea('RoomThree-Scarf', 'RoomThree', '1656,168,1833,431', 'rect', 'A Scarf', 'Text');
+        var roomThreeAreaTrunk = new ImageMapArea('RoomThree-Trunk', 'RoomThree', '1515,639,1875,993', 'rect', 'A Suitcase', 'Text');
+        var roomThreeAreaSandwiches = new ImageMapArea('RoomThree-Sandwiches', 'RoomThree', '1166,809,980,671', 'rect', 'Sanwiches', 'Text');
+        var roomThreeAreaShelf = new ImageMapArea('RoomThree-Shelf', 'RoomThree', '150,320,340,483', 'rect', 'A Shelf', 'Text');
 
-        imageMap = new ImageMap('RoomThree-imageMap', [roomThreeAreaLetter]);
+        imageMap = new ImageMap('RoomThree-imageMap', [roomThreeAreaLetter, roomThreeAreaScarf, roomThreeAreaTrunk, roomThreeAreaSandwiches, roomThreeAreaShelf]);
         backgroundColor = 'rgb(80, 84, 70)';
 
       } else if (this.props.roomIndex === 3 ) {
@@ -81,8 +87,11 @@ export default class Room extends PureComponent {
         imageHeight= '1080';
 
         var roomFourAreaChair = new ImageMapArea('RoomFour-Chair', 'RoomFour', '795,509,1018,843', 'rect', 'A Chair', 'Text');
+        var roomFourAreaRadio = new ImageMapArea('RoomFour-Radio', 'RoomFour', '184,637,377,751', 'rect', 'A Radio', 'Text');
+        var roomFourAreaPatientChair = new ImageMapArea('RoomFour-PatientChair', 'RoomFour', '552,697,661,924', 'rect', 'A Chair', 'Text');
+        var roomFourAreaWheelChair = new ImageMapArea('RoomFour-WheelChair', 'RoomFour', '1387,568,1614,997', 'rect', 'A Wheelchair', 'Text');
 
-        imageMap = new ImageMap('RoomFour-imageMap', [roomFourAreaChair]);
+        imageMap = new ImageMap('RoomFour-imageMap', [roomFourAreaChair, roomFourAreaRadio, roomFourAreaPatientChair, roomFourAreaWheelChair]);
         backgroundColor = 'rgb(80, 63, 37)';
 
       } else if (this.props.roomIndex === 4 ) {
@@ -93,14 +102,13 @@ export default class Room extends PureComponent {
         imageWidth = '1920';
         imageHeight= '1080';
 
-        var roomFiveAreaPhoto1 = new ImageMapArea('RoomFive-Photo1', 'RoomFive', '383,239,492,387', 'rect', 'Wall Photograph One', 'Text');
-        var roomFiveAreaPhoto2 = new ImageMapArea('RoomFive-Photo2', 'RoomFive', '523,235,618,377', 'rect', 'Wall Photograph Two', 'Text');
-        var roomFiveAreaPhoto3 = new ImageMapArea('RoomFive-Photo3', 'RoomFive', '659,237,756,385', 'rect', 'Wall Photograph Three', 'Text');
-        var roomFiveAreaPhoto4 = new ImageMapArea('RoomFive-Photo4', 'RoomFive', '1145,214,1265,373', 'rect', 'Wall Photograph Four', 'Text');
-        var roomFiveAreaPhoto5 = new ImageMapArea('RoomFive-Photo5', 'RoomFive', '1304,223,1409,379', 'rect', 'Wall Photograph Five', 'Text');
-        var roomFiveAreaPhoto6 = new ImageMapArea('RoomFive-Photo6', 'RoomFive', '1444,225,1562,371', 'rect', 'Wall Photograph Six', 'Text');
+        var roomFiveAreaArmchair = new ImageMapArea('RoomFive-Armchair', 'RoomFive', '1303,646,1585,838', 'rect', 'An Armchair', 'Text');
+        var roomFiveAreaBooks = new ImageMapArea('RoomFive-Books', 'RoomFive', '696,894,917,1010', 'rect', 'Some Books', 'Text');
+        var roomFiveAreaTable = new ImageMapArea('RoomFive-Table', 'RoomFive', '1069,878,1312,1000', 'rect', 'A small table', 'Text');
+        var roomFiveAreaBookcase = new ImageMapArea('RoomFive-Bookcase', 'RoomFive', '3,593,182,1014', 'rect', 'A bookcase', 'Text');
+        var roomFiveAreaFireplace = new ImageMapArea('RoomFive-Fireplace', 'RoomFive', '740,354,1176,517', 'rect', 'A fireplace', 'Text');
 
-        imageMap = new ImageMap('RoomFive-imageMap', [roomFiveAreaPhoto1, roomFiveAreaPhoto2, roomFiveAreaPhoto3, roomFiveAreaPhoto4, roomFiveAreaPhoto5, roomFiveAreaPhoto6]);
+        imageMap = new ImageMap('RoomFive-imageMap', [roomFiveAreaArmchair, roomFiveAreaBooks, roomFiveAreaTable, roomFiveAreaBookcase, roomFiveAreaFireplace]);
         backgroundColor = 'rgb(190, 180, 169)';
 
       } else if (this.props.roomIndex === 5 ) {
@@ -116,8 +124,18 @@ export default class Room extends PureComponent {
         var roomSixAreaScale = new ImageMapArea('RoomSix-Scale', 'RoomSix', '1559,573,1720,773', 'rect', 'A Weighing Scale', 'Text');
         var roomSixAreaChair = new ImageMapArea('RoomSix-Chair', 'RoomSix', '431,690,630,1045', 'rect', 'A Chair', 'Text');
         var roomSixAreaWindow = new ImageMapArea('RoomSix-Window', 'RoomSix', '538,235,754,425', 'rect', 'A Window', 'Text');
+        var roomSixAreaWindow2 = new ImageMapArea('RoomSix-Window2', 'RoomSix', '927,254,1119,415', 'rect', 'A Window', 'Text');
+        var roomSixAreaPhoto = new ImageMapArea('RoomSix-Photo', 'RoomSix', '790,263,868,344', 'rect', 'A Photograph', 'Text');
+        var roomSixAreaSink = new ImageMapArea('RoomSix-Sink', 'RoomSix', '203,629,382,763', 'rect', 'A Sink', 'Text');
+        var roomSixAreaCooker = new ImageMapArea('RoomSix-Cooker', 'RoomSix', '713,439,932,624', 'rect', 'A Cooker', 'Text');
+        var roomSixAreaChair2 = new ImageMapArea('RoomSix-Chair2', 'RoomSix', '1108,726,1287,839', 'rect', 'A Chair', 'Text');
+        var roomSixAreaFridge = new ImageMapArea('RoomSix-Fridge', 'RoomSix', '260,324,459,524', 'rect', 'A Fridge', 'Text');
+        var roomSixAreaSugar = new ImageMapArea('RoomSix-Sugar', 'RoomSix', '1349,616,1495,705', 'rect', 'A packet of Sugar', 'Text');
+        var roomSixAreaCupboard = new ImageMapArea('RoomSix-Cupboard', 'RoomSix', '1549,181,1797,329', 'rect', 'A Cupboard', 'Text');
+        var roomSixAreaLetter = new ImageMapArea('RoomSix-Letter', 'RoomSix', '120,824,289,902', 'rect', 'A Letter', 'Text');
 
-        imageMap = new ImageMap('RoomSix-imageMap', [roomSixAreaDoor, roomSixAreaRationBook, roomSixAreaScale, roomSixAreaChair, roomSixAreaWindow]);
+        imageMap = new ImageMap('RoomSix-imageMap', [roomSixAreaDoor, roomSixAreaRationBook, roomSixAreaScale, roomSixAreaChair, roomSixAreaWindow, roomSixAreaWindow2, 
+          roomSixAreaPhoto, roomSixAreaSink, roomSixAreaCooker, roomSixAreaChair2, roomSixAreaFridge, roomSixAreaSugar, roomSixAreaCupboard, roomSixAreaLetter]);
         backgroundColor = 'rgb(215, 205, 185)';
 
       }
