@@ -1,22 +1,15 @@
 import React from 'react';
-import PlayAudio from 'react-simple-audio-player';
-import chroma from 'chroma-js';
-
-import RoomOneAudio from '../images/audio/RoomOneAudio.mp3';
-
-const roomOneAudioColourScale = chroma.scale(['#C1AF26','#ffffff',]).mode('lch').colors(5);
+import ReactPlayer from 'react-player';
 
 class AudioLoader {
 
     loadAudio(name) {
 
         switch (name) {
-                 
             case 'RoomOne-Bed':
-                return(<PlayAudio url={RoomOneAudio} colorScale={roomOneAudioColourScale}/>);  
+                return(<ReactPlayer url='https://soundcloud.com/bouncetheatre/things-to-do-in-a-blackout-clip' width='100%' height='100%'/>);  
             default :
-                return(<PlayAudio url={''} colorScale={roomOneAudioColourScale}/>); 
-
+                return(<ReactPlayer url='https://soundcloud.com/bouncetheatre/things-to-do-in-a-blackout-clip'/>); 
         }
     }
 }

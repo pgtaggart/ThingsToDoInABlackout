@@ -35,7 +35,7 @@ export default class Room extends PureComponent {
         var roomOneAreaDiary = new ImageMapArea('RoomOne-Diary', 'RoomOne', '17,883,271,1060', 'rect', 'A Diary', 'Text');
         var roomOneAreaGasMask = new ImageMapArea('RoomOne-GasMask', 'RoomOne', '1688,305,1832,559', 'rect', 'A Gas Mask', 'Text');
         var roomOneCurtains = new ImageMapArea('RoomOne-Curtains', 'RoomOne', '446,185,740,446', 'rect', 'Curtains in the room', 'Text');
-        var roomOneBed = new ImageMapArea('RoomOne-Bed', 'RoomOne', '760,541,1026,792', 'rect', 'A Bed', 'AudioText');
+        var roomOneBed = new ImageMapArea('RoomOne-Bed', 'RoomOne', '760,541,1026,792', 'rect', 'A Bed', 'Audio');
         var roomOneAreaSuitcase = new ImageMapArea('RoomOne-Suitcase', 'RoomOne', '195,556,402,754', 'rect', 'a Suitcase', 'Text');
         var roomOneAreaPhoto = new ImageMapArea('RoomOne-Photo', 'RoomOne', '1467,200,1605,297', 'rect', 'A photograph', 'Text');
         var roomOneAreaBookcase = new ImageMapArea('RoomOne-Bookcase', 'RoomOne', '1445,620,1629,775', 'rect', 'A Bookcase', 'Text');
@@ -163,7 +163,7 @@ export default class Room extends PureComponent {
                   className='audio-content-modal' 
                   childClassName='audio-content-modal-body'
                   otherModals = {['image-content-modal-id','text-content-modal-id']}
-                  top='1%' left='1%'
+                  top='10%' left='25%' width='50vw' height='50vh'
                   toggleAudioContentModalFunction={() => this.props.toggleAudioContentModalOpen()}
                   toggleImageContentModalFunction={() => this.props.toggleImageContentModalOpen()}
                   toggleTextContentModalFunction={() => this.props.toggleTextContentModalOpen()}

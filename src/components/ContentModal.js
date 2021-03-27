@@ -35,7 +35,7 @@ const ContentModal = (properties) => {
                                 disableSwipe={true}/>);
             
             case 'Audio' :
-                
+
                 return audioLoader.loadAudio(properties.mapAreaTitle);
 
             case 'AudioImage' : // These types are image and audio
@@ -91,9 +91,6 @@ const ContentModal = (properties) => {
     // choose the icon for the close modal
     const closeModalIcon = () => {
         switch(properties.className) {
-            case 'audio-content-modal' :
-                // disable button for audio as we will always show an image gallery with this control, looks cleaner
-                return;
             default :
                 return (<ModalClose toggle={closeModalContent} icon='glyphicon glyphicon-remove' className='close-modal-button'/> );
         }
@@ -150,8 +147,6 @@ const ContentModal = (properties) => {
             ref={ref}
             id={properties.modalId}
             className={properties.className}
-            whileHover={properties.className === 'audio-content-modal' ? { scale: 1.2 } : {}}
-            whileTap={properties.className === 'audio-content-modal' ? { scale: 0.9 } : {}}
             initial={chooseInitial()}
             animate={chooseAnimate()}
             exit={chooseExit()}
