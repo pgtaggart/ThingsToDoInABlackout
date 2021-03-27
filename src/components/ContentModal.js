@@ -34,6 +34,10 @@ const ContentModal = (properties) => {
                                 autoPlay={false}
                                 disableSwipe={true}/>);
             
+            case 'Audio' :
+                
+                return audioLoader.loadAudio(properties.mapAreaTitle);
+
             case 'AudioImage' : // These types are image and audio
     
                 switch(properties.className) {

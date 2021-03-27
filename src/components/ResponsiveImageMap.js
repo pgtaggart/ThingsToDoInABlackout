@@ -110,9 +110,8 @@ export default class ResponsiveImageMap extends PureComponent {
     mouseOverArea(coords, mapType) {
 
         // Don't show these if the modal is active
-        var imageModal = document.getElementById('image-content-modal-id');
-        var textModal = document.getElementById('text-content-modal-id');
-        if (imageModal || textModal) {
+         // If any of the modals are open then don't allow the click
+         if (this.props.isAudioContentModalOpen || this.props.isImageContentModalOpen || this.props.isTextContentModalOpen) {
             return;
         }
 
@@ -181,16 +180,16 @@ export default class ResponsiveImageMap extends PureComponent {
 
     selectContentModalToOpen(type, title) {
 
+        // If any of the modals are open then don't allow the click
+        if (this.props.isAudioContentModalOpen || this.props.isImageContentModalOpen || this.props.isTextContentModalOpen) {
+            return;
+        }
+
         // Set the title of the map area that was clicked
         this.props.setMapAreaTitleFunction(title);
 
         // Set the type of the map area that was clicked
         this.props.setMapAreaTypeFunction(type);
-
-        // If any of the modals are open then close them first
-        if (this.props.isAudioContentModalOpen) this.props.toggleAudioContentModalFunction();
-        if (this.props.isImageContentModalOpen) this.props.toggleImageContentModalFunction();
-        if (this.props.isTextContentModalOpen) this.props.toggleTextContentModalFunction();
 
         // Hide the room image
         document.getElementById(this.props.imageId).style.opacity = '0.1';
