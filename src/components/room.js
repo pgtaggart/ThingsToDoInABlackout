@@ -56,7 +56,7 @@ export default class Room extends PureComponent {
         var roomTwoAreaWindow = new ImageMapArea('RoomTwo-Window', 'RoomTwo', '168,142,434,502', 'rect', 'A Window', 'Text');
         var roomTwoAreaRope = new ImageMapArea('RoomTwo-Rope', 'RoomTwo', '834,956,1024,1055', 'rect', 'A piece of rope', 'Text');
         var roomTwoAreaBookcase = new ImageMapArea('RoomTwo-Bookcase', 'RoomTwo', '1328,588,1433,793', 'rect', 'A Bookcase', 'Text');
-        var roomTwoAreaNewspaper = new ImageMapArea('RoomTwo-Newspaper', 'RoomTwo', '1426,476,1255,273', 'rect', 'A newspaper', 'Text');
+        var roomTwoAreaNewspaper = new ImageMapArea('RoomTwo-Newspaper', 'RoomTwo', '1426,476,1255,273', 'rect', 'A newspaper', 'Audio');
         
         imageMap = new ImageMap('RoomTwo-imageMap', [roomTwoAreaDiary, roomTwoAreaWindow, roomTwoAreaRope, roomTwoAreaBookcase, roomTwoAreaNewspaper]);
         backgroundColor = 'rgb(33, 32, 27)';
@@ -86,7 +86,7 @@ export default class Room extends PureComponent {
         imageWidth = '1920';
         imageHeight= '1080';
 
-        var roomFourAreaChair = new ImageMapArea('RoomFour-Chair', 'RoomFour', '795,509,1018,843', 'rect', 'A Chair', 'Text');
+        var roomFourAreaChair = new ImageMapArea('RoomFour-Chair', 'RoomFour', '795,509,1018,843', 'rect', 'A Chair', 'Audio');
         var roomFourAreaRadio = new ImageMapArea('RoomFour-Radio', 'RoomFour', '184,637,377,751', 'rect', 'A Radio', 'Text');
         var roomFourAreaPatientChair = new ImageMapArea('RoomFour-PatientChair', 'RoomFour', '552,697,661,924', 'rect', 'A Chair', 'Text');
         var roomFourAreaWheelChair = new ImageMapArea('RoomFour-WheelChair', 'RoomFour', '1387,568,1614,997', 'rect', 'A Wheelchair', 'Text');
@@ -122,7 +122,7 @@ export default class Room extends PureComponent {
         var roomSixAreaDoor = new ImageMapArea('RoomSix-Door', 'RoomSix', '1215,249,1314,606', 'rect', 'A Door', 'Text');
         var roomSixAreaRationBook = new ImageMapArea('RoomSix-RationBook', 'RoomSix', '863,878,993,979', 'rect', 'A Ration Book', 'Text');
         var roomSixAreaScale = new ImageMapArea('RoomSix-Scale', 'RoomSix', '1559,573,1720,773', 'rect', 'A Weighing Scale', 'Text');
-        var roomSixAreaChair = new ImageMapArea('RoomSix-Chair', 'RoomSix', '431,690,630,1045', 'rect', 'A Chair', 'Text');
+        var roomSixAreaChair = new ImageMapArea('RoomSix-Chair', 'RoomSix', '431,690,630,1045', 'rect', 'A Chair', 'Audio');
         var roomSixAreaWindow = new ImageMapArea('RoomSix-Window', 'RoomSix', '538,235,754,425', 'rect', 'A Window', 'Text');
         var roomSixAreaWindow2 = new ImageMapArea('RoomSix-Window2', 'RoomSix', '927,254,1119,415', 'rect', 'A Window', 'Text');
         var roomSixAreaPhoto = new ImageMapArea('RoomSix-Photo', 'RoomSix', '790,263,868,344', 'rect', 'A Photograph', 'Text');
