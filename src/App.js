@@ -16,17 +16,7 @@ import heritageFund from './images/HeritageFund.png';
 import ResearchTimeLine from './components/ResearchTimeLine';
 import textLoader from './components/TextLoader.js';
 import useEventListener from './components/UseEventListener.js'
-
-import hfh1 from './images/resources/HFH_1.jpg'
-import hfh2 from './images/resources/HFH_2.jpg'
-import hfh3 from './images/resources/HFH_3.jpg'
-import hfh4 from './images/resources/HFH_4.jpg'
-import hfh5 from './images/resources/HFH_5.jpg'
-import hfh6 from './images/resources/HFH_6.jpg'
-import hfh7 from './images/resources/HFH_7.jpg'
-import hfh8 from './images/resources/HFH_8.jpg'
-import hfh9 from './images/resources/HFH_9.jpg'
-import scriptImage from './images/resources/Scripts.jpg'
+import ResourcesModalContentLoader from './components/ResourcesModalContentLoader';
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -67,6 +57,7 @@ function App() {
   const [roomIndex, setRoomIndex] = useState(0);
   const [mapAreaTitle, setMapAreaTitle] = useState('unknown');
   const [mapAreaType, setMapAreaType] = useState('unknown');
+  const [resourcesType, setResourcesType] = useState('unknown');
 
   /**
    * This section is to control the whole shebang with the keyboard for accessibility 
@@ -466,7 +457,9 @@ function App() {
           <Navigation toggleAboutModalOpen={toggleAboutModalOpen}
             toggleResourcesModalOpen={toggleResourcesModalOpen}
             toggleResearchModalOpen={toggleResearchModalOpen}
-            toggleNavOpen={toggleNavOpen} />
+            toggleNavOpen={toggleNavOpen}
+            setResourcesType={setResourcesType}
+            resourcesContainer={resourcesContainer} />
           <MenuToggle toggle={() => toggleNavOpen()} />
         </motion.div>
       </motion.nav>
@@ -589,123 +582,7 @@ function App() {
                 aria-label="Close resources popup">
                 <i className='glyphicon glyphicon-remove' />
               </motion.button>
-
-              <div className="resourcesModalContent" ref={node => { resourcesContainer = node }}>
-
-                <div className="resourcesModalContentSection">
-                  <h3 className="resourcesHeader">Heritage From Home Magazine</h3>
-                  <div className="container">
-                    <div className="row">
-                      <div className="col-md-4">
-                        <a href="https://issuu.com/bouncetheatre/docs/issue_1" id="HeritageMagazine_1" target="_blank" rel="noopener noreferrer">
-                          <motion.img alt="Heritage from Home Issue 1" src={hfh1} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
-                        </a>
-                        <h5 className="resourcesImageExplain">#1</h5>
-                      </div>
-                      <div className="col-md-4">
-                        <a href="https://issuu.com/bouncetheatre/docs/issue_2" id="HeritageMagazine_2" target="_blank" rel="noopener noreferrer">
-                          <motion.img alt="Heritage from Home Issue 2" src={hfh2} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
-                        </a>
-                        <h5 className="resourcesImageExplain">#2</h5>
-                      </div>
-                      <div className="col-md-4">
-                        <a href="https://issuu.com/bouncetheatre/docs/issue_3" id="HeritageMagazine_3" target="_blank" rel="noopener noreferrer">
-                          <motion.img alt="Heritage from Home Issue 3" src={hfh3} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
-                        </a>
-                        <h5 className="resourcesImageExplain">#3</h5>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-md-4">
-                        <a href="https://issuu.com/bouncetheatre/docs/issue_4" id="HeritageMagazine_4" target="_blank" rel="noopener noreferrer">
-                          <motion.img alt="Heritage from Home Issue 4" src={hfh4} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
-                        </a>
-                        <h5 className="resourcesImageExplain">#4</h5>
-                      </div>
-                      <div className="col-md-4">
-                        <a href="https://issuu.com/bouncetheatre/docs/issue_5" id="HeritageMagazine_5" target="_blank" rel="noopener noreferrer">
-                          <motion.img alt="Heritage from Home Issue 5" src={hfh5} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
-                        </a>
-                        <h5 className="resourcesImageExplain">#5</h5>
-                      </div>
-                      <div className="col-md-4">
-                        <a href="https://issuu.com/bouncetheatre/docs/issue_6" id="HeritageMagazine_6" target="_blank" rel="noopener noreferrer">
-                          <motion.img alt="Heritage from Home Issue 6" src={hfh6} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
-                        </a>
-                        <h5 className="resourcesImageExplain">#6</h5>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-md-4">
-                        <a href="https://issuu.com/bouncetheatre/docs/issue_7" id="HeritageMagazine_7" target="_blank" rel="noopener noreferrer">
-                          <motion.img alt="Heritage from Home Issue 7" src={hfh7} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
-                        </a>
-                        <h5 className="resourcesImageExplain">#7</h5>
-                      </div>
-                      <div className="col-md-4">
-                        <a href="https://issuu.com/bouncetheatre/docs/issue_8" id="HeritageMagazine_8" target="_blank" rel="noopener noreferrer">
-                          <motion.img alt="Heritage from Home Issue 8" src={hfh8} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
-                        </a>
-                        <h5 className="resourcesImageExplain">#8</h5>
-                      </div>
-                      <div className="col-md-4">
-                        <a href="https://issuu.com/bouncetheatre/docs/issue_9" id="HeritageMagazine_9" target="_blank" rel="noopener noreferrer">
-                          <motion.img alt="Heritage from Home Issue 9" src={hfh9} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
-                        </a>
-                        <h5 className="resourcesImageExplain">#9</h5>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="resourcesModalContentSection">
-                  <h3 className="resourcesHeader">Stories from the Blackout Radio Plays</h3>
-                  <div className="container">
-                    <div className="row">
-                      <div className="col-md-4">
-                        <a href="https://issuu.com/bouncetheatre/docs/playscript_1_-_big_smoke" id="RadioPlay_1" target="_blank" rel="noopener noreferrer">
-                          <motion.img alt="Big Smoke" src={scriptImage} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
-                        </a>
-                        <h5 className="resourcesImageExplain">Big Smoke</h5>
-                      </div>
-                      <div className="col-md-4">
-                        <a href="https://issuu.com/bouncetheatre/docs/playscript_2_-_the_dead_end_kids" id="RadioPlay_2" target="_blank" rel="noopener noreferrer">
-                          <motion.img alt="The Dead End Kids" src={scriptImage} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
-                        </a>
-                        <h5 className="resourcesImageExplain">The Dead End Kids</h5>
-                      </div>
-                      <div className="col-md-4">
-                        <a href="https://issuu.com/bouncetheatre/docs/playscript_3_-_aida___alfie" id="RadioPlay_3" target="_blank" rel="noopener noreferrer">
-                          <motion.img alt="Aida and Alfie" src={scriptImage} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
-                        </a>
-                        <h5 className="resourcesImageExplain">Aida and Alfie</h5>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-md-4">
-                        <a href="https://issuu.com/bouncetheatre/docs/playscript_4_-_a_tonic" id="RadioPlay_4" target="_blank" rel="noopener noreferrer">
-                          <motion.img alt="A Tonic" src={scriptImage} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
-                        </a>
-                        <h5 className="resourcesImageExplain">A Tonic</h5>
-                      </div>
-                      <div className="col-md-4">
-                        <a href="https://issuu.com/bouncetheatre/docs/playscript_5_-_the_deserters" id="RadioPlay_5" target="_blank" rel="noopener noreferrer">
-                          <motion.img alt="The Deserters" src={scriptImage} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
-                        </a>
-                        <h5 className="resourcesImageExplain">The Deserters</h5>
-                      </div>
-                      <div className="col-md-4">
-                        <a href="https://issuu.com/bouncetheatre/docs/playscript_6_-_the_rules" id="RadioPlay_6" target="_blank" rel="noopener noreferrer">
-                          <motion.img alt="The Rules" src={scriptImage} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="HFH_Image" height='100px' width='150px' />
-                        </a>
-                        <h5 className="resourcesImageExplain">The Rules</h5>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-
+                {ResourcesModalContentLoader.loadContent(resourcesType)}   
             </motion.div>
           </div>)}
       </AnimatePresence>

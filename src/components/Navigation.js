@@ -36,12 +36,12 @@ export const Navigation = (properties) => (
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}>
       <div className="icon-placeholder" >
-        <i className="glyphicon glyphicon-info-sign"/>
+        <i className="glyphicon glyphicon-info-sign" />
       </div>
       <div className="text-placeholder">
-          <button id="navAboutButton" className="aboutButton aButton" 
-                  onClick={() => {properties.toggleAboutModalOpen(); properties.toggleNavOpen(); document.getElementById('mainMenu').style.opacity='0'; }}
-                  aria-label="Open About Project Information">About</button>
+        <button id="navAboutButton" className="aboutButton aButton"
+          onClick={() => { properties.toggleAboutModalOpen(); properties.toggleNavOpen(); document.getElementById('mainMenu').style.opacity = '0'; }}
+          aria-label="Open About Project Information">About</button>
       </div>
     </motion.li>
     <motion.li className="li-menu"
@@ -49,12 +49,12 @@ export const Navigation = (properties) => (
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}>
       <div className="icon-placeholder" >
-        <i className="glyphicon glyphicon-book"/>
+        <i className="glyphicon glyphicon-book" />
       </div>
       <div className="text-placeholder" >
-        <button id="navResearchButton" className="aboutButton aButton" 
-                onClick={() => {properties.toggleResearchModalOpen(); properties.toggleNavOpen(); document.getElementById('mainMenu').style.opacity='0'; }}
-                aria-label="Open Project Research">Research</button>
+        <button id="navResearchButton" className="aboutButton aButton"
+          onClick={() => { properties.toggleResearchModalOpen(); properties.toggleNavOpen(); document.getElementById('mainMenu').style.opacity = '0'; }}
+          aria-label="Open Project Research">Timeline</button>
       </div>
     </motion.li>
     <motion.li className="li-menu"
@@ -62,12 +62,38 @@ export const Navigation = (properties) => (
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}>
       <div className="icon-placeholder" >
-        <i className="glyphicon glyphicon-folder-open"/>
+        <i className="glyphicon glyphicon-folder-open" />
       </div>
       <div className="text-placeholder" >
-      <button id="navResourcesButton" className="aboutButton aButton" 
-              onClick={() => {properties.toggleResourcesModalOpen(); properties.toggleNavOpen(); document.getElementById('mainMenu').style.opacity='0'; }}
-              aria-label="open Project Resources">Resources</button>
+        <button id="navResourcesButton" className="aboutButton aButton"
+          onClick={() => { properties.setResourcesType('Heritage-Magazine'); properties.toggleResourcesModalOpen(); properties.toggleNavOpen(); document.getElementById('mainMenu').style.opacity = '0'; }}
+          aria-label="open Project Resources">Heritage Magazine</button>
+      </div>
+    </motion.li>
+    <motion.li className="li-menu"
+      variants={li_variants}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.95 }}>
+      <div className="icon-placeholder" >
+        <i className="glyphicon glyphicon-folder-open" />
+      </div>
+      <div className="text-placeholder" >
+        <button id="navResourcesButton" className="aboutButton aButton"
+          onClick={() => { properties.setResourcesType('Radio-Plays'); properties.toggleResourcesModalOpen(); properties.toggleNavOpen(); document.getElementById('mainMenu').style.opacity = '0'; }}
+          aria-label="open Project Resources">Radio Plays</button>
+      </div>
+    </motion.li>
+    <motion.li className="li-menu"
+      variants={li_variants}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.95 }}>
+      <div className="icon-placeholder" >
+        <i className="glyphicon glyphicon-folder-open" />
+      </div>
+      <div className="text-placeholder" >
+        <button id="navResourcesButton" className="aboutButton aButton"
+          onClick={() => { properties.setResourcesType('Resource-Packs'); properties.toggleResourcesModalOpen(); properties.toggleNavOpen(); document.getElementById('mainMenu').style.opacity = '0'; }}
+          aria-label="open Project Resources">Resources</button>
       </div>
     </motion.li>
   </motion.ul>

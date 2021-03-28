@@ -110,7 +110,7 @@ class TextLoader {
                                 He shouts, “put that light out!” Shining a light at night is now a serious offence. It is terribly easy to break blackout. Some people just forgot.
                                     They get a fine - quite a hefty one!<br /><br />
                                     So, everything is just blacked out. Some nights it all seems so beautiful because of the stars!<br /><br />
-                                    Yours Annetta </p>
+                                    Yours, <br />Annetta </p>
                             </span>
                         </motion.div>
                     </div>);
@@ -132,11 +132,11 @@ class TextLoader {
                             <br />
                             <span className="TextTypeWriterTextCenter">
                                 <p>Psst. It’s Annetta here. This is my room. I’ve returned to London from being evacuated in the early part of the war.<br />
-                                    It seems like just last week Ma and Pa were sitting, listening to the radio. And we heard Chamberlain, you know saying we was at war with Germany...  My father turned to my mother and said, ‘We’re going to war’..<br />
-                                    I remember that tone in his voice, he is afraid, it was something that has frightened him, it was something to be wary of –  that we were going to have a war..<br />
+                                    It seems like just last week Ma and Pa were sitting, listening to the radio. And we heard Chamberlain, you know saying we was at war with Germany.  My father turned to my mother and said, ‘We’re going to war’.<br />
+                                    I remember that tone in his voice, he is afraid, it was something that has frightened him, it was something to be wary of –  that we were going to have a war.<br />
                                     At the time, I decided I was just a kid, I didn’t want to worry about it. I did decide to keep a diary though, for however long the war lasts. I’m glad I have, as I never want to forget what is happening to us.
                                     You might find parts of my story scattered around. Ma saved the letters I sent her too. The two don’t always match, cause well, you don’t want to tell your parents everything and you don’t want them to worry … Evacuation, well, it stopped me being such a kid….<br />
-                                    Anyways, ma is calling. Catch you later. </p>
+                                    Anyways, Ma is calling. Catch you later. </p>
                             </span>
                         </motion.div>
                     </div>);
@@ -160,7 +160,7 @@ class TextLoader {
                                 <p>So I was evacuated. Evacuation was horrible. I was screaming as the train pulled away. Mum was crying. I didn’t want to go away. I’ve been sent to Devon. It took a long time to get here by train.
                                 My new family aren’t nice. They say I talk funny and I’m too skinny.  I don’t think they want me here any more. I’m hoping this war is over quickly and I can get back to my London home. I’ll figure it out. I have to.
                                 We have the newspapers to hear the current goings on. We have the radio on all the time. And then, there’s Pathé News on at the cinema and things like that. They’ve got Pathé News. So we’ll go and see something like The Wizard of Oz
-                                and they’d show the news so you’d get all the war updates and what was going on with all the propaganda and advice to keep everyone going. Keep us all on track for what is to come. At least...I did when I was in London. Out in the countryside,
+                                and they’d show the news so you’d get all the war updates and what was going on with all the propaganda and advice to keep everyone going. Keep us all on track for what is to come. At least.I did when I was in London. Out in the countryside,
                                     being evacuated, there’s no cinema here. I miss it dreadfully.</p>
                                 <br />
                                 <p>Annetta</p>
@@ -214,7 +214,7 @@ class TextLoader {
                                 The sunsets in the countryside are like nothing else I’ve ever seen. The sky goes orange, and it pops down under the hill but then even afterwards, everything still glows.
                                 Sometimes, now the weather’s getting better, I run through the fields. I think of all the streets in Stepney and remember how they connect together and where they lead to.
                                 I can get lost here. (Beat) I’m sorry that it took me so long to reply to your letter. I’ve been busy, just like you. And thanks for the offer for me to come back home Ma.
-                                    I think actually I'll stay here a bit longer. Seems like you can take care of yourself. Well, so can I...</p>
+                                    I think actually I'll stay here a bit longer. Seems like you can take care of yourself. Well, so can I.</p>
                                 <br />
                                 <p>Annetta</p>
                             </span>
@@ -321,7 +321,7 @@ class TextLoader {
                                 Dust, all around us. A wooshing sound, swirling and carrying me, sirens still blaring in the background, glass flying and catching the light.
                                 Black and red and orange, heat fluttering in front of me. I turn onto my back. I’m alive, I can still move, the ground below is warm.
                                 Maureen. Where is Maureen? The Pordes house is burning and parts of it are all over the street. My ears are ringing. I sit up and pull Maureen up beside me.
-                                Something springs up from the corner of my eye. The boy...Shamus is running down the street. Straight to the burning house.
+                                Something springs up from the corner of my eye. The boy.Shamus is running down the street. Straight to the burning house.
                                 I get up and stagger after him, still dizzy. Ronnie and Bert are beside me, Maureen too. Shamus stands in front of the house.
                                 What you doing boy? We need to get to the shelter. I give the front door a kick. Two more. It comes down. The smoke comes out and takes us in, elbows to mouths,
                                 I claw through, find an arm, a woman, coughing and crying. Mrs Pordes. I push her to Ronnie and Bert. The smoke has got inside me and I can’t see shapes anymore.
@@ -435,7 +435,7 @@ class TextLoader {
                                 I ain’t no saint, you’ve probably guessed that by now. But taking things from the dead. I’d never imagined that. We borrowed the Saint Christopher from the man in the Warehouse,
                                 the night that Alfie first kissed me. The contents of a safe from a cafe in Bethnal Green that paid for our trip to the cinema. A watch from an old lady in Limehouse.
                                 A wallet from a fella who didn’t make it in a factory in Poplar that brought us three packs of cigarettes. We smoked half a pack in a night watching warehouses.
-                                I told Alfie my life story - it was scintillating. He told me his. It was brief. We talked about our plans for the future.</p>
+                                I told Alfie my life story - it was scintillating. He told me his. It was brief. We talked about our plans for the future.<br />Aida</p>
                             </span>
                         </motion.div>
                     </div>);
@@ -446,11 +446,10 @@ class TextLoader {
                         <div className="TextModalHeader">
                             <Typist cursor={{ show: false }} startDelay={1000}>
                                 <span className="TextTypeWriterHeading">
-                                    <p>17th April 1940</p>
+                                    <div className="TextModalHeader">Welcome to our house</div>
                                 </span>
                             </Typist>
                         </div>
-                        <div className="TextModalHeader">Welcome to our house</div>
                         <motion.div className="TextModalContent"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
@@ -462,7 +461,7 @@ class TextLoader {
                                 there was a lot of looting going on, the wardens and others were understandably more interested in getting people out where they could. They couldn’t keep control of the… So, because they were all derelict and open,
                                 people could go in and…well… We heard there was some purloining of stuff from bombed out houses. Jewellery and things like that. So now, Shambles Lane is quite a thriving business. You can also get extra meat, eggs,
                                 things like that. You had to pay them an exorbitant price. Just local villains trying to make money. If they caught these black marketeers they were chucked in prison. I’ve no doubt everybody hates them.
-                                    They were not doing anything for the war effort. Never thought I’d be one of them, but there we go. We make it a point to remember each person. See for yourself, we take good care of the stuff we borrowed.</p>
+                                    They were not doing anything for the war effort. Never thought I’d be one of them, but there we go. We make it a point to remember each person. See for yourself, we take good care of the stuff we borrowed.<br />Aida</p>
                             </span>
                         </motion.div>
                     </div>);
@@ -473,11 +472,10 @@ class TextLoader {
                         <div className="TextModalHeader">
                             <Typist cursor={{ show: false }} startDelay={1000}>
                                 <span className="TextTypeWriterHeading">
-                                    <p>17th April 1940</p>
+                                    <div className="TextModalHeader">April 1941</div>
                                 </span>
                             </Typist>
                         </div>
-                        <div className="TextModalHeader">April 1941</div>
                         <motion.div className="TextModalContent"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
@@ -488,7 +486,7 @@ class TextLoader {
                                 There were flames in a house on Smithy Street. We carry an old couple out, still in their dressing gowns, lungs full of smoke.  When the ambulance has taken them, we head back to our post. Alfie says “Thank God they’re alive.
                                 Think they’ll be alright?” I tell him “Course they will. Strong as old boots them two. Like you and me.” Then he spots my pockets. China, boxes and gold rings, shiny even in the dark. He’s cross. I broke the deal. They ain’t dead you see.
                                 Yet, I can’t help but think it’s the older generation’s fault we’re in this mess. All these wars and problems. Nothing to do with me, I’m just an innocent bystander.
-                                We don’t live in a world that’s equal. You think those people in them fancy town houses in West London are three to a bed like me and my family? I’m not just a borrower, I’m an equaliser. We just need to do what we can to get through this.</p>
+                                We don’t live in a world that’s equal. You think those people in them fancy town houses in West London are three to a bed like me and my family? I’m not just a borrower, I’m an equaliser. We just need to do what we can to get through this.<br />Aida</p>
                             </span>
                         </motion.div>
                     </div>);
@@ -499,11 +497,10 @@ class TextLoader {
                         <div className="TextModalHeader">
                             <Typist cursor={{ show: false }} startDelay={1000}>
                                 <span className="TextTypeWriterHeading">
-                                    <p>17th April 1940</p>
+                                    <div className="TextModalHeader">1940</div>
                                 </span>
                             </Typist>
                         </div>
-                        <div className="TextModalHeader">1940</div>
                         <motion.div className="TextModalContent"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
@@ -513,7 +510,7 @@ class TextLoader {
                                 <p>Borrowed: Nothing tonight<br />
                                 Thing is, the government is properly concerned about looting. It has bought in the death penalty and life sentenced as a deterrent. Although they haven’t executed anyone yet. They mostly give fines.
                                 Alife heard about a warden who was looking through a bomb-damaged home looking for survivors. He and his team came across a bottle of brandy, he decided to share it with his men to boost their spirits.
-                                He was prosecuted for looting, which just seems ridiculous.</p>
+                                He was prosecuted for looting, which just seems ridiculous.<br />Aida</p>
                             </span>
                         </motion.div>
                     </div>);
@@ -524,11 +521,10 @@ class TextLoader {
                         <div className="TextModalHeader">
                             <Typist cursor={{ show: false }} startDelay={1000}>
                                 <span className="TextTypeWriterHeading">
-                                    <p>17th April 1940</p>
+                                <div className="TextModalHeader">9th March 1941</div>
                                 </span>
                             </Typist>
-                        </div>
-                        <div className="TextModalHeader">8th March 1941</div>
+                        </div>  
                         <motion.div className="TextModalContent"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
@@ -542,7 +538,7 @@ class TextLoader {
                                 Even the churches and air raid shelters were looted.
                                 Some felt they had to do it to save their families from starvation.
                                 Stealing what they could. You could feel the hurry, You could feel the chaos
-                                None of us knew if we would wake up the next morning.</p>
+                                None of us knew if we would wake up the next morning.<br />Aida</p>
                             </span>
                         </motion.div>
                     </div>);
@@ -564,9 +560,11 @@ class TextLoader {
                                 Benevolent Doc, or crook?<br />
                                 Tricky path to walk.<br />
                                 Human nature doesn't change. There is a great deal of bravery, strength and fortitude shown by so many people in London. I’m just afraid I’m no longer one of them. Our house was hit and I lost…<br />
-                                In my grief, I walked into the underbelly of London at war. It has provided its own sort of comfort. One can make a tidy sum marking patients as unfit for military service. There’s no doubt about it, there is a financial reward to be had. Keeps me in scotch and cigarettes. Although I try to use it to help those in need.<br />
+                                In my grief, I walked into the underbelly of London at war. It has provided its own sort of comfort. One can make a tidy sum marking patients as unfit for military service. There’s no doubt about it, 
+                                there is a financial reward to be had. Keeps me in scotch and cigarettes. Although I try to use it to help those in need.<br />
                                 Keep Calm and Carry On.<br />
-                                Not so easy. No one talks about the sight of the bodies recovered from the bombed premises. How it affects the mind. I did this job for many years before it became more extreme and overlaid with fear. Fear brings out the good and the bad in us – only we rarely admit the bad. Yet sometimes they sit together side by side. I document my cases, my dreams and the news in the hope that one day the impact on the mind might be better understood.</p>
+                                Not so easy. No one talks about the sight of the bodies recovered from the bombed premises. How it affects the mind. I did this job for many years before it became more extreme and overlaid with fear. 
+                                Fear brings out the good and the bad in us – only we rarely admit the bad. Yet sometimes they sit together side by side. I document my cases, my dreams and the news in the hope that one day the impact on the mind might be better understood.<br />Dr. W Sutton</p>
                             </span>
                         </motion.div>
                     </div>);
@@ -612,7 +610,7 @@ class TextLoader {
                                 One egg a week, but no more!<br />
                                 Ration books for merchandise,<br />
                                 A family of three - but four eggs?!?<br />
-                                Someone must be telling lies...<br />
+                                Someone must be telling lies.<br />
                                     <br />
                                 Police and young men join the army,<br />
                                 Less to keep the law enforced,<br />
@@ -633,7 +631,8 @@ class TextLoader {
                                 For any dodgy Business Starter,<br />
                                 Pull together, by all means, stiff upper lip, we'll sort it out,<br />
                                 But don't be surprised, through chance or hunger,<br />
-                                What Things We'll Do, In a Blackout.</p>
+                                What Things We'll Do, In a Blackout.
+                                <br />Dr. W Sutton</p>
                             </span>
                         </motion.div>
                     </div>);
@@ -683,7 +682,8 @@ class TextLoader {
                                     <br />
                                 Patient 6<br />
                                 6 yrs, female, poor condition. Pronounced stridor heard and having barking coughing fits.<br />
-                                Diagnosis: Whooping cough. Normal charge.</p>
+                                Diagnosis: Whooping cough. Normal charge.
+                                <br />Dr. W Sutton</p>
                             </span>
                         </motion.div>
                     </div>);
@@ -722,7 +722,8 @@ class TextLoader {
                                 <br />
                                 I lie on my back, rubbing my eyes. I look to the scars on the wall. Get up and grab my overcoat. I find myself back at the Kammerling house, knock on the door. Rebecca Kammerling shouts from inside, “It’s Christmas. What d’you want?”
                                 “Apples”, I shout, “all of your apples. Whatever fruit you’ve got.”
-                                I go to another house, and the basement of a pub, an alley, another house, and another, and another. The next night when I head to Bethnal Green station, my pockets are weighed down. I walk up and down the tracks and the platform, quietly laying apples at sleeping children’s feet.</p>
+                                I go to another house, and the basement of a pub, an alley, another house, and another, and another. The next night when I head to Bethnal Green station, my pockets are weighed down. I walk up and down the tracks and the platform, quietly laying apples at sleeping children’s feet.
+                                <br />Dr. W Sutton</p>
                             </span>
                         </motion.div>
                     </div>);
