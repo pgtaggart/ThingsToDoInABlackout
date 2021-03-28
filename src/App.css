@@ -864,6 +864,11 @@ nav {
   margin-top: -15px;
 }
 
+.nationalArchivesLogoLink {
+  padding-right: 10px;
+  margin-top: -4px;
+}
+
 .navLink {
   color: black;
 }

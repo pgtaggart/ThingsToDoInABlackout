@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Typist from 'react-typist';
 import { motion, useCycle, AnimatePresence } from 'framer-motion';
-import { SocialMediaIconsReact } from 'social-media-icons-react';
 import { MenuToggle } from "./components/MenuToggle";
 import { Navigation } from "./components/Navigation";
 import RoomModalClose from './components/RoomModalClose';
@@ -12,6 +11,7 @@ import './App.css';
 import './imageGallery.scss';
 import './VerticalTimeline.css'
 import bounceLogo from './images/bounce-logo-purple.svg';
+import nationalArchivesLogo from './images/NationalArchivesLogo.png';
 import heritageFund from './images/HeritageFund.png';
 import ResearchTimeLine from './components/ResearchTimeLine';
 import textLoader from './components/TextLoader.js';
@@ -624,21 +624,13 @@ function App() {
               <img src={bounceLogo} alt="Bounce Theatre dot com" width="50px" height="50px" />
             </a>
           </motion.div>
-          <motion.div className="social-icon" whileHover={{ scale: 1.2 }} aria-label="Twitter Link">
-            <SocialMediaIconsReact
-              icon="twitter" iconSize="8" url="https://twitter.com/bouncetheatre" iconColor="#000"
-              size="20" backgroundColor="" borderColor="#000" borderWidth="1" id="twitterLink" />
+          <motion.div className="nationalArchivesLogoLink"
+            whileHover={{ scale: 1.2 }}>
+            <a href="https://www.nationalarchives.gov.uk" target="_blank" rel="noopener noreferrer">
+              <img src={nationalArchivesLogo} alt="The National Archives" width="30px" height="30px" />
+            </a>
           </motion.div>
-          <motion.div className="social-icon" whileHover={{ scale: 1.2 }} aria-label="Facebook Link">
-            <SocialMediaIconsReact
-              icon="facebook" iconSize="8" url="https://facebook.com/bouncetheatre" iconColor="#000"
-              size="20" backgroundColor="" borderColor="#000" borderWidth="1" id="facebookLink" />
-          </motion.div>
-          <motion.div whileHover={{ scale: 1.2 }} aria-label="Instagram Link">
-            <SocialMediaIconsReact
-              icon="instagram" iconSize="8" url="https://instagram.com/bouncetheatre" iconColor="#000"
-              size="20" backgroundColor="" borderColor="#000" borderWidth="1" id="instagramLink" />
-          </motion.div>
+          
         </div>
       </div>
 

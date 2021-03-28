@@ -203,7 +203,7 @@ export default class HelpModal extends PureComponent {
                                     <p>Inside each room you will see:</p>
                                     <p><i className="glyphicon glyphicon-headphones" /> - Introduces you to the person</p>
                                     <p><i className="glyphicon glyphicon-pencil" /> - Gives you snippets of their story</p>
-                                    <p><i className="glyphicon glyphicon-picture" /> - Imagines what life might have looked like for them</p>
+                                    
                                 </motion.div>
                             </motion.div>
                         </div>
