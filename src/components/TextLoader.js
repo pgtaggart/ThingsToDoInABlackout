@@ -36,7 +36,7 @@ class TextLoader {
                     Artwork Eve Martin. <a href="https://www.evemartindesign.com" id="webLinkWeb4" target="_blank" rel="noopener noreferrer">Website</a>, <a href="https://www.instagram.com/eve_roisin" id="webLinkWeb1" target="_blank" rel="noopener noreferrer">Instagram</a><br />
                     Voice over - Luke Lawrence<br />
                     Radio - News - Henry Mendoza<br />
-                    Dream One - Mia Wootton<br /><br />
+                    Dream One - Maia Wootton<br /><br />
                         <b>House 5</b><br />
                     Artwork by Luke W. Robson. <a href="https://www.lukewrobson.com" id="webLinkWeb5" target="_blank" rel="noopener noreferrer">Website</a><br />
                     Book - A dream - Alex Mouette<br />

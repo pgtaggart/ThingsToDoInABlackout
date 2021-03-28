@@ -5,9 +5,7 @@ import ChurchillSpeech from '../images/timeline/1940_ChurchillFirstSpeech.jpg';
 import ClothesRationing from '../images/timeline/1941_ClothesRationing.jpg';
 import Rationing  from '../images/timeline/1942_Rationing.jpg';
 import SoapRationing  from '../images/timeline/1942_SoapRationing.jpg';
-import Auschwitz from '../images/timeline/1945_AuschwitzLiberated.jpg';
 import BlackoutRelaxed from '../images/timeline/1944_BlackoutRelaxed.jpg';
-import BreadRationed from '../images/timeline/1946_BreadRationed.jpg';
 
 const ResearchTimeLine = () => {
 
@@ -33,7 +31,8 @@ const ResearchTimeLine = () => {
 
         <>
         
-        <div className="ResearchTimeLineHeader"><h1>WW2 Timeline</h1></div>
+        <div className="ResearchTimeLineHeader"><h1>LIFE ON THE HOMEFRONT</h1></div>
+        <div className="ResearchTimeLineHeader"><h3>A snapshot into some of the crimes committed during WW2</h3></div>
 
         <VerticalTimeline>
             <VerticalTimelineElement
@@ -45,6 +44,9 @@ const ResearchTimeLine = () => {
                 icon={<i className='glyphicon glyphicon-bullhorn'/>}>
                 <h3 className="vertical-timeline-element-title">Air Raid Wardens’ Service</h3>
                 <p>Set up in the anticipation of another war with widescale bombing campaigns. By the outbreak of WW2 there were over 1.5 million signed up to the ARP (Air Raid Precautions).</p>
+                <p>Criminals would later on take advantage of the status of the Air Raid Precautions (ARP) service - many would sign up to the ARP to get the uniforms, in order to loot and steal more easily, 
+                    under the cover of respectability provided by the uniform. Thieves would dress up in an ARP helmet and armband, and smash shop windows - if members of the public spotted them, 
+                    they’d often help them load their car with the goods, assuming they were being removed for safekeeping!</p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
@@ -68,17 +70,8 @@ const ResearchTimeLine = () => {
                 icon={<i className='glyphicon glyphicon-file'/>}>
                 <h3 className="vertical-timeline-element-title">The Military Training Act</h3>
                 <p>The Military Training Act is passed in parliament which makes it compulsory for men aged between 20 and 22 to join the armed forces (excluding the aforementioned reserved occupations).</p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                contentStyle={{ background: commentTimelineBackground, color: commentTextColor }}
-                contentArrowStyle={{ borderRight: commentArrowStyle }}
-                date=""
-                iconStyle={{ background: commentIconBackground, color: commentIconForeground }}
-                icon={<i className='glyphicon glyphicon-comment'/>}>
-                <p>Criminals took advantage of the status of the Air Raid Precautions (ARP) service - many would sign up to the ARP to get the uniforms, in order to loot and steal more easily, under the cover 
-                    of respectability conferred by the uniform. A standard plan for thieves was to dress up in an ARP helmet and armband, and smash shop windows - if members of the public spotted them, 
-                    they’d often help them load their car with the goods, thinking they were being removed for safekeeping!</p>
+                <p>During the war, it was possible doctors could be persuaded to forge medical exemptions for families who could afford to bribe them.<br /><br />
+                <a href="https://issuu.com/bouncetheatre/docs/playscript_4_-_a_tonic" id="RadioPlay_4" target="_blank" rel="noopener noreferrer" style={{color: 'darkslateblue'}}>Find out more in our script 'A Tonic'</a></p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
@@ -92,6 +85,7 @@ const ResearchTimeLine = () => {
                    have to be voted on several times and at several stages by MPs in Parliament, and be scrutinised, debated and amended. The government likely felt that in such dangerous times they 
                    needed to be able to respond quickly regarding any national emergencies to defend the country, or instituting new laws to keep Britons safe, so having to go through weeks of work 
                    before new laws could be introduced could cost lives and valuable time.</p>
+                   <p><a href="https://www.nationalarchives.gov.uk/education/resources/government-posters/" id="RadioPlay_4" target="_blank" rel="noopener noreferrer" style={{color: 'darkslateblue'}}>Find out more about how the government encouraged people to at home to help win the war.</a></p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
@@ -103,6 +97,16 @@ const ResearchTimeLine = () => {
                 <h3 className="vertical-timeline-element-title">Hitler invades Poland</h3>
                 <p>On the same day, the evacuation of children, pregnant women and people with disabilities to ‘host areas’ begins. Approximately 1.5 million people move around the country in search 
                    of safety in the first wave of evacuation. In the Rhondda valley, 33,500 evacuees from London, Cardiff and Bristol found shelter in the homes of local people. The ‘Blackout’ officially begins.</p>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+                className="vertical-timeline-element--work"
+                contentStyle={{ background: commentTimelineBackground, color: commentTextColor }}
+                contentArrowStyle={{ borderRight: commentArrowStyle }}
+                date=""
+                iconStyle={{ background: commentIconBackground, color: commentIconForeground }}
+                icon={<i className='glyphicon glyphicon-comment'/>}>
+                <p>Unfortunately, the blackouts were actually the perfect cover for crime.  From the petty to the more serious. The infamous “Blackout Ripper” murdered four women in a six-day-Blackout period. The Ripper was eventually caught. 
+                    Gordon Cummings was an RAF serviceman with a clean record prior to this. Murderers also used the Blitz as great cover for hiding the bodies of their victims and staging the death as if they were caught in the blast.</p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
@@ -123,6 +127,20 @@ const ResearchTimeLine = () => {
                 icon={<i className='glyphicon glyphicon-hourglass'/>}>
                 <h3 className="vertical-timeline-element-title">‘The Phoney War’</h3>
                 <p>A period of eight months, in which very little of military importance takes place in Western Europe. Many evacuees drift home during this time, only to return to their host areas once the Blitz begins.</p>
+                <p><a href="https://issuu.com/bouncetheatre/docs/playscript_1_-_big_smoke" id="RadioPlay_4" target="_blank" rel="noopener noreferrer" style={{color: 'darkslateblue'}}>Find out more in our script 'Big Smoke'</a></p>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+                className="vertical-timeline-element--work"
+                contentStyle={{ background: defaultTimelineBackground, color: defaultTextColor }}
+                contentArrowStyle={{ borderRight: defaultArrowStyle }}
+                date="8th January 1940"
+                iconStyle={{ background: defaultIconBackground, color: defaultIconForeground }}
+                icon={<i className='glyphicon glyphicon-king'/>}>
+                <h3 className="vertical-timeline-element-title">Food Rationing</h3>
+                <p>Food Rationing was introduced in the UK. Limits were placed on how much meat, butter, cheese, sugar, and milk, amongst other items, any one person could have.
+                    Introducing rationing created another opportunity for crime. As every person, man, woman, or child, received a ration book. Sometimes ration books were sent out twice by mistake to people and they were used, or people would use ration books belonging to people who had died. 
+                    Sometimes ration coupons were stolen or reproduced en masse by organised criminals, or families might set up small printing operations in their homes to get by. Some turned to counterfeiting out of brazen opportunism, but others did so out of desperation.</p>
+                    <p><a href="https://www.nationalarchives.gov.uk/education/resources/government-posters/" id="RadioPlay_4" target="_blank" rel="noopener noreferrer" style={{color: 'darkslateblue'}}>Find out more how the government used art for war messaging about rationing and other acts</a></p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
@@ -131,9 +149,7 @@ const ResearchTimeLine = () => {
                 date=""
                 iconStyle={{ background: commentIconBackground, color: commentIconForeground }}
                 icon={<i className='glyphicon glyphicon-comment'/>}>
-                <p>As war began, any prisoner with less than three months left to serve was released.<br /> “The dapper gangster”, Billy Hill was one example and he immediately took advantage of “that big, wide, handsome and, oh, 
-                    so profitable black market”. Early on, Hill’s gang staged a series of jewellery robberies; on one occasion they broke into Carringtons on Regent Street in London, making off with £6,000 worth of goods. 
-                    Within weeks of rationing’s introduction, Hill was selling whiskey and sausage skins at £500 a barrel.</p>
+                <p>“They broke into the kitchen once. I was about…by this time I’d already gone into the RAF, but they broke into the kitchen and stole the rations, and eggs and milk – that kind of thing.”<br/><br />Harold, aged 95</p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
@@ -162,20 +178,7 @@ const ResearchTimeLine = () => {
                 date=""
                 iconStyle={{ background: commentIconBackground, color: commentIconForeground }}
                 icon={<i className='glyphicon glyphicon-comment'/>}>
-                <p>In 1940, one woman was caught using four ration books to get food for her family of three; her 15-year-old son had been sent a child’s book and an adult’s book; she’d used both for six months to get extra supplies.
-                     She was fined £160 - £9,015.79 in today’s money! The woman claimed she thought the extra rations were because her son was a “big schoolboy”. </p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                contentStyle={{ background: defaultTimelineBackground, color: defaultTextColor }}
-                contentArrowStyle={{ borderRight: defaultArrowStyle }}
-                date="26th May – 4th June 1940"
-                iconStyle={{ background: defaultIconBackground, color: defaultIconForeground }}
-                icon={<i className='glyphicon glyphicon-flag'/>}>
-                <h3 className="vertical-timeline-element-title">The Evacuation of Dunkirk</h3>
-                <p>Northern France, code-named ‘Operation Dynamo’. British, French, and Belgian forces had become surrounded by German troops and were stranded in Dunkirk. Churchill described it as a “colossal military disaster”. 
-                    A massive evacuation exercise was needed to rescue and return British troops. A wide variety of seacraft were requisitioned in the rescue, some being manned entirely by civilians due to a lack of personnel, 
-                    and some were commandeered even without their owners’ knowledge. Churchill described the rescue as, “a miracle of deliverance”.</p>
+                <p>“We used to hear about the black market. “Spivs”, we used to call them. Well, I didn’t use to call that that, but my gran did. She’d say “Oh, can’t get this stuff unless you go on the black market.” And it was quite a business actually. They could get you extra meat, extra eggs, things like that. For money. You had to pay them an exorbitant price. They were just local villans I suppose.” <br/> <br/>Peter, aged 85</p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
@@ -184,19 +187,8 @@ const ResearchTimeLine = () => {
                 date=""
                 iconStyle={{ background: commentIconBackground, color: commentIconForeground }}
                 icon={<i className='glyphicon glyphicon-comment'/>}>
-                <p>A. W. Morgan told the BBC of how his family managed to get meat from a butcher in exchange for surplus eggs, while his mother exchanged his sweet coupons for sugar coupons with neighbours, so they’d have enough sugar to make jam. 
-                    Former fireman Francis Goddard, meanwhile, recalled how his wife, who worked in a restaurant, would have access to steak, salmon, and other rationed food items. At the end of her shifts, she would wrap up a few items in tissue, 
-                    and carry them home hidden in her knickers!</p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                contentStyle={{ background: defaultTimelineBackground, color: defaultTextColor }}
-                contentArrowStyle={{ borderRight: defaultArrowStyle }}
-                date="10th July – 31st October 1940"
-                iconStyle={{ background: defaultIconBackground, color: defaultIconForeground }}
-                icon={<i className='glyphicon glyphicon-flag'/>}>
-                <h3 className="vertical-timeline-element-title">The Battle of Britain</h3>
-                <p>The Battle of Britain was an aerial bombardment of coastal strategic targets by Nazi Germany’s air force, the Luftwaffer.</p>
+                <p>The Black Market thrived during the war. With rationing impacting everyday life, anything could be traded at a price. It was commonplace to have a bit of dodgy dealing going on here and there.</p>
+                <p><a href="https://issuu.com/bouncetheatre/docs/playscript_3_-_aida___alfie" id="RadioPlay_3" target="_blank" rel="noopener noreferrer" style={{color: 'darkslateblue'}}>Find out more in our script 'Aida and Alfie'</a></p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
@@ -207,26 +199,8 @@ const ResearchTimeLine = () => {
                 icon={<i className='glyphicon glyphicon-fire'/>}>
                 <h3 className="vertical-timeline-element-title">London is bombed in the Blitz</h3>
                 <p>London is bombed in the Blitz every night during this period. 13,500 tons of high-explosive bombs dropped in 57 raids. Over 15,000 people are killed. 250,000 are made homeless. Important buildings such as St Paul's Cathedral, 
-                    the House of Commons and Buckingham Palace are also bombed. The King and Queen often visited suffering areas.</p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                contentStyle={{ background: commentTimelineBackground, color: commentTextColor }}
-                contentArrowStyle={{ borderRight: commentArrowStyle }}
-                date=""
-                iconStyle={{ background: commentIconBackground, color: commentIconForeground }}
-                icon={<i className='glyphicon glyphicon-comment'/>}>
-                <p>A gang led by one Wally Thompson, where they dressed up as ARP members and tried to steal a safe from a warehouse in the middle of an air raid. The Blitz was a golden period for criminals. “Air raids,” he remembered, “were the best ally London’s crooks ever had.”</p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                contentStyle={{ background: defaultTimelineBackground, color: defaultTextColor }}
-                contentArrowStyle={{ borderRight: defaultArrowStyle }}
-                date="19th September 1940"
-                iconStyle={{ background: defaultIconBackground, color: defaultIconForeground }}
-                icon={<i className='glyphicon glyphicon-flag'/>}>
-                <h3 className="vertical-timeline-element-title"> Victory in Battle of Britain</h3>
-                <p>Victory in Battle of Britain forced Hitler to postpone invasion plans.</p>
+                    the House of Commons and Buckingham Palace are also bombed.</p>
+                <p><a href="https://www.nationalarchives.gov.uk/education/resources/gordon-fords-story/" id="RadioPlay_4" target="_blank" rel="noopener noreferrer" style={{color: 'darkslateblue'}}>Find out what it was like to be an airman in WW2</a></p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
@@ -240,12 +214,14 @@ const ResearchTimeLine = () => {
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                contentStyle={{ background: defaultTimelineBackground, color: defaultTextColor }}
-                contentArrowStyle={{ borderRight: defaultArrowStyle }}
-                date="January 1941"
-                iconStyle={{ background: defaultIconBackground, color: defaultIconForeground }}
-                icon={<i className='glyphicon glyphicon-eye-open'/>}>
-                <p>A gardener is caught removing rings from four dead bodies in Kensington, West London.</p>
+                contentStyle={{ background: commentTimelineBackground, color: commentTextColor }}
+                contentArrowStyle={{ borderRight: commentArrowStyle }}
+                date=""
+                iconStyle={{ background: commentIconBackground, color: commentIconForeground }}
+                icon={<i className='glyphicon glyphicon-comment'/>}>
+                <p>“You saw planes fighting, and you saw these huge masses of planes coming over. I remember once we were on Canvey Island, there was this heavy drone, I think it was when they were going over to Coventry, 
+                    or over that way. And there were masses and masses of planes, and we thought they were our lot. We thought they were going the wrong way and all of a sudden, you saw the swastikas because they were coming down quite low. Yes. 
+                    I do remember that vividly. We were down in the shelter most of the time, but I did see a couple of planes having a scrap, because I remember seeing the flames going out…in the air.”<br /><br />Keith, aged 82</p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
@@ -269,6 +245,30 @@ const ResearchTimeLine = () => {
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
+                contentStyle={{ background: commentTimelineBackground, color: commentTextColor }}
+                contentArrowStyle={{ borderRight: commentArrowStyle }}
+                date=""
+                iconStyle={{ background: commentIconBackground, color: commentIconForeground }}
+                icon={<i className='glyphicon glyphicon-comment'/>}>
+                <p>The Blitz was actually a great time for criminals. As previously mentioned, they would get creative and dress up as ARPs or wardens, to look part of the relief effort. However, 
+                    they were able to scale up their operations and capitalise on the reduced strength of the police force – whose numbers were depleted during the war. 
+                    The Blitz caused devastation but created an opportunity for looting on a mass scale.  From pinching rations from someone’s kitchen during an air raid (where residents would have been in the shelter), 
+                    to hampering the rescue efforts of emergency services and stealing possessions directly from dead bodies in a bombsite; it was rife and by far the most common wartime crime during the Blitz. 
+                    Looted goods would be traded on the black market to individuals and businesses in racketeering rings. The government were so worried about it they introduced the death penalty. 
+                    However, it was never enforced, so the gains were worth the risks to those so inclined.</p>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+                className="vertical-timeline-element--work"
+                contentStyle={{ background: commentTimelineBackground, color: commentTextColor }}
+                contentArrowStyle={{ borderRight: commentArrowStyle }}
+                date=""
+                iconStyle={{ background: commentIconBackground, color: commentIconForeground }}
+                icon={<i className='glyphicon glyphicon-comment'/>}>
+                    <p>“I do remember the guy that lived next door to my parents – he had a bit more money than most, and I suspect he was on some sort of game because he…we went in there at Christmas a few times and he had a bar, 
+                        he had a little bar in his lounge. And he had little bottles of whiskey and rum and gin which weren’t on…top priority to the nation…in those days!”<br /><br />Bob, age 86</p>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+                className="vertical-timeline-element--work"
                 contentStyle={{ background: fireTimelineBackground, color: fireTextColor }}
                 contentArrowStyle={{ borderRight: fireArrowStyle }}
                 date="April - May 1941"
@@ -286,26 +286,6 @@ const ResearchTimeLine = () => {
                 icon={<i className='glyphicon glyphicon-camera'/>}>
                 <h3 className="vertical-timeline-element-title">Clothes rationing introduced in the UK</h3>
                 <p className="TimeLineImage"><img src={ClothesRationing} width="200" alt="Clothes Rationing"/></p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                contentStyle={{ background: commentTimelineBackground, color: commentTextColor }}
-                contentArrowStyle={{ borderRight: commentArrowStyle }}
-                date=""
-                iconStyle={{ background: commentIconBackground, color: commentIconForeground }}
-                icon={<i className='glyphicon glyphicon-comment'/>}>
-                <p>In 1941, several London hotels were fined for illegally buying over 150,000 eggs from a dealer in Folkestone. The hotels paid up to twice the controlled price for the eggs, claiming they were “desperate to feed the guests”. 
-                    The dealer is sentenced to three months' hard labour.</p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                contentStyle={{ background: defaultTimelineBackground, color: defaultTextColor }}
-                contentArrowStyle={{ borderRight: defaultArrowStyle }}
-                date="22 June 1941"
-                iconStyle={{ background: defaultIconBackground, color: defaultIconForeground }}
-                icon={<i className='glyphicon glyphicon-flag'/>}>
-                <h3 className="vertical-timeline-element-title">Hitler invades Russia</h3>
-                <p>Hitler invades Russia in “Operation Barbarossa”.</p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
@@ -327,36 +307,6 @@ const ResearchTimeLine = () => {
                 <h3 className="vertical-timeline-element-title">Women Conscripted</h3>
                 <p>Women aged 19-30 are conscripted for war work, after labour shortages become apparent. Women are enlisted in the Women’s 
                     Auxiliary Air Force (WAAF), Auxiliary Territorial Service (ATS), and Women’s Royal Naval Service (WRENS).</p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                contentStyle={{ background: fireTimelineBackground, color: fireTextColor }}
-                contentArrowStyle={{ borderRight: fireArrowStyle }}
-                date="7th December 1941"
-                iconStyle={{ background: fireIconBackground, color: fireIconForeground }}
-                icon={<i className='glyphicon glyphicon-fire'/>}>
-                <h3 className="vertical-timeline-element-title">Pearl Harbor Attacked!</h3>
-                <p>Pearl Harbor is attacked by the Japanese and the USA enters the war.</p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                contentStyle={{ background: fireTimelineBackground, color: fireTextColor }}
-                contentArrowStyle={{ borderRight: fireArrowStyle }}
-                date="1942"
-                iconStyle={{ background: fireIconBackground, color: fireIconForeground }}
-                icon={<i className='glyphicon glyphicon-fire'/>}>
-                <h3 className="vertical-timeline-element-title">Cathedral Cities Targeted</h3>
-                <p>British Cathedral Cities were strategically targeted in bombing raids by the Luftwaffe (German Air Force).</p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                contentStyle={{ background: defaultTimelineBackground, color: defaultTextColor }}
-                contentArrowStyle={{ borderRight: defaultArrowStyle }}
-                date="1942"
-                iconStyle={{ background: defaultIconBackground, color: defaultIconForeground }}
-                icon={<i className='glyphicon glyphicon-warning-sign'/>}>
-                <h3 className="vertical-timeline-element-title">The Holocaust</h3>
-                <p>The mass murder of Jewish people at Auschwitz by the Nazis begins.</p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
@@ -396,76 +346,7 @@ const ResearchTimeLine = () => {
                 iconStyle={{ background: commentIconBackground, color: commentIconForeground }}
                 icon={<i className='glyphicon glyphicon-comment'/>}>
                 <p>“By 1943, virtually every household item was either in short supply and had to be queued for, or was unobtainable.” (Charman, Imperial War Museum, Jan 2018)</p>
-                <p>Although we often think of rationing in terms of food, like with the examples above, the black market also found its way into other areas of rationing. In 1943, five million clothing coupons were stolen in one go, and the government had to cancel the entire issue. </p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                contentStyle={{ background: defaultTimelineBackground, color: defaultTextColor }}
-                contentArrowStyle={{ borderRight: defaultArrowStyle }}
-                date="2nd February 1943"
-                iconStyle={{ background: defaultIconBackground, color: defaultIconForeground }}
-                icon={<i className='glyphicon glyphicon-flag'/>}>
-                <h3 className="vertical-timeline-element-title">Surrender at Stalingrad</h3>
-                <p>Surrender at Stalingrad marks Germany's first major defeat.</p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                contentStyle={{ background: defaultTimelineBackground, color: defaultTextColor }}
-                contentArrowStyle={{ borderRight: defaultArrowStyle }}
-                date="1943"
-                iconStyle={{ background: defaultIconBackground, color: defaultIconForeground }}
-                icon={<i className='glyphicon glyphicon-gbp'/>}>
-                <p>19 men were accused in Manchester of having been selling forged clothing coupons. A printing press was seized in Salford that had been supplying high quality forged coupons.</p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                contentStyle={{ background: defaultTimelineBackground, color: defaultTextColor }}
-                contentArrowStyle={{ borderRight: defaultArrowStyle }}
-                date="July 1943"
-                iconStyle={{ background: defaultIconBackground, color: defaultIconForeground }}
-                icon={<i className='glyphicon glyphicon-gbp'/>}>
-                <h3 className="vertical-timeline-element-title">An Unusual Auction</h3>
-                <p>Actor Derrick de Marney auctions off a single banana (which had all but disappeared from wartime Britain at this point) which fetched for £5. (Charman, March 2018)</p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                contentStyle={{ background: commentTimelineBackground, color: commentTextColor }}
-                contentArrowStyle={{ borderRight: commentArrowStyle }}
-                date="September 1943"
-                iconStyle={{ background: commentIconBackground, color: commentIconForeground }}
-                icon={<i className='glyphicon glyphicon-comment'/>}>
-                <p>Five million clothing coupons are stolen from a War Office depot in South West London. The Board of Trade is forced to cancel the entire issue of five-coupon vouchers while 
-                    reassuring the public that the number stolen represents less than 1% of all coupons in circulation (Roodhouse, 2013: 88).</p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                contentStyle={{ background: defaultTimelineBackground, color: defaultTextColor }}
-                contentArrowStyle={{ borderRight: defaultArrowStyle }}
-                date="10th February 1944"
-                iconStyle={{ background: defaultIconBackground, color: defaultIconForeground }}
-                icon={<i className='glyphicon glyphicon-gbp'/>}>
-                <h3 className="vertical-timeline-element-title">P.A.Y.E</h3>
-                <p>Pay As You Earn tax system introduced</p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                contentStyle={{ background: defaultTimelineBackground, color: defaultTextColor }}
-                contentArrowStyle={{ borderRight: defaultArrowStyle }}
-                date="10th March 1944"
-                iconStyle={{ background: defaultIconBackground, color: defaultIconForeground }}
-                icon={<i className='glyphicon glyphicon-education'/>}>
-                <h3 className="vertical-timeline-element-title">Women's Rights</h3>
-                <p>Married women are allowed to teach for the first time.</p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                contentStyle={{ background: defaultTimelineBackground, color: defaultTextColor }}
-                contentArrowStyle={{ borderRight: defaultArrowStyle }}
-                date="6th June 1944"
-                iconStyle={{ background: defaultIconBackground, color: defaultIconForeground }}
-                icon={<i className='glyphicon glyphicon-flag'/>}>
-                <h3 className="vertical-timeline-element-title">“D-Day” Normandy Landings</h3>
-                <p>The Normandy Landings, delayed from the 5th due to adverse weather, Codenamed Operation 'Overlord'. The Allied landings of over 156,000 US, Canadian, and British forces on the beaches of Normandy marked the start of a long and costly campaign to liberate north-west Europe from Nazi occupation.</p>
+                <p>Although we often think of rationing in terms of food, like with the examples above, the black market also found its way into other areas of rationing. In 1943, five million clothing coupons were stolen in one go, and the government had to cancel the entire issue. The Board of Trade is forced to cancel the entire issue of five-coupon vouchers while reassuring the public that the number stolen represents less than 1% of all coupons in circulation (Roodhouse, 2013: 88)</p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
@@ -476,35 +357,6 @@ const ResearchTimeLine = () => {
                 icon={<i className='glyphicon glyphicon-camera'/>}>
                 <h3 className="vertical-timeline-element-title">Blackout restrictions relaxed</h3>
                 <p className="TimeLineImage"><img src={BlackoutRelaxed} width="200" alt="Blackout Restrictions eased"/></p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                contentStyle={{ background: commentTimelineBackground, color: commentTextColor }}
-                contentArrowStyle={{ borderRight: commentArrowStyle }}
-                date=""
-                iconStyle={{ background: commentIconBackground, color: commentIconForeground }}
-                icon={<i className='glyphicon glyphicon-comment'/>}>
-                <p>Even celebrities became infamous for black marketeering; Ivor Novello, the Welsh composer and actor, was sentenced to a month in prison in 1944 for misuse of petrol coupons, offered to him by a fan. </p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                contentStyle={{ background: defaultTimelineBackground, color: defaultTextColor }}
-                contentArrowStyle={{ borderRight: defaultArrowStyle }}
-                date="27th January 1945"
-                iconStyle={{ background: defaultIconBackground, color: defaultIconForeground }}
-                icon={<i className='glyphicon glyphicon-camera'/>}>
-                <h3 className="vertical-timeline-element-title">Auschwitz is liberated by Soviet troops</h3>
-                <p className="TimeLineImage"><img src={Auschwitz} width="200" alt="Auschwitz Liberated"/></p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                contentStyle={{ background: defaultTimelineBackground, color: defaultTextColor }}
-                contentArrowStyle={{ borderRight: defaultArrowStyle }}
-                date="30th April 1945"
-                iconStyle={{ background: defaultIconBackground, color: defaultIconForeground }}
-                icon={<i className='glyphicon glyphicon-warning-sign'/>}>
-                <h3 className="vertical-timeline-element-title">Hitler commits suicide in his Berlin bunker</h3>
-                <p></p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
@@ -560,16 +412,6 @@ const ResearchTimeLine = () => {
                 className="vertical-timeline-element--work"
                 contentStyle={{ background: defaultTimelineBackground, color: defaultTextColor }}
                 contentArrowStyle={{ borderRight: defaultArrowStyle }}
-                date="15th August 1945"
-                iconStyle={{ background: defaultIconBackground, color: defaultIconForeground }}
-                icon={<i className='glyphicon glyphicon-star'/>}>
-                <h3 className="vertical-timeline-element-title">VJ Day</h3>
-                <p>Victory in Japan (VJ Day) is celebrated after Japan’s surrender.</p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                contentStyle={{ background: defaultTimelineBackground, color: defaultTextColor }}
-                contentArrowStyle={{ borderRight: defaultArrowStyle }}
                 date="24th October 1945"
                 iconStyle={{ background: defaultIconBackground, color: defaultIconForeground }}
                 icon={<i className='glyphicon glyphicon-star'/>}>
@@ -584,18 +426,7 @@ const ResearchTimeLine = () => {
                 date=""
                 iconStyle={{ background: commentIconBackground, color: commentIconForeground }}
                 icon={<i className='glyphicon glyphicon-comment'/>}>
-                <p>Despite the odd spell back in prison, by war’s end professional crook, Billy Hill, was a wealthy man, and came to be known as 
-                    the boss of Britain’s underworld after the war. “They were roaring days. Money was easy, the villains were well loaded with dough, and we were all busy.”</p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                contentStyle={{ background: defaultTimelineBackground, color: defaultTextColor }}
-                contentArrowStyle={{ borderRight: defaultArrowStyle }}
-                date="July 1946"
-                iconStyle={{ background: defaultIconBackground, color: defaultIconForeground }}
-                icon={<i className='glyphicon glyphicon-camera'/>}>
-                <h3 className="vertical-timeline-element-title">Bread Rationed</h3>
-                <p className="TimeLineImage"><img src={BreadRationed} width="200" alt="Bread Rationed"/></p>
+                <p>“It’s a horrific thing that man should want to do so much injury, both mentally and physically, to another human being, irrespective of colour, creed, or religion.”<br/><br/>Keith, aged 83</p>
             </VerticalTimelineElement>
             <VerticalTimelineElement iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }} icon={<i className='glyphicon glyphicon-asterisk'/>}/>
         </VerticalTimeline>
