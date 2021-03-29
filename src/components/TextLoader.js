@@ -60,7 +60,8 @@ class TextLoader {
                     Sharon Kanolik , Katie Halliday Turner, Stewart Melton, Henry Mendoza, Louise Pendry, Lauren Purser.<br /><br />
                         <b>With thanks</b><br />
                     To all the young people and staff who helped start the project off.<br />
-                    Anstee Bridge, Chessington School, Coombe Boys School, The Kingston Academy, Kingston Keep Military Families</p>
+                    Anstee Bridge, Chessington School, Coombe Boys School, The Kingston Academy, Kingston Keep Military Families<br /><br />
+                    Things to do in a Blackout is written under CC-BY-NC license : <a href="https://creativecommons.org/licenses/by-nc/4.0/legalcode" id="RadioPlay_4" target="_blank" rel="noopener noreferrer" style={{color: 'darkslateblue'}}>Available Here.</a></p>
                 );
 
             case 'RoomOne-Diary':
