@@ -70,7 +70,7 @@ export default class Room extends PureComponent {
         imageHeight= '1080'; 
         
         var roomThreeAreaLetter = new ImageMapArea('RoomThree-Letter', 'RoomThree', '272,682,476,925', 'rect', 'A Letter', 'Text');
-        var roomThreeAreaScarf = new ImageMapArea('RoomThree-Scarf', 'RoomThree', '1656,168,1833,431', 'rect', 'A Scarf', 'Text');
+        var roomThreeAreaScarf = new ImageMapArea('RoomThree-Scarf', 'RoomThree', '1656,168,1833,431', 'rect', 'A Scarf', 'Audio');
         var roomThreeAreaTrunk = new ImageMapArea('RoomThree-Trunk', 'RoomThree', '1515,639,1875,993', 'rect', 'A Suitcase', 'Text');
         var roomThreeAreaSandwiches = new ImageMapArea('RoomThree-Sandwiches', 'RoomThree', '1166,809,980,671', 'rect', 'Sanwiches', 'Text');
         var roomThreeAreaShelf = new ImageMapArea('RoomThree-Shelf', 'RoomThree', '150,320,340,483', 'rect', 'A Shelf', 'Text');
