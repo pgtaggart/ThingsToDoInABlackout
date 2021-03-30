@@ -49,7 +49,7 @@ export const Navigation = (properties) => (
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}>
       <div className="icon-placeholder" >
-        <i className="glyphicon glyphicon-book" />
+        <i className="glyphicon glyphicon-tree-deciduous" />
       </div>
       <div className="text-placeholder" >
         <button id="navResearchButton" className="aboutButton aButton"
@@ -62,7 +62,7 @@ export const Navigation = (properties) => (
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}>
       <div className="icon-placeholder" >
-        <i className="glyphicon glyphicon-folder-open" />
+        <i className="glyphicon glyphicon-book" />
       </div>
       <div className="text-placeholder" >
         <button id="navResourcesButton" className="aboutButton aButton"
@@ -75,7 +75,7 @@ export const Navigation = (properties) => (
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}>
       <div className="icon-placeholder" >
-        <i className="glyphicon glyphicon-folder-open" />
+        <i className="glyphicon glyphicon-user" />
       </div>
       <div className="text-placeholder" >
         <button id="navResourcesButton" className="aboutButton aButton"
@@ -88,7 +88,7 @@ export const Navigation = (properties) => (
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}>
       <div className="icon-placeholder" >
-        <i className="glyphicon glyphicon-folder-open" />
+        <i className="glyphicon glyphicon-education" />
       </div>
       <div className="text-placeholder" >
         <button id="navResourcesButton" className="aboutButton aButton"
