@@ -160,8 +160,7 @@ nav {
   bottom: 0;
   width: 230px;
   height: 30vh;
-  
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .audio-content-modal {
@@ -441,12 +440,15 @@ nav {
 }
 
 .ul-menu {
+  margin-left: 22px;
   padding-left: 10px;
   position: absolute;
   top: 70px;
   width: 250px;
-  background: linear-gradient(360deg, white, transparent);
+  background: whitesmoke;
   border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-top-right-radius: 25px;
 }
 
 .li-menu {
